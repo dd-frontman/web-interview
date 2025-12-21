@@ -8,6 +8,9 @@ export default defineConfig({
 	// Репозиторий называется "web-interview", поэтому используем base: '/web-interview/'
 	base: "/web-interview/",
 
+	// Отключаем cleanUrls для правильной работы с base path
+	cleanUrls: false,
+
 	// Настройки темы
 	themeConfig: {
 		// Логотип сайта (опционально)
@@ -22,6 +25,8 @@ export default defineConfig({
 		],
 
 		// Боковая панель навигации
+		// В VitePress с base path ключи sidebar должны быть без base path
+		// VitePress автоматически добавит base path к ссылкам
 		sidebar: {
 			"/Vue по темам/": [
 				{
