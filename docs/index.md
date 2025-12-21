@@ -63,12 +63,18 @@ onMounted(async () => {
   await nextTick()
   
   // Динамически создаем изображения после монтирования
-  // Используем конкатенацию строк, чтобы Vite не пытался разрешить пути статически
+  // Используем функцию для построения путей, чтобы Vite не анализировал их статически
   const container = logosContainer.value
   if (container) {
-    const basePath = '/' + 'logos' + '/'
-    const vuePath = basePath + 'vue' + '.' + 'png'
-    const reactPath = basePath + 'react' + '.' + 'png'
+    // Функция для создания путей - Vite не может статически проанализировать вызов функции
+    const createPath = (() => {
+      const slash = String.fromCharCode(47) // '/'
+      const dot = String.fromCharCode(46) // '.'
+      return (folder, name, ext) => slash + folder + slash + name + dot + ext
+    })()
+    
+    const vuePath = createPath('logos', 'vue', 'png')
+    const reactPath = createPath('logos', 'react', 'png')
     
     const logos = [
       { src: vuePath, alt: 'Vue' },
