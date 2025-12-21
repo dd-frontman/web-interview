@@ -3,9 +3,14 @@ layout: page
 ---
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref, nextTick } from 'vue'
 
-onMounted(() => {
+const logosContainer = ref(null)
+
+onMounted(async () => {
+  // Проверяем, что мы на клиенте (не на сервере)
+  if (typeof window === 'undefined') return
+  
   const style = document.createElement('style')
   style.textContent = `
     .home-background-logos {
@@ -53,23 +58,40 @@ onMounted(() => {
     }
   `
   document.head.appendChild(style)
+  
+  // Ждем следующего тика, чтобы элемент точно был в DOM
+  await nextTick()
+  
+  // Динамически создаем изображения после монтирования
+  const container = logosContainer.value
+  if (container) {
+    const logos = [
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+      { src: '/logos/vue.png', alt: 'Vue' },
+      { src: '/logos/react.png', alt: 'React' },
+    ]
+    
+    logos.forEach(logo => {
+      const img = document.createElement('img')
+      img.src = logo.src
+      img.alt = logo.alt
+      img.onerror = function() { this.style.display = 'none' }
+      container.appendChild(img)
+    })
+  }
 })
 </script>
 
-<div class="home-background-logos">
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-  <img src="/logos/vue.png" alt="Vue" onerror="this.style.display='none'" />
-  <img src="/logos/react.png" alt="React" onerror="this.style.display='none'" />
-</div>
+<div ref="logosContainer" class="home-background-logos"></div>
 
 <div class="home-content" style="text-align: center;">
   <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--vp-c-brand-1);">Web Interview Documentation</h1>
