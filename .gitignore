@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+*.lcov
+
+# Production
+dist/
+.vitepress/dist/
+.vitepress/cache/
+.vitepress/.temp/
+
+# Misc
+.DS_Store
+*.log
+*.local
+.env
+.env.local
+.env.*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*~
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Build outputs
+*.tsbuildinfo
+.cache/
+
+# Temporary files
+.temp/
+.tmp/
+
