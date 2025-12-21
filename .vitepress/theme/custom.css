@@ -1,0 +1,51 @@
+/* Увеличиваем ширину бокового меню */
+:root {
+	--vp-sidebar-width: 320px;
+}
+
+/* Добавляем отступы для подтем (лесенка) */
+.VPSidebarItem .items {
+	padding-left: 1rem;
+}
+
+.VPSidebarItem .items .items {
+	padding-left: 1.5rem;
+}
+
+/* Более специфичные селекторы для вложенных элементов sidebar */
+.VPSidebarItem .item .items {
+	padding-left: 1rem;
+}
+
+.VPSidebarItem .item .items .item .items {
+	padding-left: 1.5rem;
+}
+
+/* Убираем бордеры слева и справа у свитчера темы в хедере */
+.VPNavBar .appearance {
+	border-left: none !important;
+	border-right: none !important;
+}
+
+/* Альтернативный селектор для свитчера */
+.VPNavBar .VPNavBarAppearance {
+	border-left: none !important;
+	border-right: none !important;
+}
+
+/* Более специфичный селектор для кнопки переключения темы */
+.VPNavBar .appearance button,
+.VPNavBar .VPNavBarAppearance button {
+	border-left: none !important;
+	border-right: none !important;
+}
+
+/* Селектор для контейнера свитчера */
+.VPNavBar .appearance,
+.VPNavBar .VPNavBarAppearance,
+.VPNavBar .appearance > *,
+.VPNavBar .VPNavBarAppearance > * {
+	border-left: none !important;
+	border-right: none !important;
+}
+

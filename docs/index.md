@@ -1,12 +1,11 @@
 ---
-layout: page
 ---
 
 <script setup>
 import { withBase } from 'vitepress'
 </script>
 
-<div class="home-content" style="text-align: center;">
+<div class="home-content" style="text-align: center; padding-top: 2rem;">
   <h1 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem; color: var(--vp-c-brand-1);">Web Interview Documentation</h1>
   <p style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--vp-c-text-1);">Документация по веб-разработке</p>
   <p style="font-size: 0.95rem; color: var(--vp-c-text-2); margin-bottom: 1.5rem;">Собрание знаний и материалов по фронтенд разработке для подготовки к собеседованиям</p>
