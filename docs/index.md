@@ -63,21 +63,26 @@ onMounted(async () => {
   await nextTick()
   
   // Динамически создаем изображения после монтирования
+  // Используем конкатенацию строк, чтобы Vite не пытался разрешить пути статически
   const container = logosContainer.value
   if (container) {
+    const basePath = '/' + 'logos' + '/'
+    const vuePath = basePath + 'vue' + '.' + 'png'
+    const reactPath = basePath + 'react' + '.' + 'png'
+    
     const logos = [
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
-      { src: '/logos/vue.png', alt: 'Vue' },
-      { src: '/logos/react.png', alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
+      { src: vuePath, alt: 'Vue' },
+      { src: reactPath, alt: 'React' },
     ]
     
     logos.forEach(logo => {
