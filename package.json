@@ -1,16 +1,28 @@
 {
-  "name": "web-interview-docs",
-  "version": "1.0.0",
-  "description": "Документация по веб-разработке",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
-  },
-  "devDependencies": {
-    "vitepress": "^1.0.0"
-  }
+	"name": "web-interview-docs",
+	"version": "1.0.0",
+	"description": "Документация по веб-разработке",
+	"license": "MIT",
+	"type": "module",
+	"packageManager": "yarn@1.22.19",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview",
+		"type-check": "tsc --noEmit",
+		"lint": "eslint .vitepress --ext .ts,.vue --fix",
+		"format": "prettier --write \"**/*.{ts,js,json,md}\""
+	},
+	"devDependencies": {
+		"vitepress": "^1.6.0",
+		"@typescript-eslint/eslint-plugin": "^7.0.0",
+		"@typescript-eslint/parser": "^7.0.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-vue": "^9.24.0",
+		"prettier": "^3.2.5",
+		"typescript": "^5.4.0"
+	}
 }
-

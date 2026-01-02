@@ -1,7 +1,7 @@
-- Библиотека компонентов для **Vue 3**, написанная на **TypeScript**. 
+- Библиотека компонентов для **Vue 3**, написанная на **TypeScript**.
 - Поддерживает **SSR** (Server-Side Rendering).
 - Поддержка **tree-shaking** — можно импортировать только нужные компоненты.
-- Гибкая темизация: есть светлая и тёмная темы, возможность настроить глобальные переменные темы (design tokens), переопределить стили компонентов через `themeOverride` или `ConfigProvider`. 
+- Гибкая темизация: есть светлая и тёмная темы, возможность настроить глобальные переменные темы (design tokens), переопределить стили компонентов через `themeOverride` или `ConfigProvider`.
 
 ---
 
@@ -11,42 +11,43 @@
 
 ```vue
 <template>
-  <n-config-provider :theme-overrides="themeOverrides">
-    <my-app />
-  </n-config-provider>
+	<n-config-provider :theme-overrides="themeOverrides">
+		<my-app />
+	</n-config-provider>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { GlobalThemeOverrides } from 'naive-ui';
+import { ref } from "vue";
+import { GlobalThemeOverrides } from "naive-ui";
 
 const themeOverrides: GlobalThemeOverrides = {
-  common: {
-    primaryColor: '#FF8C00',
-    fontSize: '16px',
-    borderRadius: '6px'
-  },
-  Button: {
-    color: '#FF8C00',
-    textColor: '#ffffff'
-  }
+	common: {
+		primaryColor: "#FF8C00",
+		fontSize: "16px",
+		borderRadius: "6px",
+	},
+	Button: {
+		color: "#FF8C00",
+		textColor: "#ffffff",
+	},
 };
 </script>
 ```
 
-- `common` — общие переменные темы (цвета, шрифты, скругления и др.). 
-- Можно на уровне компонента задать стили, например для `Button`, `Input` и др. через свойства темы. 
+- `common` — общие переменные темы (цвета, шрифты, скругления и др.).
+- Можно на уровне компонента задать стили, например для `Button`, `Input` и др. через свойства темы.
 
 ### Глобальные стили и синхронизация темы
 
 - Есть компонент `n-global-style`, который синхронизирует глобальные стили с `body` элементом, например фон, переключение темы и пр.
-- При рендеринге на сервере: можно отключить inline-тему через проп `inline-theme-disabled` у `ConfigProvider`, чтобы уменьшить HTML, генерируемый на сервере. 
+- При рендеринге на сервере: можно отключить inline-тему через проп `inline-theme-disabled` у `ConfigProvider`, чтобы уменьшить HTML, генерируемый на сервере.
+
 ---
 
 ## Примеры использования
 
-- Изменение основного цвета (primary color): пример из StackOverflow показывает, как через `themeOverrides` задать `common.primaryColor` и обёрнуть весь App в `n-config-provider`. 
-- Тема “на вид как Element Plus”: существует тема-override `naive-ui-element-theme`, которая делает NaiveUI визуально похожим на Element Plus. :contentReference[oaicite:9]{index=9}  
+- Изменение основного цвета (primary color): пример из StackOverflow показывает, как через `themeOverrides` задать `common.primaryColor` и обёрнуть весь App в `n-config-provider`.
+- Тема “на вид как Element Plus”: существует тема-override `naive-ui-element-theme`, которая делает NaiveUI визуально похожим на Element Plus. :contentReference[oaicite:9]{index=9}
 
 ---
 
@@ -62,7 +63,7 @@ const themeOverrides: GlobalThemeOverrides = {
 
 ## Что стоит учесть / подводные моменты
 
-- Если часто переключать тему + `themeOverride`, могут остаться “устаревшие стили” — надо проверять на утечки css и перерендер.  
-- Inline стили темы (inline theme) могут увеличить размер SSR-HTML, если не отключить `inline-theme-disabled`.   
-- Если темы очень кастомные, возможно придётся переопределять большое число переменных или стилей — иногда override может быть “болезненным”.  
+- Если часто переключать тему + `themeOverride`, могут остаться “устаревшие стили” — надо проверять на утечки css и перерендер.
+- Inline стили темы (inline theme) могут увеличить размер SSR-HTML, если не отключить `inline-theme-disabled`.
+- Если темы очень кастомные, возможно придётся переопределять большое число переменных или стилей — иногда override может быть “болезненным”.
 - Когда используется дизайн, сильно отличающийся от дефолтного стиля NaiveUI, возможно нужно создать “тематические компоненты-обёртки” или свои стили сверху.

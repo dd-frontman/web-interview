@@ -1,9 +1,9 @@
 Когда вы создаёте компонент Vue, он проходит через серию этапов:
 
-1. Создание (инициализация данных, методов и реактивности)  
-2. Монтирование (создание DOM-элементов)  
-3. Обновления, когда изменяется реактивное состояние  
-4. Размонтирование / уничтожение компонента  
+1. Создание (инициализация данных, методов и реактивности)
+2. Монтирование (создание DOM-элементов)
+3. Обновления, когда изменяется реактивное состояние
+4. Размонтирование / уничтожение компонента
 
 Vue даёт “крючки” (hooks), которые позволяют выполнить свой код в определённые моменты жизненного цикла — например, когда компонент только создан, когда DOM уже в документе, когда обновился, или сразу перед удалением.
 
@@ -27,7 +27,7 @@ Vue даёт “крючки” (hooks), которые позволяют вы�
 Дополнительные хуки во Vue 2:
 
 - `activated` / `deactivated` — для компонентов, обёрнутых в `<keep-alive>`. Когда компонент “активируется” из кеша или “деактивируется”.
-- `errorCaptured` — когда ошибка “всплывает” от потомка компонента, её можно поймать и обработать :contentReference[oaicite:11]{index=11}  
+- `errorCaptured` — когда ошибка “всплывает” от потомка компонента, её можно поймать и обработать :contentReference[oaicite:11]{index=11}
 
 ---
 
@@ -47,8 +47,8 @@ Vue 3 сохраняет большинство тех же стадий, осо
 
 ---
 
-
 ---
+
 Вот несколько примеров Vue-компонентов, демонстрирующих все основные хуки жизненного цикла (Options API и Composition API), + примеры того, что делать и чего избегать. Всё в MD-формате, экранировано.
 
 ---
@@ -57,44 +57,46 @@ Vue 3 сохраняет большинство тех же стадий, осо
 
 ```vue
 <template>
-  <div>
-    <p>{{ counter }}</p>
-    <button @click="increment">Increment</button>
-  </div>
+	<div>
+		<p>{{ counter }}</p>
+		<button @click="increment">Increment</button>
+	</div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      counter: 0
-    }
-  },
-  beforeCreate() {
-    console.log('beforeCreate: data и методы ещё не настроены');
-  },
-  created() {
-    console.log('created: data и методы уже есть, но DOM ещё не монтирован');
-  },
-  beforeMount() {
-    console.log('beforeMount: готовимся к монтированию (DOM ещё нет)');
-  },
-  mounted() {
-    console.log('mounted: компонент уже в DOM, можно работать с this.$el / $refs');
-  },
-  beforeUpdate() {
-    console.log('beforeUpdate: реактивные данные изменились, DOM скоро обновится');
-  },
-  updated() {
-    console.log('updated: DOM обновился, можно читать новые значения');
-  },
-  beforeDestroy() {  // Vue 2
-    console.log('beforeDestroy: компонент скоро будет уничтожен, но всё ещё в DOM');
-  },
-  destroyed() {      // Vue 2
-    console.log('destroyed: компонент уничтожен, DOM удалён, подписки чистятся');
-  }
-}
+	data() {
+		return {
+			counter: 0,
+		};
+	},
+	beforeCreate() {
+		console.log("beforeCreate: data и методы ещё не настроены");
+	},
+	created() {
+		console.log("created: data и методы уже есть, но DOM ещё не монтирован");
+	},
+	beforeMount() {
+		console.log("beforeMount: готовимся к монтированию (DOM ещё нет)");
+	},
+	mounted() {
+		console.log("mounted: компонент уже в DOM, можно работать с this.$el / $refs");
+	},
+	beforeUpdate() {
+		console.log("beforeUpdate: реактивные данные изменились, DOM скоро обновится");
+	},
+	updated() {
+		console.log("updated: DOM обновился, можно читать новые значения");
+	},
+	beforeDestroy() {
+		// Vue 2
+		console.log("beforeDestroy: компонент скоро будет уничтожен, но всё ещё в DOM");
+	},
+	destroyed() {
+		// Vue 2
+		console.log("destroyed: компонент уничтожен, DOM удалён, подписки чистятся");
+	},
+};
 </script>
 ```
 
@@ -104,87 +106,87 @@ export default {
 
 ```vue
 <template>
-  <div>
-    <p ref="pEl">{{ message }} — {{ count }}</p>
-    <button @click="increment">Increment</button>
-  </div>
+	<div>
+		<p ref="pEl">{{ message }} — {{ count }}</p>
+		<button @click="increment">Increment</button>
+	</div>
 </template>
 
 <script setup>
 import {
-  ref,
-  onBeforeMount,
-  onMounted,
-  onBeforeUpdate,
-  onUpdated,
-  onBeforeUnmount,
-  onUnmounted,
-  onActivated,
-  onDeactivated,
-  onErrorCaptured,
-  onRenderTracked,
-  onRenderTriggered,
-  onServerPrefetch
-} from 'vue';
+	ref,
+	onBeforeMount,
+	onMounted,
+	onBeforeUpdate,
+	onUpdated,
+	onBeforeUnmount,
+	onUnmounted,
+	onActivated,
+	onDeactivated,
+	onErrorCaptured,
+	onRenderTracked,
+	onRenderTriggered,
+	onServerPrefetch,
+} from "vue";
 
 const count = ref(0);
-const message = ref('Hello Vue 3');
+const message = ref("Hello Vue 3");
 
 const increment = () => {
-  count.value++;
+	count.value++;
 };
 
 // Пример serverPrefetch — работает при SSR
 onServerPrefetch(async () => {
-  console.log('onServerPrefetch: data можно загрузить на сервере');
+	console.log("onServerPrefetch: data можно загрузить на сервере");
 });
 
 // Монтирование
 onBeforeMount(() => {
-  console.log('onBeforeMount: перед монтированием');
+	console.log("onBeforeMount: перед монтированием");
 });
 onMounted(() => {
-  console.log('onMounted: компонент в DOM');
+	console.log("onMounted: компонент в DOM");
 });
 
 // Обновления
 onBeforeUpdate(() => {
-  console.log('onBeforeUpdate: до обновления DOM');
+	console.log("onBeforeUpdate: до обновления DOM");
 });
 onUpdated(() => {
-  console.log('onUpdated: DOM обновился, count =', count.value);
+	console.log("onUpdated: DOM обновился, count =", count.value);
 });
 
 // KeepAlive / кеширование
 onActivated(() => {
-  console.log('onActivated: компонент активирован из кеша');
+	console.log("onActivated: компонент активирован из кеша");
 });
 onDeactivated(() => {
-  console.log('onDeactivated: компонент деактивирован (в кеше)');
-// (но не удалён из DOM)
+	console.log("onDeactivated: компонент деактивирован (в кеше)");
+	// (но не удалён из DOM)
 });
 
 // Уничтожение
 onBeforeUnmount(() => {
-  console.log('onBeforeUnmount: перед удалением, можно очистить подписки / таймеры');
+	console.log("onBeforeUnmount: перед удалением, можно очистить подписки / таймеры");
 });
 onUnmounted(() => {
-  console.log('onUnmounted: компонент удалён, DOM уже нет');
+	console.log("onUnmounted: компонент удалён, DOM уже нет");
 });
 
 // Отлов ошибок
 onErrorCaptured((err, instance, info) => {
-  console.error('onErrorCaptured:', err, 'info:', info);
-  // вернуть false, чтобы ошибка дальше не всплывала
-  return false;
+	console.error("onErrorCaptured:", err, "info:", info);
+	// вернуть false, чтобы ошибка дальше не всплывала
+	return false;
 });
 
 // Для отладки реактивности / трассировки
 onRenderTracked((event) => {
-  console.log('onRenderTracked:', event);
+	console.log("onRenderTracked:", event);
 });
 onRenderTriggered((event) => {
-  console.log('onRenderTriggered:', event);
+	console.log("onRenderTriggered:", event);
 });
 </script>
 ```
@@ -221,4 +223,3 @@ onRenderTriggered((event) => {
 |                 |                               |                                         |                                                  |
 
 ---
-

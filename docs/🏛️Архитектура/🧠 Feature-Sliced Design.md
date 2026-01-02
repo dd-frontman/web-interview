@@ -10,16 +10,20 @@
 
 Здесь настраивается всё приложение: роутинг, провайдеры, глобальные стили.
 **Пример для Vue (main.ts):**
+
 ```typescript
 // main.ts
-import { createApp } from 'vue';
-import App from './app/App.vue';
-import { router } from './app/providers/router';
+import { createApp } from "vue";
+import App from "./app/App.vue";
+import { router } from "./app/providers/router";
 
-createApp(App).use(router).mount('#app');
+createApp(App).use(router).mount("#app");
 ```
-____
+
+---
+
 ### 2. `pages` — Страницы приложения
+
 Каждый файл — отдельная страница. Страницы собирают виджеты и фичи.
 
 **Пример для Next.js (app/pages/):**
@@ -42,15 +46,17 @@ export default function CatalogPage() {
 ```vue
 <!-- pages/CatalogPage.vue -->
 <template>
-  <div>
-    <ProductList />
-    <Filters />
-  </div>
+	<div>
+		<ProductList />
+		<Filters />
+	</div>
 </template>
 ```
 
 ---
+
 ### 3. `widgets` — Крупные составные блоки
+
 Виджеты комбинируют несколько фич и entities. Например, шапка сайта или виджет корзины.
 
 **Пример (widgets/Header):**
@@ -58,36 +64,38 @@ export default function CatalogPage() {
 ```vue
 <!-- widgets/Header/Header.vue -->
 <template>
-  <header>
-    <Logo />
-    <Navigation />
-    <UserProfile />
-  </header>
+	<header>
+		<Logo />
+		<Navigation />
+		<UserProfile />
+	</header>
 </template>
 ```
 
 ```typescript
 // widgets/Header/index.ts
-export { default as Header } from './Header.vue';
+export { default as Header } from "./Header.vue";
 ```
 
 ---
 
 ### 4. `features` — Пользовательские функции
+
 Фичи реализуют конкретную бизнес-возможность. Например, "лайкнуть пост" или "добавить в корзину".
 
 **Пример (features/AddToCart):**
+
 ```vue
 <!-- features/AddToCart/AddToCart.vue -->
 <template>
-  <button @click="addToCart">Добавить в корзину</button>
+	<button @click="addToCart">Добавить в корзину</button>
 </template>
 
 <script setup>
-const props = defineProps(['productId']);
+const props = defineProps(["productId"]);
 
 const addToCart = () => {
-  // Логика добавления
+	// Логика добавления
 };
 </script>
 ```
@@ -95,50 +103,53 @@ const addToCart = () => {
 ---
 
 ### 5. `entities` — Бизнес-сущности
+
 Сущности описывают основные понятия предметной области: `User`, `Product`, `Order`.
 
 **Пример (entities/Product):**
+
 ```vue
 <!-- entities/Product/ProductCard.vue -->
 <template>
-  <div class="product-card">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.price }}</p>
-  </div>
+	<div class="product-card">
+		<h3>{{ product.name }}</h3>
+		<p>{{ product.price }}</p>
+	</div>
 </template>
 
 <script setup>
-defineProps(['product']);
+defineProps(["product"]);
 </script>
 ```
 
 ```typescript
 // entities/Product/model/types.ts
 export interface Product {
-  id: string;
-  name: string;
-  price: number;
+	id: string;
+	name: string;
+	price: number;
 }
-
 ```
 
 ---
 
 ### 6. `shared` — Переиспользуемый код
+
 Всё, что можно использовать в любом месте приложения: UI-кит, утилиты, API.
 
 **Пример (shared/ui/):**
+
 ```vue
 <!-- shared/ui/Button/Button.vue -->
 <template>
-  <button class="btn" :class="variant">
-    <slot />
-  </button>
+	<button class="btn" :class="variant">
+		<slot />
+	</button>
 </template>
 
 <script setup>
 defineProps({
-  variant: { type: String, default: 'primary' }
+	variant: { type: String, default: "primary" },
 });
 </script>
 ```
@@ -146,9 +157,8 @@ defineProps({
 ```typescript
 // shared/api/base.ts
 export const apiClient = axios.create({
-  baseURL: '/api'
+	baseURL: "/api",
 });
-
 ```
 
 ---
@@ -158,32 +168,33 @@ export const apiClient = axios.create({
 text
 
 src/
-├── app/                    # Инициализация приложения
-│   ├── providers/         # Провайдеры (router, store)
-│   ├── styles/            # Глобальные стили
-│   └── App.vue/main.tsx   # Входная точка
-├── pages/                 # Страницы
-│   ├── CatalogPage.vue   # /catalog
-│   └── ProductPage.vue   # /product/:id
-├── widgets/              # Виджеты
-│   ├── Header/
-│   └── Footer/
-├── features/             # Фичи
-│   ├── AddToCart/
-│   └── ProductSearch/
-├── entities/             # Сущности
-│   ├── Product/
-│   └── User/
-└── shared/               # Общие модули
-    ├── ui/               # Компоненты UI
-    ├── lib/              # Утилиты
-    └── api/              # API клиент
+├── app/ # Инициализация приложения
+│ ├── providers/ # Провайдеры (router, store)
+│ ├── styles/ # Глобальные стили
+│ └── App.vue/main.tsx # Входная точка
+├── pages/ # Страницы
+│ ├── CatalogPage.vue # /catalog
+│ └── ProductPage.vue # /product/:id
+├── widgets/ # Виджеты
+│ ├── Header/
+│ └── Footer/
+├── features/ # Фичи
+│ ├── AddToCart/
+│ └── ProductSearch/
+├── entities/ # Сущности
+│ ├── Product/
+│ └── User/
+└── shared/ # Общие модули
+├── ui/ # Компоненты UI
+├── lib/ # Утилиты
+└── api/ # API клиент
 
 ---
 
 ## 🔄 Как работают зависимости между слоями
 
 Правила FSD запрещают "горизонтальные" и "обратные" зависимости:
+
 - **Можно**: `pages` → `widgets` → `features` → `entities` → `shared`
 - **Нельзя**: `shared` → `entities` → `features` (снизу вверх)
 
@@ -202,6 +213,7 @@ src/
 ---
 
 ## 🛠️ Как внедрить FSD в существующий проект
+
 1. Начните с выделения `shared` слоя (UI-кит, утилиты)
 2. Выделите основные бизнес-`entities`
 3. Перенесите функциональность в `features`

@@ -14,7 +14,6 @@ dist/
 .vitepress/.temp/
 
 # Misc
-.DS_Store
 *.log
 *.local
 .env

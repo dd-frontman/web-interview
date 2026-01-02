@@ -6,19 +6,48 @@
 /* Добавляем отступы для подтем (лесенка) */
 .VPSidebarItem .items {
 	padding-left: 1rem;
+	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .VPSidebarItem .items .items {
 	padding-left: 1.5rem;
+	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Более специфичные селекторы для вложенных элементов sidebar */
 .VPSidebarItem .item .items {
 	padding-left: 1rem;
+	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .VPSidebarItem .item .items .item .items {
 	padding-left: 1.5rem;
+	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Анимация отступов при сворачивании - универсальные селекторы */
+.VPSidebar .group[aria-expanded="false"] .items,
+.VPSidebarGroup[aria-expanded="false"] .items,
+.VPSidebarItem[aria-expanded="false"] .items,
+.VPSidebar .group.collapsed .items,
+.VPSidebarGroup.collapsed .items,
+.VPSidebarItem.collapsed .items,
+.VPSidebar .group .item[aria-expanded="false"] .items,
+.VPSidebarItem .item[aria-expanded="false"] .items,
+.VPSidebar .group .item.collapsed .items,
+.VPSidebarItem .item.collapsed .items {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 /* Убираем бордеры слева и справа у свитчера темы в хедере */
@@ -48,4 +77,155 @@
 	border-left: none !important;
 	border-right: none !important;
 }
+
+/* Стили для ссылки на главную (логотип/заголовок) */
+.VPNavBarTitle a,
+.VPNavBarTitle .title,
+.VPNavBarTitle {
+	color: var(--vp-c-brand-1) !important;
+	transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.VPNavBarTitle a:hover,
+.VPNavBarTitle .title:hover {
+	opacity: 0.8;
+}
+
+/* Анимация развертывания и свертывания меню в sidebar */
+/* Простой и надежный подход с max-height */
+
+/* Универсальные селекторы для всех возможных структур VitePress */
+.VPSidebar,
+.VPSidebar .group,
+.VPSidebarGroup,
+.VPSidebarItem,
+.VPSidebarItem .item {
+	overflow: hidden;
+}
+
+/* Убеждаемся, что items не скрыты через display: none */
+.VPSidebar .group .items,
+.VPSidebarGroup .items,
+.VPSidebarItem .items,
+.VPSidebar .items,
+.VPSidebarItem .item .items {
+	display: block !important;
+	visibility: visible !important;
+}
+
+/* Анимация для списков items - используем max-height */
+/* Максимально широкие селекторы для охвата всех возможных структур */
+.VPSidebar .group .items,
+.VPSidebarGroup .items,
+.VPSidebarItem .items,
+.VPSidebar .group > .items,
+.VPSidebarGroup > .items,
+.VPSidebarItem > .items,
+.VPSidebar .items,
+.VPSidebarItem .item .items,
+[class*="VPSidebar"] .items,
+[class*="VPSidebar"] [class*="group"] .items,
+[class*="VPSidebar"] [class*="item"] .items {
+	transition: max-height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+		padding-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		padding-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		margin-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		margin-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+	max-height: 5000px !important;
+	opacity: 1 !important;
+	overflow: hidden !important;
+	will-change: max-height, opacity, padding-top, padding-bottom;
+}
+
+/* Свернутое состояние - максимально широкие селекторы */
+.VPSidebar .group[aria-expanded="false"] .items,
+.VPSidebarGroup[aria-expanded="false"] .items,
+.VPSidebarItem[aria-expanded="false"] .items,
+.VPSidebar .group[aria-expanded="false"] > .items,
+.VPSidebarGroup[aria-expanded="false"] > .items,
+.VPSidebarItem[aria-expanded="false"] > .items,
+.VPSidebar .group.collapsed .items,
+.VPSidebarGroup.collapsed .items,
+.VPSidebarItem.collapsed .items,
+[class*="VPSidebar"][aria-expanded="false"] .items,
+[class*="VPSidebar"].collapsed .items,
+[class*="VPSidebar"] [class*="group"][aria-expanded="false"] .items,
+[class*="VPSidebar"] [class*="item"][aria-expanded="false"] .items {
+	max-height: 0 !important;
+	opacity: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* Развернутое состояние */
+.VPSidebar .group[aria-expanded="true"] .items,
+.VPSidebarGroup[aria-expanded="true"] .items,
+.VPSidebarItem[aria-expanded="true"] .items,
+.VPSidebar .group[aria-expanded="true"] > .items,
+.VPSidebarGroup[aria-expanded="true"] > .items,
+.VPSidebarItem[aria-expanded="true"] > .items {
+	max-height: 5000px !important;
+	opacity: 1 !important;
+}
+
+/* Анимация для вложенных элементов */
+.VPSidebar .group .item .items,
+.VPSidebarItem .item .items {
+	display: block !important;
+	transition: max-height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+		padding-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		padding-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		margin-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+		margin-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: max-height, opacity, padding-top, padding-bottom;
+	max-height: 5000px;
+	opacity: 1;
+	overflow: hidden;
+}
+
+.VPSidebar .group .item[aria-expanded="false"] .items,
+.VPSidebarItem .item[aria-expanded="false"] .items,
+.VPSidebar .group .item.collapsed .items,
+.VPSidebarItem .item.collapsed .items {
+	max-height: 0 !important;
+	opacity: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.VPSidebar .group .item[aria-expanded="true"] .items,
+.VPSidebarItem .item[aria-expanded="true"] .items {
+	max-height: 5000px !important;
+	opacity: 1 !important;
+}
+
+/* Плавная анимация для иконок развертывания (стрелки) */
+.VPSidebar .group .caret,
+.VPSidebarGroup .caret,
+.VPSidebarItem .caret,
+.VPSidebar .group button[aria-expanded],
+.VPSidebarGroup button[aria-expanded],
+.VPSidebarItem button[aria-expanded],
+.VPSidebar .group .item-link,
+.VPSidebarGroup .item-link,
+.VPSidebarItem .item-link {
+	transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+	will-change: transform;
+}
+
+.VPSidebar .group[aria-expanded="true"] .caret,
+.VPSidebarGroup[aria-expanded="true"] .caret,
+.VPSidebarItem[aria-expanded="true"] .caret,
+.VPSidebar .group button[aria-expanded="true"],
+.VPSidebarGroup button[aria-expanded="true"],
+.VPSidebarItem button[aria-expanded="true"] {
+	transform: rotate(90deg);
+}
+
 

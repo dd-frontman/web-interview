@@ -24,17 +24,17 @@ Vue автоматически отслеживает изменения в да
 
 ```javascript
 const app = Vue.createApp({
-  data() {
-    return {
-      message: "Hello Vue!",
-      count: 0,
-    };
-  },
-  methods: {
-    increment() {
-      this.count++;
-    },
-  },
+	data() {
+		return {
+			message: "Hello Vue!",
+			count: 0,
+		};
+	},
+	methods: {
+		increment() {
+			this.count++;
+		},
+	},
 });
 
 app.mount("#app");
@@ -42,9 +42,9 @@ app.mount("#app");
 
 ```html
 <div id="app">
-  <p>{{ message }}</p>
-  <p>Счетчик: {{ count }}</p>
-  <button @click="increment">+1</button>
+	<p>{{ message }}</p>
+	<p>Счетчик: {{ count }}</p>
+	<button @click="increment">+1</button>
 </div>
 ```
 
@@ -54,8 +54,8 @@ app.mount("#app");
 
 ```javascript
 app.component("todo-item", {
-  props: ["todo"],
-  template: `
+	props: ["todo"],
+	template: `
     <li>
       {{ todo.text }}
       <button @click="$emit('remove')">Удалить</button>
@@ -68,10 +68,10 @@ app.component("todo-item", {
 
 ```html
 <todo-item
-  v-for="item in todos"
-  :key="item.id"
-  :todo="item"
-  @remove="removeTodo(item.id)"
+	v-for="item in todos"
+	:key="item.id"
+	:todo="item"
+	@remove="removeTodo(item.id)"
 ></todo-item>
 ```
 
@@ -91,9 +91,7 @@ app.component("todo-item", {
 
 ```html
 <ul>
-  <li v-for="(item, index) in items" :key="item.id">
-    {{ index + 1 }}. {{ item.name }}
-  </li>
+	<li v-for="(item, index) in items" :key="item.id">{{ index + 1 }}. {{ item.name }}</li>
 </ul>
 ```
 
@@ -103,9 +101,9 @@ app.component("todo-item", {
 <input v-model="message" placeholder="Введите текст" />
 <textarea v-model="description"></textarea>
 <select v-model="selected">
-  <option value="">Выберите опцию</option>
-  <option value="a">Опция A</option>
-  <option value="b">Опция B</option>
+	<option value="">Выберите опцию</option>
+	<option value="a">Опция A</option>
+	<option value="b">Опция B</option>
 </select>
 ```
 
@@ -113,40 +111,40 @@ app.component("todo-item", {
 
 ```javascript
 export default {
-  beforeCreate() {
-    // Компонент еще не создан
-  },
+	beforeCreate() {
+		// Компонент еще не создан
+	},
 
-  created() {
-    // Компонент создан, данные доступны
-    // API вызовы, инициализация
-  },
+	created() {
+		// Компонент создан, данные доступны
+		// API вызовы, инициализация
+	},
 
-  beforeMount() {
-    // Компонент будет смонтирован в DOM
-  },
+	beforeMount() {
+		// Компонент будет смонтирован в DOM
+	},
 
-  mounted() {
-    // Компонент в DOM
-    // Инициализация, API вызовы
-  },
+	mounted() {
+		// Компонент в DOM
+		// Инициализация, API вызовы
+	},
 
-  beforeUpdate() {
-    // Данные изменились, DOM обновится
-  },
+	beforeUpdate() {
+		// Данные изменились, DOM обновится
+	},
 
-  updated() {
-    // DOM обновлен
-  },
+	updated() {
+		// DOM обновлен
+	},
 
-  beforeUnmount() {
-    // Компонент будет удален
-    // Очистка таймеров, отписка от событий
-  },
+	beforeUnmount() {
+		// Компонент будет удален
+		// Очистка таймеров, отписка от событий
+	},
 
-  unmounted() {
-    // Компонент удален
-  },
+	unmounted() {
+		// Компонент удален
+	},
 };
 ```
 
@@ -156,41 +154,39 @@ export default {
 
 ```javascript
 export default {
-  data() {
-    return {
-      count: 0,
-      todos: [],
-      filter: "all",
-    };
-  },
+	data() {
+		return {
+			count: 0,
+			todos: [],
+			filter: "all",
+		};
+	},
 
-  computed: {
-    filteredTodos() {
-      if (this.filter === "all") return this.todos;
-      return this.todos.filter(
-        (todo) => todo.completed === (this.filter === "completed")
-      );
-    },
+	computed: {
+		filteredTodos() {
+			if (this.filter === "all") return this.todos;
+			return this.todos.filter((todo) => todo.completed === (this.filter === "completed"));
+		},
 
-    totalTodos() {
-      return this.todos.length;
-    },
-  },
+		totalTodos() {
+			return this.todos.length;
+		},
+	},
 
-  methods: {
-    addTodo(text) {
-      this.todos.push({
-        id: Date.now(),
-        text,
-        completed: false,
-      });
-    },
+	methods: {
+		addTodo(text) {
+			this.todos.push({
+				id: Date.now(),
+				text,
+				completed: false,
+			});
+		},
 
-    toggleTodo(id) {
-      const todo = this.todos.find((t) => t.id === id);
-      if (todo) todo.completed = !todo.completed;
-    },
-  },
+		toggleTodo(id) {
+			const todo = this.todos.find((t) => t.id === id);
+			if (todo) todo.completed = !todo.completed;
+		},
+	},
 };
 ```
 
@@ -201,34 +197,32 @@ export default {
 import { defineStore } from "pinia";
 
 export const useTodosStore = defineStore("todos", {
-  state: () => ({
-    todos: [],
-    filter: "all",
-  }),
+	state: () => ({
+		todos: [],
+		filter: "all",
+	}),
 
-  getters: {
-    filteredTodos: (state) => {
-      if (state.filter === "all") return state.todos;
-      return state.todos.filter(
-        (todo) => todo.completed === (state.filter === "completed")
-      );
-    },
-  },
+	getters: {
+		filteredTodos: (state) => {
+			if (state.filter === "all") return state.todos;
+			return state.todos.filter((todo) => todo.completed === (state.filter === "completed"));
+		},
+	},
 
-  actions: {
-    addTodo(text) {
-      this.todos.push({
-        id: Date.now(),
-        text,
-        completed: false,
-      });
-    },
+	actions: {
+		addTodo(text) {
+			this.todos.push({
+				id: Date.now(),
+				text,
+				completed: false,
+			});
+		},
 
-    toggleTodo(id) {
-      const todo = this.todos.find((t) => t.id === id);
-      if (todo) todo.completed = !todo.completed;
-    },
-  },
+		toggleTodo(id) {
+			const todo = this.todos.find((t) => t.id === id);
+			if (todo) todo.completed = !todo.completed;
+		},
+	},
 });
 ```
 
@@ -238,52 +232,52 @@ export const useTodosStore = defineStore("todos", {
 
 ```html
 <form @submit.prevent="submitForm">
-  <div>
-    <label for="name">Имя:</label>
-    <input id="name" v-model="form.name" type="text" required />
-  </div>
+	<div>
+		<label for="name">Имя:</label>
+		<input id="name" v-model="form.name" type="text" required />
+	</div>
 
-  <div>
-    <label for="email">Email:</label>
-    <input id="email" v-model="form.email" type="email" required />
-  </div>
+	<div>
+		<label for="email">Email:</label>
+		<input id="email" v-model="form.email" type="email" required />
+	</div>
 
-  <div>
-    <label for="message">Сообщение:</label>
-    <textarea id="message" v-model="form.message" rows="4"></textarea>
-  </div>
+	<div>
+		<label for="message">Сообщение:</label>
+		<textarea id="message" v-model="form.message" rows="4"></textarea>
+	</div>
 
-  <button type="submit">Отправить</button>
+	<button type="submit">Отправить</button>
 </form>
 ```
 
 ```javascript
 export default {
-  data() {
-    return {
-      form: {
-        name: "",
-        email: "",
-        message: "",
-      },
-    };
-  },
+	data() {
+		return {
+			form: {
+				name: "",
+				email: "",
+				message: "",
+			},
+		};
+	},
 
-  methods: {
-    submitForm() {
-      console.log("Форма отправлена:", this.form);
-      // API вызов
-      this.resetForm();
-    },
+	methods: {
+		submitForm() {
+			console.log("Форма отправлена:", this.form);
+			// API вызов
+			this.resetForm();
+		},
 
-    resetForm() {
-      this.form = {
-        name: "",
-        email: "",
-        message: "",
-      };
-    },
-  },
+		resetForm() {
+			this.form = {
+				name: "",
+				email: "",
+				message: "",
+			};
+		},
+	},
 };
 ```
 
@@ -293,22 +287,22 @@ export default {
 
 ```vue
 <template>
-  <div class="todo-item">
-    <span :class="{ completed: todo.completed }">
-      {{ todo.text }}
-    </span>
-  </div>
+	<div class="todo-item">
+		<span :class="{ completed: todo.completed }">
+			{{ todo.text }}
+		</span>
+	</div>
 </template>
 
 <style scoped>
 .todo-item {
-  padding: 10px;
-  border-bottom: 1px solid #eee;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
 }
 
 .completed {
-  text-decoration: line-through;
-  color: #999;
+	text-decoration: line-through;
+	color: #999;
 }
 </style>
 ```
@@ -317,14 +311,14 @@ export default {
 
 ```html
 <div
-  :style="{
+	:style="{
     backgroundColor: isActive ? '#4CAF50' : '#f44336',
     color: 'white',
     padding: '10px',
     borderRadius: '4px'
   }"
 >
-  {{ isActive ? 'Активно' : 'Неактивно' }}
+	{{ isActive ? 'Активно' : 'Неактивно' }}
 </div>
 ```
 
@@ -336,36 +330,36 @@ export default {
 import { ref, computed, onMounted } from "vue";
 
 export default {
-  setup() {
-    const count = ref(0);
-    const todos = ref([]);
+	setup() {
+		const count = ref(0);
+		const todos = ref([]);
 
-    const doubleCount = computed(() => count.value * 2);
+		const doubleCount = computed(() => count.value * 2);
 
-    const increment = () => {
-      count.value++;
-    };
+		const increment = () => {
+			count.value++;
+		};
 
-    const addTodo = (text) => {
-      todos.value.push({
-        id: Date.now(),
-        text,
-        completed: false,
-      });
-    };
+		const addTodo = (text) => {
+			todos.value.push({
+				id: Date.now(),
+				text,
+				completed: false,
+			});
+		};
 
-    onMounted(() => {
-      console.log("Компонент смонтирован");
-    });
+		onMounted(() => {
+			console.log("Компонент смонтирован");
+		});
 
-    return {
-      count,
-      todos,
-      doubleCount,
-      increment,
-      addTodo,
-    };
-  },
+		return {
+			count,
+			todos,
+			doubleCount,
+			increment,
+			addTodo,
+		};
+	},
 };
 ```
 
@@ -381,34 +375,34 @@ const todos = ref([]);
 const doubleCount = computed(() => count.value * 2);
 
 const increment = () => {
-  count.value++;
+	count.value++;
 };
 
 const addTodo = (text) => {
-  todos.value.push({
-    id: Date.now(),
-    text,
-    completed: false,
-  });
+	todos.value.push({
+		id: Date.now(),
+		text,
+		completed: false,
+	});
 };
 
 onMounted(() => {
-  console.log("Компонент смонтирован");
+	console.log("Компонент смонтирован");
 });
 </script>
 
 <template>
-  <div>
-    <p>Счетчик: {{ count }}</p>
-    <p>Удвоенный: {{ doubleCount }}</p>
-    <button @click="increment">+1</button>
+	<div>
+		<p>Счетчик: {{ count }}</p>
+		<p>Удвоенный: {{ doubleCount }}</p>
+		<button @click="increment">+1</button>
 
-    <ul>
-      <li v-for="todo in todos" :key="todo.id">
-        {{ todo.text }}
-      </li>
-    </ul>
-  </div>
+		<ul>
+			<li v-for="todo in todos" :key="todo.id">
+				{{ todo.text }}
+			</li>
+		</ul>
+	</div>
 </template>
 ```
 
@@ -423,26 +417,26 @@ import About from "./views/About.vue";
 import TodoList from "./views/TodoList.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    component: About,
-  },
-  {
-    path: "/todos",
-    name: "TodoList",
-    component: TodoList,
-  },
+	{
+		path: "/",
+		name: "Home",
+		component: Home,
+	},
+	{
+		path: "/about",
+		name: "About",
+		component: About,
+	},
+	{
+		path: "/todos",
+		name: "TodoList",
+		component: TodoList,
+	},
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
-  routes,
+	history: createWebHistory(),
+	routes,
 });
 
 export default router;
@@ -452,13 +446,12 @@ export default router;
 
 ```html
 <template>
-  <nav>
-    <router-link to="/">Главная</router-link> |
-    <router-link to="/about">О нас</router-link> |
-    <router-link to="/todos">Задачи</router-link>
-  </nav>
+	<nav>
+		<router-link to="/">Главная</router-link> | <router-link to="/about">О нас</router-link> |
+		<router-link to="/todos">Задачи</router-link>
+	</nav>
 
-  <router-view />
+	<router-view />
 </template>
 ```
 
@@ -478,36 +471,36 @@ import { mount } from "@vue/test-utils";
 import TodoItem from "@/components/TodoItem.vue";
 
 describe("TodoItem", () => {
-  test("отображает текст задачи", () => {
-    const wrapper = mount(TodoItem, {
-      props: {
-        todo: {
-          id: 1,
-          text: "Тестовая задача",
-          completed: false,
-        },
-      },
-    });
+	test("отображает текст задачи", () => {
+		const wrapper = mount(TodoItem, {
+			props: {
+				todo: {
+					id: 1,
+					text: "Тестовая задача",
+					completed: false,
+				},
+			},
+		});
 
-    expect(wrapper.text()).toContain("Тестовая задача");
-  });
+		expect(wrapper.text()).toContain("Тестовая задача");
+	});
 
-  test("эмитит событие при клике на кнопку", async () => {
-    const wrapper = mount(TodoItem, {
-      props: {
-        todo: {
-          id: 1,
-          text: "Тестовая задача",
-          completed: false,
-        },
-      },
-    });
+	test("эмитит событие при клике на кнопку", async () => {
+		const wrapper = mount(TodoItem, {
+			props: {
+				todo: {
+					id: 1,
+					text: "Тестовая задача",
+					completed: false,
+				},
+			},
+		});
 
-    await wrapper.find("button").trigger("click");
+		await wrapper.find("button").trigger("click");
 
-    expect(wrapper.emitted("remove")).toBeTruthy();
-    expect(wrapper.emitted("remove")[0]).toEqual([1]);
-  });
+		expect(wrapper.emitted("remove")).toBeTruthy();
+		expect(wrapper.emitted("remove")[0]).toEqual([1]);
+	});
 });
 ```
 
@@ -537,9 +530,7 @@ computed: {
 ### **v-memo для оптимизации рендеринга**
 
 ```html
-<div v-for="item in items" :key="item.id" v-memo="[item.id, item.completed]">
-  {{ item.text }}
-</div>
+<div v-for="item in items" :key="item.id" v-memo="[item.id, item.completed]">{{ item.text }}</div>
 ```
 
 ## 📚 Лучшие практики
