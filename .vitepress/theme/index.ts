@@ -13,7 +13,6 @@ export default {
 				if (sidebar) {
 					console.log("🔍 Sidebar structure:", sidebar.className);
 					console.log("🔍 Sidebar HTML:", sidebar.outerHTML.substring(0, 500));
-					
 					// Проверяем все элементы с классом items
 					const items = document.querySelectorAll("[class*='items']");
 					console.log("🔍 Found items elements:", items.length);

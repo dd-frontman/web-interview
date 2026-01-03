@@ -67,8 +67,7 @@
 Форма с label
 
 ```html
-<label for="email">Email</label>
-<input id="email" type="email" />
+<label for="email">Email</label> <input id="email" type="email" />
 ```
 
 ## 5. Чит-щит шпаргалка

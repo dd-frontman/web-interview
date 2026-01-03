@@ -10,7 +10,7 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 	{
 		text: "Общее",
 		collapsible: true,
-		collapsed: false,
+		collapsed: true,
 		items: [
 			{ text: "Подготовка к собеседованию", link: "/Подготовка к собеседованию" },
 			{ text: "Общие вопросы по Web", link: "/Общие вопросы по Web" },
@@ -377,5 +377,17 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [{ text: "Vite", link: "/Сборщики/Vite/Vite" }],
+	},
+	{
+		text: "Тестирование",
+		collapsible: true,
+		collapsed: true,
+		items: [
+			{ text: "Vitest", link: "/Тестирование/Vitest" },
+			{
+				text: "Vitest + Vue Test Utils + Playwright",
+				link: "/Тестирование/Vitest + Vue Test Utils + Playwright",
+			},
+		],
 	},
 ];
