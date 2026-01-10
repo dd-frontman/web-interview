@@ -205,6 +205,243 @@
 	opacity: 1 !important;
 }
 
+/* ============================================
+   Адаптивные стили для главной страницы
+   ============================================ */
+
+/* Стили для заголовка главной страницы */
+.home-header {
+	text-align: center;
+	padding-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.home-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+	color: var(--vp-c-brand-1);
+	line-height: 1.2;
+}
+
+.home-subtitle {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+	color: var(--vp-c-text-1);
+	line-height: 1.4;
+}
+
+.home-description {
+	font-size: 0.95rem;
+	color: var(--vp-c-text-2);
+	margin-bottom: 1.5rem;
+	line-height: 1.5;
+}
+
+.home-cta-button {
+	display: inline-block;
+	padding: 0.6rem 1.2rem;
+	background: var(--vp-button-brand-bg);
+	color: var(--vp-button-brand-text);
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 600;
+	transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.home-cta-button:hover {
+	opacity: 0.9;
+	transform: translateY(-1px);
+}
+
+/* Разделитель */
+.home-divider {
+	max-width: 800px;
+	margin: 2rem auto 0;
+	padding: 0 1.5rem;
+}
+
+.home-divider hr {
+	border: none;
+	border-top: 1px solid var(--vp-c-divider);
+	margin: 0;
+}
+
+/* Контейнер секций */
+.home-sections {
+	margin-top: 2rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/* Сетка секций */
+.home-sections-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+/* Карточка секции */
+.home-section-card {
+	padding: 1rem;
+	background: var(--vp-c-bg-soft);
+	border-radius: 8px;
+	border: 1px solid var(--vp-c-divider);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-section-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.home-section-title {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+
+.home-section-link {
+	text-decoration: none;
+	color: var(--vp-c-brand-1);
+	transition: opacity 0.2s ease;
+}
+
+.home-section-link:hover {
+	opacity: 0.8;
+}
+
+.home-section-description {
+	color: var(--vp-c-text-2);
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.5;
+}
+
+/* Медиа-запросы для планшетов (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+	.home-sections-grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.875rem;
+	}
+
+	.home-title {
+		font-size: 2rem;
+	}
+
+	.home-subtitle {
+		font-size: 1.1rem;
+	}
+}
+
+/* Медиа-запросы для мобильных устройств (до 767px) */
+@media screen and (max-width: 767px) {
+	.home-header {
+		padding-top: 1.5rem;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.home-title {
+		font-size: 1.75rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.home-subtitle {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.home-description {
+		font-size: 0.875rem;
+		margin-bottom: 1.25rem;
+	}
+
+	.home-cta-button {
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+	}
+
+	.home-divider {
+		margin: 1.5rem auto 0;
+		padding: 0 0.75rem;
+	}
+
+	.home-sections {
+		margin-top: 1.5rem;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+	}
+
+	.home-sections-grid {
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.home-section-card {
+		padding: 0.875rem;
+	}
+
+	.home-section-title {
+		font-size: 1rem;
+		margin-bottom: 0.375rem;
+	}
+
+	.home-section-description {
+		font-size: 0.85rem;
+	}
+}
+
+/* Медиа-запросы для очень маленьких экранов (до 480px) */
+@media screen and (max-width: 480px) {
+	.home-header {
+		padding-top: 1rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.home-title {
+		font-size: 1.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.home-subtitle {
+		font-size: 0.95rem;
+	}
+
+	.home-description {
+		font-size: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.home-cta-button {
+		padding: 0.45rem 0.875rem;
+		font-size: 0.85rem;
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.home-sections {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.home-section-card {
+		padding: 0.75rem;
+	}
+
+	.home-section-title {
+		font-size: 0.95rem;
+	}
+
+	.home-section-description {
+		font-size: 0.8rem;
+	}
+}
+
 /* Плавная анимация для иконок развертывания (стрелки) */
 .VPSidebar .group .caret,
 .VPSidebarGroup .caret,
@@ -227,5 +464,4 @@
 .VPSidebarItem button[aria-expanded="true"] {
 	transform: rotate(90deg);
 }
-
 

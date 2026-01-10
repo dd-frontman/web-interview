@@ -1,3 +1,0 @@
-# JavaScript
-
-Материалы по JavaScript
