@@ -228,6 +228,10 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsed: true,
 		items: [
 			{ text: "Утилитарные типы", link: "/typescript/utilitarnye-tipy" },
+			{ text: "as const в TypeScript", link: "/typescript/as-const-v-typescript" },
+			{ text: "satisfies в TypeScript", link: "/typescript/satisfies-v-typescript" },
+			{ text: "Type Guards: виды и примеры", link: "/typescript/taypguardy-v-typescript" },
+			{ text: "assert в TypeScript", link: "/typescript/assert-v-typescript" },
 			{ text: "Шпоры TS", link: "/typescript/shpory-ts" },
 			{
 				text: "Задачи",
