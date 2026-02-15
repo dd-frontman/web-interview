@@ -1,0 +1,106 @@
+В этом разделе разбираем всё, что помогает удержать **60 FPS+** и быстро находить узкие места в-реальном проекте: как считать draw-calls, когда включать batching, чем отличаются `cacheAsTexture` и `cacheAsBitmap`, почему `ParticleContainer` летает, как дружить с Ticker и WebGPU, и какие инструменты дают «рентген» сцены прямо в браузере.
+
+## 4.1 Быстрый чек-лист профилирования
+
+1. **Мерьте, а не гадайте** — открывайте Chrome → Performance/Rendering, смотрите время кадра и количество draw-calls, а затем подтверждайте цифры в Pixi DevTools. [Chrome Web Store](https://chromewebstore.google.com/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon?hl=en)
+2. **Сначала уплотняйте текстуры** (атласы), потом включайте batching, потом кэшируйте статичные группы; порядок важен, иначе оптимизации «перебьют» друг друга. [pixijs.com](https://pixijs.com/8.x/guides/concepts/performance-tips)
+3. **Собирайте метрики** (FPS, draw-calls, VRAM) в собственный overlay и логируйте в консоль — это окупается на производстве. [Medium](https://medium.com/%40turkmergin/maximising-performance-a-deep-dive-into-pixijs-optimization-6689688ead93)
+
+## 4.2 Batching и атласы
+
+Когда несколько `Sprite` делят один `BaseTexture`, Pixi может объединить их в _один_ draw-call. Поэтому:
+
+```ts
+// vite-plugin-pixi + TexturePacker дадут общий atlas.png
+const hero = Sprite.from("atlas.json#hero");
+const coin = Sprite.from("atlas.json#coin");
+stage.addChild(hero, coin); // одна текстура ⇒ 1 draw-call
+```
+
+— Используйте спрайт-листы (Sprite Sheets) и соблюдайте лимит текстур, который WebGL может держать в одном батче (обычно 8–16). [pixijs.com](https://pixijs.com/7.x/guides/components/sprite-sheets)  
+— Если атласов много (UI + игровые спрайты), сначала сортируйте спрайты по `zIndex`, затем по `baseTexture`, чтобы Pixi сгруппировал вызовы.
+
+## 4.3 `cacheAsTexture` vs `cacheAsBitmap`
+
+| Приём            | Что делает                                                  | Когда нажимать «On»                               |
+| ---------------- | ----------------------------------------------------------- | ------------------------------------------------- |
+| `cacheAsTexture` | Рендерит **контейнер** в текстуру; обновляется _по запросу_ | Статичный HUD, фоновые объекты, тени              |
+| `cacheAsBitmap`  | То же, но _переподписывает_ объект на новый рендер-принцип  | Deprecated с v8 — предпочтителен `cacheAsTexture` |
+
+```ts
+uiLayer.cacheAsTexture = true; // один draw вместо сотни кнопок
+```
+
+Помните, что VRAM растёт: обновляйте кэш только после заметных изменений.
+
+## 4.4 `ParticleContainer` и GPU-инстансинг
+
+`ParticleContainer` загружает позицию/скейл/альфу частиц как _вершинные атрибуты_, поэтому 50 000 частиц тратят один draw-call. Ограничение: нельзя менять rotation или tint по-отдельности без пересоздания буфера. [pixijs.download](https://pixijs.download/dev/docs/scene.ParticleContainer.html)
+
+```ts
+const snow = new ParticleContainer(50_000, { position: true, alpha: true, scale: true });
+app.stage.addChild(snow);
+```
+
+## 4.5 Ticker, дельта-тайм и пауза
+
+`app.ticker` выдаёт нормализованную `deltaMS`; используйте её вместо `requestAnimationFrame`, чтобы логика не «прыгала» при tab-switch. [pixijs.download](https://pixijs.download/v6.1.0/docs/PIXI.Ticker.html)
+
+```ts
+app.ticker.add(({ deltaMS }) => {
+	sprite.x += speed * deltaMS;
+});
+// При паузе:
+app.ticker.stop();
+```
+
+## 4.6 RenderTexture-pool & Garbage Collection
+
+Частое `new Graphics()` + `destroy()` породит всплески GC. Дешевле — хранить пул `RenderTexture` и переиспользовать:
+
+```ts
+const pool: RenderTexture[] = [];
+function getRT(w, h) {
+	return pool.pop() ?? RenderTexture.create({ width: w, height: h });
+}
+function reclaim(rt: RenderTexture) {
+	pool.push(rt);
+}
+```
+
+Pixi 8 уже отдаёт хук `app.renderer.texture.disposeClient` для чистой выгрузки VRAM.
+
+## 4.7 WebGPU-режим (v8+)
+
+- Опция `preferWebGPU:true` переключит Pixi на `WebGPURenderer`; прирост ~15-25 % в тяжёлых сценах благодаря _bind-group reuse_ и уменьшению драйвер-овер-хеда. [pixijs.com](https://pixijs.com/blog/pixi-v8-launches)
+- Обязательно `await app.init()` — шейдеры грузятся асинхронно; без этого будет «чёрный экран». [pixijs.com](https://pixijs.com/8.x/guides/concepts/performance-tips)
+
+## 4.8 Pixi DevTools и другие «рентгены»
+
+1. **Pixi DevTools** (Chrome) показывает сцену, атласы, draw-calls; двойной-клик на узле → `$pixi` в консоли. [Chrome Web Store](https://chromewebstore.google.com/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon?hl=en)
+2. **Chrome → Performance Tab** — ищите «Rasterizer busy» и «Upload to GPU».
+3. **Spector.js** пригодится, когда нужны шейдер-трейсы и захват кадров WebGL.
+
+## 4.9 Рецепт оптимизации по шагам
+
+1. **Считаем draw-calls** (DevTools).
+2. **Собираем атласы** → проверяем шаг 1.
+3. **Переводим частицы в `ParticleContainer`**.
+4. **Кэшируем статичные группы** через `cacheAsTexture`.
+5. **Профилируем память**: ищем утечки `BaseTexture`, включаем `app.renderer.textureGC`.
+6. **Только если нужно** — WebGPU и фирменные плагины для пост-процессинга.
+
+## 4.10 Шпаргалка «красные флаги»
+
+| Симптом                      | Возможная причина                       | Быстрый фикс                                |
+| ---------------------------- | --------------------------------------- | ------------------------------------------- |
+| FPS < 50, draw-calls > 1000  | Разброс спрайтов по разным текстурам    | Слепите атласы, сортируйте по `baseTexture` |
+| FPS дергается при tab-change | RAF + дельта-время прыгают              | Перейдите на `app.ticker`                   |
+| VRAM взлетает после анимации | Частое `cacheAsTexture` без `destroy()` | Переиспользуйте RT-пул                      |
+| Чёрный экран в WebGPU        | забыли `await app.init()`               | Инициализируйте асинхронно                  |
+
+---
+
+### Что запомнить
+
+Оптимизация в Pixi — это _алгоритм_: сначала минимизируем draw-calls через атласы и batching, затем кэшируем статику, переводим массовые эффекты в GPU-инстансинг, следим за GC и, если нужно, жмём WebGPU-турбо. Pixi DevTools и Chrome Performance помогут проверить каждое действие цифрами — и только так мы гарантируем стабильные 60 FPS на всех платформах.

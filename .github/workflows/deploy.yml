@@ -43,6 +43,9 @@ jobs:
       - name: Type check
         run: yarn type-check
 
+      - name: Validate routes
+        run: yarn validate-routes
+
       - name: Build with VitePress
         run: yarn build
 
@@ -54,4 +57,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

@@ -10,8 +10,8 @@ export default defineConfig({
 	// В локальной разработке тоже нужно использовать этот base - открывайте http://localhost:5173/web-interview/
 	base: "/web-interview/",
 
-	// Отключаем cleanUrls для правильной работы с base path
-	cleanUrls: false,
+	// Чистые URL без .html
+	cleanUrls: true,
 
 	// Настройки темы
 	themeConfig: {

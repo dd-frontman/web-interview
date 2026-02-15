@@ -8,76 +8,79 @@ type SidebarItemWithCollapsible = Omit<DefaultTheme.SidebarItem, "items"> & {
 
 export const sidebar: SidebarItemWithCollapsible[] = [
 	{
-		text: "Общее",
-		collapsible: true,
-		collapsed: true,
-		items: [
-			{ text: "Подготовка к собеседованию", link: "/Подготовка к собеседованию" },
-			{ text: "Общие вопросы по Web", link: "/Общие вопросы по Web" },
-			{ text: "Vue", link: "/Vue" },
-		],
-	},
-	{
 		text: "Vue",
 		collapsible: true,
 		collapsed: true,
 		items: [
+			{ text: "Vue", link: "/vue" },
 			{
 				text: "Реактивность во Vue3",
-				link: "/Vue/Реактивность во Vue3",
+				link: "/vue/ref-and-reactive/reaktivnost-vo-vue3",
 			},
 			{
 				text: "Ref & reactive",
 				collapsible: true,
 				collapsed: true,
 				items: [
-					{ text: "ref vs reactive", link: "/Vue/Ref & reactive/ref vs reactive" },
-					{ text: "reactive", link: "/Vue/Ref & reactive/reactive" },
-					{ text: "shallowReactive", link: "/Vue/Ref & reactive/shallowReactive" },
+					{ text: "ref vs reactive", link: "/vue/ref-and-reactive/ref-vs-reactive" },
+					{ text: "reactive", link: "/vue/ref-and-reactive/reactive" },
+					{ text: "shallowReactive", link: "/vue/ref-and-reactive/shallowreactive" },
 					{
 						text: "Как работает ref внутри в Vue 3",
-						link: "/Vue/Ref & reactive/ref/🧠 Как работает ref внутри в Vue 3",
+						link: "/vue/ref-and-reactive/ref/kak-rabotaet-ref-vnutri-v-vue-3",
 					},
 				],
 			},
 			{
 				text: "watch и watchEffect",
-				link: "/Vue/watch и watchEffect",
+				link: "/vue/watch-i-watcheffect",
 			},
 			{
 				text: "provide и inject",
-				link: "/Vue/provide и inject",
+				link: "/vue/provide-i-inject",
 			},
-			{ text: "Pinia", link: "/Vue/Pinia" },
-			{ text: "defineExpose()", link: "/Vue/defineExpose()" },
-			{ text: "Suspense", link: "/Vue/Suspense" },
+			{ text: "Pinia", link: "/vue/pinia" },
+			{ text: "defineExpose()", link: "/vue/defineexpose" },
+			{ text: "Suspense", link: "/vue/suspense" },
 			{
 				text: "Template под капотом",
-				link: "/Vue/Template под капотом",
+				link: "/vue/template-pod-kapotom",
 			},
-			{ text: "Рендер-функции", link: "/Vue/Рендер-функции" },
-			{ text: "Директивы Vue", link: "/Vue/Директивы Vue" },
+			{ text: "Рендер-функции", link: "/vue/render-funktsii" },
+			{ text: "Директивы Vue", link: "/vue/direktivy-vue" },
 			{
 				text: "Жизненные циклы компонентов Vue 2 vs Vue 3",
-				link: "/Vue/Жизненные циклы компонентов Vue 2 vs Vue 3",
+				link: "/vue/zhiznennye-tsikly-komponentov-vue-2-vs-vue-3",
 			},
 			{
 				text: "Асинхронные рендеры и батчинг",
-				link: "/Vue/Асинхронные рендеры и батчинг",
+				link: "/vue/asinkhronnye-rendery-i-batching",
 			},
 			{
 				text: "Scheduler",
-				link: "/Vue/Scheduler",
+				link: "/vue/scheduler",
 			},
-			{ text: "Virtual DOM", link: "/Vue/Virtual DOM" },
-			{ text: "Tree-Shaking", link: "/Vue/Tree-Shaking" },
+			{ text: "Virtual DOM", link: "/vue/virtual-dom" },
+			{ text: "Tree-Shaking", link: "/vue/tree-shaking" },
 			{
 				text: "Оптимизация High Load проекта",
-				link: "/Vue/Оптимизация Higth Load проекта",
+				link: "/vue/optimizatsiya-high-load-proekta",
+			},
+			{
+				text: "Задачи",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "Props и Emits", link: "/vue/zadachi/propsy-emity" },
+					{
+						text: "Двустороннее связывание через v-model",
+						link: "/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model",
+					},
+				],
 			},
 			{
 				text: "Подкапотные темы во Vue.js",
-				link: "/Vue/🔎 Подкапотные темы во Vue.js",
+				link: "/vue/podkapotnye-temy-vo-vue-js",
 			},
 		],
 	},
@@ -88,24 +91,24 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "Основные функции React",
-				link: "/React/Основные функции React",
+				link: "/react/osnovnye-funktsii-react",
 			},
 			{
 				text: "Локальное состояние (реактивность)",
-				link: "/React/Локальное состояние (реактивность)",
+				link: "/react/lokalnoe-sostoyanie-reaktivnost",
 			},
-			{ text: "UseState подробно", link: "/React/UseState подробно" },
+			{ text: "UseState подробно", link: "/react/usestate-podrobno" },
 			{
 				text: "JSX и его альтернативы",
-				link: "/React/JSX и его альтернативы",
+				link: "/react/jsx-i-ego-alternativy",
 			},
 			{
 				text: "React на примере Vue",
-				link: "/React/React на примере Vue",
+				link: "/react/react-na-primere-vue",
 			},
 			{
 				text: "Таблица сравнения React vs Vue",
-				link: "/React/Таблица сравнения React vs Vue",
+				link: "/react/tablitsa-sravneniya-react-vs-vue",
 			},
 			{
 				text: "Хуки",
@@ -114,11 +117,11 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				items: [
 					{
 						text: "Основные хуки в React",
-						link: "/React/Хуки/📌 Основные хуки в React",
+						link: "/react/khuki/osnovnye-khuki-v-react",
 					},
-					{ text: "useState", link: "/React/Хуки/🔹 useState" },
-					{ text: "useEffect", link: "/React/Хуки/🔹 useEffect" },
-					{ text: "useContext", link: "/React/Хуки/🔹 useContext" },
+					{ text: "useState", link: "/react/khuki/usestate" },
+					{ text: "useEffect", link: "/react/khuki/useeffect" },
+					{ text: "useContext", link: "/react/khuki/usecontext" },
 				],
 			},
 		],
@@ -130,29 +133,30 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "Архитектура приложений — виды и особенности",
-				link: "/🏛️Архитектура/🏛️ Архитектура приложений — виды и особенности",
+				link: "/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti",
 			},
 			{
 				text: "Domain-Driven Design",
-				link: "/🏛️Архитектура/🎯 Domain-Driven Design",
+				link: "/arkhitektura/domain-driven-design",
 			},
 			{
 				text: "Feature-Sliced Design",
-				link: "/🏛️Архитектура/🧠 Feature-Sliced Design",
+				link: "/arkhitektura/feature-sliced-design",
 			},
-			{ text: "Монолит", link: "/🏛️Архитектура/Монолит" },
-			{ text: "Микросервисы", link: "/🏛️Архитектура/Микросервисы" },
+			{ text: "Монолит", link: "/arkhitektura/monolit" },
+			{ text: "Микросервисы", link: "/arkhitektura/mikroservisy" },
+			{ text: "Микрофронтенд", link: "/arkhitektura/mikrofrontend" },
 			{
 				text: "Топ-5 фронтенд-архитектур",
-				link: "/🏛️Архитектура/Топ-5 фронтенд-архитектур",
+				link: "/arkhitektura/top-5-frontend-arkhitektur",
 			},
 			{
 				text: "Циклические зависимости",
-				link: "/🏛️Архитектура/Циклические зависимости",
+				link: "/arkhitektura/tsiklicheskie-zavisimosti",
 			},
 			{
 				text: "Шпаргалка по архитектурам",
-				link: "/🏛️Архитектура/Шпаргалка по архитектурам",
+				link: "/arkhitektura/shpargalka-po-arkhitekturam",
 			},
 		],
 	},
@@ -166,28 +170,30 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				collapsible: true,
 				collapsed: true,
 				items: [
-					{ text: "Типы данных", link: "/JavaScript/Типы данных/Типы  данных" },
-					{ text: "Object", link: "/JavaScript/Типы данных/Оbject" },
+					{ text: "Типы данных", link: "/javascript/tipy-dannykh/tipy-dannykh" },
+					{ text: "Object", link: "/javascript/tipy-dannykh/object" },
 				],
 			},
-			{ text: "Типы функций", link: "/JavaScript/Типы функций" },
-			{ text: "Методы массивов", link: "/JavaScript/Методы массивов" },
-			{ text: "Операторы", link: "/JavaScript/Операторы" },
+			{ text: "Типы функций", link: "/javascript/tipy-funktsii" },
+			{ text: "Методы массивов", link: "/javascript/metody-massivov" },
+			{ text: "Операторы", link: "/javascript/operatory" },
 			{
 				text: "Условные операторы",
-				link: "/JavaScript/Условные операторы",
+				link: "/javascript/uslovnye-operatory",
 			},
-			{ text: "Event Loop", link: "/JavaScript/Event Loop" },
-			{ text: "Event Bubbling", link: "/JavaScript/Event Bubbling" },
-			{ text: "Promise", link: "/JavaScript/Promice" },
+			{ text: "Event Loop", link: "/javascript/event-loop" },
+			{ text: "Event Bubbling", link: "/javascript/event-bubbling" },
+			{ text: "Promise", link: "/javascript/promise" },
+			{ text: "Что такое замыкание", link: "/javascript/chto-takoe-zamykanie" },
+			{ text: "Object.freeze()", link: "/javascript/object-freeze" },
 			{
 				text: "Коллекции данных",
 				collapsible: true,
 				collapsed: true,
 				items: [
-					{ text: "Map", link: "/JavaScript/Коллекции данных/Map" },
-					{ text: "Set", link: "/JavaScript/Коллекции данных/Set" },
-					{ text: "WeakMap", link: "/JavaScript/Коллекции данных/WeakMap" },
+					{ text: "Map", link: "/javascript/kollektsii-dannykh/map" },
+					{ text: "Set", link: "/javascript/kollektsii-dannykh/set" },
+					{ text: "WeakMap", link: "/javascript/kollektsii-dannykh/weakmap" },
 				],
 			},
 		],
@@ -196,15 +202,33 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		text: "HTML",
 		collapsible: true,
 		collapsed: true,
-		items: [{ text: "Семантические теги", link: "/HTML/Семантические теги" }],
+		items: [
+			{ text: "Семантические теги", link: "/html/semanticheskie-tegi" },
+			{ text: "Shadow DOM", link: "/html/shadow-dom" },
+		],
+	},
+	{
+		text: "CSS",
+		collapsible: true,
+		collapsed: true,
+		items: [
+			{ text: "Центрирование в CSS", link: "/css/tsentrirovanie-v-css" },
+			{ text: "Позиционирование в CSS", link: "/css/pozitsionirovanie-v-css" },
+			{
+				text: "Расположение контента и высота main",
+				link: "/css/raspolozhenie-kontenta-i-vysota-main",
+			},
+			{ text: "z-index и stacking context", link: "/css/z-index-i-stacking-context" },
+			{ text: "will-change", link: "/css/will-change" },
+		],
 	},
 	{
 		text: "TypeScript",
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "Утилитарные типы", link: "/TypeScript/Утилитарные типы" },
-			{ text: "Шпоры TS", link: "/TypeScript/Шпоры TS" },
+			{ text: "Утилитарные типы", link: "/typescript/utilitarnye-tipy" },
+			{ text: "Шпоры TS", link: "/typescript/shpory-ts" },
 			{
 				text: "Задачи",
 				collapsible: true,
@@ -212,7 +236,7 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				items: [
 					{
 						text: "Задача - реализовать Pick своими силами",
-						link: "/TypeScript/Задачи/💡 Задача - реализовать Pick своими силами",
+						link: "/typescript/zadachi/zadacha-realizovat-pick-svoimi-silami",
 					},
 				],
 			},
@@ -225,19 +249,20 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "SSR - Server-Side Rendering",
-				link: "/Nuxt/📌 SSR - Server-Side Rendering",
+				link: "/nuxt/ssr-server-side-rendering",
 			},
 			{
 				text: "SSG - Static Site Generation",
-				link: "/Nuxt/📌 SSG - Static Site Generation",
+				link: "/nuxt/ssg-static-site-generation",
 			},
 			{
 				text: "ISR - Incremental Static Regeneration",
-				link: "/Nuxt/📌 ISR - Incremental Static Regeneration",
+				link: "/nuxt/isr-incremental-static-regeneration",
 			},
-			{ text: "Hydration", link: "/Nuxt/Hydration" },
-			{ text: "Nuxt vs Vue", link: "/Nuxt/Nuxt vs Vue" },
-			{ text: "Nuxt2 vs Nuxt3", link: "/Nuxt/Nuxt2 vs Nuxt3" },
+			{ text: "Hydration", link: "/nuxt/hydration" },
+			{ text: "Nitro", link: "/nuxt/nitro" },
+			{ text: "Nuxt vs Vue", link: "/nuxt/nuxt-vs-vue" },
+			{ text: "Nuxt2 vs Nuxt3", link: "/nuxt/nuxt2-vs-nuxt3" },
 		],
 	},
 	{
@@ -247,37 +272,72 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "Полный путь загрузки сайта",
-				link: "/Браузеры/Полный путь загрузки сайта",
+				link: "/brauzery/polnyi-put-zagruzki-saita",
 			},
-			{
-				text: "Critical Render Path",
-				link: "/Браузеры/Critical Render Path",
-			},
-			{ text: "LCP, INP, TTI", link: "/Браузеры/LCP, INP, TTI" },
+				{
+					text: "Critical Render Path",
+					link: "/brauzery/critical-render-path",
+				},
+				{
+					text: "Ошибки Critical Rendering Path",
+					collapsible: true,
+					collapsed: true,
+					items: [
+						{
+							text: "Типичные ошибки CRP",
+							link: "/brauzery/oshibki-critical-rendering-path",
+						},
+						{
+							text: "Reflow, Repaint, Layout Thrashing",
+							link: "/brauzery/reflow-repaint-i-layout-thrashing",
+						},
+						{
+							text: "Forced Synchronous Layout и Long Tasks",
+							link: "/brauzery/forced-synchronous-layout-i-long-tasks",
+						},
+					],
+				},
+				{ text: "LCP, INP, TTI", link: "/brauzery/lcp-inp-tti" },
 			{
 				text: "Garbage Collector",
 				collapsible: true,
 				collapsed: true,
 				items: [
-					{ text: "Сборщик мусора", link: "/Браузеры/Garbage Collector/1 Cборщик мусора" },
-					{ text: "Утечки памяти", link: "/Браузеры/Garbage Collector/2 Утечки памяти" },
+					{ text: "Сборщик мусора", link: "/brauzery/garbage-collector/1-sborschik-musora" },
+					{ text: "Утечки памяти", link: "/brauzery/garbage-collector/2-utechki-pamyati" },
 					{
 						text: "Вопросы по Garbage Collector",
-						link: "/Браузеры/Garbage Collector/Вопросы по Garbage Collector",
+						link: "/brauzery/garbage-collector/voprosy-po-garbage-collector",
 					},
 				],
 			},
 			{
 				text: "Разница между HTTP 1.1, HTTP 2 и HTTP 3",
-				link: "/Браузеры/🌐 Разница между HTTP 1.1, HTTP 2 и HTTP 3",
+				link: "/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3",
 			},
 			{
 				text: "Сети, HTTP и CORS",
-				link: "/Браузеры/🌐 Сети, HTTP и CORS",
+				link: "/brauzery/seti-http-i-cors",
+			},
+			{
+				text: "Междоменные запросы: CORS, JSONP, Proxy",
+				link: "/brauzery/mezhdomennye-zaprosy-cors-jsonp-proxy",
+			},
+			{
+				text: "Server-Sent Events (SSE)",
+				link: "/brauzery/server-sent-events-sse",
+			},
+			{
+				text: "Общение между вкладками браузера",
+				link: "/brauzery/obschenie-mezhdu-vkladkami-brauzera",
+			},
+			{
+				text: "Workers в браузере",
+				link: "/brauzery/workers-v-brauzere",
 			},
 			{
 				text: "A11y (Accessibility)",
-				link: "/Браузеры/♿️ A11y (Accessibility)",
+				link: "/brauzery/a11y-accessibility",
 			},
 		],
 	},
@@ -288,15 +348,19 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "Безопасность приложений",
-				link: "/Безопасность приложений/Безопасность приложений",
+				link: "/bezopasnost-prilozhenii/bezopasnost-prilozhenii",
 			},
 			{
 				text: "XSS (Cross-Site Scripting)",
-				link: "/Безопасность приложений/XSS (Cross-Site Scripting)",
+				link: "/bezopasnost-prilozhenii/xss-cross-site-scripting",
 			},
 			{
 				text: "CSP — Content Security Policy",
-				link: "/Безопасность приложений/🔐 CSP — Content Security Policy",
+				link: "/bezopasnost-prilozhenii/csp-content-security-policy",
+			},
+			{
+				text: "CSRF (Cross-Site Request Forgery)",
+				link: "/bezopasnost-prilozhenii/csrf-cross-site-request-forgery",
 			},
 		],
 	},
@@ -305,11 +369,11 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "Авторизация", link: "/Авторизация/Авторизация" },
-			{ text: "JWT", link: "/Авторизация/JWT" },
+			{ text: "Авторизация", link: "/avtorizatsiya/avtorizatsiya" },
+			{ text: "JWT", link: "/avtorizatsiya/jwt" },
 			{
 				text: "Cookie-сессия vs JWT",
-				link: "/Авторизация/🔐 Cookie-сессия vs JWT",
+				link: "/avtorizatsiya/cookie-sessiya-vs-jwt",
 			},
 		],
 	},
@@ -318,9 +382,9 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "Алгоритмы", link: "/Алгоритмы/Алгоритмы" },
-			{ text: "Структуры данных", link: "/Алгоритмы/2 Структуры данных" },
-			{ text: "Карта по алгосам", link: "/Алгоритмы/Карта по алгосам" },
+			{ text: "Алгоритмы", link: "/algoritmy/algoritmy" },
+			{ text: "Структуры данных", link: "/algoritmy/2-struktury-dannykh" },
+			{ text: "Карта по алгосам", link: "/algoritmy/karta-po-algosam" },
 		],
 	},
 	{
@@ -328,8 +392,8 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "Принципы ООП", link: "/ООП/Принципы ООП" },
-			{ text: "Пораждающие паттерны", link: "/ООП/Пораждающие паттерны" },
+			{ text: "Принципы ООП", link: "/oop/printsipy-oop" },
+			{ text: "Пораждающие паттерны", link: "/oop/porazhdayuschie-patterny" },
 		],
 	},
 	{
@@ -337,11 +401,15 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "NaiveUI", link: "/npm tools/NaiveUI" },
-			{ text: "Nx и Turborepo", link: "/npm tools/Nx и Turborepo" },
+			{ text: "NaiveUI", link: "/npm-tools/naiveui" },
+			{ text: "Nx и Turborepo", link: "/npm-tools/nx-i-turborepo" },
 			{
 				text: "OpenAPI, Swagger, Protobuf",
-				link: "/npm tools/OpenAPI, Swagger, Protobuf",
+				link: "/npm-tools/openapi-swagger-protobuf",
+			},
+			{
+				text: "gRPC и Protobuf",
+				link: "/npm-tools/grpc-i-protobuf",
 			},
 		],
 	},
@@ -352,22 +420,22 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{
 				text: "Глубокое понимание PixiJS",
-				link: "/Pixi по темам/1 Глубокое понимание PixiJS",
+				link: "/pixi-po-temam/1-glubokoe-ponimanie-pixijs",
 			},
 			{
 				text: "Vue 3 + Pixi паттерны интеграции",
-				link: "/Pixi по темам/2 Vue 3 + Pixi паттерны интеграции",
+				link: "/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii",
 			},
 			{
 				text: "TypeScript first",
-				link: "/Pixi по темам/3 TypeScript first",
+				link: "/pixi-po-temam/3-typescript-first",
 			},
 			{
 				text: "Производительность и отладка",
-				link: "/Pixi по темам/4 Производительность и отладка",
+				link: "/pixi-po-temam/4-proizvoditelnost-i-otladka",
 			},
-			{ text: "Pixi", link: "/Pixi по темам/Pixi" },
-			{ text: "Карта по Pixi", link: "/Pixi по темам/Карта по Pixi" },
+			{ text: "Pixi", link: "/pixi-po-temam/pixi" },
+			{ text: "Карта по Pixi", link: "/pixi-po-temam/karta-po-pixi" },
 		],
 	},
 	{
@@ -375,10 +443,10 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "SOLID", link: "/Принципы программирования/SOLID" },
+			{ text: "SOLID", link: "/printsipy-programmirovaniya/solid" },
 			{
 				text: "Маленькие принципы",
-				link: "/Принципы программирования/Маленькие принципы",
+				link: "/printsipy-programmirovaniya/malenkie-printsipy",
 			},
 		],
 	},
@@ -386,18 +454,19 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		text: "Кэширование",
 		collapsible: true,
 		collapsed: true,
-		items: [{ text: "Кэш", link: "/Кэширование/Кэш" }],
+		items: [{ text: "Кэш", link: "/keshirovanie/kesh" }],
 	},
 	{
 		text: "Задачи",
 		collapsible: true,
 		collapsed: true,
 		items: [
+			{ text: "Подготовка к собеседованию", link: "/podgotovka-k-sobesedovaniyu" },
 			{
 				text: "Яндекс",
 				collapsible: true,
 				collapsed: true,
-				items: [{ text: "1 этап", link: "/Задачи/Яндекс/1 этап" }],
+				items: [{ text: "1 этап", link: "/zadachi/yandeks/1-etap" }],
 			},
 		],
 	},
@@ -405,17 +474,17 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		text: "Сборщики",
 		collapsible: true,
 		collapsed: true,
-		items: [{ text: "Vite", link: "/Сборщики/Vite/Vite" }],
+		items: [{ text: "Vite", link: "/sborschiki/vite/vite" }],
 	},
 	{
 		text: "Тестирование",
 		collapsible: true,
 		collapsed: true,
 		items: [
-			{ text: "Vitest", link: "/Тестирование/Vitest" },
+			{ text: "Vitest", link: "/testirovanie/vitest" },
 			{
 				text: "Vitest + Vue Test Utils + Playwright",
-				link: "/Тестирование/Vitest + Vue Test Utils + Playwright",
+				link: "/testirovanie/vitest-plus-vue-test-utils-plus-playwright",
 			},
 		],
 	},

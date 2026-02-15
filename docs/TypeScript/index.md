@@ -1,3 +1,0 @@
-# TypeScript
-
-Материалы по TypeScript

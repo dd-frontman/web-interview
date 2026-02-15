@@ -13,6 +13,9 @@
 		"build": "vitepress build",
 		"preview": "vitepress preview",
 		"type-check": "tsc --noEmit",
+		"validate-content": "node scripts/validate-content.mjs",
+		"validate-links": "node scripts/validate-links.mjs",
+		"validate-routes": "node scripts/validate-routes.mjs",
 		"lint": "eslint .vitepress --ext .ts,.vue --fix",
 		"format": "prettier --write \"**/*.{ts,js,json,md}\""
 	},
