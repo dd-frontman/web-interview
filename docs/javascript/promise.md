@@ -143,3 +143,12 @@ Promise.any([p1, p2, p3])
 		/* если все упали */
 	});
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [Event Bubbling](/javascript/event-bubbling)
+> - [Event Loop](/javascript/event-loop)
+

@@ -95,3 +95,12 @@ GC в JavaScript-движке запускается:
 | **Reference Counting**          | Подсчёт ссылок на объект                           | Простая схема, но не решает циклы          |
 | **Heap**                        | Область памяти для объектов                        | GC управляет heap                          |
 | **Roots**                       | Точки входа для живых объектов                     | Начальная точка графа достижимости         |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Утечки памяти](/brauzery/garbage-collector/2-utechki-pamyati)
+> - [Вопросы по Garbage Collector](/brauzery/garbage-collector/voprosy-po-garbage-collector)
+> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+

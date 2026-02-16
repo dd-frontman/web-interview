@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Сети, HTTP и CORS
-> - Разница между HTTP 1.1, HTTP 2 и HTTP 3
-> - CSRF (Cross-Site Request Forgery)
-
 ## База: что такое origin
 
 `origin = protocol + host + port`.
@@ -75,3 +69,11 @@ JSONP работает через `<script src="...">`, потому что за
 - "разрешить всё" в production без списка origin
 - перенос security-логики в клиент вместо backend
 - ожидание, что CORS защищает от CSRF (это разные классы задач)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
+> - [Разница между HTTP 1.1, HTTP 2 и HTTP 3](/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3)
+> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)

@@ -1,10 +1,3 @@
-> [!tip] Связанные темы
->
-> - Critical Render Path
-> - LCP, INP, TTI
-> - Reflow, Repaint, Layout Thrashing
-> - Forced Synchronous Layout и Long Tasks
-
 ## Типичные ошибки в Critical Rendering Path
 
 CRP ломается не "одной большой проблемой", а суммой мелких ошибок:
@@ -146,3 +139,12 @@ for (const item of items) {
   https://web.dev/articles/optimize-long-tasks
 - MDN: Critical rendering path  
   https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
+> - [Reflow, Repaint, Layout Thrashing](/brauzery/reflow-repaint-i-layout-thrashing)
+> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)

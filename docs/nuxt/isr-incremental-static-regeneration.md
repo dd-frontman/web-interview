@@ -148,3 +148,12 @@ export default defineEventHandler(async (event) => {
 
 4. **SEO и кэш**
    - Иногда поисковик может получить устаревшую страницу, если она обновляется редко.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Hydration](/nuxt/hydration)
+> - [Nitro](/nuxt/nitro)
+> - [Nuxt vs Vue](/nuxt/nuxt-vs-vue)
+

@@ -216,3 +216,12 @@ createRouter({ routes: [{ path: "/about", component: About }] });
 | SEO/Head      | Плагины/вручную               | `useHead`, SSR‑meta из коробки                 |
 | Деплой        | SPA/свой SSR                  | SSR/SSG/Edge/Serverless (адаптеры)             |
 | Когда брать   | Лёгкий SPA, виджет            | SEO/SSR, крупный продукт, единый стек          |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Hydration](/nuxt/hydration)
+> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
+> - [Nitro](/nuxt/nitro)
+

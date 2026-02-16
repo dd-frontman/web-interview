@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Типичные ошибки CRP
-> - Critical Render Path
-> - LCP, INP, TTI
-
 ## Reflow, Repaint и Layout Thrashing простыми словами
 
 Когда DOM/CSS меняются, браузер проходит этапы:
@@ -109,3 +103,11 @@ requestAnimationFrame(() => {
   https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance
 - MDN: Rendering performance  
   https://developer.mozilla.org/en-US/docs/Web/Performance/Guides/How_browsers_work
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Типичные ошибки CRP](/brauzery/oshibki-critical-rendering-path)
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)

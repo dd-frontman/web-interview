@@ -327,3 +327,12 @@ console.log(u1.role); // "user"
 - **Abstract Factory** → IKEA: один стиль мебели для всей комнаты.
 - **Builder** → конструктор LEGO: собираешь по шагам.
 - **Prototype** → копировать документ и заполнить по-новому.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [ООП](/oop/index)
+> - [Принципы](/oop/printsipy-oop)
+> - [Vue](/vue)
+

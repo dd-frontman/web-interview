@@ -19,3 +19,12 @@
 3. **`&&` и `||`** часто применяют в JSX/шаблонах Vue для условного рендера: `v-if="isReady && list.length"`.
 4. **`??`** не путается с `||`: `||` смотрит на «falsy» (`0`, `''`, `false` тоже), `??` — только на `null`/`undefined`.
 5. **`?.`** сокращает проверки «`obj && obj.prop`» и особенно ценится при работе с API-данными.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [Event Bubbling](/javascript/event-bubbling)
+> - [Event Loop](/javascript/event-loop)
+

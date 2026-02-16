@@ -130,3 +130,12 @@ export default function Product({ product }: any) {
 | Нагрузка на сервер       | Минимальная     | Высокая                            |
 | Кеширование              | Легко (CDN)     | Сложнее                            |
 | Где использовать         | Дашборды, SPA   | Публичные сайты, e-commerce, блоги |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Hydration](/nuxt/hydration)
+> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
+> - [Nitro](/nuxt/nitro)
+

@@ -1,10 +1,3 @@
-> [!tip] Связанные темы
->
-> - Безопасность приложений
-> - Авторизация
-> - Cookie-сессия vs JWT
-> - Сети, HTTP и CORS
-
 ## Что такое CSRF
 
 CSRF (Cross-Site Request Forgery) — атака, при которой злоумышленник заставляет браузер пользователя отправить запрос на доверенный сайт от имени этого пользователя.
@@ -67,3 +60,12 @@ CSRF (Cross-Site Request Forgery) — атака, при которой злоу
 3. Проверяется `Origin`/`Referer` для unsafe методов.
 4. `GET` не выполняет изменения.
 5. Критичные операции подтверждаются повторной аутентификацией/2FA.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Безопасность приложений](/bezopasnost-prilozhenii/bezopasnost-prilozhenii)
+> - [Авторизация](/avtorizatsiya/avtorizatsiya)
+> - [Cookie-сессия vs JWT](/avtorizatsiya/cookie-sessiya-vs-jwt)
+> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)

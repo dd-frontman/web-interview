@@ -165,3 +165,12 @@ ref(value)
                      └── Proxy для глубокого трекинга
 
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+

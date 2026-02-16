@@ -67,3 +67,12 @@ function onInput(event) {
 }
 </script>
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Props и Emits](/vue/zadachi/propsy-emity)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

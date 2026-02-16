@@ -203,3 +203,12 @@ export default defineConfig({
 
 - ✅ Использовать `shallowRef` для потоков.
 - ✅ Делать батчинг обновлений в `requestIdleCallback` или `setTimeout`.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

@@ -91,3 +91,12 @@ export function render(_ctx, _cache) {
 | **Генерация render** | Формируется JavaScript-рендер, создающий VNode                              |
 | **Tree-shaking**     | Импортируются только использованные хелперы/директивы, экономия бандла      |
 | **Отдельно (CSS)**   | Vue SFC вставляет CSS даже из неиспользуемых компонентов, нужен sideEffects |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

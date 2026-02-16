@@ -84,3 +84,12 @@
 | Тестирование   | Lighthouse, axe, NVDA           | Игнорировать доступность        |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+> - [Браузеры](/brauzery/index)
+

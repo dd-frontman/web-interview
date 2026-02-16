@@ -277,3 +277,12 @@ FSD не требует рефакторинга всего проекта ср�
 - Overview: https://feature-sliced.design/docs/get-started/overview
 - Layers: https://feature-sliced.design/docs/reference/layers
 - Next.js (App Router): https://feature-sliced.design/docs/guides/tech/with-nextjs
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
+> - [Domain-Driven Design](/arkhitektura/domain-driven-design)
+> - [Архитектура](/arkhitektura/index)
+

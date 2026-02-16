@@ -57,3 +57,12 @@
 - **LCP**: зависит от SSR/SSG (чем быстрее HTML + картинки → тем лучше).
 - **INP**: зависит от оптимизации JS, реактивности и числа ререндеров.
 - **TTI**: зависит от размера бандла, сложности hydration, использования code splitting/lazy load.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [A11y (Accessibility)](/brauzery/a11y-accessibility)
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+

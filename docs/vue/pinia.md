@@ -185,3 +185,12 @@ const { filteredItems, loading } = storeToRefs(store);
 
 Если хочешь, я подготовлю “конкретный эталон” структуры стора + компонентного подхода + рекомендации для реального проекта, чтобы ты мог просто вставить и адаптировать?
 :
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

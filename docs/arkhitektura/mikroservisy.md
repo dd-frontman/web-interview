@@ -185,3 +185,12 @@ export function Orders() {
 | Надёжность      | Сбой ломает всё              | Сбой затрагивает только сервис      |
 | Фронтенд        | Один SPA/SSR                 | SPA/SSR + общение через API Gateway |
 | Подходит        | Малые/средние проекты        | Большие системы, много команд       |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
+> - [Domain-Driven Design](/arkhitektura/domain-driven-design)
+> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
+

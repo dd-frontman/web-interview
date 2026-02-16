@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Сети, HTTP и CORS
-> - Разница между HTTP 1.1, HTTP 2 и HTTP 3
-> - Полный путь загрузки сайта
-
 ## Что такое SSE
 
 Server-Sent Events (SSE) — это способ передавать данные с сервера в браузер по одному долгоживущему HTTP-соединению.
@@ -66,3 +60,11 @@ app.get("/api/events", (req, res) => {
 - учитывайте авто-reconnect `EventSource`
 - для resume используйте `id:` и `Last-Event-ID`
 - проверяйте таймауты у reverse proxy/CDN
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
+> - [Разница между HTTP 1.1, HTTP 2 и HTTP 3](/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3)
+> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)

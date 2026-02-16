@@ -124,3 +124,12 @@ sprite.on("pointertap", () => emit("select", id));
 ### Вывод
 
 Грамотная интеграция Pixi и Vue строится на простых принципах: используем хуки Vue для старта/останова канвы, держим горячие данные в Pixi, холодные — в реактивности, а за декларативность отвечает `vue3-pixi` (или собственный renderer). Следуя этим паттернам, вы получаете реактивный фронт плюс 60 FPS-рендер без лишнего кода.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
+> - [TypeScript first](/pixi-po-temam/3-typescript-first)
+> - [Производительность и отладка](/pixi-po-temam/4-proizvoditelnost-i-otladka)
+

@@ -19,3 +19,12 @@
 19. `arr.join() - склеивает массив в строку по указанному разделителю`
 20. `arr.reduce() - используются для вычисления единого значения с начала [] на основе всего массива arr.reduce(function(accumulator, item, index, array) { // ... }, [initial]) let result = arr.reduce((sum, current) => sum + current, 0)`
 21. `arr.reduceright() - используются для вычисления единого значения с конца [] на основе всего массива arr.reduce(function(accumulator, item, index, array) { // ... }, [initial]) let result = arr.reduce((sum, current) => sum + current, 0)`
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [Event Bubbling](/javascript/event-bubbling)
+> - [Event Loop](/javascript/event-loop)
+

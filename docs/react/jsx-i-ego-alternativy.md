@@ -98,3 +98,12 @@ function App() {
 - В 90% случаев в React используют **JSX/TSX**.
 - Если нужна работа без сборщика (Babel/Webpack) или в средах вроде Node.js, можно рендерить **через чистый `React.createElement`** или hyperscript-подход.
 - Vue-шных шаблонов «по умолчанию» в React нет — это концепция фреймворка Vue, а React изначально заточен под декларативный JS.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [React](/react/index)
+> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
+> - [Основные функции React](/react/osnovnye-funktsii-react)
+

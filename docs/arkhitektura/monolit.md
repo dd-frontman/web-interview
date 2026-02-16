@@ -252,3 +252,12 @@ export default async function Home() {
 | Плюсы            | Простота, быстрый старт                    | Универсальный стек, один деплой    |
 | Минусы           | С ростом сложнее поддерживать              | Сервер и фронт тесно связаны       |
 | Где использовать | Малые/средние проекты, MVP                 | Стартапы, корпоративные сайты      |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
+> - [Domain-Driven Design](/arkhitektura/domain-driven-design)
+> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
+

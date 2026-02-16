@@ -110,3 +110,12 @@ const config = {
 - сохраняешь точные литеральные значения (`as const`).
 
 Кратко: `as const` нужен, когда хочешь максимум точности и неизменяемости для литералов.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [assert в TypeScript](/typescript/assert-v-typescript)
+> - [TypeScript](/typescript/index)
+> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+

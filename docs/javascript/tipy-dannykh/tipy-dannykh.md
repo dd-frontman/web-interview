@@ -59,3 +59,12 @@ const b = BigInt("9007199254740993"); // безопасно
   - `BigInt.prototype.toString()`, `valueOf()`, `toLocaleString()` [MDN Web Docs+15MDN Web Docs+15Stack Overflow+15](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString)[Stack Overflow+4MDN Web Docs+4LogRocket Blog+4](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt)[LogRocket Blog](https://blog.logrocket.com/how-to-use-javascript-bigint/)
 - **Когда применять?**
   - Когда нужны большие целые значения: криптография, финансовые расчёты, высокоточные счётчики, работа с ID и timestamp’ами [v8.dev](https://v8.dev/features/bigint)[LogRocket Blog](https://blog.logrocket.com/how-to-use-javascript-bigint/)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Object](/javascript/tipy-dannykh/object)
+> - [Типы функций](/javascript/tipy-funktsii)
+> - [Методы массивов](/javascript/metody-massivov)
+

@@ -143,3 +143,12 @@ type A = Awaited<Promise<Promise<string>>> // string
 ---
 
 Практика: комбинируйте стандартные utility types с собственными generic-типами, чтобы снижать дублирование и риск несогласованных интерфейсов.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [assert в TypeScript](/typescript/assert-v-typescript)
+> - [TypeScript](/typescript/index)
+

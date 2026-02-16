@@ -91,3 +91,12 @@ function divide(a: number, b: number) {
 - Писать assert без понятного сообщения ошибки.
 
 Кратко: `assert` проверяет корректность состояния во время выполнения, а `asserts` дополнительно улучшает типобезопасность в TypeScript.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [TypeScript](/typescript/index)
+> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+

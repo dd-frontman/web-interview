@@ -90,3 +90,12 @@
 - Пройдите «Алгоритмы» от freeCodeCamp до раздела Dynamic Programming — это база для интервью. [freecodecamp.org](https://www.freecodecamp.org/news/learn-data-structures-and-algorithms/)
 - Подписывайтесь на рассылки Vue и Nuxt — обновления движка иногда меняют алгоритмы рендера. [Nuxt](https://nuxt.com/docs/guide/concepts/rendering)
 - Раз в месяц решайте одну задачу «чужой» парадигмы (например, графовая) — мозг не застревает.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Структуры данных](/algoritmy/2-struktury-dannykh)
+> - [Алгоритмы](/algoritmy/algoritmy)
+> - [Vue](/vue)
+

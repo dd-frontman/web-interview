@@ -63,3 +63,12 @@ const AsyncStats = defineAsyncComponent(() => import("./Stats.vue"));
 | **Комбинация с другими** | Используйте с `<Transition>`, `<KeepAlive>`, `<RouterView>` — важен порядок.                                 |
 | **Польза**               | Убирает множество загрузочных спиннеров, избегает layout shifts (“popcorn effect”), улучшает UX.             |
 | **Официальное описание** | Vue Official Docs: описание всех фич и API.                          |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

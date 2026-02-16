@@ -86,3 +86,12 @@ const count = ref(0);
 | После гидрации | Элементы становятся интерактивными                               |
 | Проблемы       | Hydration mismatch, двойной рендер                               |
 | Решения        | Избегать nondeterministic кода, переносить в onMounted/useEffect |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
+> - [Nitro](/nuxt/nitro)
+> - [Nuxt vs Vue](/nuxt/nuxt-vs-vue)
+

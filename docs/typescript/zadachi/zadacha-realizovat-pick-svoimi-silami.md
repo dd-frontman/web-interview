@@ -71,3 +71,12 @@ type UserPreview = MyPick<User, "id" | "name">;
 | `K extends keyof T` | Разрешаем только допустимые ключи       |
 | `[P in K]`          | Проходим по каждому ключу из `K`        |
 | `T[P]`              | Берём тип свойства из исходного объекта |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Утилитарные типы](/typescript/utilitarnye-tipy)
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+

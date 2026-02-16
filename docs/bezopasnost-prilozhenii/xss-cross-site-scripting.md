@@ -180,3 +180,12 @@ CSP позволяет браузеру блокировать выполнен�
 | CSP                          | Политика доверенных источников                          | Запрет inline-скриптов, только безопасные   |
 | HttpOnly-куки                | Куки недоступны из JS                                   | Снижение риска кражи сессии                 |
 | Фреймворки                   | Автоматически экранируют вывод                          | React, Vue, Angular                         |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Безопасность приложений](/bezopasnost-prilozhenii/bezopasnost-prilozhenii)
+> - [CSP — Content Security Policy](/bezopasnost-prilozhenii/csp-content-security-policy)
+> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)
+

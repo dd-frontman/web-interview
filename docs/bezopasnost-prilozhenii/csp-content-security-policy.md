@@ -264,3 +264,12 @@ export default defineNuxtConfig({
 | SPA/SSR            | Генерируй **nonce на каждый ответ**, проставляй в `<script>/<style>`     | middleware/сервер формирует CSP + nonce                           |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Безопасность приложений](/bezopasnost-prilozhenii/bezopasnost-prilozhenii)
+> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)
+> - [XSS (Cross-Site Scripting)](/bezopasnost-prilozhenii/xss-cross-site-scripting)
+

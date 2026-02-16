@@ -153,3 +153,12 @@ SELECT * FROM users WHERE username = 'admin' AND password = '' OR '1'='1';
 🔹 Практики защиты включают проверку ввода, контекстное экранирование, безопасное хранение данных и регулярное обновление зависимостей.
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [CSP — Content Security Policy](/bezopasnost-prilozhenii/csp-content-security-policy)
+> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)
+> - [XSS (Cross-Site Scripting)](/bezopasnost-prilozhenii/xss-cross-site-scripting)
+

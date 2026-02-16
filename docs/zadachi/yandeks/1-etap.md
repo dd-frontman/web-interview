@@ -32,3 +32,12 @@ function strjoin(separator, ...letters) {
 console.log(strjoin(".", "a", "b", "c")); // 'a.b.c'
 console.log(strjoin("-", "d", "e", "f")); // 'd-e-f'
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Задачи](/zadachi/index)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

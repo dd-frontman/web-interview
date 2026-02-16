@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Позиционирование в CSS
-> - z-index и stacking context
-> - Shadow DOM
-
 ## Центрирование в CSS: полный практический справочник
 
 У центрирования всегда есть контекст:
@@ -330,3 +324,11 @@ img.avatar {
   https://developer.mozilla.org/en-US/docs/Web/CSS/position
 - MDN: `margin`  
   https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
+> - [z-index и stacking context](/css/z-index-i-stacking-context)
+> - [Shadow DOM](/html/shadow-dom)

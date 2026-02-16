@@ -174,3 +174,12 @@ export function Search({ query }: { query: string }) {
 - Не бойся cleanup — это гарантия, что не будет утечек.
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
+> - [useContext](/react/khuki/usecontext)
+> - [useState](/react/khuki/usestate)
+

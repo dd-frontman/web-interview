@@ -223,3 +223,12 @@ CRP — это набор шагов, которые выполняет брау
 - Vue/Nuxt/React различаются в подходах к SSR/SSG/ISR и гидратации.
 - Чем меньше JS на клиенте → тем быстрее CRP.
 - **Stream, partial hydration, оптимизация картинок** =
+
+---
+
+> [!tip] Связанные темы
+>
+> - [A11y (Accessibility)](/brauzery/a11y-accessibility)
+> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+> - [Браузеры](/brauzery/index)
+

@@ -63,3 +63,12 @@ export default function App() {
 | Альтернатива     | Проброс пропсов вниз — неудобно при глубокой вложенности |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
+> - [useEffect](/react/khuki/useeffect)
+> - [useState](/react/khuki/usestate)
+

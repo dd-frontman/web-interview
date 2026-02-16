@@ -141,3 +141,12 @@ export default function BlogPage({ post }: { post: Post }) {
    - `false` → быстрый билд, но только заранее известные пути.
    - `true` → генерирует новые страницы на лету.
    - `blocking` → пользователь ждёт, пока страница соберётся.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Hydration](/nuxt/hydration)
+> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
+> - [Nitro](/nuxt/nitro)
+

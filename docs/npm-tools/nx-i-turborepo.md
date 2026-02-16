@@ -81,3 +81,12 @@
 - Пошаговую настройку Vue-монорепо с Nx 17;
 - Настройку CI с NX Cloud;
 - Пример миграции или конфигурации `nx.json`.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
+> - [NaiveUI](/npm-tools/naiveui)
+> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
+

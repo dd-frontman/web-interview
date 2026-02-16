@@ -67,3 +67,12 @@ const themeOverrides: GlobalThemeOverrides = {
 - Inline стили темы (inline theme) могут увеличить размер SSR-HTML, если не отключить `inline-theme-disabled`.
 - Если темы очень кастомные, возможно придётся переопределять большое число переменных или стилей — иногда override может быть “болезненным”.
 - Когда используется дизайн, сильно отличающийся от дефолтного стиля NaiveUI, возможно нужно создать “тематические компоненты-обёртки” или свои стили сверху.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
+> - [Nx и Turborepo](/npm-tools/nx-i-turborepo)
+> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
+

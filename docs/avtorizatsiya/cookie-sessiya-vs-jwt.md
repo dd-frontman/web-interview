@@ -63,3 +63,12 @@
 | Logout          | Просто удалить сессию на сервере    | Сложно, нужен blacklist         |
 | Уязвимости      | CSRF (решается SameSite/CSRF-токен) | XSS/утечка токена               |
 | Подходит для    | Классических сайтов, SPA            | API, микросервисы, mobile + web |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Авторизация](/avtorizatsiya/avtorizatsiya)
+> - [JWT](/avtorizatsiya/jwt)
+> - [Vue](/vue)
+

@@ -147,3 +147,12 @@ export function TodoList() {
 | Типизация                   | Указываем явно                   | `useState<Item[]>([])`            | Иначе будет `never[]`               |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
+> - [useContext](/react/khuki/usecontext)
+> - [useEffect](/react/khuki/useeffect)
+

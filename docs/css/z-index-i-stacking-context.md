@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Позиционирование в CSS
-> - will-change
-> - Shadow DOM
-
 ## Что такое `z-index`
 
 `z-index` определяет порядок наложения элементов по оси Z (кто "поверх" кого).
@@ -69,3 +63,11 @@ Stacking context — это "локальный слой", внутри кото
   https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
 - MDN: Stacking context  
   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
+> - [will-change](/css/will-change)
+> - [Shadow DOM](/html/shadow-dom)

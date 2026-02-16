@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Семантические теги
-> - Центрирование в CSS
-> - z-index и stacking context
-
 ## Что такое Shadow DOM
 
 Shadow DOM — это механизм Web Components, который дает компоненту собственное "внутреннее дерево" DOM со стилевой изоляцией.
@@ -89,3 +83,11 @@ customElements.define("x-badge", XBadge);
 
 - MDN: Using shadow DOM  
   https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Семантические теги](/html/semanticheskie-tegi)
+> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
+> - [z-index и stacking context](/css/z-index-i-stacking-context)

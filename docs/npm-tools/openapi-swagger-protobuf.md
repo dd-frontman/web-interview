@@ -178,3 +178,12 @@ function useFetchUsers() {
 
 Если хочешь, могу собрать **реальный пример проекта** (Vue или React), где API spec, клиент, версии, кэширование и ошибки уже реализованы — чтобы видеть шаблон “на практике”?
 :
+
+---
+
+> [!tip] Связанные темы
+>
+> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
+> - [NaiveUI](/npm-tools/naiveui)
+> - [Nx и Turborepo](/npm-tools/nx-i-turborepo)
+

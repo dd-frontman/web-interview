@@ -415,3 +415,12 @@ const inc3 = () => {
 | Защита от утечек при async        | Отмена/cleanup                        | `AbortController` в `useEffect`        | Избегаем `setState` после анмаунта                              |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [React](/react/index)
+> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
+> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
+

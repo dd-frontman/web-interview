@@ -113,3 +113,12 @@
 - **Do-expression `do { … }`** (Stage 1): блок-как-выражение, возвращающий последнее значение. Не стоит использовать в проде. [Medium](https://medium.com/%40ofir.zukerman/mastering-do-expressions-in-javascript-for-enhanced-code-clarity-3fa111a94bfc)
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [Event Bubbling](/javascript/event-bubbling)
+> - [Event Loop](/javascript/event-loop)
+

@@ -62,3 +62,12 @@ describe("Pixi boot", () => {
 
 - **PixiJS DevTools** (расширение Chrome) показывает дерево сцены, размеры текстур и позволяет логировать узел как `$pixi` — must-have на dev-сборке [Chrome Web Store](https://chromewebstore.google.com/detail/pixijs-devtools/aamddddknhcagpehecnhphigffljadon?hl=en).
 - **Встроенный Vite HMR** мгновенно перезагружает канву; карта источников остаётся, потому что Pixi v8 разбит на ESM-файлы с поддержкой tree-shaking [GitHub](https://github.com/pixijs/pixijs/discussions/8765).
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
+> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
+> - [Производительность и отладка](/pixi-po-temam/4-proizvoditelnost-i-otladka)
+

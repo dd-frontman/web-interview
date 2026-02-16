@@ -133,3 +133,11 @@ Tree-shaking помогает:
 ✔️ разобрать как это выглядит в реальном проекте  
 ✔️ объяснить взаимодействие tree-shaking с code splitting
 
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

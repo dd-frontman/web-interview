@@ -131,3 +131,12 @@ onRenderTriggered((e) => console.log("render triggered", e.type, e.key));
 - **Практические лайфхаки замеров:**
   - Для синтетики используйте `performance.now()` вокруг операций и прогоняйте в `requestIdleCallback`/`setTimeout` для честных цифр (без блокировки рендера).
   - Для реального UI — **Vue Devtools timeline** + профилировщик браузера, смотрите частоту ререндеров и «горячие» участки, и включайте debug-хуки (`onTrack`/`onTrigger`, `onRenderTracked`/`onRenderTriggered`) точечно в dev-сборке, чтобы увидеть, **что именно** дёргает обновления. [Vue.js](https://vuejs.org/guide/extras/reactivity-in-depth)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [reactive](/vue/ref-and-reactive/reactive)
+> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+

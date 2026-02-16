@@ -108,3 +108,11 @@ console.log("End"); // 2
 3. Возьми первую макротаску из очереди и выполни её.
 4. После макротаски — снова все микротаски.
 5. Повторяй шаги 3–4, пока есть задачи.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [Event Bubbling](/javascript/event-bubbling)
+> - [JSON и его альтернативы](/javascript/json-i-ego-alternativy)

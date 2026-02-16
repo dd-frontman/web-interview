@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Типичные ошибки CRP
-> - Reflow, Repaint, Layout Thrashing
-> - Workers в браузере
-
 ## Forced Synchronous Layout и Long Tasks
 
 Это две частые причины "тормозов" интерфейса:
@@ -103,3 +97,11 @@ button.addEventListener("click", async () => {
   https://web.dev/articles/inp
 - MDN: Long tasks API  
   https://developer.mozilla.org/en-US/docs/Web/API/PerformanceLongTaskTiming
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Типичные ошибки CRP](/brauzery/oshibki-critical-rendering-path)
+> - [Reflow, Repaint, Layout Thrashing](/brauzery/reflow-repaint-i-layout-thrashing)
+> - [Workers в браузере](/brauzery/workers-v-brauzere)

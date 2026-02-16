@@ -112,3 +112,12 @@ onRenderTriggered((e) => {
 
 Если потребуется, могу дополнить таблицу примерами кода, сравнениями производительности, use-case’ами для `markRaw`, или включить `effectScope()` и lifecycle-хуки `onRenderTracked/onRenderTriggered`.
 :
+
+---
+
+> [!tip] Связанные темы
+>
+> - [reactive](/vue/ref-and-reactive/reactive)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+

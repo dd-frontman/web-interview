@@ -248,3 +248,12 @@ Vue трансформирует это в:
 ```vue
 <div @click.capture="onClick">...</div>
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+

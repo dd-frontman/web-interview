@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Центрирование в CSS
-> - Позиционирование в CSS
-> - z-index и stacking context
-
 ## Расположение контента на странице и растягивание `main`
 
 Частая задача: сделать layout "шапка + контент + футер" так, чтобы:
@@ -219,3 +213,11 @@ main {
   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout
 - MDN: Grid layout  
   https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
+> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
+> - [z-index и stacking context](/css/z-index-i-stacking-context)

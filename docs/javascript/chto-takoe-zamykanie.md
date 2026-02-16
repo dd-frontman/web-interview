@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Типы функций
-> - Event Loop
-> - Promise
-
 ## Что такое замыкание простыми словами
 
 Замыкание (closure) — это функция, которая "помнит" переменные из внешней области видимости, даже если внешняя функция уже отработала.
@@ -96,3 +90,11 @@ for (let i = 0; i < 3; i++) {
 
 - MDN: Closures  
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Типы функций](/javascript/tipy-funktsii)
+> - [Event Loop](/javascript/event-loop)
+> - [Promise](/javascript/promise)

@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Общение между вкладками браузера
-> - Critical Render Path
-> - LCP, INP, TTI
-
 ## Зачем нужны Workers
 
 Workers позволяют вынести тяжёлые задачи из main thread, чтобы интерфейс не зависал.
@@ -60,3 +54,11 @@ self.onmessage = (event) => {
 - передача данных копирует объекты, используйте `Transferable` для больших буферов
 - не выносите в worker мелкие операции, иначе overhead может быть выше пользы
 - при длительной работе следите за утечками и завершайте worker через `terminate()`
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Общение между вкладками браузера](/brauzery/obschenie-mezhdu-vkladkami-brauzera)
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)

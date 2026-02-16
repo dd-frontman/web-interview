@@ -173,3 +173,12 @@ map.set(objKey, "value");
 ✔ предоставляет удобные методы для работы  
 ✔ эффективнее справляется с частыми изменениями  
 ✔ имеет удобную итерацию и размер `.size` Summary.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Set](/javascript/kollektsii-dannykh/set)
+> - [WeakMap](/javascript/kollektsii-dannykh/weakmap)
+> - [WeakSet](/javascript/kollektsii-dannykh/weakset)
+

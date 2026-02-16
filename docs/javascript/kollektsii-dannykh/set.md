@@ -198,3 +198,12 @@ console.log(uniqueUsers.size); // 1
 ✔ не допускает дубликатов  
 ✔ имеет оптимизированное API  
 ✔ работает быстрее для проверок наличия, чем массивы [MDN Web Docs](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Map](/javascript/kollektsii-dannykh/map)
+> - [WeakMap](/javascript/kollektsii-dannykh/weakmap)
+> - [WeakSet](/javascript/kollektsii-dannykh/weakset)
+

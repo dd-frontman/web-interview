@@ -198,3 +198,12 @@ load();
 
 Если хочешь, могу подготовить **усы шаблон** структуры проекта на Vue 3 + DDD, плюс ESLint правила для импортов между доменами, чтобы соблюдать изоляцию, и показать, как мигрировать старый проект под DDD?
 :
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
+> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
+> - [Архитектура](/arkhitektura/index)
+

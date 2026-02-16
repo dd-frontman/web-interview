@@ -13,3 +13,12 @@ onMounted(() => {
   child.value.sayHi()
 })
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [Директивы Vue](/vue/direktivy-vue)
+> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+

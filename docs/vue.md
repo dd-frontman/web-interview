@@ -1,12 +1,3 @@
-> [!tip] Связанные темы
->
-> - JavaScript
-> - React на примере Vue
-> - Таблица сравнения React vs Vue
-> - defineExpose()
-> - provide и inject
-> - Эффективное обучение
-
 ## 🎯 Что такое Vue.js
 
 **Vue.js** — это прогрессивный JavaScript-фреймворк для создания пользовательских интерфейсов. Он прост в освоении, но мощный в использовании.
@@ -544,8 +535,19 @@ computed: {
 
 > [!note] См. также
 >
-> - watch и watchEffect
-> - Рендер-функции
-> - Nuxt2 vs Nuxt3
+> - [watch и watchEffect](/vue/watch-i-watcheffect)
+> - [Рендер-функции](/vue/render-funktsii)
+> - [Nuxt2 vs Nuxt3](/nuxt/nuxt2-vs-nuxt3)
 
 #vue #фреймворк #frontend #реактивность #компоненты
+
+---
+
+> [!tip] Связанные темы
+>
+> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
+> - [React на примере Vue](/react/react-na-primere-vue)
+> - [Таблица сравнения React vs Vue](/react/tablitsa-sravneniya-react-vs-vue)
+> - [defineExpose()](/vue/defineexpose)
+> - [provide и inject](/vue/provide-i-inject)
+> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)

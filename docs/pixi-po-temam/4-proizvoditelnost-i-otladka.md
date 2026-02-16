@@ -104,3 +104,12 @@ Pixi 8 уже отдаёт хук `app.renderer.texture.disposeClient` для ч
 ### Что запомнить
 
 Оптимизация в Pixi — это _алгоритм_: сначала минимизируем draw-calls через атласы и batching, затем кэшируем статику, переводим массовые эффекты в GPU-инстансинг, следим за GC и, если нужно, жмём WebGPU-турбо. Pixi DevTools и Chrome Performance помогут проверить каждое действие цифрами — и только так мы гарантируем стабильные 60 FPS на всех платформах.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
+> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
+> - [TypeScript first](/pixi-po-temam/3-typescript-first)
+

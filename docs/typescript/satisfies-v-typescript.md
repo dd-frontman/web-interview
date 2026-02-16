@@ -134,3 +134,12 @@ const mockResponse = {
 - Тестовые моки, где нужна проверка формы и точные литералы.
 
 Кратко: `satisfies` = "проверь, что форма верная, но оставь мне точные типы".
+
+---
+
+> [!tip] Связанные темы
+>
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [assert в TypeScript](/typescript/assert-v-typescript)
+> - [TypeScript](/typescript/index)
+

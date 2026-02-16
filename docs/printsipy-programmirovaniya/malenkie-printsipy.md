@@ -57,3 +57,12 @@
 
 Это не один принцип, а набор из 9 (Controller, Creator, Information Expert, High Cohesion, Low Coupling и др.) — описывают, **кому** назначать ответственность в ОО‑дизайне.  
 **Vue‑пример:** «Controller» может лечь на слой маршрутизатора (view‑model), а «Pure Fabrication» — в композабл, который формирует отчёт, не будучи настоящей доменной сущностью.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Принципы программирования](/printsipy-programmirovaniya/index)
+> - [SOLID](/printsipy-programmirovaniya/solid)
+> - [Vue](/vue)
+

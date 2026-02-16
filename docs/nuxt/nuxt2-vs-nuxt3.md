@@ -322,3 +322,12 @@ useHead({ title: "Home", meta: [{ name: "description", content: "..." }] });
 ---
 
 Если нужно, подготовлю **чек-лист миграции Nuxt 2 → Nuxt 3** (1-в-1 соответствия API, типичные замены, ловушки) и минимальный шаблон репозитория для PoC.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Hydration](/nuxt/hydration)
+> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
+> - [Nitro](/nuxt/nitro)
+

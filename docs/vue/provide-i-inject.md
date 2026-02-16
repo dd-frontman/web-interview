@@ -12,3 +12,12 @@ provide("user", ref("Alice"));
 // Далеко в потомках
 const user = inject("user");
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+

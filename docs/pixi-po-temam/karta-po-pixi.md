@@ -91,3 +91,12 @@ onUnmounted(() => app.destroy(true));
 - **Модульный DOM-less UI** — рендер всей игры в Pixi, HUD/меню — компонентами Vue DOM, поверх канвы (z-index).
 - **FSM или ECS** для сложной логики; ECS-данные остаются вне Vue, Vue отвечает только за визуальный слой.
 - **DI / composables**: выносите общие Pixi-helpers (`useTicker`, `useResize`) в отдельные composable-файлы для повторного использования [vuejs.org](https://vuejs.org/guide/reusability/composables).
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
+> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
+> - [TypeScript first](/pixi-po-temam/3-typescript-first)
+

@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Типы данных / Object
-> - Что такое замыкание
-> - TypeScript: утилитарные типы
-
 ## Что делает `Object.freeze()`
 
 `Object.freeze(obj)` "замораживает" объект:
@@ -81,3 +75,11 @@ const settings = deepFreeze({
 
 - MDN: `Object.freeze()`  
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Типы данных / Object](/javascript/tipy-dannykh/object)
+> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
+> - [TypeScript: утилитарные типы](/typescript/utilitarnye-tipy)

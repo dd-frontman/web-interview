@@ -42,3 +42,12 @@ function increment() {
 	<button @click="increment">+</button>
 </template>
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [defineExpose()](/vue/defineexpose)
+> - [Директивы Vue](/vue/direktivy-vue)
+> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+

@@ -156,3 +156,12 @@ function increment() {
 ✔ Для сложных объектных состояний `reactive()` — отличное решение.  
 ✔ Если нужна именно реактивность изменений **на уровне свойств**, выбирай `reactive()`.  
 ✔ Если объект планируется **полностью заменять** часто, предпочти `ref(object)`.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+

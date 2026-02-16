@@ -265,3 +265,12 @@ watch(
 - В Vue состояние **реактивно** → можно менять напрямую.
 - Для derived values используем `useMemo` (React) и `computed` (Vue).
 - Для синхронизации с пропсами — `useEffect` (React) и `watch` (Vue).
+
+---
+
+> [!tip] Связанные темы
+>
+> - [React](/react/index)
+> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
+> - [Основные функции React](/react/osnovnye-funktsii-react)
+

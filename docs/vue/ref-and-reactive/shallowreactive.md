@@ -131,3 +131,12 @@ const updateNested = () => {
   <button @click="updateNested">Update nested</button>
 </template>
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [reactive](/vue/ref-and-reactive/reactive)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+

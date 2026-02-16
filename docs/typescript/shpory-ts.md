@@ -682,3 +682,12 @@ class Car {
 
 **Что такое деструктуризация в TypeScript?** Деструктуризация - это ES6-функция, которую TypeScript поддерживает. Он позволяет извлекать данные из массивов или объектов с использованием синтаксиса, который зеркалирует конструкцию массивов и объектов.
 `let { a, b }: { a: string, b: number } = { a: "baz", b: 101 };`
+
+---
+
+> [!tip] Связанные темы
+>
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [assert в TypeScript](/typescript/assert-v-typescript)
+> - [TypeScript](/typescript/index)
+

@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Workers в браузере
-> - Сети, HTTP и CORS
-> - Event Loop
-
 ## Зачем нужно общение между вкладками
 
 Типовые сценарии:
@@ -63,3 +57,11 @@ window.addEventListener("storage", (event) => {
 1. Для большинства задач: `BroadcastChannel`.
 2. Для старых/ограниченных окружений: fallback на `storage`.
 3. Для общего вычислительного/сетевого слоя на все вкладки: `SharedWorker`.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Workers в браузере](/brauzery/workers-v-brauzere)
+> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
+> - [Event Loop](/javascript/event-loop)

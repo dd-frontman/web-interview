@@ -52,3 +52,12 @@
 
 - **PixiJS** — графический движок и рендерер для произвольной 2D-графики.
 - **Phaser** — полноценный игровой фреймворк на базе PixiJS, включающий физику, сцены, управление аудио, коллизии и прочее [Medium](https://selinabyeon.medium.com/pixi-js-vs-phaser-3-519eba2f9817).
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
+> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
+> - [TypeScript first](/pixi-po-temam/3-typescript-first)
+

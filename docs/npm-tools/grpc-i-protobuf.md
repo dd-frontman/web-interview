@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - OpenAPI, Swagger, Protobuf
-> - Сети, HTTP и CORS
-> - Nuxt / Nitro
-
 ## gRPC и Protobuf простыми словами
 
 - **Protobuf** — формат и язык описания структур данных (`.proto`).
@@ -95,3 +89,11 @@ console.log(user.name);
   https://protobuf.dev/overview/
 - Protocol Buffers: Proto3 language guide  
   https://protobuf.dev/programming-guides/proto3/
+
+---
+
+> [!tip] Связанные темы
+>
+> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
+> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
+> - [Nuxt / Nitro](/nuxt/nitro)

@@ -1,13 +1,4 @@
 # ⚛️ React на примере Vue
-
-> [!tip] Связанные темы
->
-> - JavaScript
-> - Vue.md
-> - Основные функции React
-> - Таблица сравнения React vs Vue
-> - Эффективное обучение
-
 ## 🎯 Основные идеи
 
 ### **Реактивность**
@@ -621,8 +612,18 @@ function TodoApp() {
 
 > [!note] См. также
 >
-> - 📌 Основные хуки в React
-> - defineExpose()
-> - Принципы SOLID
+> - [📌 Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
+> - [defineExpose()](/vue/defineexpose)
+> - [Принципы SOLID](/printsipy-programmirovaniya/solid)
 
 #react #vue #сравнение #фреймворки #frontend
+
+---
+
+> [!tip] Связанные темы
+>
+> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
+> - [Vue.md](/vue)
+> - [Основные функции React](/react/osnovnye-funktsii-react)
+> - [Таблица сравнения React vs Vue](/react/tablitsa-sravneniya-react-vs-vue)
+> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)

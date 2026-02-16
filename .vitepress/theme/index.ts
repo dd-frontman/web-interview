@@ -1,10 +1,16 @@
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import { onMounted } from "vue";
+import { h, onMounted } from "vue";
+import AsideSupportFooter from "./components/AsideSupportFooter.vue";
 import "./custom.css";
 
 export default {
 	extends: DefaultTheme,
+	Layout: () => {
+		return h(DefaultTheme.Layout, null, {
+			"aside-bottom": () => h(AsideSupportFooter),
+		});
+	},
 	setup() {
 		// Логирование структуры sidebar для отладки
 		onMounted(() => {

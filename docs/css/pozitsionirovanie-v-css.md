@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - Центрирование в CSS
-> - z-index и stacking context
-> - will-change
-
 ## Позиционирование в CSS: что это
 
 `position` управляет тем, как элемент участвует в потоке документа и как работают `top/right/bottom/left`.
@@ -127,3 +121,11 @@
   https://developer.mozilla.org/en-US/docs/Web/CSS/position
 - MDN: Learn CSS positioning  
   https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
+> - [z-index и stacking context](/css/z-index-i-stacking-context)
+> - [will-change](/css/will-change)

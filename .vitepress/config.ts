@@ -1,14 +1,21 @@
 import { defineConfig } from "vitepress";
 import { sidebar } from "./sidebar";
 
+const siteBase = "/web-interview/";
+
 export default defineConfig({
 	title: "Web Interview Documentation",
 	description: "Документация по веб-разработке для подготовки к собеседованиям",
 
+	head: [
+		["link", { rel: "icon", type: "image/svg+xml", href: `${siteBase}favicon.svg` }],
+		["link", { rel: "shortcut icon", href: `${siteBase}favicon.svg` }],
+	],
+
 	// Настройка для деплоя на GitHub Pages
 	// Репозиторий называется "web-interview", поэтому используем base: '/web-interview/'
 	// В локальной разработке тоже нужно использовать этот base - открывайте http://localhost:5173/web-interview/
-	base: "/web-interview/",
+	base: siteBase,
 
 	// Чистые URL без .html
 	cleanUrls: true,
@@ -37,7 +44,8 @@ export default defineConfig({
 
 		// Футер (опционально)
 		footer: {
-			message: "Документация по веб-разработке",
+			message:
+				'Документация по веб-разработке · <a href="https://github.com/dd-frontman/web-interview" target="_blank" rel="noreferrer">поставь звезде на гх, если понравилось</a>',
 			copyright: "Copyright © 2024",
 		},
 

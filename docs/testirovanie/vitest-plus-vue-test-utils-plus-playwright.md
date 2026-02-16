@@ -227,3 +227,12 @@ Vitest может делать **snapshot-тесты UI**, а Playwright — **p
 | **Unit**                            | Vitest + Vue Test Utils          | Компоненты и функции             |
 | **Integration/Component (browser)** | Vitest browser mode + Playwright | Реальный DOM, события            |
 | **E2E/UI**                          | Playwright                       | Полный пользовательский сценарий |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Vitest](/testirovanie/vitest)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

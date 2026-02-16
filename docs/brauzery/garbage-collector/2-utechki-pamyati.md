@@ -188,3 +188,12 @@ b = null;
 
 ➡️ Утечки памяти возникают, когда **ссылки на объекты остаются, даже если они больше не нужны.**  
 ➡️ Garbage Collector может **удалять только недостижимые объекты**, поэтому всё ещё достижимое останется в памяти. [DITD](https://www.ditdot.hr/en/causes-of-memory-leaks-in-javascript-and-how-to-avoid-them)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Сборщик мусора](/brauzery/garbage-collector/1-sborschik-musora)
+> - [Вопросы по Garbage Collector](/brauzery/garbage-collector/voprosy-po-garbage-collector)
+> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+

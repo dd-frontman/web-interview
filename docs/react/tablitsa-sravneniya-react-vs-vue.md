@@ -125,3 +125,12 @@
 | SSR         | Next.js                                              | Nuxt.js                                            |
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [React](/react/index)
+> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
+> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
+

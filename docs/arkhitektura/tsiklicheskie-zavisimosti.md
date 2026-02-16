@@ -234,3 +234,12 @@ A → Facade ← B      (A и B не знают друг о друге)
 | Использовать mediator/pub-sub             | Убрать A↔B прямые связи             |
 | Применять **dynamic import** точечно      | Разрывать статические циклы         |
 | Писать ADR/правила импорта                | Чтобы команда не возвращала циклы   |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
+> - [Domain-Driven Design](/arkhitektura/domain-driven-design)
+> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
+

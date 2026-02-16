@@ -83,3 +83,12 @@ React делит хуки на 3 группы: **базовые**, **допол�
 - Для **отладки**: `useDebugValue`.
 
 ---
+
+---
+
+> [!tip] Связанные темы
+>
+> - [useContext](/react/khuki/usecontext)
+> - [useEffect](/react/khuki/useeffect)
+> - [useState](/react/khuki/usestate)
+

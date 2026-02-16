@@ -147,6 +147,10 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 			{ text: "Микросервисы", link: "/arkhitektura/mikroservisy" },
 			{ text: "Микрофронтенд", link: "/arkhitektura/mikrofrontend" },
 			{
+				text: "Трассировка запросов (OpenTelemetry)",
+				link: "/arkhitektura/trassirovka-zaprosov-opentelemetry",
+			},
+			{
 				text: "Топ-5 фронтенд-архитектур",
 				link: "/arkhitektura/top-5-frontend-arkhitektur",
 			},
@@ -184,18 +188,27 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 			{ text: "Event Loop", link: "/javascript/event-loop" },
 			{ text: "Event Bubbling", link: "/javascript/event-bubbling" },
 			{ text: "Promise", link: "/javascript/promise" },
+			{
+				text: "Как работает JavaScript под капотом",
+				link: "/javascript/kak-rabotaet-javascript-pod-kapotom",
+			},
 			{ text: "Что такое замыкание", link: "/javascript/chto-takoe-zamykanie" },
+			{
+				text: "JSON и его альтернативы",
+				link: "/javascript/json-i-ego-alternativy",
+			},
 			{ text: "Object.freeze()", link: "/javascript/object-freeze" },
 			{
 				text: "Коллекции данных",
 				collapsible: true,
 				collapsed: true,
-				items: [
-					{ text: "Map", link: "/javascript/kollektsii-dannykh/map" },
-					{ text: "Set", link: "/javascript/kollektsii-dannykh/set" },
-					{ text: "WeakMap", link: "/javascript/kollektsii-dannykh/weakmap" },
-				],
-			},
+					items: [
+						{ text: "Map", link: "/javascript/kollektsii-dannykh/map" },
+						{ text: "Set", link: "/javascript/kollektsii-dannykh/set" },
+						{ text: "WeakMap", link: "/javascript/kollektsii-dannykh/weakmap" },
+						{ text: "WeakSet", link: "/javascript/kollektsii-dannykh/weakset" },
+					],
+				},
 		],
 	},
 	{
@@ -212,6 +225,10 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
+			{
+				text: "Адаптивная и отзывчивая верстка",
+				link: "/css/adaptivnaya-i-otzyvchivaya-verstka",
+			},
 			{ text: "Центрирование в CSS", link: "/css/tsentrirovanie-v-css" },
 			{ text: "Позиционирование в CSS", link: "/css/pozitsionirovanie-v-css" },
 			{
@@ -319,14 +336,18 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Разница между HTTP 1.1, HTTP 2 и HTTP 3",
 				link: "/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3",
 			},
-			{
-				text: "Сети, HTTP и CORS",
-				link: "/brauzery/seti-http-i-cors",
-			},
-			{
-				text: "Междоменные запросы: CORS, JSONP, Proxy",
-				link: "/brauzery/mezhdomennye-zaprosy-cors-jsonp-proxy",
-			},
+				{
+					text: "Сети, HTTP и CORS",
+					link: "/brauzery/seti-http-i-cors",
+				},
+				{
+					text: "WebSocket в браузере",
+					link: "/brauzery/websockety-v-brauzere",
+				},
+				{
+					text: "Междоменные запросы: CORS, JSONP, Proxy",
+					link: "/brauzery/mezhdomennye-zaprosy-cors-jsonp-proxy",
+				},
 			{
 				text: "Server-Sent Events (SSE)",
 				link: "/brauzery/server-sent-events-sse",
@@ -335,14 +356,18 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Общение между вкладками браузера",
 				link: "/brauzery/obschenie-mezhdu-vkladkami-brauzera",
 			},
-			{
-				text: "Workers в браузере",
-				link: "/brauzery/workers-v-brauzere",
-			},
-			{
-				text: "A11y (Accessibility)",
-				link: "/brauzery/a11y-accessibility",
-			},
+				{
+					text: "Workers в браузере",
+					link: "/brauzery/workers-v-brauzere",
+				},
+				{
+					text: "Оптимизация изображений в вебе",
+					link: "/brauzery/optimizatsiya-izobrazhenii-v-vebe",
+				},
+				{
+					text: "A11y (Accessibility)",
+					link: "/brauzery/a11y-accessibility",
+				},
 		],
 	},
 	{
@@ -391,15 +416,15 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 			{ text: "Карта по алгосам", link: "/algoritmy/karta-po-algosam" },
 		],
 	},
-	{
-		text: "ООП",
-		collapsible: true,
-		collapsed: true,
-		items: [
-			{ text: "Принципы ООП", link: "/oop/printsipy-oop" },
-			{ text: "Пораждающие паттерны", link: "/oop/porazhdayuschie-patterny" },
-		],
-	},
+		{
+			text: "ООП",
+			collapsible: true,
+			collapsed: true,
+			items: [
+				{ text: "Принципы", link: "/oop/printsipy-oop" },
+				{ text: "Пораждающие паттерны", link: "/oop/porazhdayuschie-patterny" },
+			],
+		},
 	{
 		text: "npm tools",
 		collapsible: true,
@@ -418,7 +443,7 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		],
 	},
 	{
-		text: "Pixi по темам",
+		text: "Pixi",
 		collapsible: true,
 		collapsed: true,
 		items: [

@@ -315,3 +315,12 @@ Vite использует esbuild для этой задачи, что даёт 
 | Legacy-поддержка          | плагин @vitejs/plugin-legacy                         |
 | Плагины                   | похожи на Rollup, участвуют в pipeline               |
 | Dependency pre-bundling   | улучшает стабильность и загрузку                     |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+

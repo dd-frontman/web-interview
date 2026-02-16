@@ -246,3 +246,12 @@ button {
 }
 </style>
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Двустороннее связывание через v-model](/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

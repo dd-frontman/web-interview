@@ -182,3 +182,12 @@
 ```
 
 Такой каркас странице задаёт **чёткую структуру**, понятную для браузеров, ассистивных устройств и поисковых роботов. [w3schools.com](https://www.w3schools.com/html/html5_semantic_elements.asp)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Shadow DOM](/html/shadow-dom)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

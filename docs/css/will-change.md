@@ -1,9 +1,3 @@
-> [!tip] Связанные темы
->
-> - z-index и stacking context
-> - Позиционирование в CSS
-> - LCP, INP, TTI
-
 ## Что такое `will-change`
 
 `will-change` — это подсказка браузеру: "это свойство скоро изменится, подготовь оптимизации заранее".
@@ -71,3 +65,11 @@ function endAnimation() {
 
 - MDN: `will-change`  
   https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+
+---
+
+> [!tip] Связанные темы
+>
+> - [z-index и stacking context](/css/z-index-i-stacking-context)
+> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
+> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)

@@ -192,3 +192,12 @@ function process(value: unknown) {
 - Для структур данных: `in` или user-defined guard.
 - Для сложных состояний UI/API: discriminated union по полю `status`.
 - Для fail-fast сценариев: `asserts value is Type`.
+
+---
+
+> [!tip] Связанные темы
+>
+> - [as const в TypeScript](/typescript/as-const-v-typescript)
+> - [assert в TypeScript](/typescript/assert-v-typescript)
+> - [TypeScript](/typescript/index)
+

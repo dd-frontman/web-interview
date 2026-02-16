@@ -173,3 +173,12 @@ Vitest — это:
 ✅ быстрый и удобный  
 ✅ хорошо работает с Vue и TypeScript  
 ✅ поддерживает продвинутые возможности (параллель, фильтрация, типы) [Vitest](https://vitest.dev/guide/)
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Vitest + Vue Test Utils + Playwright](/testirovanie/vitest-plus-vue-test-utils-plus-playwright)
+> - [Vue](/vue)
+> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+

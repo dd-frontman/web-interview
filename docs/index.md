@@ -55,3 +55,12 @@ import { withBase } from 'vitepress'
 </div>
 
 </div>
+
+---
+
+> [!tip] Связанные темы
+>
+> - [Общие вопросы по Web (разнесено по разделам)](/obschie-voprosy-po-web)
+> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
+> - [Vue](/vue)
+

@@ -162,3 +162,12 @@ CORS → сервер сам решает, **кому можно**. Это за�
 | **CORS**                | Ограничивает доступ между origin; основан на заголовках `Access-Control-*` |
 | **Simple vs Preflight** | Простые запросы проверяются по ответу, сложные → `OPTIONS` запрос          |
 | **Защита**              | CORS предотвращает кражу запросов между сайтами, особенно CSRF             |
+
+---
+
+> [!tip] Связанные темы
+>
+> - [A11y (Accessibility)](/brauzery/a11y-accessibility)
+> - [Critical Render Path](/brauzery/critical-render-path)
+> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+

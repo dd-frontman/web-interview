@@ -803,3 +803,12 @@ const { data } = useSWR("/api/user", fetcher);
 ```js
 const { data } = useSWR("/api/user", fetcher);
 ```
+
+---
+
+> [!tip] Связанные темы
+>
+> - [React](/react/index)
+> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
+> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
+
