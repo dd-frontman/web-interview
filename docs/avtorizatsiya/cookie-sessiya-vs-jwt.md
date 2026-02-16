@@ -66,9 +66,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Авторизация](/avtorizatsiya/avtorizatsiya)
-> - [JWT](/avtorizatsiya/jwt)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
+		{ title: 'JWT', href: '/avtorizatsiya/jwt' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

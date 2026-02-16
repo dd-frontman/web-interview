@@ -86,15 +86,21 @@ for (let i = 0; i < 3; i++) {
 Пока есть ссылка на функцию-замыкание, окружение может оставаться в памяти.  
 Если держать тяжелые объекты в замыкании без необходимости, можно получить утечки.
 
-## Официальная документация
-
-- MDN: Closures  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures
+<OfficialDocsLinks
+	:links="[
+		{
+			title: 'MDN: Closures',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Типы функций](/javascript/tipy-funktsii)
-> - [Event Loop](/javascript/event-loop)
-> - [Promise](/javascript/promise)
+<RelatedTopics
+	:items="[
+		{ title: 'Типы функций', href: '/javascript/tipy-funktsii' },
+		{ title: 'Event Loop', href: '/javascript/event-loop' },
+		{ title: 'Promise', href: '/javascript/promise' },
+	]"
+/>

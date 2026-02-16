@@ -177,9 +177,11 @@ export function Search({ query }: { query: string }) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
-> - [useContext](/react/khuki/usecontext)
-> - [useState](/react/khuki/usestate)
+<RelatedTopics
+	:items="[
+		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+		{ title: 'useContext', href: '/react/khuki/usecontext' },
+		{ title: 'useState', href: '/react/khuki/usestate' },
+	]"
+/>
 

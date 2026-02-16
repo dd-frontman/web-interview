@@ -106,8 +106,10 @@ requestAnimationFrame(() => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Типичные ошибки CRP](/brauzery/oshibki-critical-rendering-path)
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
+<RelatedTopics
+	:items="[
+		{ title: 'Типичные ошибки CRP', href: '/brauzery/oshibki-critical-rendering-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+	]"
+/>

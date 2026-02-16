@@ -79,15 +79,21 @@ customElements.define("x-badge", XBadge);
 - для кастомизации обычно используют CSS custom properties и `::part`
 - событие из shadow может "пробулькать" наружу, если оно `composed`
 
-## Официальная документация
-
-- MDN: Using shadow DOM  
-  https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM
+<OfficialDocsLinks
+	:links="[
+		{
+			title: 'MDN: Using shadow DOM',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Семантические теги](/html/semanticheskie-tegi)
-> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
-> - [z-index и stacking context](/css/z-index-i-stacking-context)
+<RelatedTopics
+	:items="[
+		{ title: 'Семантические теги', href: '/html/semanticheskie-tegi' },
+		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+	]"
+/>

@@ -201,23 +201,25 @@ main {
 
 Этот шаблон покрывает большую часть проектов.
 
-## Официальная документация
-
-- MDN: `min-height`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/min-height
-- MDN: `height`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/height
-- MDN: Layout cookbook - Sticky footers  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers
-- MDN: Flexbox  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout
-- MDN: Grid layout  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+<OfficialDocsLinks
+	:links="[
+		{ title: 'MDN: min-height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/min-height' },
+		{ title: 'MDN: height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/height' },
+		{
+			title: 'MDN: Layout cookbook - Sticky footers',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers',
+		},
+		{ title: 'MDN: Flexbox', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout' },
+		{ title: 'MDN: Grid layout', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout' },
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
-> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
-> - [z-index и stacking context](/css/z-index-i-stacking-context)
+<RelatedTopics
+	:items="[
+		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+	]"
+/>

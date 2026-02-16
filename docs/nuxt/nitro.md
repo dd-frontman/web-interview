@@ -118,9 +118,11 @@ Nuxt интегрирует Nitro таким образом, что вам **н�
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Hydration](/nuxt/hydration)
-> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
-> - [Nuxt vs Vue](/nuxt/nuxt-vs-vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Hydration', href: '/nuxt/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+	]"
+/>
 

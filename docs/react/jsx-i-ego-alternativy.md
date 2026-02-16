@@ -101,9 +101,11 @@ function App() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [React](/react/index)
-> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
-> - [Основные функции React](/react/osnovnye-funktsii-react)
+<RelatedTopics
+	:items="[
+		{ title: 'React', href: '/react/index' },
+		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+		{ title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
+	]"
+/>
 

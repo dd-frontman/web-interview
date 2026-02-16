@@ -422,9 +422,11 @@ export function UserCard() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [ООП](/oop/index)
-> - [Пораждающие паттерны](/oop/porazhdayuschie-patterny)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'ООП', href: '/oop/index' },
+		{ title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

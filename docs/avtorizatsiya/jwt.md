@@ -77,9 +77,11 @@ JWT состоит из трёх частей, разделённых точка
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Авторизация](/avtorizatsiya/avtorizatsiya)
-> - [Cookie-сессия vs JWT](/avtorizatsiya/cookie-sessiya-vs-jwt)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
+		{ title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

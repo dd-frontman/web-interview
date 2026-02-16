@@ -115,9 +115,11 @@ onRenderTriggered((e) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [reactive](/vue/ref-and-reactive/reactive)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
-> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+<RelatedTopics
+	:items="[
+		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+	]"
+/>
 

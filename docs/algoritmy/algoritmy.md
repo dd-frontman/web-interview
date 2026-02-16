@@ -202,19 +202,15 @@ console.log(fibonacciMemo(10)); // 55
 - **Практика**: LeetCode, HackerRank, Codewars
 - **Визуализация**: VisuAlgo, Algorithm Visualizer
 
-> [!note] См. также
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Структуры данных](/algoritmy/2-struktury-dannykh)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
-
 #алгоритмы #структуры-данных #сложность #оптимизация #программирование
 
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Структуры данных](/algoritmy/2-struktury-dannykh)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Структуры данных', href: '/algoritmy/2-struktury-dannykh' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

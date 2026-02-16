@@ -330,9 +330,11 @@ console.log(u1.role); // "user"
 
 ---
 
-> [!tip] Связанные темы
->
-> - [ООП](/oop/index)
-> - [Принципы](/oop/printsipy-oop)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'ООП', href: '/oop/index' },
+		{ title: 'Принципы', href: '/oop/printsipy-oop' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

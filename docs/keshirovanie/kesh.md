@@ -181,9 +181,11 @@ export default function PostsPage({ posts }) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Кэширование](/keshirovanie/index)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Кэширование', href: '/keshirovanie/index' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

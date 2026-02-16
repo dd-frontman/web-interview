@@ -251,9 +251,11 @@ Vue трансформирует это в:
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
-> - [defineExpose()](/vue/defineexpose)
-> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+<RelatedTopics
+	:items="[
+		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+		{ title: 'defineExpose()', href: '/vue/defineexpose' },
+		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
+	]"
+/>
 

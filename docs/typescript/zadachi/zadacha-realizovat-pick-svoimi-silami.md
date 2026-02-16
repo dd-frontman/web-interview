@@ -74,9 +74,11 @@ type UserPreview = MyPick<User, "id" | "name">;
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Утилитарные типы](/typescript/utilitarnye-tipy)
-> - [as const в TypeScript](/typescript/as-const-v-typescript)
-> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+<RelatedTopics
+	:items="[
+		{ title: 'Утилитарные типы', href: '/typescript/utilitarnye-tipy' },
+		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+	]"
+/>
 

@@ -4,9 +4,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Кэш](/keshirovanie/kesh)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Кэш', href: '/keshirovanie/kesh' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

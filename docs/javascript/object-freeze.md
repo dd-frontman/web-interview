@@ -71,15 +71,21 @@ const settings = deepFreeze({
 - защиту от случайной мутации
 - immutable-подходы в архитектуре
 
-## Официальная документация
-
-- MDN: `Object.freeze()`  
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+<OfficialDocsLinks
+	:links="[
+		{
+			title: 'MDN: Object.freeze()',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Типы данных / Object](/javascript/tipy-dannykh/object)
-> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
-> - [TypeScript: утилитарные типы](/typescript/utilitarnye-tipy)
+<RelatedTopics
+	:items="[
+		{ title: 'Типы данных / Object', href: '/javascript/tipy-dannykh/object' },
+		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+		{ title: 'TypeScript: утилитарные типы', href: '/typescript/utilitarnye-tipy' },
+	]"
+/>

@@ -142,9 +142,11 @@ for (const item of items) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
-> - [Reflow, Repaint, Layout Thrashing](/brauzery/reflow-repaint-i-layout-thrashing)
-> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+<RelatedTopics
+	:items="[
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+		{ title: 'Reflow, Repaint, Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+	]"
+/>

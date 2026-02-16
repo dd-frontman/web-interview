@@ -68,9 +68,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
-> - [Монолит](/arkhitektura/monolit)
-> - [Микросервисы](/arkhitektura/mikroservisy)
-> - [Топ-5 фронтенд-архитектур](/arkhitektura/top-5-frontend-arkhitektur)
+<RelatedTopics
+	:items="[
+		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+		{ title: 'Монолит', href: '/arkhitektura/monolit' },
+		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+		{ title: 'Топ-5 фронтенд-архитектур', href: '/arkhitektura/top-5-frontend-arkhitektur' },
+	]"
+/>

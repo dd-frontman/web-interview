@@ -60,9 +60,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Принципы программирования](/printsipy-programmirovaniya/index)
-> - [SOLID](/printsipy-programmirovaniya/solid)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Принципы программирования', href: '/printsipy-programmirovaniya/index' },
+		{ title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

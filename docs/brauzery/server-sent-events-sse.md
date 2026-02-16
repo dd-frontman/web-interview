@@ -63,8 +63,10 @@ app.get("/api/events", (req, res) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [Разница между HTTP 1.1, HTTP 2 и HTTP 3](/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3)
-> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+<RelatedTopics
+	:items="[
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'Разница между HTTP 1.1, HTTP 2 и HTTP 3', href: '/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3' },
+		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+	]"
+/>

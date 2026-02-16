@@ -100,8 +100,10 @@ button.addEventListener("click", async () => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Типичные ошибки CRP](/brauzery/oshibki-critical-rendering-path)
-> - [Reflow, Repaint, Layout Thrashing](/brauzery/reflow-repaint-i-layout-thrashing)
-> - [Workers в браузере](/brauzery/workers-v-brauzere)
+<RelatedTopics
+	:items="[
+		{ title: 'Типичные ошибки CRP', href: '/brauzery/oshibki-critical-rendering-path' },
+		{ title: 'Reflow, Repaint, Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+		{ title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
+	]"
+/>

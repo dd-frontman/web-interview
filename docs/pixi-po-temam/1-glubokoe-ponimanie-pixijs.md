@@ -137,9 +137,11 @@ _Расширяем_ рендер-пайплайн без форка Pixi: фи�
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
-> - [TypeScript first](/pixi-po-temam/3-typescript-first)
-> - [Производительность и отладка](/pixi-po-temam/4-proizvoditelnost-i-otladka)
+<RelatedTopics
+	:items="[
+		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+	]"
+/>
 

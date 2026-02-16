@@ -79,21 +79,24 @@ console.log(user.name);
 - **gRPC**: внутренние сервисы, строгая типизация, high-throughput, стриминг
 - **REST/OpenAPI**: публичные API, простая интеграция, дебаг "из браузера"
 
-## Официальная документация
-
-- gRPC: Introduction  
-  https://grpc.io/docs/what-is-grpc/introduction/
-- gRPC: Core concepts  
-  https://grpc.io/docs/what-is-grpc/core-concepts/
-- Protocol Buffers: Overview  
-  https://protobuf.dev/overview/
-- Protocol Buffers: Proto3 language guide  
-  https://protobuf.dev/programming-guides/proto3/
+<OfficialDocsLinks
+	:links="[
+		{ title: 'gRPC: Introduction', href: 'https://grpc.io/docs/what-is-grpc/introduction/' },
+		{ title: 'gRPC: Core concepts', href: 'https://grpc.io/docs/what-is-grpc/core-concepts/' },
+		{ title: 'Protocol Buffers: Overview', href: 'https://protobuf.dev/overview/' },
+		{
+			title: 'Protocol Buffers: Proto3 language guide',
+			href: 'https://protobuf.dev/programming-guides/proto3/',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [Nuxt / Nitro](/nuxt/nitro)
+<RelatedTopics
+	:items="[
+		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'Nuxt / Nitro', href: '/nuxt/nitro' },
+	]"
+/>

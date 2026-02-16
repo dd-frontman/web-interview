@@ -146,9 +146,11 @@ type A = Awaited<Promise<Promise<string>>> // string
 
 ---
 
-> [!tip] Связанные темы
->
-> - [as const в TypeScript](/typescript/as-const-v-typescript)
-> - [assert в TypeScript](/typescript/assert-v-typescript)
-> - [TypeScript](/typescript/index)
+<RelatedTopics
+	:items="[
+		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+		{ title: 'TypeScript', href: '/typescript/index' },
+	]"
+/>
 

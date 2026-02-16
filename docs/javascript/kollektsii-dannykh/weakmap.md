@@ -144,9 +144,11 @@ u = null; // объект и privateStorage запись могут быть у�
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Map](/javascript/kollektsii-dannykh/map)
-> - [Set](/javascript/kollektsii-dannykh/set)
-> - [WeakSet](/javascript/kollektsii-dannykh/weakset)
+<RelatedTopics
+	:items="[
+		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+	]"
+/>
 

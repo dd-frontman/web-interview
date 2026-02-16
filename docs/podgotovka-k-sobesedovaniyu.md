@@ -174,19 +174,15 @@
 
 ---
 
-> [!note] См. также
->
-> - [Самопрезентация](/podgotovka-k-sobesedovaniyu) - как рассказать о себе
-> - [Мок собеседование](/podgotovka-k-sobesedovaniyu) - практика с HR
-> - [Алгоритмы](/algoritmy/algoritmy) - техническая подготовка
-
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
-> - [Vue](/vue)
-> - [Алгоритмы](/algoritmy/algoritmy)
-> - [Самопрезентация](/podgotovka-k-sobesedovaniyu)
-> - [Мок собеседование](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
+		{ title: 'Самопрезентация', href: '/podgotovka-k-sobesedovaniyu' },
+		{ title: 'Мок собеседование', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

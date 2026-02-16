@@ -146,9 +146,11 @@ Promise.any([p1, p2, p3])
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
-> - [Event Bubbling](/javascript/event-bubbling)
-> - [Event Loop](/javascript/event-loop)
+<RelatedTopics
+	:items="[
+		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+		{ title: 'Event Bubbling', href: '/javascript/event-bubbling' },
+		{ title: 'Event Loop', href: '/javascript/event-loop' },
+	]"
+/>
 

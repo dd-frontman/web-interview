@@ -104,8 +104,10 @@ console.log("4");
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Event Loop](/javascript/event-loop)
-> - [Promise](/javascript/promise)
-> - [Garbage Collector](/brauzery/garbage-collector/1-sborschik-musora)
+<RelatedTopics
+	:items="[
+		{ title: 'Event Loop', href: '/javascript/event-loop' },
+		{ title: 'Promise', href: '/javascript/promise' },
+		{ title: 'Garbage Collector', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+	]"
+/>

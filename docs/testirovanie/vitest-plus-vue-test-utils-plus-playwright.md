@@ -230,9 +230,11 @@ Vitest может делать **snapshot-тесты UI**, а Playwright — **p
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Vitest](/testirovanie/vitest)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Vitest', href: '/testirovanie/vitest' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

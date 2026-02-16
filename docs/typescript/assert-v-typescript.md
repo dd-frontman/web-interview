@@ -94,9 +94,11 @@ function divide(a: number, b: number) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [as const в TypeScript](/typescript/as-const-v-typescript)
-> - [TypeScript](/typescript/index)
-> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+<RelatedTopics
+	:items="[
+		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+		{ title: 'TypeScript', href: '/typescript/index' },
+		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+	]"
+/>
 

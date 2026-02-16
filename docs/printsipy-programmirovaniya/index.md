@@ -4,9 +4,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Маленькие принципы](/printsipy-programmirovaniya/malenkie-printsipy)
-> - [SOLID](/printsipy-programmirovaniya/solid)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Маленькие принципы', href: '/printsipy-programmirovaniya/malenkie-printsipy' },
+		{ title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

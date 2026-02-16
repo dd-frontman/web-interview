@@ -407,19 +407,15 @@ class ProfileService {
 
 ---
 
-> [!note] См. также
->
-> - [Монолит](/arkhitektura/monolit) - детально о монолитной архитектуре
-> - [Микросервисы](/arkhitektura/mikroservisy) - детально о микросервисной архитектуре
-> - [Принципы SOLID](/printsipy-programmirovaniya/solid) - как применять в архитектуре
-
 ---
 
-> [!tip] Связанные темы
->
-> - [Принципы SOLID](/printsipy-programmirovaniya/solid)
-> - [Монолит](/arkhitektura/monolit)
-> - [Микросервисы](/arkhitektura/mikroservisy)
-> - [Циклические зависимости](/arkhitektura/tsiklicheskie-zavisimosti)
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'Принципы SOLID', href: '/printsipy-programmirovaniya/solid' },
+		{ title: 'Монолит', href: '/arkhitektura/monolit' },
+		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+		{ title: 'Циклические зависимости', href: '/arkhitektura/tsiklicheskie-zavisimosti' },
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

@@ -4,9 +4,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Пораждающие паттерны](/oop/porazhdayuschie-patterny)
-> - [Принципы](/oop/printsipy-oop)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
+		{ title: 'Принципы', href: '/oop/printsipy-oop' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

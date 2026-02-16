@@ -134,9 +134,11 @@ onRenderTriggered((e) => console.log("render triggered", e.type, e.key));
 
 ---
 
-> [!tip] Связанные темы
->
-> - [reactive](/vue/ref-and-reactive/reactive)
-> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
-> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+<RelatedTopics
+	:items="[
+		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
+		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+	]"
+/>
 

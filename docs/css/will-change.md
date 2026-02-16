@@ -61,15 +61,18 @@ function endAnimation() {
 
 Это самые безопасные кандидаты для анимаций в UI.
 
-## Официальная документация
-
-- MDN: `will-change`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/will-change
+<OfficialDocsLinks
+	:links="[
+		{ title: 'MDN: will-change', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/will-change' },
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [z-index и stacking context](/css/z-index-i-stacking-context)
-> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
-> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
+<RelatedTopics
+	:items="[
+		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+	]"
+/>

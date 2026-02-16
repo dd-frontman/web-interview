@@ -268,9 +268,11 @@ watch(
 
 ---
 
-> [!tip] Связанные темы
->
-> - [React](/react/index)
-> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
-> - [Основные функции React](/react/osnovnye-funktsii-react)
+<RelatedTopics
+	:items="[
+		{ title: 'React', href: '/react/index' },
+		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+		{ title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
+	]"
+/>
 

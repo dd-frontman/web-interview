@@ -202,13 +202,13 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Коллекции данных",
 				collapsible: true,
 				collapsed: true,
-					items: [
-						{ text: "Map", link: "/javascript/kollektsii-dannykh/map" },
-						{ text: "Set", link: "/javascript/kollektsii-dannykh/set" },
-						{ text: "WeakMap", link: "/javascript/kollektsii-dannykh/weakmap" },
-						{ text: "WeakSet", link: "/javascript/kollektsii-dannykh/weakset" },
-					],
-				},
+				items: [
+					{ text: "Map", link: "/javascript/kollektsii-dannykh/map" },
+					{ text: "Set", link: "/javascript/kollektsii-dannykh/set" },
+					{ text: "WeakMap", link: "/javascript/kollektsii-dannykh/weakmap" },
+					{ text: "WeakSet", link: "/javascript/kollektsii-dannykh/weakset" },
+				],
+			},
 		],
 	},
 	{
@@ -295,30 +295,30 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Полный путь загрузки сайта",
 				link: "/brauzery/polnyi-put-zagruzki-saita",
 			},
-				{
-					text: "Critical Render Path",
-					link: "/brauzery/critical-render-path",
-				},
-				{
-					text: "Ошибки Critical Rendering Path",
-					collapsible: true,
-					collapsed: true,
-					items: [
-						{
-							text: "Типичные ошибки CRP",
-							link: "/brauzery/oshibki-critical-rendering-path",
-						},
-						{
-							text: "Reflow, Repaint, Layout Thrashing",
-							link: "/brauzery/reflow-repaint-i-layout-thrashing",
-						},
-						{
-							text: "Forced Synchronous Layout и Long Tasks",
-							link: "/brauzery/forced-synchronous-layout-i-long-tasks",
-						},
-					],
-				},
-				{ text: "LCP, INP, TTI", link: "/brauzery/lcp-inp-tti" },
+			{
+				text: "Critical Render Path",
+				link: "/brauzery/critical-render-path",
+			},
+			{
+				text: "Ошибки Critical Rendering Path",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{
+						text: "Типичные ошибки CRP",
+						link: "/brauzery/oshibki-critical-rendering-path",
+					},
+					{
+						text: "Reflow, Repaint, Layout Thrashing",
+						link: "/brauzery/reflow-repaint-i-layout-thrashing",
+					},
+					{
+						text: "Forced Synchronous Layout и Long Tasks",
+						link: "/brauzery/forced-synchronous-layout-i-long-tasks",
+					},
+				],
+			},
+			{ text: "LCP, INP, TTI", link: "/brauzery/lcp-inp-tti" },
 			{
 				text: "Garbage Collector",
 				collapsible: true,
@@ -336,18 +336,18 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Разница между HTTP 1.1, HTTP 2 и HTTP 3",
 				link: "/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3",
 			},
-				{
-					text: "Сети, HTTP и CORS",
-					link: "/brauzery/seti-http-i-cors",
-				},
-				{
-					text: "WebSocket в браузере",
-					link: "/brauzery/websockety-v-brauzere",
-				},
-				{
-					text: "Междоменные запросы: CORS, JSONP, Proxy",
-					link: "/brauzery/mezhdomennye-zaprosy-cors-jsonp-proxy",
-				},
+			{
+				text: "Сети, HTTP и CORS",
+				link: "/brauzery/seti-http-i-cors",
+			},
+			{
+				text: "WebSocket в браузере",
+				link: "/brauzery/websockety-v-brauzere",
+			},
+			{
+				text: "Междоменные запросы: CORS, JSONP, Proxy",
+				link: "/brauzery/mezhdomennye-zaprosy-cors-jsonp-proxy",
+			},
 			{
 				text: "Server-Sent Events (SSE)",
 				link: "/brauzery/server-sent-events-sse",
@@ -356,18 +356,18 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				text: "Общение между вкладками браузера",
 				link: "/brauzery/obschenie-mezhdu-vkladkami-brauzera",
 			},
-				{
-					text: "Workers в браузере",
-					link: "/brauzery/workers-v-brauzere",
-				},
-				{
-					text: "Оптимизация изображений в вебе",
-					link: "/brauzery/optimizatsiya-izobrazhenii-v-vebe",
-				},
-				{
-					text: "A11y (Accessibility)",
-					link: "/brauzery/a11y-accessibility",
-				},
+			{
+				text: "Workers в браузере",
+				link: "/brauzery/workers-v-brauzere",
+			},
+			{
+				text: "Оптимизация изображений в вебе",
+				link: "/brauzery/optimizatsiya-izobrazhenii-v-vebe",
+			},
+			{
+				text: "A11y (Accessibility)",
+				link: "/brauzery/a11y-accessibility",
+			},
 		],
 	},
 	{
@@ -416,15 +416,15 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 			{ text: "Карта по алгосам", link: "/algoritmy/karta-po-algosam" },
 		],
 	},
-		{
-			text: "ООП",
-			collapsible: true,
-			collapsed: true,
-			items: [
-				{ text: "Принципы", link: "/oop/printsipy-oop" },
-				{ text: "Пораждающие паттерны", link: "/oop/porazhdayuschie-patterny" },
-			],
-		},
+	{
+		text: "ООП",
+		collapsible: true,
+		collapsed: true,
+		items: [
+			{ text: "Принципы", link: "/oop/printsipy-oop" },
+			{ text: "Пораждающие паттерны", link: "/oop/porazhdayuschie-patterny" },
+		],
+	},
 	{
 		text: "npm tools",
 		collapsible: true,
@@ -447,6 +447,7 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsible: true,
 		collapsed: true,
 		items: [
+			{ text: "Обзор Pixi", link: "/pixi-po-temam/index" },
 			{
 				text: "Глубокое понимание PixiJS",
 				link: "/pixi-po-temam/1-glubokoe-ponimanie-pixijs",

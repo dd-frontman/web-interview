@@ -111,8 +111,10 @@ console.log("End"); // 2
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Что такое замыкание](/javascript/chto-takoe-zamykanie)
-> - [Event Bubbling](/javascript/event-bubbling)
-> - [JSON и его альтернативы](/javascript/json-i-ego-alternativy)
+<RelatedTopics
+	:items="[
+		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+		{ title: 'Event Bubbling', href: '/javascript/event-bubbling' },
+		{ title: 'JSON и его альтернативы', href: '/javascript/json-i-ego-alternativy' },
+	]"
+/>

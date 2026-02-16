@@ -134,9 +134,11 @@ const updateNested = () => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [reactive](/vue/ref-and-reactive/reactive)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
-> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
+<RelatedTopics
+	:items="[
+		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+	]"
+/>
 

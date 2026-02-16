@@ -249,9 +249,11 @@ button {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Двустороннее связывание через v-model](/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Двустороннее связывание через v-model', href: '/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

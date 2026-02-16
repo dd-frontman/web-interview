@@ -93,9 +93,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Структуры данных](/algoritmy/2-struktury-dannykh)
-> - [Алгоритмы](/algoritmy/algoritmy)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Структуры данных', href: '/algoritmy/2-struktury-dannykh' },
+		{ title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

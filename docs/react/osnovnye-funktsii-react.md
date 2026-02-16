@@ -806,9 +806,11 @@ const { data } = useSWR("/api/user", fetcher);
 
 ---
 
-> [!tip] Связанные темы
->
-> - [React](/react/index)
-> - [JSX и его альтернативы](/react/jsx-i-ego-alternativy)
-> - [Локальное состояние (реактивность)](/react/lokalnoe-sostoyanie-reaktivnost)
+<RelatedTopics
+	:items="[
+		{ title: 'React', href: '/react/index' },
+		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+	]"
+/>
 

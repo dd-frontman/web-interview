@@ -181,9 +181,11 @@ function useFetchUsers() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
-> - [NaiveUI](/npm-tools/naiveui)
-> - [Nx и Turborepo](/npm-tools/nx-i-turborepo)
+<RelatedTopics
+	:items="[
+		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+		{ title: 'NaiveUI', href: '/npm-tools/naiveui' },
+		{ title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
+	]"
+/>
 

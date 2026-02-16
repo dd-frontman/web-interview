@@ -536,20 +536,16 @@ container.register("UserService", new UserService(container.resolve("UserReposit
 5. **Проверь подстановку** (LSP)
 6. **Протестируй** изменения
 
-> [!note] См. также
->
-> - [Принципы](/oop/printsipy-oop)
-> - [Маленькие принципы](/printsipy-programmirovaniya/malenkie-printsipy)
-> - [Архитектура приложений](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
-
 #solid #ооп #принципы #архитектура #код #качество
 
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [React на примере Vue](/react/react-na-primere-vue)
-> - [Vue.md](/vue)
-> - [Принципы](/oop/printsipy-oop)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'React на примере Vue', href: '/react/react-na-primere-vue' },
+		{ title: 'Vue.md', href: '/vue' },
+		{ title: 'Принципы', href: '/oop/printsipy-oop' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

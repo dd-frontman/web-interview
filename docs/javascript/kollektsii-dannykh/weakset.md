@@ -147,9 +147,11 @@ function bindClick(el) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Map](/javascript/kollektsii-dannykh/map)
-> - [Set](/javascript/kollektsii-dannykh/set)
-> - [WeakMap](/javascript/kollektsii-dannykh/weakmap)
+<RelatedTopics
+	:items="[
+		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+	]"
+/>
 

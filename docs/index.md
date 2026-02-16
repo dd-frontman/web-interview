@@ -58,9 +58,11 @@ import { withBase } from 'vitepress'
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Общие вопросы по Web (разнесено по разделам)](/obschie-voprosy-po-web)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Общие вопросы по Web (разнесено по разделам)', href: '/obschie-voprosy-po-web' },
+		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

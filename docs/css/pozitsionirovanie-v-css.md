@@ -115,17 +115,22 @@
 - `sticky` не работает, если у контейнера неподходящий `overflow`.
 - `z-index` пытаются чинить без понимания stacking context.
 
-## Официальная документация
-
-- MDN: `position`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/position
-- MDN: Learn CSS positioning  
-  https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+<OfficialDocsLinks
+	:links="[
+		{ title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
+		{
+			title: 'MDN: Learn CSS positioning',
+			href: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
-> - [z-index и stacking context](/css/z-index-i-stacking-context)
-> - [will-change](/css/will-change)
+<RelatedTopics
+	:items="[
+		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+		{ title: 'will-change', href: '/css/will-change' },
+	]"
+/>

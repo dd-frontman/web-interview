@@ -98,9 +98,11 @@ GC в JavaScript-движке запускается:
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Утечки памяти](/brauzery/garbage-collector/2-utechki-pamyati)
-> - [Вопросы по Garbage Collector](/brauzery/garbage-collector/voprosy-po-garbage-collector)
-> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+<RelatedTopics
+	:items="[
+		{ title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
+		{ title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
+		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+	]"
+/>
 

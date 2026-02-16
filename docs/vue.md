@@ -533,21 +533,17 @@ computed: {
 - **Тестируй компоненты** изолированно
 - **Оптимизируй рендеринг** с помощью `v-memo` и `v-once`
 
-> [!note] См. также
->
-> - [watch и watchEffect](/vue/watch-i-watcheffect)
-> - [Рендер-функции](/vue/render-funktsii)
-> - [Nuxt2 vs Nuxt3](/nuxt/nuxt2-vs-nuxt3)
-
 #vue #фреймворк #frontend #реактивность #компоненты
 
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [React на примере Vue](/react/react-na-primere-vue)
-> - [Таблица сравнения React vs Vue](/react/tablitsa-sravneniya-react-vs-vue)
-> - [defineExpose()](/vue/defineexpose)
-> - [provide и inject](/vue/provide-i-inject)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'React на примере Vue', href: '/react/react-na-primere-vue' },
+		{ title: 'Таблица сравнения React vs Vue', href: '/react/tablitsa-sravneniya-react-vs-vue' },
+		{ title: 'defineExpose()', href: '/vue/defineexpose' },
+		{ title: 'provide и inject', href: '/vue/provide-i-inject' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

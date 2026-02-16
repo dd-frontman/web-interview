@@ -610,20 +610,16 @@ function TodoApp() {
 - **Сравнивай подходы** для лучшего понимания
 - **Не бойся переключаться** между фреймворками
 
-> [!note] См. также
->
-> - [📌 Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
-> - [defineExpose()](/vue/defineexpose)
-> - [Принципы SOLID](/printsipy-programmirovaniya/solid)
-
 #react #vue #сравнение #фреймворки #frontend
 
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Vue.md](/vue)
-> - [Основные функции React](/react/osnovnye-funktsii-react)
-> - [Таблица сравнения React vs Vue](/react/tablitsa-sravneniya-react-vs-vue)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Vue.md', href: '/vue' },
+		{ title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
+		{ title: 'Таблица сравнения React vs Vue', href: '/react/tablitsa-sravneniya-react-vs-vue' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

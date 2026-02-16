@@ -201,9 +201,11 @@ load();
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
-> - [Feature-Sliced Design](/arkhitektura/feature-sliced-design)
-> - [Архитектура](/arkhitektura/index)
+<RelatedTopics
+	:items="[
+		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+		{ title: 'Архитектура', href: '/arkhitektura/index' },
+	]"
+/>
 

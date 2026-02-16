@@ -191,9 +191,11 @@ b = null;
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Сборщик мусора](/brauzery/garbage-collector/1-sborschik-musora)
-> - [Вопросы по Garbage Collector](/brauzery/garbage-collector/voprosy-po-garbage-collector)
-> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+<RelatedTopics
+	:items="[
+		{ title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+		{ title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
+		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+	]"
+/>
 

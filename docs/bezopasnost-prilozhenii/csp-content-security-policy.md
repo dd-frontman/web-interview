@@ -267,9 +267,11 @@ export default defineNuxtConfig({
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Безопасность приложений](/bezopasnost-prilozhenii/bezopasnost-prilozhenii)
-> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)
-> - [XSS (Cross-Site Scripting)](/bezopasnost-prilozhenii/xss-cross-site-scripting)
+<RelatedTopics
+	:items="[
+		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+		{ title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
+	]"
+/>
 

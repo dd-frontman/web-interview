@@ -226,9 +226,11 @@ CRP — это набор шагов, которые выполняет брау
 
 ---
 
-> [!tip] Связанные темы
->
-> - [A11y (Accessibility)](/brauzery/a11y-accessibility)
-> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
-> - [Браузеры](/brauzery/index)
+<RelatedTopics
+	:items="[
+		{ title: 'A11y (Accessibility)', href: '/brauzery/a11y-accessibility' },
+		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+		{ title: 'Браузеры', href: '/brauzery/index' },
+	]"
+/>
 

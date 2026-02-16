@@ -66,9 +66,11 @@ export default function App() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
-> - [useEffect](/react/khuki/useeffect)
-> - [useState](/react/khuki/usestate)
+<RelatedTopics
+	:items="[
+		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+		{ title: 'useEffect', href: '/react/khuki/useeffect' },
+		{ title: 'useState', href: '/react/khuki/usestate' },
+	]"
+/>
 

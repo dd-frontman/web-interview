@@ -1,477 +1,135 @@
-/* Увеличиваем ширину бокового меню */
 :root {
 	--vp-sidebar-width: 320px;
 }
 
-/* Добавляем отступы для подтем (лесенка) */
+/* Keep nested sidebar levels readable without overriding VitePress behavior. */
 .VPSidebarItem .items {
-	padding-left: 1rem;
-	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	padding-inline-start: 0.875rem;
 }
 
 .VPSidebarItem .items .items {
-	padding-left: 1.5rem;
-	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	padding-inline-start: 1.25rem;
 }
 
-/* Более специфичные селекторы для вложенных элементов sidebar */
-.VPSidebarItem .item .items {
-	padding-left: 1rem;
-	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.VPSidebarItem .item .items .item .items {
-	padding-left: 1.5rem;
-	transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-		padding-bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Анимация отступов при сворачивании - универсальные селекторы */
-.VPSidebar .group[aria-expanded="false"] .items,
-.VPSidebarGroup[aria-expanded="false"] .items,
-.VPSidebarItem[aria-expanded="false"] .items,
-.VPSidebar .group.collapsed .items,
-.VPSidebarGroup.collapsed .items,
-.VPSidebarItem.collapsed .items,
-.VPSidebar .group .item[aria-expanded="false"] .items,
-.VPSidebarItem .item[aria-expanded="false"] .items,
-.VPSidebar .group .item.collapsed .items,
-.VPSidebarItem .item.collapsed .items {
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-
-/* Убираем бордеры слева и справа у свитчера темы в хедере */
-.VPNavBar .appearance {
-	border-left: none !important;
-	border-right: none !important;
-}
-
-/* Альтернативный селектор для свитчера */
-.VPNavBar .VPNavBarAppearance {
-	border-left: none !important;
-	border-right: none !important;
-}
-
-/* Более специфичный селектор для кнопки переключения темы */
-.VPNavBar .appearance button,
-.VPNavBar .VPNavBarAppearance button {
-	border-left: none !important;
-	border-right: none !important;
-}
-
-/* Селектор для контейнера свитчера */
-.VPNavBar .appearance,
-.VPNavBar .VPNavBarAppearance,
-.VPNavBar .appearance > *,
-.VPNavBar .VPNavBarAppearance > * {
-	border-left: none !important;
-	border-right: none !important;
-}
-
-/* Стили для ссылки на главную (логотип/заголовок) */
-.VPNavBarTitle a,
-.VPNavBarTitle .title,
-.VPNavBarTitle {
-	color: var(--vp-c-brand-1) !important;
+/* Brand color for site title in the top nav. */
+.VPNavBarTitle .title {
+	color: var(--vp-c-brand-1);
 	transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-.VPNavBarTitle a:hover,
 .VPNavBarTitle .title:hover {
-	opacity: 0.8;
+	opacity: 0.85;
 }
 
-/* Анимация развертывания и свертывания меню в sidebar */
-/* Простой и надежный подход с max-height */
-
-/* Универсальные селекторы для всех возможных структур VitePress */
-.VPSidebar,
-.VPSidebar .group,
-.VPSidebarGroup,
-.VPSidebarItem,
-.VPSidebarItem .item {
-	overflow: hidden;
-}
-
-/* Убеждаемся, что items не скрыты через display: none */
-.VPSidebar .group .items,
-.VPSidebarGroup .items,
-.VPSidebarItem .items,
-.VPSidebar .items,
-.VPSidebarItem .item .items {
-	display: block !important;
-	visibility: visible !important;
-}
-
-/* Анимация для списков items - используем max-height */
-/* Максимально широкие селекторы для охвата всех возможных структур */
-.VPSidebar .group .items,
-.VPSidebarGroup .items,
-.VPSidebarItem .items,
-.VPSidebar .group > .items,
-.VPSidebarGroup > .items,
-.VPSidebarItem > .items,
-.VPSidebar .items,
-.VPSidebarItem .item .items,
-[class*="VPSidebar"] .items,
-[class*="VPSidebar"] [class*="group"] .items,
-[class*="VPSidebar"] [class*="item"] .items {
-	transition: max-height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-		padding-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		padding-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		margin-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		margin-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-	max-height: 5000px !important;
-	opacity: 1 !important;
-	overflow: hidden !important;
-	will-change: max-height, opacity, padding-top, padding-bottom;
-}
-
-/* Свернутое состояние - максимально широкие селекторы */
-.VPSidebar .group[aria-expanded="false"] .items,
-.VPSidebarGroup[aria-expanded="false"] .items,
-.VPSidebarItem[aria-expanded="false"] .items,
-.VPSidebar .group[aria-expanded="false"] > .items,
-.VPSidebarGroup[aria-expanded="false"] > .items,
-.VPSidebarItem[aria-expanded="false"] > .items,
-.VPSidebar .group.collapsed .items,
-.VPSidebarGroup.collapsed .items,
-.VPSidebarItem.collapsed .items,
-[class*="VPSidebar"][aria-expanded="false"] .items,
-[class*="VPSidebar"].collapsed .items,
-[class*="VPSidebar"] [class*="group"][aria-expanded="false"] .items,
-[class*="VPSidebar"] [class*="item"][aria-expanded="false"] .items {
-	max-height: 0 !important;
-	opacity: 0 !important;
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-
-/* Развернутое состояние */
-.VPSidebar .group[aria-expanded="true"] .items,
-.VPSidebarGroup[aria-expanded="true"] .items,
-.VPSidebarItem[aria-expanded="true"] .items,
-.VPSidebar .group[aria-expanded="true"] > .items,
-.VPSidebarGroup[aria-expanded="true"] > .items,
-.VPSidebarItem[aria-expanded="true"] > .items {
-	max-height: 5000px !important;
-	opacity: 1 !important;
-}
-
-/* Анимация для вложенных элементов */
-.VPSidebar .group .item .items,
-.VPSidebarItem .item .items {
-	display: block !important;
-	transition: max-height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-		padding-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		padding-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		margin-top 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-		margin-bottom 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-	will-change: max-height, opacity, padding-top, padding-bottom;
-	max-height: 5000px;
-	opacity: 1;
-	overflow: hidden;
-}
-
-.VPSidebar .group .item[aria-expanded="false"] .items,
-.VPSidebarItem .item[aria-expanded="false"] .items,
-.VPSidebar .group .item.collapsed .items,
-.VPSidebarItem .item.collapsed .items {
-	max-height: 0 !important;
-	opacity: 0 !important;
-	padding-top: 0 !important;
-	padding-bottom: 0 !important;
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-
-.VPSidebar .group .item[aria-expanded="true"] .items,
-.VPSidebarItem .item[aria-expanded="true"] .items {
-	max-height: 5000px !important;
-	opacity: 1 !important;
-}
-
-/* ============================================
-   Адаптивные стили для главной страницы
-   ============================================ */
-
-/* Стили для заголовка главной страницы */
+/* Home page */
 .home-header {
 	text-align: center;
-	padding-top: 2rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding: 2rem 1rem 0;
 }
 
 .home-title {
-	font-size: 2.5rem;
-	font-weight: bold;
-	margin-bottom: 0.5rem;
-	color: var(--vp-c-brand-1);
+	margin: 0 0 0.5rem;
+	font-size: clamp(1.75rem, 3.8vw, 2.5rem);
 	line-height: 1.2;
+	color: var(--vp-c-brand-1);
 }
 
 .home-subtitle {
-	font-size: 1.2rem;
-	margin-bottom: 0.5rem;
-	color: var(--vp-c-text-1);
+	margin: 0 0 0.5rem;
+	font-size: clamp(1rem, 2.1vw, 1.2rem);
 	line-height: 1.4;
+	color: var(--vp-c-text-1);
 }
 
 .home-description {
-	font-size: 0.95rem;
+	margin: 0 0 1.5rem;
+	font-size: clamp(0.85rem, 1.7vw, 0.95rem);
+	line-height: 1.55;
 	color: var(--vp-c-text-2);
-	margin-bottom: 1.5rem;
-	line-height: 1.5;
 }
 
 .home-cta-button {
 	display: inline-block;
 	padding: 0.6rem 1.2rem;
+	border-radius: 8px;
 	background: var(--vp-button-brand-bg);
 	color: var(--vp-button-brand-text);
-	border-radius: 8px;
 	text-decoration: none;
 	font-weight: 600;
-	transition: opacity 0.2s ease, transform 0.2s ease;
+	transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .home-cta-button:hover {
-	opacity: 0.9;
 	transform: translateY(-1px);
+	opacity: 0.9;
 }
 
-/* Разделитель */
 .home-divider {
 	max-width: 800px;
 	margin: 2rem auto 0;
-	padding: 0 1.5rem;
+	padding: 0 1rem;
 }
 
 .home-divider hr {
-	border: none;
+	border: 0;
 	border-top: 1px solid var(--vp-c-divider);
 	margin: 0;
 }
 
-/* Контейнер секций */
 .home-sections {
 	margin-top: 2rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding: 0 1rem;
 }
 
-/* Сетка секций */
 .home-sections-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, minmax(0, 1fr));
 	gap: 1rem;
 	margin-top: 1.5rem;
 }
 
-/* Карточка секции */
 .home-section-card {
 	padding: 1rem;
-	background: var(--vp-c-bg-soft);
-	border-radius: 8px;
 	border: 1px solid var(--vp-c-divider);
+	border-radius: 10px;
+	background: var(--vp-c-bg-soft);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .home-section-card:hover {
 	transform: translateY(-2px);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 .home-section-title {
-	margin: 0 0 0.5rem 0;
+	margin: 0 0 0.5rem;
 	font-size: 1.1rem;
 	line-height: 1.4;
 }
 
 .home-section-link {
-	text-decoration: none;
 	color: var(--vp-c-brand-1);
-	transition: opacity 0.2s ease;
+	text-decoration: none;
 }
 
 .home-section-link:hover {
-	opacity: 0.8;
+	text-decoration: underline;
 }
 
 .home-section-description {
-	color: var(--vp-c-text-2);
 	margin: 0;
 	font-size: 0.9rem;
 	line-height: 1.5;
+	color: var(--vp-c-text-2);
 }
 
-/* Медиа-запросы для планшетов (768px - 1023px) */
-@media screen and (max-width: 1023px) {
-	.home-sections-grid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 0.875rem;
-	}
-
-	.home-title {
-		font-size: 2rem;
-	}
-
-	.home-subtitle {
-		font-size: 1.1rem;
-	}
-}
-
-/* Медиа-запросы для мобильных устройств (до 767px) */
-@media screen and (max-width: 767px) {
-	.home-header {
-		padding-top: 1.5rem;
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-	}
-
-	.home-title {
-		font-size: 1.75rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.home-subtitle {
-		font-size: 1rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.home-description {
-		font-size: 0.875rem;
-		margin-bottom: 1.25rem;
-	}
-
-	.home-cta-button {
-		padding: 0.5rem 1rem;
-		font-size: 0.9rem;
-	}
-
-	.home-divider {
-		margin: 1.5rem auto 0;
-		padding: 0 0.75rem;
-	}
-
-	.home-sections {
-		margin-top: 1.5rem;
-		padding-left: 0.75rem;
-		padding-right: 0.75rem;
-	}
-
-	.home-sections-grid {
-		grid-template-columns: 1fr;
-		gap: 0.75rem;
-		margin-top: 1rem;
-	}
-
-	.home-section-card {
-		padding: 0.875rem;
-	}
-
-	.home-section-title {
-		font-size: 1rem;
-		margin-bottom: 0.375rem;
-	}
-
-	.home-section-description {
-		font-size: 0.85rem;
-	}
-}
-
-/* Медиа-запросы для очень маленьких экранов (до 480px) */
-@media screen and (max-width: 480px) {
-	.home-header {
-		padding-top: 1rem;
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-
-	.home-title {
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.home-subtitle {
-		font-size: 0.95rem;
-	}
-
-	.home-description {
-		font-size: 0.8rem;
-		margin-bottom: 1rem;
-	}
-
-	.home-cta-button {
-		padding: 0.45rem 0.875rem;
-		font-size: 0.85rem;
-		width: 100%;
-		max-width: 280px;
-	}
-
-	.home-sections {
-		padding-left: 0.5rem;
-		padding-right: 0.5rem;
-	}
-
-	.home-section-card {
-		padding: 0.75rem;
-	}
-
-	.home-section-title {
-		font-size: 0.95rem;
-	}
-
-	.home-section-description {
-		font-size: 0.8rem;
-	}
-}
-
-/* Плавная анимация для иконок развертывания (стрелки) */
-.VPSidebar .group .caret,
-.VPSidebarGroup .caret,
-.VPSidebarItem .caret,
-.VPSidebar .group button[aria-expanded],
-.VPSidebarGroup button[aria-expanded],
-.VPSidebarItem button[aria-expanded],
-.VPSidebar .group .item-link,
-.VPSidebarGroup .item-link,
-.VPSidebarItem .item-link {
-	transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-	will-change: transform;
-}
-
-.VPSidebar .group[aria-expanded="true"] .caret,
-.VPSidebarGroup[aria-expanded="true"] .caret,
-.VPSidebarItem[aria-expanded="true"] .caret,
-.VPSidebar .group button[aria-expanded="true"],
-.VPSidebarGroup button[aria-expanded="true"],
-.VPSidebarItem button[aria-expanded="true"] {
-	transform: rotate(90deg);
-}
-
-/* Компактный footer внизу правого aside */
+/* Right aside support block */
 .VPDocAside .aside-support-footer {
 	margin-top: 12px;
 	padding: 10px 12px;
 	border: 1px solid var(--vp-c-divider);
 	border-radius: 10px;
-	background-color: var(--vp-c-bg-soft);
+	background: var(--vp-c-bg-soft);
 	font-size: 12px;
 	line-height: 1.45;
 }
@@ -490,4 +148,62 @@
 .VPDocAside .aside-support-footer__link:hover {
 	color: var(--vp-c-brand-2);
 	text-decoration: underline;
+}
+
+/* Reusable doc blocks */
+.official-docs {
+	margin-top: 2rem;
+}
+
+.official-docs__list {
+	margin: 0.75rem 0 0;
+	padding-left: 1.25rem;
+}
+
+.official-docs__list li {
+	margin: 0.25rem 0;
+}
+
+.related-topics {
+	margin-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+	.home-sections-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	.home-header {
+		padding-top: 1.5rem;
+	}
+
+	.home-divider {
+		margin-top: 1.5rem;
+		padding: 0 0.75rem;
+	}
+
+	.home-sections {
+		margin-top: 1.5rem;
+		padding: 0 0.75rem;
+	}
+
+	.home-sections-grid {
+		grid-template-columns: 1fr;
+		gap: 0.75rem;
+		margin-top: 1rem;
+	}
+
+	.home-section-card {
+		padding: 0.875rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.home-cta-button {
+		width: 100%;
+		max-width: 280px;
+		font-size: 0.85rem;
+	}
 }

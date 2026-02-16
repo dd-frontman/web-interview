@@ -312,23 +312,31 @@ img.avatar {
 5. Модалка в центре экрана: `fixed + transform`.
 6. Loader поверх карточки: `absolute + inset: 0 + margin: auto`.
 
-## Официальная документация
-
-- MDN: Center an element  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element
-- MDN: Aligning items in a flex container  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-- MDN: Box alignment in grid layout  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
-- MDN: `position`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/position
-- MDN: `margin`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+<OfficialDocsLinks
+	:links="[
+		{
+			title: 'MDN: Center an element',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element',
+		},
+		{
+			title: 'MDN: Aligning items in a flex container',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container',
+		},
+		{
+			title: 'MDN: Box alignment in grid layout',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout',
+		},
+		{ title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
+		{ title: 'MDN: margin', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/margin' },
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
-> - [z-index и stacking context](/css/z-index-i-stacking-context)
-> - [Shadow DOM](/html/shadow-dom)
+<RelatedTopics
+	:items="[
+		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
+	]"
+/>

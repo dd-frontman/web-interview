@@ -57,8 +57,10 @@ self.onmessage = (event) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Общение между вкладками браузера](/brauzery/obschenie-mezhdu-vkladkami-brauzera)
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
+<RelatedTopics
+	:items="[
+		{ title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+	]"
+/>

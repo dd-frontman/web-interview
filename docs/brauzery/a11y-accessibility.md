@@ -87,9 +87,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
-> - [Браузеры](/brauzery/index)
+<RelatedTopics
+	:items="[
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+		{ title: 'Браузеры', href: '/brauzery/index' },
+	]"
+/>
 

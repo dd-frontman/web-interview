@@ -151,9 +151,11 @@ export default defineEventHandler(async (event) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Hydration](/nuxt/hydration)
-> - [Nitro](/nuxt/nitro)
-> - [Nuxt vs Vue](/nuxt/nuxt-vs-vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Hydration', href: '/nuxt/hydration' },
+		{ title: 'Nitro', href: '/nuxt/nitro' },
+		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+	]"
+/>
 

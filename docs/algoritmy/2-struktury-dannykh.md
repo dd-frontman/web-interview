@@ -386,19 +386,15 @@ class LinkedList {
 - **Практикуйся**: реализуй структуры данных с нуля
 - **Анализируй**: выбирай структуру под конкретную задачу
 
-> [!note] См. также
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Алгоритмы](/algoritmy/algoritmy)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
-
 #структуры-данных #алгоритмы #массивы #объекты #map #set #стек #очередь
 
 ---
 
-> [!tip] Связанные темы
->
-> - [JavaScript](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Алгоритмы](/algoritmy/algoritmy)
-> - [Эффективное обучение](/podgotovka-k-sobesedovaniyu)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
+<RelatedTopics
+	:items="[
+		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
+		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
+	]"
+/>

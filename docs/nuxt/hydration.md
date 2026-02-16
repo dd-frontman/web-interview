@@ -89,9 +89,11 @@ const count = ref(0);
 
 ---
 
-> [!tip] Связанные темы
->
-> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
-> - [Nitro](/nuxt/nitro)
-> - [Nuxt vs Vue](/nuxt/nuxt-vs-vue)
+<RelatedTopics
+	:items="[
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Nitro', href: '/nuxt/nitro' },
+		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+	]"
+/>
 

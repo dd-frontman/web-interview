@@ -57,17 +57,22 @@ Stacking context — это "локальный слой", внутри кото
 3. Храните оверлеи (modal/popover) ближе к корню приложения.
 4. Проверяйте stacking context в DevTools.
 
-## Официальная документация
-
-- MDN: `z-index`  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
-- MDN: Stacking context  
-  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context
+<OfficialDocsLinks
+	:links="[
+		{ title: 'MDN: z-index', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/z-index' },
+		{
+			title: 'MDN: Stacking context',
+			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context',
+		},
+	]"
+/>
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
-> - [will-change](/css/will-change)
-> - [Shadow DOM](/html/shadow-dom)
+<RelatedTopics
+	:items="[
+		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+		{ title: 'will-change', href: '/css/will-change' },
+		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
+	]"
+/>

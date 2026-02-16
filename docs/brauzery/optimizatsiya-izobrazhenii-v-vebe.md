@@ -78,8 +78,10 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [LCP, INP, TTI](/brauzery/lcp-inp-tti)
-> - [Ошибки Critical Rendering Path](/brauzery/oshibki-critical-rendering-path)
+<RelatedTopics
+	:items="[
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+		{ title: 'Ошибки Critical Rendering Path', href: '/brauzery/oshibki-critical-rendering-path' },
+	]"
+/>

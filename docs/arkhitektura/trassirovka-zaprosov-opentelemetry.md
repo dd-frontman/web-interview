@@ -73,8 +73,10 @@ await fetch("/api/orders", {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
-> - [Микросервисы](/arkhitektura/mikroservisy)
-> - [Безопасность приложений](/bezopasnost-prilozhenii/bezopasnost-prilozhenii)
+<RelatedTopics
+	:items="[
+		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+	]"
+/>

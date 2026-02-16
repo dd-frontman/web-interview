@@ -65,9 +65,11 @@ describe("Pixi boot", () => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
-> - [Vue 3 + Pixi паттерны интеграции](/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii)
-> - [Производительность и отладка](/pixi-po-temam/4-proizvoditelnost-i-otladka)
+<RelatedTopics
+	:items="[
+		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+	]"
+/>
 

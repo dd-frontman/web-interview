@@ -109,8 +109,10 @@ Adaptive полезен, если:
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Центрирование в CSS](/css/tsentrirovanie-v-css)
-> - [Позиционирование в CSS](/css/pozitsionirovanie-v-css)
-> - [Расположение контента и высота main](/css/raspolozhenie-kontenta-i-vysota-main)
+<RelatedTopics
+	:items="[
+		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+		{ title: 'Расположение контента и высота main', href: '/css/raspolozhenie-kontenta-i-vysota-main' },
+	]"
+/>

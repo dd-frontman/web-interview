@@ -176,9 +176,11 @@ map.set(objKey, "value");
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Set](/javascript/kollektsii-dannykh/set)
-> - [WeakMap](/javascript/kollektsii-dannykh/weakmap)
-> - [WeakSet](/javascript/kollektsii-dannykh/weakset)
+<RelatedTopics
+	:items="[
+		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+	]"
+/>
 

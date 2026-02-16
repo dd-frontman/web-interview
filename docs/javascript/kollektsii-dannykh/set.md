@@ -201,9 +201,11 @@ console.log(uniqueUsers.size); // 1
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Map](/javascript/kollektsii-dannykh/map)
-> - [WeakMap](/javascript/kollektsii-dannykh/weakmap)
-> - [WeakSet](/javascript/kollektsii-dannykh/weakset)
+<RelatedTopics
+	:items="[
+		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+	]"
+/>
 

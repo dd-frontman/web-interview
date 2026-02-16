@@ -60,8 +60,10 @@ window.addEventListener("storage", (event) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Workers в браузере](/brauzery/workers-v-brauzere)
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [Event Loop](/javascript/event-loop)
+<RelatedTopics
+	:items="[
+		{ title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'Event Loop', href: '/javascript/event-loop' },
+	]"
+/>

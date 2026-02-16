@@ -113,9 +113,11 @@ const config = {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [assert в TypeScript](/typescript/assert-v-typescript)
-> - [TypeScript](/typescript/index)
-> - [satisfies в TypeScript](/typescript/satisfies-v-typescript)
+<RelatedTopics
+	:items="[
+		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+		{ title: 'TypeScript', href: '/typescript/index' },
+		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+	]"
+/>
 

@@ -16,9 +16,11 @@ onMounted(() => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
-> - [Директивы Vue](/vue/direktivy-vue)
-> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+<RelatedTopics
+	:items="[
+		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
+	]"
+/>
 

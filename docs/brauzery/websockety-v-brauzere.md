@@ -67,8 +67,10 @@ socket.addEventListener("close", () => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Server-Sent Events (SSE)](/brauzery/server-sent-events-sse)
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [Общение между вкладками браузера](/brauzery/obschenie-mezhdu-vkladkami-brauzera)
+<RelatedTopics
+	:items="[
+		{ title: 'Server-Sent Events (SSE)', href: '/brauzery/server-sent-events-sse' },
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
+	]"
+/>

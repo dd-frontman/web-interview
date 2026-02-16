@@ -72,8 +72,10 @@ JSONP работает через `<script src="...">`, потому что за
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [Разница между HTTP 1.1, HTTP 2 и HTTP 3](/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3)
-> - [CSRF (Cross-Site Request Forgery)](/bezopasnost-prilozhenii/csrf-cross-site-request-forgery)
+<RelatedTopics
+	:items="[
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'Разница между HTTP 1.1, HTTP 2 и HTTP 3', href: '/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3' },
+		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+	]"
+/>

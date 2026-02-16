@@ -127,9 +127,11 @@ sprite.on("pointertap", () => emit("select", id));
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Глубокое понимание PixiJS](/pixi-po-temam/1-glubokoe-ponimanie-pixijs)
-> - [TypeScript first](/pixi-po-temam/3-typescript-first)
-> - [Производительность и отладка](/pixi-po-temam/4-proizvoditelnost-i-otladka)
+<RelatedTopics
+	:items="[
+		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+	]"
+/>
 

@@ -222,9 +222,11 @@ console.log(state.user.name); // Maria
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Типы данных](/javascript/tipy-dannykh/tipy-dannykh)
-> - [Типы функций](/javascript/tipy-funktsii)
-> - [Методы массивов](/javascript/metody-massivov)
+<RelatedTopics
+	:items="[
+		{ title: 'Типы данных', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+		{ title: 'Типы функций', href: '/javascript/tipy-funktsii' },
+		{ title: 'Методы массивов', href: '/javascript/metody-massivov' },
+	]"
+/>
 

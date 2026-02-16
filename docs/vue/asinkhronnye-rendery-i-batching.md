@@ -45,9 +45,11 @@ function increment() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [defineExpose()](/vue/defineexpose)
-> - [Директивы Vue](/vue/direktivy-vue)
-> - [Оптимизация High Load проекта](/vue/optimizatsiya-high-load-proekta)
+<RelatedTopics
+	:items="[
+		{ title: 'defineExpose()', href: '/vue/defineexpose' },
+		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
+	]"
+/>
 

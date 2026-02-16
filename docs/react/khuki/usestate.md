@@ -150,9 +150,11 @@ export function TodoList() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Основные хуки в React](/react/khuki/osnovnye-khuki-v-react)
-> - [useContext](/react/khuki/usecontext)
-> - [useEffect](/react/khuki/useeffect)
+<RelatedTopics
+	:items="[
+		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+		{ title: 'useContext', href: '/react/khuki/usecontext' },
+		{ title: 'useEffect', href: '/react/khuki/useeffect' },
+	]"
+/>
 

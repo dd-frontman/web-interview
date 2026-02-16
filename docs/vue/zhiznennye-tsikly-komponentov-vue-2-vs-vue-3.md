@@ -226,9 +226,11 @@ onRenderTriggered((event) => {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Асинхронные рендеры и батчинг](/vue/asinkhronnye-rendery-i-batching)
-> - [defineExpose()](/vue/defineexpose)
-> - [Директивы Vue](/vue/direktivy-vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+		{ title: 'defineExpose()', href: '/vue/defineexpose' },
+		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+	]"
+/>
 

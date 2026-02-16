@@ -70,9 +70,11 @@ const themeOverrides: GlobalThemeOverrides = {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
-> - [Nx и Turborepo](/npm-tools/nx-i-turborepo)
-> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
+<RelatedTopics
+	:items="[
+		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+		{ title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
+		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+	]"
+/>
 

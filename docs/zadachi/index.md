@@ -4,9 +4,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [1 этап](/zadachi/yandeks/1-etap)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: '1 этап', href: '/zadachi/yandeks/1-etap' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

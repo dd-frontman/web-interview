@@ -76,8 +76,10 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Index](/index)
-> - [Подготовка к собеседованию](/podgotovka-k-sobesedovaniyu)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Index', href: '/index' },
+		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>

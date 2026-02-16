@@ -44,9 +44,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Cookie-сессия vs JWT](/avtorizatsiya/cookie-sessiya-vs-jwt)
-> - [JWT](/avtorizatsiya/jwt)
-> - [Vue](/vue)
+<RelatedTopics
+	:items="[
+		{ title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
+		{ title: 'JWT', href: '/avtorizatsiya/jwt' },
+		{ title: 'Vue', href: '/vue' },
+	]"
+/>
 

@@ -35,9 +35,11 @@ console.log(strjoin("-", "d", "e", "f")); // 'd-e-f'
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Задачи](/zadachi/index)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Задачи', href: '/zadachi/index' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

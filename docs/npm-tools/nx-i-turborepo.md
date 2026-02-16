@@ -84,9 +84,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
-> - [NaiveUI](/npm-tools/naiveui)
-> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
+<RelatedTopics
+	:items="[
+		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+		{ title: 'NaiveUI', href: '/npm-tools/naiveui' },
+		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+	]"
+/>
 

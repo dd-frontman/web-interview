@@ -280,9 +280,11 @@ FSD не требует рефакторинга всего проекта ср�
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Архитектура приложений — виды и особенности](/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti)
-> - [Domain-Driven Design](/arkhitektura/domain-driven-design)
-> - [Архитектура](/arkhitektura/index)
+<RelatedTopics
+	:items="[
+		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+		{ title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
+		{ title: 'Архитектура', href: '/arkhitektura/index' },
+	]"
+/>
 

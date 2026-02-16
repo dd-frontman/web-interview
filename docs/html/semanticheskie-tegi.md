@@ -185,9 +185,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Shadow DOM](/html/shadow-dom)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

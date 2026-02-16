@@ -176,9 +176,11 @@ Vitest — это:
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Vitest + Vue Test Utils + Playwright](/testirovanie/vitest-plus-vue-test-utils-plus-playwright)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Vitest + Vue Test Utils + Playwright', href: '/testirovanie/vitest-plus-vue-test-utils-plus-playwright' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

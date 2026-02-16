@@ -62,9 +62,11 @@ const b = BigInt("9007199254740993"); // безопасно
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Object](/javascript/tipy-dannykh/object)
-> - [Типы функций](/javascript/tipy-funktsii)
-> - [Методы массивов](/javascript/metody-massivov)
+<RelatedTopics
+	:items="[
+		{ title: 'Object', href: '/javascript/tipy-dannykh/object' },
+		{ title: 'Типы функций', href: '/javascript/tipy-funktsii' },
+		{ title: 'Методы массивов', href: '/javascript/metody-massivov' },
+	]"
+/>
 

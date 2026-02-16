@@ -92,8 +92,10 @@ message User {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Сети, HTTP и CORS](/brauzery/seti-http-i-cors)
-> - [OpenAPI, Swagger, Protobuf](/npm-tools/openapi-swagger-protobuf)
-> - [gRPC и Protobuf](/npm-tools/grpc-i-protobuf)
+<RelatedTopics
+	:items="[
+		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+	]"
+/>

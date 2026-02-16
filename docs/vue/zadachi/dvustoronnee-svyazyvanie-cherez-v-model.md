@@ -70,9 +70,11 @@ function onInput(event) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Props и Emits](/vue/zadachi/propsy-emity)
-> - [Vue](/vue)
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
+<RelatedTopics
+	:items="[
+		{ title: 'Props и Emits', href: '/vue/zadachi/propsy-emity' },
+		{ title: 'Vue', href: '/vue' },
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+	]"
+/>
 

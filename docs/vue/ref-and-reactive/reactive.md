@@ -159,9 +159,11 @@ function increment() {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Реактивность во Vue3](/vue/ref-and-reactive/reaktivnost-vo-vue3)
-> - [ref vs reactive](/vue/ref-and-reactive/ref-vs-reactive)
-> - [shallowReactive](/vue/ref-and-reactive/shallowreactive)
+<RelatedTopics
+	:items="[
+		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+	]"
+/>
 

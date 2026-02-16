@@ -91,9 +91,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [A11y (Accessibility)](/brauzery/a11y-accessibility)
-> - [Critical Render Path](/brauzery/critical-render-path)
-> - [Forced Synchronous Layout и Long Tasks](/brauzery/forced-synchronous-layout-i-long-tasks)
+<RelatedTopics
+	:items="[
+		{ title: 'A11y (Accessibility)', href: '/brauzery/a11y-accessibility' },
+		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+	]"
+/>
 

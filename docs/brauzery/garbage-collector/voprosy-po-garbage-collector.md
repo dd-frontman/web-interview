@@ -33,9 +33,11 @@
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Сборщик мусора](/brauzery/garbage-collector/1-sborschik-musora)
-> - [Утечки памяти](/brauzery/garbage-collector/2-utechki-pamyati)
-> - [Полный путь загрузки сайта](/brauzery/polnyi-put-zagruzki-saita)
+<RelatedTopics
+	:items="[
+		{ title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+		{ title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
+		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+	]"
+/>
 

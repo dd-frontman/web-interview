@@ -133,9 +133,11 @@ export default function Product({ product }: any) {
 
 ---
 
-> [!tip] Связанные темы
->
-> - [Hydration](/nuxt/hydration)
-> - [ISR - Incremental Static Regeneration](/nuxt/isr-incremental-static-regeneration)
-> - [Nitro](/nuxt/nitro)
+<RelatedTopics
+	:items="[
+		{ title: 'Hydration', href: '/nuxt/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Nitro', href: '/nuxt/nitro' },
+	]"
+/>
 
