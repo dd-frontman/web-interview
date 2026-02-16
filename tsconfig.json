@@ -14,6 +14,6 @@
 		"isolatedModules": true,
 		"types": ["vitepress/client"]
 	},
-	"include": [".vitepress/**/*.ts", ".vitepress/**/*.vue"],
+	"include": [".vitepress/**/*.ts", ".vitepress/**/*.vue", ".vitepress/**/*.d.ts"],
 	"exclude": ["node_modules", ".vitepress/dist", ".vitepress/cache"]
 }
