@@ -1,3 +1,11 @@
+---
+title: "Cookie sessiya vs"
+description: "Краткая выжимка по теме \\\"Cookie sessiya vs jwt\\\"."
+tags:
+  - "avtorizatsiya"
+  - "cookie-sessiya-vs-jwt"
+updatedAt: "2026-02-16"
+---
 ## Cookie-сессия
 
 - Сервер создаёт **идентификатор сессии (sid)**.
@@ -73,4 +81,3 @@
 		{ title: 'Vue', href: '/vue' },
 	]"
 />
-

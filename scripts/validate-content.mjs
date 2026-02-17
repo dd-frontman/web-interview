@@ -1,8 +1,15 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+	REQUIRED_FRONTMATTER_KEYS,
+	collectMarkdownFiles,
+	docsRoot,
+	splitFrontmatter,
+	toPosix,
+} from "./lib/content-utils.mjs";
 
 const cwd = process.cwd();
-const docsRoot = path.join(cwd, "docs");
+const docsIndexPath = path.join(docsRoot, "index.md");
 
 const LINE_RULES = [
 	{
@@ -35,47 +42,46 @@ const LINE_RULES = [
 	},
 ];
 
-function toPosix(filePath) {
-	return filePath.split(path.sep).join("/");
-}
-
-function isInsidePublic(relativePath) {
-	return relativePath === "public" || relativePath.startsWith("public/");
-}
-
-function collectMarkdownFiles() {
-	const files = [];
-	const stack = [docsRoot];
-
-	while (stack.length > 0) {
-		const current = stack.pop();
-		for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
-			const abs = path.join(current, entry.name);
-			const rel = toPosix(path.relative(docsRoot, abs));
-
-			if (isInsidePublic(rel)) {
-				continue;
-			}
-
-			if (entry.isDirectory()) {
-				stack.push(abs);
-				continue;
-			}
-
-			if (entry.isFile() && entry.name.endsWith(".md")) {
-				files.push(abs);
-			}
-		}
-	}
-
-	return files.sort();
-}
+const UPDATED_AT_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 function validateFile(filePath) {
 	const issues = [];
 	const source = fs.readFileSync(filePath, "utf8");
 	const lines = source.split(/\r?\n/);
 	const rel = toPosix(path.relative(cwd, filePath));
+	const isRootIndex = filePath === docsIndexPath;
+
+	if (!isRootIndex) {
+		const { hasFrontmatter, frontmatter } = splitFrontmatter(source);
+		if (!hasFrontmatter) {
+			issues.push(`${rel}:1 missing frontmatter block`);
+		} else {
+			for (const key of REQUIRED_FRONTMATTER_KEYS) {
+				if (!(key in frontmatter)) {
+					issues.push(`${rel}:1 missing frontmatter key "${key}"`);
+				}
+			}
+
+			if (typeof frontmatter.title !== "string" || frontmatter.title.trim().length < 3) {
+				issues.push(`${rel}:1 invalid frontmatter title`);
+			}
+
+			if (
+				typeof frontmatter.description !== "string" ||
+				frontmatter.description.trim().length < 10
+			) {
+				issues.push(`${rel}:1 invalid frontmatter description`);
+			}
+
+			if (!Array.isArray(frontmatter.tags) || frontmatter.tags.length === 0) {
+				issues.push(`${rel}:1 invalid frontmatter tags`);
+			}
+
+			if (!UPDATED_AT_RE.test(String(frontmatter.updatedAt ?? ""))) {
+				issues.push(`${rel}:1 invalid frontmatter updatedAt (expected YYYY-MM-DD)`);
+			}
+		}
+	}
 
 	for (let index = 0; index < lines.length; index += 1) {
 		const line = lines[index];

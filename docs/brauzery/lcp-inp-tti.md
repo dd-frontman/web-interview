@@ -1,3 +1,11 @@
+---
+title: "Lcp inp tti"
+description: "Краткая выжимка по теме \\\"Lcp inp tti\\\"."
+tags:
+  - "brauzery"
+  - "lcp-inp-tti"
+updatedAt: "2026-02-16"
+---
 ## 🔹 LCP (Largest Contentful Paint)
 
 **Что это:** момент, когда отрисован **самый крупный элемент на экране** (обычно картинка или заголовок).
@@ -63,8 +71,7 @@
 <RelatedTopics
 	:items="[
 		{ title: 'A11y (Accessibility)', href: '/brauzery/a11y-accessibility' },
-		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
 		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
 	]"
 />
-

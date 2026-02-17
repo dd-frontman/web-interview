@@ -1,3 +1,11 @@
+---
+title: "Suspense"
+description: "1. Компоненты с async setup() или <script setup> с await на верхнем уровне."
+tags:
+  - "vue"
+  - "suspense"
+updatedAt: "2026-02-16"
+---
 - `<Suspense>` — встроенный компонент Vue 3 для управления асинхронными зависимостями внутри компонентов. Он позволяет показывать один общий индикатор загрузки, пока всё не подгрузится, вместо множества спиннеров.
 - Он ждёт два типа асинхронных зависимостей:
   1. Компоненты с `async setup()` или `<script setup>` с `await` на верхнем уровне.
@@ -62,7 +70,7 @@ const AsyncStats = defineAsyncComponent(() => import("./Stats.vue"));
 | **Обработка ошибок**     | Через `onErrorCaptured` вокруг `<Suspense>`.                                                                 |
 | **Комбинация с другими** | Используйте с `<Transition>`, `<KeepAlive>`, `<RouterView>` — важен порядок.                                 |
 | **Польза**               | Убирает множество загрузочных спиннеров, избегает layout shifts (“popcorn effect”), улучшает UX.             |
-| **Официальное описание** | Vue Official Docs: описание всех фич и API.                          |
+| **Официальное описание** | Vue Official Docs: описание всех фич и API.                                                                  |
 
 ---
 
@@ -73,4 +81,3 @@ const AsyncStats = defineAsyncComponent(() => import("./Stats.vue"));
 		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
 	]"
 />
-

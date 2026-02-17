@@ -1,3 +1,11 @@
+---
+title: "Pozitsionirovanie v css"
+description: "position управляет тем, как элемент участвует в потоке документа и как работают top/right/bottom/left."
+tags:
+  - "css"
+  - "pozitsionirovanie-v-css"
+updatedAt: "2026-02-16"
+---
 ## Позиционирование в CSS: что это
 
 `position` управляет тем, как элемент участвует в потоке документа и как работают `top/right/bottom/left`.

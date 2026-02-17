@@ -9,15 +9,25 @@
 		"node": ">=20.0.0"
 	},
 	"scripts": {
+		"predev": "yarn sync:meta",
 		"dev": "vitepress dev",
+		"prebuild": "yarn sync:meta",
 		"build": "vitepress build",
 		"preview": "vitepress preview",
 		"type-check": "tsc --noEmit",
+		"sync:frontmatter": "node scripts/sync-frontmatter.mjs",
+		"generate:content-index": "node scripts/generate-content-index.mjs",
+		"generate:sidebar": "node scripts/generate-sidebar.mjs",
+		"sync:meta": "yarn sync:frontmatter && yarn generate:content-index && yarn generate:sidebar",
+		"check:generated": "yarn sync:meta && git diff --exit-code docs .vitepress/sidebar.generated.ts .vitepress/theme/generated/content-index.ts",
 		"validate-content": "node scripts/validate-content.mjs",
 		"validate-links": "node scripts/validate-links.mjs",
 		"validate-routes": "node scripts/validate-routes.mjs",
+		"report:stale": "node scripts/report-stale-content.mjs",
+		"lint:md": "npx --yes markdownlint-cli2 \"docs/**/*.md\" \"README.md\"",
+		"test:mobile": "npx --yes playwright@1.51.1 test --config=playwright.mobile.config.ts",
 		"lint": "eslint .vitepress --ext .ts,.vue --fix",
-		"format": "prettier --write \"**/*.{ts,js,json,md}\""
+		"format": "prettier --write \"**/*.{ts,js,json,md,vue,css}\""
 	},
 	"devDependencies": {
 		"vitepress": "^1.6.0",

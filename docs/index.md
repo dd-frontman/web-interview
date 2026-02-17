@@ -60,9 +60,7 @@ import { withBase } from 'vitepress'
 
 <RelatedTopics
 	:items="[
-		{ title: 'Общие вопросы по Web (разнесено по разделам)', href: '/obschie-voprosy-po-web' },
 		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
 		{ title: 'Vue', href: '/vue' },
 	]"
 />
-

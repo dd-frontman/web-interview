@@ -1,3 +1,11 @@
+---
+title: "Kak rabotaet JS"
+description: "JavaScript исполняется не напрямую браузером \\\\\"как текст\\\\\", а через движок (engine) и runtime-среду."
+tags:
+  - "javascript"
+  - "kak-rabotaet-javascript-pod-kapotom"
+updatedAt: "2026-02-16"
+---
 ## Как работает JavaScript под капотом
 
 JavaScript исполняется не напрямую браузером "как текст", а через движок (engine) и runtime-среду.

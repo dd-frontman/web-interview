@@ -1,3 +1,11 @@
+---
+title: "Nitro"
+description: "Он отвечает за такие вещи, как:"
+tags:
+  - "nuxt"
+  - "nitro"
+updatedAt: "2026-02-16"
+---
 ## 🧠 Что такое **Nitro** в Nuxt
 
 **Nitro** — это **серверный движок (server engine)**, который используется **под капотом Nuxt** (начиная с Nuxt 3 и далее) для выполнения всех серверных задач вашего приложения.  
@@ -120,9 +128,8 @@ Nuxt интегрирует Nitro таким образом, что вам **н�
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
 	]"
 />
-

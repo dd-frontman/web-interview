@@ -1,3 +1,11 @@
+---
+title: "Pixi"
+description: "Краткая выжимка по теме \\\"Pixi\\\"."
+tags:
+  - "pixi-po-temam"
+  - "pixi"
+updatedAt: "2026-02-16"
+---
 - **PixiJS — это сверхбыстрый движок для создания 2D-графики в браузере**, работающий поверх WebGL и при необходимости использующий Canvas2D как fallback [Medium+12GitHub+12PixiJS+12](https://github.com/pixijs/pixijs).
 - Он позволяет **рисовать и анимировать интерактивные элементы**, управлять спрайтами, текстурами, фильтрами и событиями — всё с высокой производительностью на любых устройствах [GitHub](https://github.com/pixijs/pixijs)[PixiJS](https://pixijs.com/)[PixiJS](https://pixijs.com/8.x/guides/concepts/architecture).
 
@@ -62,4 +70,3 @@
 		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
 	]"
 />
-

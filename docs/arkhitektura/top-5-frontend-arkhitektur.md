@@ -1,3 +1,11 @@
+---
+title: "Top 5 frontend"
+description: "Приложение делится на логические слои, каждый слой отвечает только за свою задачу."
+tags:
+  - "arkhitektura"
+  - "top-5-frontend-arkhitektur"
+updatedAt: "2026-02-16"
+---
 ## 1️⃣ **Layered Architecture (Слоистая архитектура)**
 
 ### Суть
@@ -181,4 +189,3 @@ https://storybook.js.org/docs/react/get-started/why-storybook
 		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
 	]"
 />
-

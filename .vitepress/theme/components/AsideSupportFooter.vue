@@ -12,7 +12,7 @@ const currentYear = new Date().getFullYear();
 			rel="noopener noreferrer"
 		>
 			Понравилась дока?<br />
-			Поддержи ⭐ на GitHub.
+			Поставь ⭐ на GitHub.
 		</a>
 	</div>
 </template>

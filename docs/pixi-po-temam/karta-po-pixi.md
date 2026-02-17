@@ -1,16 +1,24 @@
+---
+title: "Карта по Pixi"
+description: "Pixi даёт быстрый WebGL/WebGPU-рендер 2D-сцен, Vue 3 — реактивное UI. Senior обязан уверенно владеть ядром Pixi (рендер-пайплайн, сцена, текстуры), глубоко знать Compo..."
+tags:
+  - "pixi-po-temam"
+  - "karta-po-pixi"
+updatedAt: "2026-02-16"
+---
 Pixi даёт быстрый WebGL/WebGPU-рендер 2D-сцен, Vue 3 — реактивное UI. Senior обязан уверенно владеть ядром Pixi (рендер-пайплайн, сцена, текстуры), глубоко знать Composition API Vue и уметь «сшивать» оба мира: управлять жизненным циклом канвы через хуки, держать state в реактивности, оптимизировать FPS (batching, кеширование), типизировать всё TypeScript-ом и автоматизировать билд (Vite/Vitest). Ниже — подробности и примеры кода.
 
 ---
 
 ## 1. Глубокое понимание PixiJS
 
-| Что знать                                                                         | Зачем                                                                                                                                                                                                                          |
-| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Application / Renderer / Stage** — базовая точка входа, API `init()` для WebGPU | Основы инициализации сцены [pixijs.com](https://pixijs.com/8.x/guides/getting-started/intro)                                                                                                            |
-| **Scene Graph**: `Container`, `Sprite`, `Graphics`, `Text`, `NineSlice`           | Структура отображаемых объектов [pixijs.com](https://pixijs.com/8.x/guides)                                                                                                                             |
-| **Assets & Texture Loader**: асинхронная загрузка, `Assets.load`                  | Подготовка ресурсов до монтирования Vue компонента [pixijs.com](https://pixijs.com/8.x/guides)                                                                                                          |
-| **Pixi v8 Architecture & Extensions**                                             | Плагинная модель, возможность писать собственные рендер-системы [pixijs.com](https://pixijs.com/8.x/guides/concepts/architecture)                                                                       |
-| **Performance Tips**: геометрический batching, `cacheAsTexture`, GC-ловушки       | Поддержка 60 FPS в сложных сценах [pixijs.com](https://pixijs.com/8.x/guides/concepts/performance-tips)                                                                                                 |
+| Что знать                                                                         | Зачем                                                                                                                                                                            |
+| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Application / Renderer / Stage** — базовая точка входа, API `init()` для WebGPU | Основы инициализации сцены [pixijs.com](https://pixijs.com/8.x/guides/getting-started/intro)                                                                                     |
+| **Scene Graph**: `Container`, `Sprite`, `Graphics`, `Text`, `NineSlice`           | Структура отображаемых объектов [pixijs.com](https://pixijs.com/8.x/guides)                                                                                                      |
+| **Assets & Texture Loader**: асинхронная загрузка, `Assets.load`                  | Подготовка ресурсов до монтирования Vue компонента [pixijs.com](https://pixijs.com/8.x/guides)                                                                                   |
+| **Pixi v8 Architecture & Extensions**                                             | Плагинная модель, возможность писать собственные рендер-системы [pixijs.com](https://pixijs.com/8.x/guides/concepts/architecture)                                                |
+| **Performance Tips**: геометрический batching, `cacheAsTexture`, GC-ловушки       | Поддержка 60 FPS в сложных сценах [pixijs.com](https://pixijs.com/8.x/guides/concepts/performance-tips)                                                                          |
 | **DevTools** (официальное расширение)                                             | Инспекция сцены и текстур прямо в браузере [pixijs.com](https://pixijs.com/8.x/guides/getting-started/ecosystem)[pixijs.io](https://pixijs.io/devtools/docs/guide/installation/) |
 
 ### Мини-пример прямого включения Pixi в Vue
@@ -101,4 +109,3 @@ onUnmounted(() => app.destroy(true));
 		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
 	]"
 />
-

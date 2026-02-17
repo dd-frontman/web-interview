@@ -1,4 +1,13 @@
-# 📝 Разбор реализации `Pick` построчно
+---
+title: "реализации Pick построчно"
+description: "3. Цикл [P in K] сначала возьмёт P = \\\\\"id\\\\\", потом P = \\\\\"name\\\\\"."
+tags:
+  - "typescript"
+  - "zadachi"
+  - "zadacha-realizovat-pick-svoimi-silami"
+updatedAt: "2026-02-16"
+---
+# реализации Pick построчно
 
 ---
 
@@ -81,4 +90,3 @@ type UserPreview = MyPick<User, "id" | "name">;
 		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
 	]"
 />
-

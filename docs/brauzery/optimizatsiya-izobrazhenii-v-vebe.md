@@ -1,3 +1,11 @@
+---
+title: "Optimizatsiya izobrazhenii v"
+description: "Изображения часто занимают большую часть веса страницы. Цель оптимизации:"
+tags:
+  - "brauzery"
+  - "optimizatsiya-izobrazhenii-v-vebe"
+updatedAt: "2026-02-16"
+---
 ## Оптимизация изображений в вебе
 
 Изображения часто занимают большую часть веса страницы. Цель оптимизации:
@@ -20,18 +28,21 @@
 	<source
 		type="image/avif"
 		srcset="/img/hero-640.avif 640w, /img/hero-1280.avif 1280w"
-		sizes="(max-width: 768px) 100vw, 50vw" />
+		sizes="(max-width: 768px) 100vw, 50vw"
+	/>
 	<source
 		type="image/webp"
 		srcset="/img/hero-640.webp 640w, /img/hero-1280.webp 1280w"
-		sizes="(max-width: 768px) 100vw, 50vw" />
+		sizes="(max-width: 768px) 100vw, 50vw"
+	/>
 	<img
 		src="/img/hero-1280.jpg"
 		alt="Главный баннер"
 		width="1280"
 		height="720"
 		loading="lazy"
-		decoding="async" />
+		decoding="async"
+	/>
 </picture>
 ```
 
@@ -80,8 +91,8 @@
 
 <RelatedTopics
 	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
 		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-		{ title: 'Ошибки Critical Rendering Path', href: '/brauzery/oshibki-critical-rendering-path' },
+		{ title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
 	]"
 />

@@ -1,3 +1,11 @@
+---
+title: "CSP CSP"
+description: "CSP — это «белый список» для браузера: откуда можно загружать и выполнять скрипты, стили, картинки, какие страницы могут встраивать наш сайт в <iframe>, куда можно отп..."
+tags:
+  - "bezopasnost-prilozhenii"
+  - "csp-content-security-policy"
+updatedAt: "2026-02-16"
+---
 CSP — это «белый список» для браузера: откуда **можно** загружать и выполнять скрипты, стили, картинки, какие страницы могут встраивать наш сайт в `<iframe>`, куда можно отправлять запросы и т. д. Цель — **снизить риск XSS/кликджекинга** и других атак.
 
 ---
@@ -274,4 +282,3 @@ export default defineNuxtConfig({
 		{ title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
 	]"
 />
-

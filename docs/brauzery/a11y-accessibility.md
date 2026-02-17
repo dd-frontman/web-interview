@@ -1,3 +1,11 @@
+---
+title: "A11y accessibility"
+description: "Цель — сделать сайт или приложение удобным для всех пользователей, включая людей с ограниченными возможностями (например, слабовидящих, незрячих, с нарушениями моторики)."
+tags:
+  - "brauzery"
+  - "a11y-accessibility"
+updatedAt: "2026-02-16"
+---
 ## 1. Краткое объяснение
 
 **A11y** — это сокращение от _Accessibility_ (доступность).  
@@ -89,9 +97,8 @@
 
 <RelatedTopics
 	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
 		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
 		{ title: 'Браузеры', href: '/brauzery/index' },
 	]"
 />
-

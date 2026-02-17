@@ -1,3 +1,11 @@
+---
+title: "Naiveui"
+description: "Краткая выжимка по теме \\\"Naiveui\\\"."
+tags:
+  - "npm-tools"
+  - "naiveui"
+updatedAt: "2026-02-16"
+---
 - Библиотека компонентов для **Vue 3**, написанная на **TypeScript**.
 - Поддерживает **SSR** (Server-Side Rendering).
 - Поддержка **tree-shaking** — можно импортировать только нужные компоненты.
@@ -77,4 +85,3 @@ const themeOverrides: GlobalThemeOverrides = {
 		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
 	]"
 />
-

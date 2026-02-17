@@ -1,8 +1,17 @@
-# `satisfies` в TypeScript
+---
+title: "satisfies в TS"
+description: "Satisfies проверяет, что значение соответствует нужному типу, но не \\\\\"перетирает\\\\\" исходный, более точный тип значения."
+tags:
+  - "typescript"
+  - "satisfies-v-typescript"
+updatedAt: "2026-02-16"
+---
+# satisfies в TS
 
 `Satisfies` проверяет, что значение соответствует нужному типу, но не "перетирает" исходный, более точный тип значения.
 
 Это удобно, когда нужно:
+
 - проверить форму объекта;
 - сохранить литеральные типы (`"dark"`, `3000`, `true`);
 - не терять автодополнение и точность типов.
@@ -14,8 +23,8 @@
 ```ts
 // Аннотация сужает знания о конкретных значениях
 const config: Record<string, string | number> = {
-  mode: "dark",
-  port: 3000,
+	mode: "dark",
+	port: 3000,
 };
 
 // Тип config.mode теперь string | number, а не "dark"
@@ -25,8 +34,8 @@ const config: Record<string, string | number> = {
 
 ```ts
 const config = {
-  mode: "dark",
-  port: 3000,
+	mode: "dark",
+	port: 3000,
 } satisfies Record<string, string | number>;
 
 // Проверка формы есть,
@@ -69,15 +78,15 @@ const user = { role: "admin" } satisfies { role: string };
 
 ```ts
 type AppConfig = {
-  mode: "development" | "production";
-  apiBaseUrl: string;
-  retry: number;
+	mode: "development" | "production";
+	apiBaseUrl: string;
+	retry: number;
 };
 
 const config = {
-  mode: "development",
-  apiBaseUrl: "https://api.example.com",
-  retry: 3,
+	mode: "development",
+	apiBaseUrl: "https://api.example.com",
+	retry: 3,
 } satisfies AppConfig;
 ```
 
@@ -85,9 +94,9 @@ const config = {
 
 ```ts
 const badConfig = {
-  mode: "dev", // Ошибка: нет в union
-  apiBaseUrl: "https://api.example.com",
-  retry: 3,
+	mode: "dev", // Ошибка: нет в union
+	apiBaseUrl: "https://api.example.com",
+	retry: 3,
 } satisfies AppConfig;
 ```
 
@@ -99,8 +108,8 @@ type EventName = "open" | "close";
 type Handlers = Record<EventName, () => void>;
 
 const handlers = {
-  open: () => console.log("opened"),
-  close: () => console.log("closed"),
+	open: () => console.log("opened"),
+	close: () => console.log("closed"),
 } satisfies Handlers;
 ```
 
@@ -110,20 +119,20 @@ const handlers = {
 
 ```ts
 type ApiResponse = {
-  status: "ok" | "error";
-  data: { id: number; name: string };
+	status: "ok" | "error";
+	data: { id: number; name: string };
 };
 
 const mockResponse = {
-  status: "ok",
-  data: { id: 1, name: "Alice" },
+	status: "ok",
+	data: { id: 1, name: "Alice" },
 } satisfies ApiResponse;
 ```
 
 ## Частые ошибки
 
 - Путать `satisfies` с runtime-проверкой.
-`satisfies` работает только на этапе компиляции.
+  `satisfies` работает только на этапе компиляции.
 - Использовать `as` там, где нужна проверка структуры.
 - Ожидать, что `satisfies` изменит тип переменной под "широкий". Он наоборот сохраняет точность исходного литерала.
 
@@ -144,4 +153,3 @@ const mockResponse = {
 		{ title: 'TypeScript', href: '/typescript/index' },
 	]"
 />
-

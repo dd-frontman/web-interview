@@ -1,3 +1,11 @@
+---
+title: "Trassirovka zaprosov opentelemetry"
+description: "Трассировка нужна, чтобы видеть полный путь одного пользовательского запроса через несколько сервисов."
+tags:
+  - "arkhitektura"
+  - "trassirovka-zaprosov-opentelemetry"
+updatedAt: "2026-02-16"
+---
 ## Трассировка запросов (Request Tracing)
 
 Трассировка нужна, чтобы видеть полный путь одного пользовательского запроса через несколько сервисов.

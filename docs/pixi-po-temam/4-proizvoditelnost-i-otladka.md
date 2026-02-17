@@ -1,3 +1,11 @@
+---
+title: "Производительность отладка Pixi"
+description: "В этом разделе разбираем всё, что помогает удержать 60 FPS+ и быстро находить узкие места в-реальном проекте: как считать draw-calls, когда включать batching, чем отли..."
+tags:
+  - "pixi-po-temam"
+  - "proizvoditelnost-i-otladka"
+updatedAt: "2026-02-16"
+---
 В этом разделе разбираем всё, что помогает удержать **60 FPS+** и быстро находить узкие места в-реальном проекте: как считать draw-calls, когда включать batching, чем отличаются `cacheAsTexture` и `cacheAsBitmap`, почему `ParticleContainer` летает, как дружить с Ticker и WebGPU, и какие инструменты дают «рентген» сцены прямо в браузере.
 
 ## 4.1 Быстрый чек-лист профилирования
@@ -114,4 +122,3 @@ Pixi 8 уже отдаёт хук `app.renderer.texture.disposeClient` для ч
 		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
 	]"
 />
-

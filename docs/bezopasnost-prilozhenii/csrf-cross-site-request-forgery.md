@@ -1,3 +1,11 @@
+---
+title: "CSRF CSRF"
+description: "CSRF (Cross-Site Request Forgery) — атака, при которой злоумышленник заставляет браузер пользователя отправить запрос на доверенный сайт от имени этого пользователя."
+tags:
+  - "bezopasnost-prilozhenii"
+  - "csrf-cross-site-request-forgery"
+updatedAt: "2026-02-16"
+---
 ## Что такое CSRF
 
 CSRF (Cross-Site Request Forgery) — атака, при которой злоумышленник заставляет браузер пользователя отправить запрос на доверенный сайт от имени этого пользователя.

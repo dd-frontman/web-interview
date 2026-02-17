@@ -1,3 +1,12 @@
+---
+title: "Osnovnye funktsii react"
+description: "Краткая выжимка по теме \\\"Osnovnye funktsii react\\\"."
+tags:
+  - "react"
+  - "osnovnye-funktsii-react"
+updatedAt: "2026-02-16"
+search: false
+---
 ## 📚 React vs Vue — пофункциональное сравнение
 
 ### 1) Локальное состояние
@@ -813,4 +822,3 @@ const { data } = useSWR("/api/user", fetcher);
 		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
 	]"
 />
-

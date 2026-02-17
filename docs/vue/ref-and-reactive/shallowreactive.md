@@ -1,3 +1,12 @@
+---
+title: "Shallowreactive"
+description: "shallowReactive(obj) — это функция из Vue 3 reactivity API, которая делает реактивными только поля самого объекта, но не его вложенные объекты. Это означает:"
+tags:
+  - "vue"
+  - "ref-and-reactive"
+  - "shallowreactive"
+updatedAt: "2026-02-16"
+---
 ## 📌 Что такое `shallowReactive`
 
 `shallowReactive(obj)` — это функция из Vue 3 reactivity API, которая делает **реактивными только поля самого объекта**, но **не его вложенные объекты**. Это означает:
@@ -137,8 +146,7 @@ const updateNested = () => {
 <RelatedTopics
 	:items="[
 		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+		{ title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
 		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
 	]"
 />
-

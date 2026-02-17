@@ -1,3 +1,11 @@
+---
+title: "Mezhdomennye zaprosy cors"
+description: "origin = protocol + host + port."
+tags:
+  - "brauzery"
+  - "mezhdomennye-zaprosy-cors-jsonp-proxy"
+updatedAt: "2026-02-16"
+---
 ## База: что такое origin
 
 `origin = protocol + host + port`.
@@ -75,7 +83,7 @@ JSONP работает через `<script src="...">`, потому что за
 <RelatedTopics
 	:items="[
 		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Разница между HTTP 1.1, HTTP 2 и HTTP 3', href: '/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3' },
+		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
 		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
 	]"
 />

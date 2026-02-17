@@ -4,6 +4,7 @@ import path from "node:path";
 const cwd = process.cwd();
 const docsRoot = path.join(cwd, "docs");
 const sidebarPath = path.join(cwd, ".vitepress", "sidebar.ts");
+const sidebarGeneratedPath = path.join(cwd, ".vitepress", "sidebar.generated.ts");
 const homePath = path.join(docsRoot, "index.md");
 
 const ROUTE_RE = /^\/[a-z0-9]+(?:-[a-z0-9]+)*(?:\/[a-z0-9]+(?:-[a-z0-9]+)*)*$/;
@@ -51,6 +52,24 @@ function extractMatches(filePath, regex) {
 	return [...source.matchAll(regex)].map((match) => match[1]);
 }
 
+function resolveRouteAlias(route, routeSet) {
+	const normalized = route.replace(/\/+$/, "") || "/";
+	if (routeSet.has(normalized)) {
+		return normalized;
+	}
+
+	if (normalized === "/" && routeSet.has("/index")) {
+		return "/index";
+	}
+
+	const indexAlias = `${normalized}/index`;
+	if (routeSet.has(indexAlias)) {
+		return indexAlias;
+	}
+
+	return null;
+}
+
 const routes = collectMarkdownRoutes();
 const routeSet = new Set(routes);
 const errors = [];
@@ -61,13 +80,14 @@ for (const route of routes) {
 	}
 }
 
-const sidebarLinks = extractMatches(sidebarPath, /link:\s*"([^"]+)"/g);
+const sidebarSourcePath = fs.existsSync(sidebarGeneratedPath) ? sidebarGeneratedPath : sidebarPath;
+const sidebarLinks = extractMatches(sidebarSourcePath, /link:\s*"([^"]+)"/g);
 for (const link of sidebarLinks) {
 	if (!ROUTE_RE.test(link)) {
 		errors.push(`Invalid sidebar link format: ${link}`);
 		continue;
 	}
-	if (!routeSet.has(link)) {
+	if (!resolveRouteAlias(link, routeSet)) {
 		errors.push(`Sidebar link points to missing page: ${link}`);
 	}
 }
@@ -78,7 +98,7 @@ for (const link of homeLinks) {
 		errors.push(`Invalid home route format: ${link}`);
 		continue;
 	}
-	if (!routeSet.has(link)) {
+	if (!resolveRouteAlias(link, routeSet)) {
 		errors.push(`Home page link points to missing page: ${link}`);
 	}
 }
@@ -91,4 +111,6 @@ if (errors.length > 0) {
 	process.exit(1);
 }
 
-console.log(`Route validation passed (${routes.length} pages, ${sidebarLinks.length} sidebar links).`);
+console.log(
+	`Route validation passed (${routes.length} pages, ${sidebarLinks.length} sidebar links).`
+);

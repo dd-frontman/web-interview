@@ -1,3 +1,11 @@
+---
+title: "Hydration"
+description: "1. SSR: сервер отрендерил компонент <button>Нажми</button> и отдал HTML."
+tags:
+  - "nuxt"
+  - "hydration"
+updatedAt: "2026-02-16"
+---
 ## 1) Простое объяснение
 
 **Hydration** — это процесс, когда браузер **«оживляет» HTML, сгенерированный на сервере (SSR)**, добавляя к нему JavaScript-логику (обработчики событий, реактивность, состояние).
@@ -76,7 +84,7 @@ const count = ref(0);
 
 ---
 
-# 📑 Шпаргалка
+# Шпаргалка
 
 | Этап           | Что происходит                                                   |
 | -------------- | ---------------------------------------------------------------- |
@@ -91,9 +99,8 @@ const count = ref(0);
 
 <RelatedTopics
 	:items="[
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
 	]"
 />
-

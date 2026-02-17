@@ -1,4 +1,13 @@
-# 🔹 Хук `useState`
+---
+title: "Хук useState"
+description: "useState — это хук для хранения и изменения локального состояния внутри функционального компонента."
+tags:
+  - "react"
+  - "khuki"
+  - "usestate"
+updatedAt: "2026-02-16"
+---
+# Хук useState
 
 ## 1) Кратко, простыми словами
 
@@ -157,4 +166,3 @@ export function TodoList() {
 		{ title: 'useEffect', href: '/react/khuki/useeffect' },
 	]"
 />
-

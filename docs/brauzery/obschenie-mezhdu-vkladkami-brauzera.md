@@ -1,3 +1,11 @@
+---
+title: "Obschenie mezhdu vkladkami"
+description: "Простой API для вкладок одного origin."
+tags:
+  - "brauzery"
+  - "obschenie-mezhdu-vkladkami-brauzera"
+updatedAt: "2026-02-16"
+---
 ## Зачем нужно общение между вкладками
 
 Типовые сценарии:

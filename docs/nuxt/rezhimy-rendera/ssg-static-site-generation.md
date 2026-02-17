@@ -1,3 +1,11 @@
+---
+title: "SSG SSG"
+description: "SSG — это когда страница вашего приложения генерируется один раз на этапе билда и сохраняется в виде готового HTML-файла. Пользователь сразу получает статический HTML,..."
+tags:
+  - "nuxt"
+  - "ssg-static-site-generation"
+updatedAt: "2026-02-16"
+---
 ## 1. Краткое объяснение
 
 SSG — это когда страница вашего приложения **генерируется один раз на этапе билда** и сохраняется в виде **готового HTML-файла**. Пользователь сразу получает статический HTML, а затем подключается JavaScript для оживления интерфейса.
@@ -146,9 +154,8 @@ export default function BlogPage({ post }: { post: Post }) {
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 	]"
 />
-

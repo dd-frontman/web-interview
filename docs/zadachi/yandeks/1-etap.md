@@ -1,3 +1,18 @@
+---
+title: "1 этап"
+description: "Подборка базовых задач первого этапа: промисы и работа со строками."
+tags:
+  - "zadachi"
+  - "yandeks"
+  - "etap"
+updatedAt: "2026-02-17"
+---
+# Яндекс 1 этап
+
+Ниже две типовые задачи с собеседований: работа с промисами и вариативными аргументами.
+
+## Задача 1. Сумма результатов промисов
+
 ```js
 /**
  * Реализовать функцию sumPromises, которая принимает
@@ -7,7 +22,6 @@
  * Функция может принимать любое количество аргументов.
  * Можно использовать любые API процессы.
  */
-// Code here
 function sumPromises(...promises) {
 	return Promise.all(promises).then((results) => results.reduce((acc, number) => acc + number, 0));
 }
@@ -18,6 +32,8 @@ const promise2 = Promise.resolve(2);
 
 sumPromises(promise1, promise2).then(console.log); // 3
 ```
+
+## Задача 2. Склейка строк через разделитель
 
 ```js
 /**
@@ -42,4 +58,3 @@ console.log(strjoin("-", "d", "e", "f")); // 'd-e-f'
 		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
 	]"
 />
-

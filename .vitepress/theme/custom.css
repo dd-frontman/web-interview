@@ -14,7 +14,9 @@
 /* Brand color for site title in the top nav. */
 .VPNavBarTitle .title {
 	color: var(--vp-c-brand-1);
-	transition: color 0.2s ease, opacity 0.2s ease;
+	transition:
+		color 0.2s ease,
+		opacity 0.2s ease;
 }
 
 .VPNavBarTitle .title:hover {
@@ -56,7 +58,9 @@
 	color: var(--vp-button-brand-text);
 	text-decoration: none;
 	font-weight: 600;
-	transition: transform 0.2s ease, opacity 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		opacity 0.2s ease;
 }
 
 .home-cta-button:hover {
@@ -93,7 +97,9 @@
 	border: 1px solid var(--vp-c-divider);
 	border-radius: 10px;
 	background: var(--vp-c-bg-soft);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 .home-section-card:hover {
@@ -166,6 +172,26 @@
 
 .related-topics {
 	margin-top: 1rem;
+}
+
+.auto-related-topics {
+	margin-top: 1.5rem;
+}
+
+.auto-related-topics__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	margin: 0 0 0.65rem;
+}
+
+.auto-related-topics__tags span {
+	padding: 0.1rem 0.45rem;
+	border-radius: 999px;
+	background: var(--vp-c-bg-soft);
+	border: 1px solid var(--vp-c-divider);
+	font-size: 0.75rem;
+	line-height: 1.2;
 }
 
 @media (max-width: 1023px) {

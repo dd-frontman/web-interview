@@ -1,3 +1,12 @@
+---
+title: "Reactive"
+description: "reactive() — это функция API реактивности Vue 3, которая превращает JavaScript-объект в глубоко реактивный объект (reactive proxy)."
+tags:
+  - "vue"
+  - "ref-and-reactive"
+  - "reactive"
+updatedAt: "2026-02-16"
+---
 ## 🧠 Что такое `reactive()`
 
 `reactive()` — это **функция API реактивности Vue 3**, которая превращает JavaScript-объект в **глубоко реактивный объект (reactive proxy)**.  
@@ -166,4 +175,3 @@ function increment() {
 		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
 	]"
 />
-

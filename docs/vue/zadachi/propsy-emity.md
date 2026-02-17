@@ -1,3 +1,21 @@
+---
+title: "Props и Emits"
+description: "Практика по props и emits: типизация, валидация и паттерн update:* во Vue."
+tags:
+  - "vue"
+  - "zadachi"
+  - "propsy-emity"
+updatedAt: "2026-02-17"
+---
+# Props и Emits
+
+Ниже две практические заготовки:
+
+- пример компонента на Vue 3 с разными способами `defineProps` и `defineEmits`;
+- пример типичных реактивных ловушек во Vue 2 (и как их исправлять).
+
+## Задача 1. Typed props + typed emits во Vue 3
+
 ```vue
 <template>
 	<section class="child">
@@ -176,6 +194,8 @@ function onInputTitle(e: Event) {
 </style>
 ```
 
+## Задача 2. Реактивные ловушки во Vue 2
+
 ```vue
 <template>
 	<div class="wrap">
@@ -256,4 +276,3 @@ button {
 		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
 	]"
 />
-

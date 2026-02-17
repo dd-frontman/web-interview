@@ -1,3 +1,11 @@
+---
+title: "Asinkhronnye rendery i"
+description: "Краткая выжимка по теме \\\"Asinkhronnye rendery i batching\\\"."
+tags:
+  - "vue"
+  - "asinkhronnye-rendery-i-batching"
+updatedAt: "2026-02-16"
+---
 - Когда вы меняете реактивное состояние, Vue не обновляет DOM сразу. Вместо этого он **группирует несколько изменений** и применяет их **в одном обновлении**. Это помогает избежать лишних перерисовок и экономит ресурсы.
 - Каждое изменение добавляет **Watchers** в очередь. Vue запускает `flushSchedulerQueue` на **следующем тике** (асинхронно через microtask), и выполняет все накопленные обновления одним пакетом.
 
@@ -52,4 +60,3 @@ function increment() {
 		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
 	]"
 />
-

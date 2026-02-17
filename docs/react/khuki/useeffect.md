@@ -1,3 +1,12 @@
+---
+title: "Useeffect"
+description: "useEffect нужен, чтобы выполнять побочные эффекты в React-компонентах:"
+tags:
+  - "react"
+  - "khuki"
+  - "useeffect"
+updatedAt: "2026-02-16"
+---
 ## 1) Кратко, простыми словами
 
 `useEffect` нужен, чтобы выполнять **побочные эффекты** в React-компонентах:
@@ -184,4 +193,3 @@ export function Search({ query }: { query: string }) {
 		{ title: 'useState', href: '/react/khuki/usestate' },
 	]"
 />
-

@@ -1,3 +1,11 @@
+---
+title: "Websockety v brauzere"
+description: "WebSocket — это постоянное двустороннее соединение между клиентом и сервером."
+tags:
+  - "brauzery"
+  - "websockety-v-brauzere"
+updatedAt: "2026-02-16"
+---
 ## WebSocket в браузере
 
 `WebSocket` — это постоянное двустороннее соединение между клиентом и сервером.

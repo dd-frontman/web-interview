@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { withBase } from "vitepress";
+
 interface RelatedTopic {
 	title: string;
 	href: string;
@@ -14,7 +16,7 @@ defineProps<{
 		<p class="custom-block-title">Связанные темы</p>
 		<ul>
 			<li v-for="item in items" :key="item.href">
-				<a :href="item.href">{{ item.title }}</a>
+				<a :href="withBase(item.href)">{{ item.title }}</a>
 			</li>
 		</ul>
 	</div>

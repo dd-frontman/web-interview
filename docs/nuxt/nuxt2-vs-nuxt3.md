@@ -1,4 +1,12 @@
-# Nuxt 2 vs Nuxt 3 — практическое сравнение + «под капотом»
+---
+title: "Nuxt 2 vs"
+description: "1. Контекст/плагины: в Nuxt 3 нет this — только функции/композаблы/useNuxtApp."
+tags:
+  - "nuxt"
+  - "nuxt2-vs-nuxt3"
+updatedAt: "2026-02-16"
+---
+# Nuxt 2 vs
 
 ## 1) Краткое объяснение
 
@@ -327,9 +335,8 @@ useHead({ title: "Home", meta: [{ name: "description", content: "..." }] });
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 	]"
 />
-

@@ -4,10 +4,15 @@ import path from "node:path";
 const cwd = process.cwd();
 const docsRoot = path.join(cwd, "docs");
 const readmePath = path.join(cwd, "README.md");
+const sidebarGeneratedPath = path.join(cwd, ".vitepress", "sidebar.generated.ts");
+const sidebarFallbackPath = path.join(cwd, ".vitepress", "sidebar.ts");
 
 const EXTERNAL_PROTOCOL_RE = /^(https?:|mailto:|tel:|data:)/i;
 const MARKDOWN_LINK_RE = /!?\[[^\]]*\]\(([^)]+)\)/g;
 const URL_WITH_TITLE_RE = /^(\S+)(?:\s+["'][^"']*["'])?$/;
+const RELATED_TOPICS_BLOCK_RE = /<RelatedTopics[\s\S]*?\/>/g;
+const RELATED_TOPICS_HREF_RE = /href:\s*"([^"]+)"/g;
+const ROOT_LINK_RE = /link:\s*"([^"]+)"/g;
 
 function toPosix(filePath) {
 	return filePath.split(path.sep).join("/");
@@ -15,6 +20,38 @@ function toPosix(filePath) {
 
 function isInsidePublic(relativePath) {
 	return relativePath === "public" || relativePath.startsWith("public/");
+}
+
+function routeFromFilePath(filePath) {
+	const rel = toPosix(path.relative(docsRoot, filePath)).replace(/\.md$/, "");
+	return `/${rel}`;
+}
+
+function normalizeRoute(route) {
+	if (route === "/") {
+		return "/index";
+	}
+	return route.replace(/\/+$/, "");
+}
+
+function resolveRouteAlias(route, routeMap) {
+	const normalized = route.replace(/\/+$/, "") || "/";
+	const canonical = normalizeRoute(normalized);
+
+	if (routeMap.has(canonical)) {
+		return canonical;
+	}
+
+	if (canonical === "/index") {
+		return routeMap.has("/index") ? "/index" : null;
+	}
+
+	const indexAlias = `${canonical}/index`;
+	if (routeMap.has(indexAlias)) {
+		return indexAlias;
+	}
+
+	return null;
 }
 
 function stripCodeFences(source) {
@@ -60,7 +97,7 @@ function splitPathAndHash(target) {
 }
 
 function collectDocRoutes() {
-	const routes = new Set();
+	const routes = new Map();
 	const stack = [docsRoot];
 
 	while (stack.length > 0) {
@@ -78,7 +115,7 @@ function collectDocRoutes() {
 			}
 
 			if (entry.isFile() && entry.name.endsWith(".md")) {
-				routes.add(`/${rel.replace(/\.md$/, "")}`);
+				routes.set(routeFromFilePath(abs), abs);
 			}
 		}
 	}
@@ -116,7 +153,24 @@ function collectMarkdownFiles() {
 	return files.sort();
 }
 
-function resolveRelativeTarget(baseFile, targetPath) {
+function extractSidebarLinks() {
+	const sidebarPath = fs.existsSync(sidebarGeneratedPath)
+		? sidebarGeneratedPath
+		: sidebarFallbackPath;
+	if (!fs.existsSync(sidebarPath)) {
+		return new Set();
+	}
+
+	const source = fs.readFileSync(sidebarPath, "utf8");
+	const links = new Set();
+	let match;
+	while ((match = ROOT_LINK_RE.exec(source)) !== null) {
+		links.add(match[1].trim());
+	}
+	return links;
+}
+
+function resolveRelativeTarget(baseFile, targetPath, routeMap) {
 	const baseDir = path.dirname(baseFile);
 	const resolved = path.resolve(baseDir, targetPath);
 	const candidates = [];
@@ -129,14 +183,72 @@ function resolveRelativeTarget(baseFile, targetPath) {
 		candidates.push(path.join(resolved, "index.md"));
 	}
 
-	return candidates.some((candidate) => fs.existsSync(candidate));
+	for (const candidate of candidates) {
+		if (!fs.existsSync(candidate)) {
+			continue;
+		}
+
+		if (candidate.endsWith(".md") && candidate.startsWith(docsRoot)) {
+			return {
+				exists: true,
+				route: normalizeRoute(routeFromFilePath(candidate)),
+			};
+		}
+
+		return { exists: true, route: null };
+	}
+
+	const maybeRoute = normalizeRoute(`/${toPosix(path.relative(docsRoot, resolved))}`);
+	if (routeMap.has(maybeRoute)) {
+		return { exists: true, route: maybeRoute };
+	}
+
+	return { exists: false, route: null };
 }
 
-function validateMarkdownLinks(filePath, routeSet) {
+function validateRelatedTopicsBlock(source, currentRoute, routeMap, rel) {
+	const errors = [];
+	const blocks = [...source.matchAll(RELATED_TOPICS_BLOCK_RE)];
+
+	for (const block of blocks) {
+		const raw = block[0];
+		const seen = new Set();
+		let hrefMatch;
+		while ((hrefMatch = RELATED_TOPICS_HREF_RE.exec(raw)) !== null) {
+			const hrefRaw = hrefMatch[1].trim();
+			const resolvedHref = resolveRouteAlias(hrefRaw, routeMap);
+			const dedupeKey = resolvedHref ?? normalizeRoute(hrefRaw);
+			if (seen.has(dedupeKey)) {
+				errors.push(`${rel}: duplicate href in RelatedTopics: ${hrefRaw}`);
+				continue;
+			}
+			seen.add(dedupeKey);
+
+			if (resolvedHref && resolvedHref === currentRoute) {
+				errors.push(`${rel}: self-link in RelatedTopics: ${hrefRaw}`);
+			}
+
+			if (!resolvedHref) {
+				errors.push(`${rel}: missing route in RelatedTopics: ${hrefRaw}`);
+			}
+		}
+	}
+
+	return errors;
+}
+
+function validateMarkdownLinks(filePath, routeMap, inboundCount) {
 	const errors = [];
 	const source = fs.readFileSync(filePath, "utf8");
 	const searchable = stripCodeFences(source);
 	const rel = toPosix(path.relative(cwd, filePath));
+	const currentRoute = filePath.startsWith(docsRoot)
+		? normalizeRoute(routeFromFilePath(filePath))
+		: null;
+
+	if (currentRoute) {
+		errors.push(...validateRelatedTopicsBlock(source, currentRoute, routeMap, rel));
+	}
 
 	let match;
 	while ((match = MARKDOWN_LINK_RE.exec(searchable)) !== null) {
@@ -162,24 +274,43 @@ function validateMarkdownLinks(filePath, routeSet) {
 			continue;
 		}
 
-		const { pathPart } = splitPathAndHash(target);
+		const { pathPart, hashPart } = splitPathAndHash(target);
 		if (!pathPart) {
 			continue;
 		}
 
 		if (pathPart.startsWith("/")) {
 			const normalized = pathPart.replace(/\/+$/, "") || "/";
-			const routeCandidate = normalized === "/" ? "/index" : normalized;
+			const resolvedRoute = resolveRouteAlias(normalized, routeMap);
 			const publicCandidate = path.join(docsRoot, "public", normalized.replace(/^\//, ""));
-
-			if (!routeSet.has(routeCandidate) && !fs.existsSync(publicCandidate)) {
+			if (!resolvedRoute && !fs.existsSync(publicCandidate)) {
 				errors.push(`${rel}: missing root link target: ${target}`);
+				continue;
+			}
+
+			if (currentRoute && resolvedRoute && resolvedRoute === currentRoute && !hashPart) {
+				errors.push(`${rel}: self-link detected: ${target}`);
+			}
+
+			if (resolvedRoute && (!currentRoute || resolvedRoute !== currentRoute)) {
+				inboundCount.set(resolvedRoute, (inboundCount.get(resolvedRoute) ?? 0) + 1);
 			}
 			continue;
 		}
 
-		if (!resolveRelativeTarget(filePath, pathPart)) {
+		const resolved = resolveRelativeTarget(filePath, pathPart, routeMap);
+		if (!resolved.exists) {
 			errors.push(`${rel}: missing relative link target: ${target}`);
+			continue;
+		}
+
+		if (resolved.route && currentRoute && resolved.route === currentRoute && !hashPart) {
+			errors.push(`${rel}: self-link detected: ${target}`);
+			continue;
+		}
+
+		if (resolved.route && (!currentRoute || resolved.route !== currentRoute)) {
+			inboundCount.set(resolved.route, (inboundCount.get(resolved.route) ?? 0) + 1);
 		}
 	}
 
@@ -191,9 +322,30 @@ if (!fs.existsSync(docsRoot)) {
 	process.exit(1);
 }
 
-const routeSet = collectDocRoutes();
+const routeMap = collectDocRoutes();
+const routeSet = new Set(routeMap.keys());
+const sidebarRawLinks = extractSidebarLinks();
+const sidebarLinks = new Set(
+	Array.from(sidebarRawLinks)
+		.map((link) => resolveRouteAlias(link, routeMap))
+		.filter(Boolean)
+);
+const inboundCount = new Map();
 const files = collectMarkdownFiles();
-const errors = files.flatMap((filePath) => validateMarkdownLinks(filePath, routeSet));
+const errors = files.flatMap((filePath) => validateMarkdownLinks(filePath, routeMap, inboundCount));
+
+for (const route of routeSet) {
+	if (route === "/index") {
+		continue;
+	}
+	if (sidebarLinks.has(route)) {
+		continue;
+	}
+	if ((inboundCount.get(route) ?? 0) > 0) {
+		continue;
+	}
+	errors.push(`orphan page (no sidebar and no inbound links): ${route}`);
+}
 
 if (errors.length > 0) {
 	console.error("Link validation failed:");
@@ -203,4 +355,6 @@ if (errors.length > 0) {
 	process.exit(1);
 }
 
-console.log(`Link validation passed (${files.length} markdown files).`);
+console.log(
+	`Link validation passed (${files.length} markdown files, ${routeSet.size} routes, ${sidebarLinks.size} sidebar links).`
+);

@@ -1,3 +1,11 @@
+---
+title: "Shadow dom"
+description: "Shadow DOM — это механизм Web Components, который дает компоненту собственное \\\\\"внутреннее дерево\\\\\" DOM со стилевой изоляцией."
+tags:
+  - "html"
+  - "shadow-dom"
+updatedAt: "2026-02-16"
+---
 ## Что такое Shadow DOM
 
 Shadow DOM — это механизм Web Components, который дает компоненту собственное "внутреннее дерево" DOM со стилевой изоляцией.
@@ -69,8 +77,7 @@ customElements.define("x-badge", XBadge);
 В компоненте:
 
 ```html
-<slot name="title"></slot>
-<slot></slot>
+<slot name="title"></slot> <slot></slot>
 ```
 
 ## Что важно помнить

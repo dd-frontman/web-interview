@@ -1,3 +1,11 @@
+---
+title: "TS-first в Pixi"
+description: "Краткая выжимка по теме \\\"Typescript first\\\"."
+tags:
+  - "pixi-po-temam"
+  - "typescript-first"
+updatedAt: "2026-02-16"
+---
 - **Pixi v8 снова поставляется единым пакетом**; декларации типов (`pixi.js/dist/pixi.d.ts`) лежат прямо внутри node-module, так что `@types` не нужны [GitHub](https://github.com/pixijs/pixijs/discussions/8765)[GitHub](https://github.com/pixijs/pixi.js/issues/7155).
 - В `tsconfig.json` включаем строгие флаги и отключаем анализ внутренних структур Pixi, чтобы IDE не тормозила:
 
@@ -15,10 +23,10 @@
 
 ## 3.2 Сборка и Asset-pipeline
 
-| Задача                                      | Решение                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача                                      | Решение                                                                                                                                                                                                                                                                                                                                              |
+| ------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Быстрый HMR + tree-shaking**              | `vite` + `vite-plugin-pixi` или просто alias до `pixi.mjs`; исправляет ошибку «Cannot use import outside module» на прод-сборке [pixijs.io](https://pixijs.io/assetpack/docs/guide/getting-started/vite/)[Stack Overflow](https://stackoverflow.com/questions/73075168/svelte-vite-pixi-js-build-error-cannot-use-import-statement-outside-a-module) |
-| **Автоматическая упаковка спрайтов/звуков** | `@assetpack/core` — плагин запускается в `vite.config.mts`, кладёт оптимизированные ассеты в `public/assets` [pixijs.io](https://pixijs.io/assetpack/docs/guide/getting-started/vite/)                                                                                                                                                                                      |
+| **Автоматическая упаковка спрайтов/звуков** | `@assetpack/core` — плагин запускается в `vite.config.mts`, кладёт оптимизированные ассеты в `public/assets` [pixijs.io](https://pixijs.io/assetpack/docs/guide/getting-started/vite/)                                                                                                                                                               |
 | **Шаблон под ключ**                         | `create-pixi` уже имеет пресет «Vite + PixiJS» [pixijs.io](https://pixijs.io/create-pixi/docs/guide/installation/)                                                                                                                                                                                                                                   |
 
 ## 3.3 Lint + type-safety
@@ -72,4 +80,3 @@ describe("Pixi boot", () => {
 		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
 	]"
 />
-

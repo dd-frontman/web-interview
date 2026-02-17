@@ -1,3 +1,11 @@
+---
+title: "Defineexpose"
+description: "Позволяет экспортировать внутренние переменные из компонента наружу, когда ты используешь <script setup> и хочешь получить доступ к ref, method и т.п. из ref(component..."
+tags:
+  - "vue"
+  - "defineexpose"
+updatedAt: "2026-02-16"
+---
 Позволяет **экспортировать внутренние переменные из компонента** наружу, когда ты используешь `<script setup>` и хочешь получить доступ к `ref`, `method` и т.п. из `ref(componentRef)`.
 
 ```js
@@ -23,4 +31,3 @@ onMounted(() => {
 		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
 	]"
 />
-

@@ -1,3 +1,11 @@
+---
+title: "SSR SSR"
+description: "Браузер получает уже готовый HTML, а затем поверх него «гидратируется» JavaScript (оживляет UI, добавляет интерактивность)."
+tags:
+  - "nuxt"
+  - "ssr-server-side-rendering"
+updatedAt: "2026-02-16"
+---
 **SSR (Server-Side Rendering)** — это способ рендеринга, когда **HTML-страница формируется на сервере**, а не в браузере.  
 Браузер получает уже готовый HTML, а затем поверх него «гидратируется» JavaScript (оживляет UI, добавляет интерактивность).
 
@@ -119,7 +127,7 @@ export default function Product({ product }: any) {
 
 ---
 
-# 📑 Шпаргалка
+# Шпаргалка
 
 | Характеристика           | CSR             | SSR                                |
 | ------------------------ | --------------- | ---------------------------------- |
@@ -135,9 +143,8 @@ export default function Product({ product }: any) {
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 	]"
 />
-

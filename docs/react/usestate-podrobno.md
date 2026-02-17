@@ -1,4 +1,13 @@
-# Урок 2. Хук `useState` — от основ до продвинутых нюансов
+---
+title: "Урок 2. Хук"
+description: "useState — это способ хранить и менять данные внутри функционального компонента React. Он возвращает пару: [value, setValue]. Вы вызываете setValue(newValue) → React с..."
+tags:
+  - "react"
+  - "usestate-podrobno"
+updatedAt: "2026-02-16"
+search: false
+---
+# Урок 2. Хук
 
 ## 1) Кратко, по‑простому
 
@@ -425,4 +434,3 @@ const inc3 = () => {
 		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
 	]"
 />
-

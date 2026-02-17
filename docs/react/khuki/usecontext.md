@@ -1,3 +1,12 @@
+---
+title: "Usecontext"
+description: "useContext нужен, чтобы передавать данные через дерево компонентов без \\\\\"пробрасывания пропсов\\\\\"."
+tags:
+  - "react"
+  - "khuki"
+  - "usecontext"
+updatedAt: "2026-02-16"
+---
 ## 1) Кратко, простыми словами
 
 `useContext` нужен, чтобы **передавать данные через дерево компонентов без "пробрасывания пропсов"**.  
@@ -73,4 +82,3 @@ export default function App() {
 		{ title: 'useState', href: '/react/khuki/usestate' },
 	]"
 />
-

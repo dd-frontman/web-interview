@@ -1,3 +1,12 @@
+---
+title: "Декораторы"
+description: "TypeScript поддерживает множество типов данных, включая:"
+tags:
+  - "typescript"
+  - "shpory-ts"
+updatedAt: "2026-02-16"
+search: false
+---
 TypeScript поддерживает множество типов данных, включая:
 
 - string (строковый тип данных);
@@ -692,4 +701,3 @@ class Car {
 		{ title: 'TypeScript', href: '/typescript/index' },
 	]"
 />
-

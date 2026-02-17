@@ -1,3 +1,11 @@
+---
+title: "Object freeze"
+description: "Object.freeze(obj) \\\\\"замораживает\\\\\" объект:"
+tags:
+  - "javascript"
+  - "object-freeze"
+updatedAt: "2026-02-16"
+---
 ## Что делает `Object.freeze()`
 
 `Object.freeze(obj)` "замораживает" объект:

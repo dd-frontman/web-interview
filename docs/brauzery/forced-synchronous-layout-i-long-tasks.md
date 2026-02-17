@@ -1,3 +1,11 @@
+---
+title: "Forced synchronous layout"
+description: "Это две частые причины \\\\\"тормозов\\\\\" интерфейса:"
+tags:
+  - "brauzery"
+  - "forced-synchronous-layout-i-long-tasks"
+updatedAt: "2026-02-16"
+---
 ## Forced Synchronous Layout и Long Tasks
 
 Это две частые причины "тормозов" интерфейса:
@@ -102,7 +110,7 @@ button.addEventListener("click", async () => {
 
 <RelatedTopics
 	:items="[
-		{ title: 'Типичные ошибки CRP', href: '/brauzery/oshibki-critical-rendering-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
 		{ title: 'Reflow, Repaint, Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
 		{ title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
 	]"

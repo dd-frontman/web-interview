@@ -1,3 +1,11 @@
+---
+title: "Metody massivov"
+description: "1. arr.push(...items) – добавляет элементы в конец,"
+tags:
+  - "javascript"
+  - "metody-massivov"
+updatedAt: "2026-02-16"
+---
 1. `arr.push(...items) – добавляет элементы в конец,`
 2. `arr.pop() – извлекает элемент из конца,`
 3. `arr.shift() – извлекает элемент из начала,`
@@ -29,4 +37,3 @@
 		{ title: 'Event Loop', href: '/javascript/event-loop' },
 	]"
 />
-

@@ -1,3 +1,12 @@
+---
+title: "Двустороннее связывание через"
+description: "так же можно сделать через @input"
+tags:
+  - "vue"
+  - "zadachi"
+  - "dvustoronnee-svyazyvanie-cherez-v-model"
+updatedAt: "2026-02-16"
+---
 - Реализовать корректное **двустороннее связывание** между родителем и дочерним компонентом через `v-model`.
 - Изменения в инпуте **дочернего компонента** должны обновлять состояние в родителе.
 - Кнопка в дочернем компоненте должна **сбрасывать значение** и корректно уведомлять родителя.
@@ -63,7 +72,7 @@ function reset() {
 
 <script>
 function onInput(event) {
-  emit("update:modelValue", event.target.value);
+	emit("update:modelValue", event.target.value);
 }
 </script>
 ```
@@ -77,4 +86,3 @@ function onInput(event) {
 		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
 	]"
 />
-

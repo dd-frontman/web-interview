@@ -1,3 +1,11 @@
+---
+title: "SSE sse"
+description: "Server-Sent Events (SSE) — это способ передавать данные с сервера в браузер по одному долгоживущему HTTP-соединению."
+tags:
+  - "brauzery"
+  - "server-sent-events-sse"
+updatedAt: "2026-02-16"
+---
 ## Что такое SSE
 
 Server-Sent Events (SSE) — это способ передавать данные с сервера в браузер по одному долгоживущему HTTP-соединению.
@@ -66,7 +74,7 @@ app.get("/api/events", (req, res) => {
 <RelatedTopics
 	:items="[
 		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Разница между HTTP 1.1, HTTP 2 и HTTP 3', href: '/brauzery/raznitsa-mezhdu-http-1-1-http-2-i-http-3' },
+		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
 		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
 	]"
 />

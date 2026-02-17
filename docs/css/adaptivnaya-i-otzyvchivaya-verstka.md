@@ -1,3 +1,11 @@
+---
+title: "Adaptivnaya i otzyvchivaya"
+description: "Обычно в собеседованиях спрашивают про два подхода:"
+tags:
+  - "css"
+  - "adaptivnaya-i-otzyvchivaya-verstka"
+updatedAt: "2026-02-16"
+---
 ## Адаптивная и отзывчивая верстка простыми словами
 
 Обычно в собеседованиях спрашивают про два подхода:

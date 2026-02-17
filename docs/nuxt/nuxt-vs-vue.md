@@ -1,4 +1,12 @@
-# ⚡ Nuxt vs Vue — в чём отличия (подробно)
+---
+title: "Nuxt vs Vue"
+description: "Nuxt — это мета‑фреймворк поверх Vue, который превращает Vue‑приложение в «полный стек»: SSR/SSG/ISR, файловый роутинг, серверные эндпоинты, модули, авто‑импорты, гото..."
+tags:
+  - "nuxt"
+  - "nuxt-vs-vue"
+updatedAt: "2026-02-16"
+---
+# Nuxt vs Vue
 
 Nuxt — это **мета‑фреймворк** поверх Vue, который превращает Vue‑приложение в «полный стек»: SSR/SSG/ISR, файловый роутинг, серверные эндпоинты, модули, авто‑импорты, готовая структура и DevOps‑фишки.  
 Vue сам по себе — это **UI‑фреймворк** (рендер компонентов + реактивность). Всё остальное вы дособираете вручную.
@@ -221,9 +229,8 @@ createRouter({ routes: [{ path: "/about", component: About }] });
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/isr-incremental-static-regeneration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 	]"
 />
-

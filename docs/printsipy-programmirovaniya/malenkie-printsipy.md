@@ -1,3 +1,11 @@
+---
+title: "Маленькие принципы"
+description: "Это не один принцип, а набор из 9 (Controller, Creator, Information Expert, High Cohesion, Low Coupling и др.) — описывают, кому назначать ответственность в ОО‑дизайне."
+tags:
+  - "printsipy-programmirovaniya"
+  - "malenkie-printsipy"
+updatedAt: "2026-02-16"
+---
 ###  1 KISS — _Keep It Simple, Stupid_
 
 **Смысл:** решение должно быть настолько простым, насколько возможно, без «премудрой» архитектуры.  
@@ -67,4 +75,3 @@
 		{ title: 'Vue', href: '/vue' },
 	]"
 />
-

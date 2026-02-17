@@ -1,3 +1,11 @@
+---
+title: "Workers v brauzere"
+description: "Workers позволяют вынести тяжёлые задачи из main thread, чтобы интерфейс не зависал."
+tags:
+  - "brauzery"
+  - "workers-v-brauzere"
+updatedAt: "2026-02-16"
+---
 ## Зачем нужны Workers
 
 Workers позволяют вынести тяжёлые задачи из main thread, чтобы интерфейс не зависал.
@@ -60,7 +68,7 @@ self.onmessage = (event) => {
 <RelatedTopics
 	:items="[
 		{ title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
-		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
 		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
 	]"
 />

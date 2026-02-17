@@ -68,4 +68,12 @@ export default defineConfig({
 		},
 		codeTransformers: [],
 	},
+
+	// Локальный поисковый индекс собирается в отдельный JS-чанк и для большой базы знаний
+	// он закономерно превышает дефолтный warning-порог 500kb.
+	vite: {
+		build: {
+			chunkSizeWarningLimit: 1500,
+		},
+	},
 });

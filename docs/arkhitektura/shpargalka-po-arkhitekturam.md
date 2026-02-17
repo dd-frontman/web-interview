@@ -1,3 +1,11 @@
+---
+title: "Shpargalka po arkhitekturam"
+description: "Размер проекта + Команда + Бизнес = Архитектура"
+tags:
+  - "arkhitektura"
+  - "shpargalka-po-arkhitekturam"
+updatedAt: "2026-02-16"
+---
 ## 🧠 Frontend Architecture — Cheat Sheet
 
 | Архитектура                       | Краткое описание                      | Когда применять                        | Типичная структура                                     | Плюсы                                                         | Минусы                                          | Частые ошибки                                   | Где чаще всего                  |
@@ -97,4 +105,3 @@
 		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
 	]"
 />
-

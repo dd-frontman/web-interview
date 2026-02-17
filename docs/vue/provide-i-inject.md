@@ -1,3 +1,11 @@
+---
+title: "provide и inject"
+description: "Позволяют передавать данные глубоко вниз по дереву компонентов без props."
+tags:
+  - "vue"
+  - "provide-i-inject"
+updatedAt: "2026-02-16"
+---
 ## 🧩 `provide` / `inject`
 
 Позволяют **передавать данные глубоко вниз по дереву компонентов** без `props`.
@@ -22,4 +30,3 @@ const user = inject("user");
 		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
 	]"
 />
-

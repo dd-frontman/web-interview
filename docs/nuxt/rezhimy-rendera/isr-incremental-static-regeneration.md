@@ -1,3 +1,11 @@
+---
+title: "ISR ISR"
+description: "👉 То есть это «гибрид» между SSG (быстро, но статично) и SSR (всегда свежо, но медленно)."
+tags:
+  - "nuxt"
+  - "isr-incremental-static-regeneration"
+updatedAt: "2026-02-16"
+---
 ## 1. Краткое объяснение
 
 **ISR (Incremental Static Regeneration)** — это режим, в котором страница генерируется **как в SSG** (во время билда), но при этом может **обновляться на сервере через заданный интервал времени**.  
@@ -153,9 +161,8 @@ export default defineEventHandler(async (event) => {
 
 <RelatedTopics
 	:items="[
-		{ title: 'Hydration', href: '/nuxt/hydration' },
+		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
 		{ title: 'Nitro', href: '/nuxt/nitro' },
 		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
 	]"
 />
-

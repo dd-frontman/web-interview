@@ -1,3 +1,11 @@
+---
+title: "Reflow repaint i"
+description: "Когда DOM/CSS меняются, браузер проходит этапы:"
+tags:
+  - "brauzery"
+  - "reflow-repaint-i-layout-thrashing"
+updatedAt: "2026-02-16"
+---
 ## Reflow, Repaint и Layout Thrashing простыми словами
 
 Когда DOM/CSS меняются, браузер проходит этапы:
@@ -108,8 +116,8 @@ requestAnimationFrame(() => {
 
 <RelatedTopics
 	:items="[
-		{ title: 'Типичные ошибки CRP', href: '/brauzery/oshibki-critical-rendering-path' },
-		{ title: 'Critical Render Path', href: '/brauzery/critical-render-path' },
+		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
 		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
 	]"
 />

@@ -1,4 +1,12 @@
-# `assert` в TypeScript
+---
+title: "assert в TS"
+description: "Assert обычно используют в двух смыслах:"
+tags:
+  - "typescript"
+  - "assert-v-typescript"
+updatedAt: "2026-02-16"
+---
+# assert в TS
 
 `Assert` обычно используют в двух смыслах:
 
@@ -9,9 +17,9 @@
 
 ```ts
 function assert(condition: unknown, message: string): void {
-  if (!condition) {
-    throw new Error(message);
-  }
+	if (!condition) {
+		throw new Error(message);
+	}
 }
 
 const user = { name: "Alice" };
@@ -24,14 +32,14 @@ assert(user.name.length > 0, "Имя не должно быть пустым");
 
 ```ts
 function assert(condition: unknown, message: string): asserts condition {
-  if (!condition) {
-    throw new Error(message);
-  }
+	if (!condition) {
+		throw new Error(message);
+	}
 }
 
 function printLength(value: string | null) {
-  assert(value !== null, "value is null");
-  console.log(value.length); // value -> string
+	assert(value !== null, "value is null");
+	console.log(value.length); // value -> string
 }
 ```
 
@@ -41,23 +49,23 @@ function printLength(value: string | null) {
 
 ```ts
 type User = {
-  id: number;
-  name: string;
+	id: number;
+	name: string;
 };
 
 function assertIsUser(value: unknown): asserts value is User {
-  if (typeof value !== "object" || value === null) {
-    throw new Error("Not an object");
-  }
+	if (typeof value !== "object" || value === null) {
+		throw new Error("Not an object");
+	}
 
-  if (!("id" in value) || !("name" in value)) {
-    throw new Error("Invalid user shape");
-  }
+	if (!("id" in value) || !("name" in value)) {
+		throw new Error("Invalid user shape");
+	}
 }
 
 function handleResponse(data: unknown) {
-  assertIsUser(data);
-  console.log(data.name); // data -> User
+	assertIsUser(data);
+	console.log(data.name); // data -> User
 }
 ```
 
@@ -71,8 +79,8 @@ function handleResponse(data: unknown) {
 import assert from "node:assert/strict";
 
 function divide(a: number, b: number) {
-  assert(b !== 0, "b must not be zero");
-  return a / b;
+	assert(b !== 0, "b must not be zero");
+	return a / b;
 }
 ```
 
@@ -101,4 +109,3 @@ function divide(a: number, b: number) {
 		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
 	]"
 />
-
