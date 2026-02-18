@@ -44,6 +44,17 @@ const LINE_RULES = [
 
 const UPDATED_AT_RE = /^\d{4}-\d{2}-\d{2}$/;
 
+function isValidTitle(title) {
+	if (typeof title !== "string") {
+		return false;
+	}
+	const trimmed = title.trim();
+	if (trimmed.length < 2) {
+		return false;
+	}
+	return /[\p{L}\p{N}]/u.test(trimmed);
+}
+
 function validateFile(filePath) {
 	const issues = [];
 	const source = fs.readFileSync(filePath, "utf8");
@@ -62,7 +73,7 @@ function validateFile(filePath) {
 				}
 			}
 
-			if (typeof frontmatter.title !== "string" || frontmatter.title.trim().length < 3) {
+			if (!isValidTitle(frontmatter.title)) {
 				issues.push(`${rel}:1 invalid frontmatter title`);
 			}
 

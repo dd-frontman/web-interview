@@ -18,6 +18,8 @@ updatedAt: "2026-02-16"
 
 ## ⚡ Реактивность
 
+- [Vue2 vs Vue3](/vue/vue2-vs-vue3) — ключевые различия и план миграции по официальной документации.
+
 Vue автоматически отслеживает изменения в данных и обновляет DOM:
 
 ```javascript
@@ -189,6 +191,10 @@ export default {
 ```
 
 ### **Глобальное состояние с Pinia**
+
+- [Pinia](/vue/story/pinia) — база по store-паттернам в современном Vue.
+- [Vuex](/vue/story/vuex) — когда нужен в legacy-проектах и как с ним работать.
+- [Pinia vs Vuex](/vue/story/pinia-vs-vuex) — что выбрать для нового проекта и как мигрировать legacy.
 
 ```javascript
 // store/todos.js

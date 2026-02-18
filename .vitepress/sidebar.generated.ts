@@ -15,19 +15,19 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		items: [
 			{ text: "Vue", link: "/vue" },
 			{ text: "Директивы Vue", link: "/vue/direktivy-vue" },
-			{ text: "Зачем вообще нужен", link: "/vue/scheduler" },
 			{ text: "Основные хуки во", link: "/vue/zhiznennye-tsikly-komponentov-vue-2-vs-vue-3" },
 			{ text: "Подкапотные темы Vue.js", link: "/vue/podkapotnye-temy-vo-vue-js" },
 			{ text: "Рендер-функции", link: "/vue/render-funktsii" },
 			{ text: "Типичный стек хайлоад", link: "/vue/optimizatsiya-high-load-proekta" },
 			{ text: "defineExpose", link: "/vue/defineexpose" },
 			{ text: "nextTick что это", link: "/vue/asinkhronnye-rendery-i-batching" },
-			{ text: "Pinia", link: "/vue/pinia" },
 			{ text: "provide и inject", link: "/vue/provide-i-inject" },
+			{ text: "Scheduler", link: "/vue/scheduler" },
 			{ text: "Suspense", link: "/vue/suspense" },
 			{ text: "Template под капотом", link: "/vue/template-pod-kapotom" },
 			{ text: "Tree-Shaking", link: "/vue/tree-shaking" },
 			{ text: "Virtual DOM", link: "/vue/virtual-dom" },
+			{ text: "Vue2 vs Vue3", link: "/vue/vue2-vs-vue3" },
 			{ text: "watch vs watchEffect", link: "/vue/watch-i-watcheffect" },
 			{
 				text: "Задачи",
@@ -36,6 +36,16 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				items: [
 					{ text: "Двустороннее связывание через", link: "/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model" },
 					{ text: "Props и Emits", link: "/vue/zadachi/propsy-emity" }
+				],
+			},
+			{
+				text: "Сторы",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "Pinia", link: "/vue/story/pinia" },
+					{ text: "Pinia vs Vuex", link: "/vue/story/pinia-vs-vuex" },
+					{ text: "Vuex", link: "/vue/story/vuex" }
 				],
 			},
 			{

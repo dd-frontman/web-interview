@@ -137,7 +137,10 @@ const TITLE_OVERRIDES = {
 	"/vue": "Vue",
 	"/vue/defineexpose": "defineExpose()",
 	"/vue/direktivy-vue": "Директивы Vue",
-	"/vue/pinia": "Pinia",
+	"/vue/story/pinia": "Pinia",
+	"/vue/story/pinia-vs-vuex": "Pinia vs Vuex",
+	"/vue/story/vuex": "Vuex",
+	"/vue/scheduler": "Scheduler",
 	"/vue/watch-i-watcheffect": "watch vs watchEffect",
 	"/vue/podkapotnye-temy-vo-vue-js": "Подкапотные темы Vue.js",
 	"/vue/template-pod-kapotom": "Template под капотом",
@@ -145,6 +148,7 @@ const TITLE_OVERRIDES = {
 	"/vue/ref-and-reactive/shallowref": "shallowRef",
 	"/vue/ref-and-reactive/ref-vs-reactive": "ref vs reactive",
 	"/vue/ref-and-reactive/shallowreactive": "shallowReactive",
+	"/vue/vue2-vs-vue3": "Vue2 vs Vue3",
 	"/vue/render-funktsii": "Рендер-функции",
 	"/vue/suspense": "Suspense",
 	"/vue/tree-shaking": "Tree-Shaking",
@@ -220,6 +224,7 @@ function compactTitle(title) {
 
 const GROUP_TITLE_OVERRIDES = {
 	"/vue/ref-and-reactive": "Ref & reactive",
+	"/vue/story": "Сторы",
 	"/vue/zadachi": "Задачи",
 	"/react/khuki": "Хуки",
 	"/javascript/tipy-dannykh": "Типы данных",
