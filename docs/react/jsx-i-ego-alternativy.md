@@ -18,11 +18,11 @@ React под капотом всё равно вызывает `React.createElem
 import React from "react";
 
 export default function App() {
-	return React.createElement(
-		"div",
-		{ className: "wrapper" },
-		React.createElement("h1", null, "Привет, мир!")
-	);
+    return React.createElement(
+        "div",
+        { className: "wrapper" },
+        React.createElement("h1", null, "Привет, мир!")
+    );
 }
 ```
 
@@ -39,10 +39,10 @@ export default function App() {
 import { h } from "react-hyperscript";
 
 export default function App() {
-	return h("div.wrapper", [
-		h("h1", "Привет"),
-		h("button", { onClick: () => alert("Клик!") }, "Нажми"),
-	]);
+    return h("div.wrapper", [
+        h("h1", "Привет"),
+        h("button", { onClick: () => alert("Клик!") }, "Нажми"),
+    ]);
 }
 ```
 
@@ -59,7 +59,7 @@ React сам не поддерживает template-строки как в Vue, 
 import html from "nanohtml";
 
 export default function App() {
-	return html`<div><h1>Привет</h1></div>`;
+    return html`<div><h1>Привет</h1></div>`;
 }
 ```
 
@@ -89,10 +89,10 @@ const App = ({ title }: Props) => <h1>{title}</h1>;
 
 ```js
 function App() {
-	const isLoggedIn = true;
-	return isLoggedIn
-		? React.createElement("h1", null, "Добро пожаловать")
-		: React.createElement("h1", null, "Войдите");
+    const isLoggedIn = true;
+    return isLoggedIn
+        ? React.createElement("h1", null, "Добро пожаловать")
+        : React.createElement("h1", null, "Войдите");
 }
 ```
 
@@ -110,9 +110,9 @@ function App() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'React', href: '/react/index' },
-		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
-		{ title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
-	]"
+    :items="[
+        { title: 'React', href: '/react/index' },
+        { title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+        { title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
+    ]"
 />

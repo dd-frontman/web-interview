@@ -16,17 +16,17 @@ updatedAt: "2026-02-16"
 
 ```vue
 <template>
-	<div>
-		<h2>Родительский компонент</h2>
+    <div>
+        <h2>Родительский компонент</h2>
 
-		<!-- TODO FIX: v-model не будет работать, если в Child не реализованы нужные props/emits -->
-		<!-- ✅ FIX: в Child должен быть prop modelValue и emit update:modelValue -->
-		<ChildInput v-model="name" />
+        <!-- TODO FIX: v-model не будет работать, если в Child не реализованы нужные props/emits -->
+        <!-- ✅ FIX: в Child должен быть prop modelValue и emit update:modelValue -->
+        <ChildInput v-model="name" />
 
-		<p>Текущее значение в родителе: "{{ name }}"</p>
+        <p>Текущее значение в родителе: "{{ name }}"</p>
 
-		<button @click="setProgrammatically">Установить значение из родителя</button>
-	</div>
+        <button @click="setProgrammatically">Установить значение из родителя</button>
+    </div>
 </template>
 
 <script setup>
@@ -36,7 +36,7 @@ import ChildInput from "./ChildInput.vue";
 const name = ref(undefined);
 
 function setProgrammatically() {
-	name.value = "Vue";
+    name.value = "Vue";
 }
 </script>
 ```
@@ -45,7 +45,7 @@ function setProgrammatically() {
 
 ```vue
 <template>
-	<input v-model="value" placeholder="Введите текст" />
+    <input v-model="value" placeholder="Введите текст" />
 </template>
 
 <script setup>
@@ -55,12 +55,12 @@ const props = defineProps({ modelValue: String });
 const emit = defineEmits(["update:modelValue"]);
 
 const value = computed({
-	get: () => props.modelValue ?? "",
-	set: (v) => emit("update:modelValue", v),
+    get: () => props.modelValue ?? "",
+    set: (v) => emit("update:modelValue", v),
 });
 
 function reset() {
-	emit("update:modelValue", "");
+    emit("update:modelValue", "");
 }
 </script>
 ```
@@ -72,7 +72,7 @@ function reset() {
 
 <script>
 function onInput(event) {
-	emit("update:modelValue", event.target.value);
+    emit("update:modelValue", event.target.value);
 }
 </script>
 ```
@@ -80,9 +80,9 @@ function onInput(event) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Props и Emits', href: '/vue/zadachi/propsy-emity' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Props и Emits', href: '/vue/zadachi/propsy-emity' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

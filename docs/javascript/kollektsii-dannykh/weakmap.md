@@ -97,12 +97,12 @@ console.log(wm.get(obj)); // 'данные'
 const privateStorage = new WeakMap();
 
 class User {
-	constructor(name) {
-		privateStorage.set(this, { name });
-	}
-	getName() {
-		return privateStorage.get(this).name;
-	}
+    constructor(name) {
+        privateStorage.set(this, { name });
+    }
+    getName() {
+        return privateStorage.get(this).name;
+    }
 }
 
 let u = new User("Bob");
@@ -154,9 +154,9 @@ u = null; // объект и privateStorage запись могут быть у�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
-		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
-		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
-	]"
+    :items="[
+        { title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+        { title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+        { title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+    ]"
 />

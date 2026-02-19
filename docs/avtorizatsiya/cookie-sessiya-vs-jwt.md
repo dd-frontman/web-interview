@@ -75,9 +75,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
-		{ title: 'JWT', href: '/avtorizatsiya/jwt' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
+        { title: 'JWT', href: '/avtorizatsiya/jwt' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

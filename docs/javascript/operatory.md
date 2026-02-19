@@ -125,9 +125,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
-		{ title: 'Event Bubbling', href: '/javascript/event-bubbling' },
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-	]"
+    :items="[
+        { title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+        { title: 'Event Bubbling', href: '/javascript/event-bubbling' },
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+    ]"
 />

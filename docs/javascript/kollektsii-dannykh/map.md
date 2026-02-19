@@ -74,7 +74,7 @@ console.log(map.get("name")); // "Alice"
 console.log(map.size); // 3
 
 for (const [key, value] of map) {
-	console.log(key, value);
+    console.log(key, value);
 }
 ```
 
@@ -186,9 +186,9 @@ map.set(objKey, "value");
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
-		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
-		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
-	]"
+    :items="[
+        { title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+        { title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+        { title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+    ]"
 />

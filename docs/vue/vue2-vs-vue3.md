@@ -40,7 +40,7 @@ import Vue from "vue";
 import App from "./App.vue";
 
 new Vue({
-	render: (h) => h(App),
+    render: (h) => h(App),
 }).$mount("#app");
 ```
 
@@ -141,7 +141,7 @@ const model = defineModel<string>();
 </script>
 
 <template>
-	<input v-model="model" />
+    <input v-model="model" />
 </template>
 ```
 
@@ -167,11 +167,11 @@ const lastName = defineModel<string>("lastName");
 ```vue
 <script setup lang="ts">
 const emit = defineEmits<{
-	(e: "submit", payload: { id: string }): void;
+    (e: "submit", payload: { id: string }): void;
 }>();
 
 function onSave() {
-	emit("submit", { id: "42" });
+    emit("submit", { id: "42" });
 }
 </script>
 ```
@@ -234,15 +234,15 @@ Vue 3:
 ```vue
 <script setup lang="ts">
 function formatCurrency(value: number) {
-	return new Intl.NumberFormat("ru-RU", {
-		style: "currency",
-		currency: "RUB",
-	}).format(value);
+    return new Intl.NumberFormat("ru-RU", {
+        style: "currency",
+        currency: "RUB",
+    }).format(value);
 }
 </script>
 
 <template>
-	<span>{{ formatCurrency(price) }}</span>
+    <span>{{ formatCurrency(price) }}</span>
 </template>
 ```
 
@@ -261,9 +261,9 @@ Vue 2:
 
 ```ts
 export default {
-	render(h: any) {
-		return h("div", "Hello");
-	},
+    render(h: any) {
+        return h("div", "Hello");
+    },
 };
 ```
 
@@ -273,9 +273,9 @@ Vue 3:
 import { h } from "vue";
 
 export default {
-	render() {
-		return h("div", "Hello");
-	},
+    render() {
+        return h("div", "Hello");
+    },
 };
 ```
 
@@ -306,8 +306,8 @@ Vue 3:
 
 ```vue
 <template>
-	<header>Header</header>
-	<main>Content</main>
+    <header>Header</header>
+    <main>Content</main>
 </template>
 ```
 
@@ -317,7 +317,7 @@ Vue 3:
 
 ```vue
 <teleport to="body">
-	<MyModal v-if="open" />
+    <MyModal v-if="open" />
 </teleport>
 ```
 
@@ -327,8 +327,8 @@ Vue 3:
 
 ```vue
 <Suspense>
-	<AsyncPanel />
-	<template #fallback>Loading...</template>
+    <AsyncPanel />
+    <template #fallback>Loading...</template>
 </Suspense>
 ```
 
@@ -412,9 +412,9 @@ const props = defineProps<Props>();
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Жизненный цикл', href: '/vue/zhiznennye-tsikly-komponentov-vue-2-vs-vue-3' },
-		{ title: 'Ref vs Reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-		{ title: 'watch vs watchEffect', href: '/vue/watch-i-watcheffect' },
-	]"
+    :items="[
+        { title: 'Жизненный цикл', href: '/vue/zhiznennye-tsikly-komponentov-vue-2-vs-vue-3' },
+        { title: 'Ref vs Reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+        { title: 'watch vs watchEffect', href: '/vue/watch-i-watcheffect' },
+    ]"
 />

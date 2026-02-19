@@ -69,9 +69,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Принципы программирования', href: '/printsipy-programmirovaniya/index' },
-		{ title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Принципы программирования', href: '/printsipy-programmirovaniya/index' },
+        { title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

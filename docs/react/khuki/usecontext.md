@@ -25,30 +25,30 @@ const ThemeContext = createContext<Theme>("light");
 
 // 2. Провайдер — оборачиваем приложение
 function ThemeProvider({ children }: { children: React.ReactNode }) {
-	const [theme, setTheme] = useState<Theme>("light");
-	return (
-		<ThemeContext.Provider value={theme}>
-			{children}
-			<button onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}>
-				Toggle theme
-			</button>
-		</ThemeContext.Provider>
-	);
+    const [theme, setTheme] = useState<Theme>("light");
+    return (
+        <ThemeContext.Provider value={theme}>
+            {children}
+            <button onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}>
+                Toggle theme
+            </button>
+        </ThemeContext.Provider>
+    );
 }
 
 // 3. Дочерний компонент может получить тему без пропсов
 function ThemedText() {
-	const theme = useContext(ThemeContext);
-	return <p style={{ color: theme === "light" ? "#000" : "#fff" }}>Hello!</p>;
+    const theme = useContext(ThemeContext);
+    return <p style={{ color: theme === "light" ? "#000" : "#fff" }}>Hello!</p>;
 }
 
 // 4. Используем
 export default function App() {
-	return (
-		<ThemeProvider>
-			<ThemedText />
-		</ThemeProvider>
-	);
+    return (
+        <ThemeProvider>
+            <ThemedText />
+        </ThemeProvider>
+    );
 }
 ```
 
@@ -76,9 +76,9 @@ export default function App() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
-		{ title: 'useEffect', href: '/react/khuki/useeffect' },
-		{ title: 'useState', href: '/react/khuki/usestate' },
-	]"
+    :items="[
+        { title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+        { title: 'useEffect', href: '/react/khuki/useeffect' },
+        { title: 'useState', href: '/react/khuki/usestate' },
+    ]"
 />

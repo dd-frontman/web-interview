@@ -96,9 +96,9 @@ React делит хуки на 3 группы: **базовые**, **допол�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'useContext', href: '/react/khuki/usecontext' },
-		{ title: 'useEffect', href: '/react/khuki/useeffect' },
-		{ title: 'useState', href: '/react/khuki/usestate' },
-	]"
+    :items="[
+        { title: 'useContext', href: '/react/khuki/usecontext' },
+        { title: 'useEffect', href: '/react/khuki/useeffect' },
+        { title: 'useState', href: '/react/khuki/usestate' },
+    ]"
 />

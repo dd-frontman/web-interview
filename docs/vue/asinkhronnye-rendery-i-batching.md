@@ -36,27 +36,27 @@ const count = ref(0);
 const el = ref(null);
 
 function increment() {
-	count.value++;
-	console.log("до nextTick:", el.value?.textContent); // всё ещё старое значение
+    count.value++;
+    console.log("до nextTick:", el.value?.textContent); // всё ещё старое значение
 
-	nextTick(() => {
-		console.log("после nextTick:", el.value?.textContent); // уже обновлённое
-	});
+    nextTick(() => {
+        console.log("после nextTick:", el.value?.textContent); // уже обновлённое
+    });
 }
 </script>
 
 <template>
-	<div ref="el">{{ count }}</div>
-	<button @click="increment">+</button>
+    <div ref="el">{{ count }}</div>
+    <button @click="increment">+</button>
 </template>
 ```
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
-	]"
+    :items="[
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+        { title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
+    ]"
 />

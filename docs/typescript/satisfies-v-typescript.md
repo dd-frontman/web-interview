@@ -23,8 +23,8 @@ updatedAt: "2026-02-16"
 ```ts
 // Аннотация сужает знания о конкретных значениях
 const config: Record<string, string | number> = {
-	mode: "dark",
-	port: 3000,
+    mode: "dark",
+    port: 3000,
 };
 
 // Тип config.mode теперь string | number, а не "dark"
@@ -34,8 +34,8 @@ const config: Record<string, string | number> = {
 
 ```ts
 const config = {
-	mode: "dark",
-	port: 3000,
+    mode: "dark",
+    port: 3000,
 } satisfies Record<string, string | number>;
 
 // Проверка формы есть,
@@ -78,15 +78,15 @@ const user = { role: "admin" } satisfies { role: string };
 
 ```ts
 type AppConfig = {
-	mode: "development" | "production";
-	apiBaseUrl: string;
-	retry: number;
+    mode: "development" | "production";
+    apiBaseUrl: string;
+    retry: number;
 };
 
 const config = {
-	mode: "development",
-	apiBaseUrl: "https://api.example.com",
-	retry: 3,
+    mode: "development",
+    apiBaseUrl: "https://api.example.com",
+    retry: 3,
 } satisfies AppConfig;
 ```
 
@@ -94,9 +94,9 @@ const config = {
 
 ```ts
 const badConfig = {
-	mode: "dev", // Ошибка: нет в union
-	apiBaseUrl: "https://api.example.com",
-	retry: 3,
+    mode: "dev", // Ошибка: нет в union
+    apiBaseUrl: "https://api.example.com",
+    retry: 3,
 } satisfies AppConfig;
 ```
 
@@ -108,8 +108,8 @@ type EventName = "open" | "close";
 type Handlers = Record<EventName, () => void>;
 
 const handlers = {
-	open: () => console.log("opened"),
-	close: () => console.log("closed"),
+    open: () => console.log("opened"),
+    close: () => console.log("closed"),
 } satisfies Handlers;
 ```
 
@@ -119,13 +119,13 @@ const handlers = {
 
 ```ts
 type ApiResponse = {
-	status: "ok" | "error";
-	data: { id: number; name: string };
+    status: "ok" | "error";
+    data: { id: number; name: string };
 };
 
 const mockResponse = {
-	status: "ok",
-	data: { id: 1, name: "Alice" },
+    status: "ok",
+    data: { id: 1, name: "Alice" },
 } satisfies ApiResponse;
 ```
 
@@ -147,9 +147,9 @@ const mockResponse = {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
-		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
-		{ title: 'TypeScript', href: '/typescript/index' },
-	]"
+    :items="[
+        { title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+        { title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+        { title: 'TypeScript', href: '/typescript/index' },
+    ]"
 />

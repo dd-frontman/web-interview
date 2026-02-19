@@ -25,22 +25,22 @@ updatedAt: "2026-02-18"
 import { createStore } from "vuex";
 
 export default createStore({
-	state: {
-		count: 0,
-	},
-	getters: {
-		double: (state) => state.count * 2,
-	},
-	mutations: {
-		increment(state) {
-			state.count++;
-		},
-	},
-	actions: {
-		incAsync({ commit }) {
-			setTimeout(() => commit("increment"), 300);
-		},
-	},
+    state: {
+        count: 0,
+    },
+    getters: {
+        double: (state) => state.count * 2,
+    },
+    mutations: {
+        increment(state) {
+            state.count++;
+        },
+    },
+    actions: {
+        incAsync({ commit }) {
+            setTimeout(() => commit("increment"), 300);
+        },
+    },
 });
 ```
 
@@ -88,9 +88,9 @@ Vuex часто организуют через modules:
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Pinia', href: '/vue/story/pinia' },
-		{ title: 'Pinia vs Vuex', href: '/vue/story/pinia-vs-vuex' },
-		{ title: 'Vue2 vs Vue3', href: '/vue/vue2-vs-vue3' },
-	]"
+    :items="[
+        { title: 'Pinia', href: '/vue/story/pinia' },
+        { title: 'Pinia vs Vuex', href: '/vue/story/pinia-vs-vuex' },
+        { title: 'Vue2 vs Vue3', href: '/vue/vue2-vs-vue3' },
+    ]"
 />

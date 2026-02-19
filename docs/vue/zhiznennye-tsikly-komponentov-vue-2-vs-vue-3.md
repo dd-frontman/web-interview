@@ -65,45 +65,45 @@ Vue 3 сохраняет большинство тех же стадий, осо
 
 ```vue
 <template>
-	<div>
-		<p>{{ counter }}</p>
-		<button @click="increment">Increment</button>
-	</div>
+    <div>
+        <p>{{ counter }}</p>
+        <button @click="increment">Increment</button>
+    </div>
 </template>
 
 <script>
 export default {
-	data() {
-		return {
-			counter: 0,
-		};
-	},
-	beforeCreate() {
-		console.log("beforeCreate: data и методы ещё не настроены");
-	},
-	created() {
-		console.log("created: data и методы уже есть, но DOM ещё не монтирован");
-	},
-	beforeMount() {
-		console.log("beforeMount: готовимся к монтированию (DOM ещё нет)");
-	},
-	mounted() {
-		console.log("mounted: компонент уже в DOM, можно работать с this.$el / $refs");
-	},
-	beforeUpdate() {
-		console.log("beforeUpdate: реактивные данные изменились, DOM скоро обновится");
-	},
-	updated() {
-		console.log("updated: DOM обновился, можно читать новые значения");
-	},
-	beforeDestroy() {
-		// Vue 2
-		console.log("beforeDestroy: компонент скоро будет уничтожен, но всё ещё в DOM");
-	},
-	destroyed() {
-		// Vue 2
-		console.log("destroyed: компонент уничтожен, DOM удалён, подписки чистятся");
-	},
+    data() {
+        return {
+            counter: 0,
+        };
+    },
+    beforeCreate() {
+        console.log("beforeCreate: data и методы ещё не настроены");
+    },
+    created() {
+        console.log("created: data и методы уже есть, но DOM ещё не монтирован");
+    },
+    beforeMount() {
+        console.log("beforeMount: готовимся к монтированию (DOM ещё нет)");
+    },
+    mounted() {
+        console.log("mounted: компонент уже в DOM, можно работать с this.$el / $refs");
+    },
+    beforeUpdate() {
+        console.log("beforeUpdate: реактивные данные изменились, DOM скоро обновится");
+    },
+    updated() {
+        console.log("updated: DOM обновился, можно читать новые значения");
+    },
+    beforeDestroy() {
+        // Vue 2
+        console.log("beforeDestroy: компонент скоро будет уничтожен, но всё ещё в DOM");
+    },
+    destroyed() {
+        // Vue 2
+        console.log("destroyed: компонент уничтожен, DOM удалён, подписки чистятся");
+    },
 };
 </script>
 ```
@@ -114,87 +114,87 @@ export default {
 
 ```vue
 <template>
-	<div>
-		<p ref="pEl">{{ message }} — {{ count }}</p>
-		<button @click="increment">Increment</button>
-	</div>
+    <div>
+        <p ref="pEl">{{ message }} — {{ count }}</p>
+        <button @click="increment">Increment</button>
+    </div>
 </template>
 
 <script setup>
 import {
-	ref,
-	onBeforeMount,
-	onMounted,
-	onBeforeUpdate,
-	onUpdated,
-	onBeforeUnmount,
-	onUnmounted,
-	onActivated,
-	onDeactivated,
-	onErrorCaptured,
-	onRenderTracked,
-	onRenderTriggered,
-	onServerPrefetch,
+    ref,
+    onBeforeMount,
+    onMounted,
+    onBeforeUpdate,
+    onUpdated,
+    onBeforeUnmount,
+    onUnmounted,
+    onActivated,
+    onDeactivated,
+    onErrorCaptured,
+    onRenderTracked,
+    onRenderTriggered,
+    onServerPrefetch,
 } from "vue";
 
 const count = ref(0);
 const message = ref("Hello Vue 3");
 
 const increment = () => {
-	count.value++;
+    count.value++;
 };
 
 // Пример serverPrefetch — работает при SSR
 onServerPrefetch(async () => {
-	console.log("onServerPrefetch: data можно загрузить на сервере");
+    console.log("onServerPrefetch: data можно загрузить на сервере");
 });
 
 // Монтирование
 onBeforeMount(() => {
-	console.log("onBeforeMount: перед монтированием");
+    console.log("onBeforeMount: перед монтированием");
 });
 onMounted(() => {
-	console.log("onMounted: компонент в DOM");
+    console.log("onMounted: компонент в DOM");
 });
 
 // Обновления
 onBeforeUpdate(() => {
-	console.log("onBeforeUpdate: до обновления DOM");
+    console.log("onBeforeUpdate: до обновления DOM");
 });
 onUpdated(() => {
-	console.log("onUpdated: DOM обновился, count =", count.value);
+    console.log("onUpdated: DOM обновился, count =", count.value);
 });
 
 // KeepAlive / кеширование
 onActivated(() => {
-	console.log("onActivated: компонент активирован из кеша");
+    console.log("onActivated: компонент активирован из кеша");
 });
 onDeactivated(() => {
-	console.log("onDeactivated: компонент деактивирован (в кеше)");
-	// (но не удалён из DOM)
+    console.log("onDeactivated: компонент деактивирован (в кеше)");
+    // (но не удалён из DOM)
 });
 
 // Уничтожение
 onBeforeUnmount(() => {
-	console.log("onBeforeUnmount: перед удалением, можно очистить подписки / таймеры");
+    console.log("onBeforeUnmount: перед удалением, можно очистить подписки / таймеры");
 });
 onUnmounted(() => {
-	console.log("onUnmounted: компонент удалён, DOM уже нет");
+    console.log("onUnmounted: компонент удалён, DOM уже нет");
 });
 
 // Отлов ошибок
 onErrorCaptured((err, instance, info) => {
-	console.error("onErrorCaptured:", err, "info:", info);
-	// вернуть false, чтобы ошибка дальше не всплывала
-	return false;
+    console.error("onErrorCaptured:", err, "info:", info);
+    // вернуть false, чтобы ошибка дальше не всплывала
+    return false;
 });
 
 // Для отладки реактивности / трассировки
 onRenderTracked((event) => {
-	console.log("onRenderTracked:", event);
+    console.log("onRenderTracked:", event);
 });
 onRenderTriggered((event) => {
-	console.log("onRenderTriggered:", event);
+    console.log("onRenderTriggered:", event);
 });
 </script>
 ```
@@ -235,9 +235,9 @@ onRenderTriggered((event) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

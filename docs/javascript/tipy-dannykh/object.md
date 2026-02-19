@@ -37,22 +37,22 @@ updatedAt: "2026-02-16"
 
 ```javascript
 function deepClone(obj) {
-	if (obj === null) return null;
-	if (typeof obj !== "object") return obj;
+    if (obj === null) return null;
+    if (typeof obj !== "object") return obj;
 
-	if (Array.isArray(obj)) {
-		const arrCopy = [];
-		for (let i = 0; i < obj.length; i++) {
-			arrCopy[i] = deepClone(obj[i]);
-		}
-		return arrCopy;
-	}
+    if (Array.isArray(obj)) {
+        const arrCopy = [];
+        for (let i = 0; i < obj.length; i++) {
+            arrCopy[i] = deepClone(obj[i]);
+        }
+        return arrCopy;
+    }
 
-	const objCopy = {};
-	for (let key in obj) {
-		objCopy[key] = deepClone(obj[key]);
-	}
-	return objCopy;
+    const objCopy = {};
+    for (let key in obj) {
+        objCopy[key] = deepClone(obj[key]);
+    }
+    return objCopy;
 }
 
 let deepCopy = deepClone(original);
@@ -140,8 +140,8 @@ a === b     // true — одна ссылка
 
 ```js
 const original = {
-	name: "John",
-	hobbies: ["reading", "swimming"],
+    name: "John",
+    hobbies: ["reading", "swimming"],
 };
 const copy = { ...original };
 copy.hobbies.push("cooking");
@@ -164,7 +164,7 @@ console.log(original.hobbies); // ['reading', 'swimming', 'cooking']
 
 ```js
 function deepCopy(obj) {
-	return JSON.parse(JSON.stringify(obj));
+    return JSON.parse(JSON.stringify(obj));
 }
 ```
 
@@ -232,9 +232,9 @@ console.log(state.user.name); // Maria
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Типы данных', href: '/javascript/tipy-dannykh/tipy-dannykh' },
-		{ title: 'Типы функций', href: '/javascript/tipy-funktsii' },
-		{ title: 'Методы массивов', href: '/javascript/metody-massivov' },
-	]"
+    :items="[
+        { title: 'Типы данных', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+        { title: 'Типы функций', href: '/javascript/tipy-funktsii' },
+        { title: 'Методы массивов', href: '/javascript/metody-massivov' },
+    ]"
 />

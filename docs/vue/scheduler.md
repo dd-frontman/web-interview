@@ -144,13 +144,13 @@ console.log(panelRef.value?.offsetHeight); // уже после flush
 
 ```ts
 watch(query, async (q, _, onCleanup) => {
-	const controller = new AbortController();
-	onCleanup(() => controller.abort());
+    const controller = new AbortController();
+    onCleanup(() => controller.abort());
 
-	const res = await fetch(`/api/search?q=${q}`, {
-		signal: controller.signal,
-	});
-	data.value = await res.json();
+    const res = await fetch(`/api/search?q=${q}`, {
+        signal: controller.signal,
+    });
+    data.value = await res.json();
 });
 ```
 
@@ -188,9 +188,9 @@ watch(query, async (q, _, onCleanup) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронный рендер', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'Watch vs Effect', href: '/vue/watch-i-watcheffect' },
-		{ title: 'Подкапотные темы', href: '/vue/podkapotnye-temy-vo-vue-js' },
-	]"
+    :items="[
+        { title: 'Асинхронный рендер', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'Watch vs Effect', href: '/vue/watch-i-watcheffect' },
+        { title: 'Подкапотные темы', href: '/vue/podkapotnye-temy-vo-vue-js' },
+    ]"
 />

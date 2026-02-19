@@ -88,23 +88,23 @@ console.log(user.name);
 - **REST/OpenAPI**: публичные API, простая интеграция, дебаг "из браузера"
 
 <OfficialDocsLinks
-	:links="[
-		{ title: 'gRPC: Introduction', href: 'https://grpc.io/docs/what-is-grpc/introduction/' },
-		{ title: 'gRPC: Core concepts', href: 'https://grpc.io/docs/what-is-grpc/core-concepts/' },
-		{ title: 'Protocol Buffers: Overview', href: 'https://protobuf.dev/overview/' },
-		{
-			title: 'Protocol Buffers: Proto3 language guide',
-			href: 'https://protobuf.dev/programming-guides/proto3/',
-		},
-	]"
+    :links="[
+        { title: 'gRPC: Introduction', href: 'https://grpc.io/docs/what-is-grpc/introduction/' },
+        { title: 'gRPC: Core concepts', href: 'https://grpc.io/docs/what-is-grpc/core-concepts/' },
+        { title: 'Protocol Buffers: Overview', href: 'https://protobuf.dev/overview/' },
+        {
+            title: 'Protocol Buffers: Proto3 language guide',
+            href: 'https://protobuf.dev/programming-guides/proto3/',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Nuxt / Nitro', href: '/nuxt/nitro' },
-	]"
+    :items="[
+        { title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'Nuxt / Nitro', href: '/nuxt/nitro' },
+    ]"
 />

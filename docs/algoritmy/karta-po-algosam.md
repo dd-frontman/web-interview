@@ -102,9 +102,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Структуры данных', href: '/algoritmy/2-struktury-dannykh' },
-		{ title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Структуры данных', href: '/algoritmy/2-struktury-dannykh' },
+        { title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

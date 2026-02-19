@@ -36,13 +36,13 @@ updatedAt: "2026-02-16"
 import { b } from "./b";
 export const a = "a";
 export function fromA() {
-	return "A → " + b();
+    return "A → " + b();
 }
 
 // b.ts
 import { fromA } from "./a";
 export function b() {
-	return "B (uses " + fromA() + ")";
+    return "B (uses " + fromA() + ")";
 }
 // A -> B и B -> A: цикл.
 ```
@@ -81,10 +81,10 @@ hooks/useAuth.ts         -> импортирует contexts/UserContext.tsx   //
 ```js
 // .eslintrc.cjs
 module.exports = {
-	plugins: ["import"],
-	rules: {
-		"import/no-cycle": ["error", { maxDepth: Infinity }],
-	},
+    plugins: ["import"],
+    rules: {
+        "import/no-cycle": ["error", { maxDepth: Infinity }],
+    },
 };
 ```
 
@@ -119,13 +119,13 @@ shared/
 // before
 import { sendEmail } from "../notifications/email";
 export function createUser(u) {
-	/*...*/ sendEmail(u.email);
+    /*...*/ sendEmail(u.email);
 }
 
 // after (DI)
 export type Notifier = (email: string) => Promise<void>;
 export function createUser(u, notify: Notifier) {
-	/*...*/ return notify(u.email);
+    /*...*/ return notify(u.email);
 }
 ```
 
@@ -158,7 +158,7 @@ app → processes → pages → widgets → features → entities → shared
 type Events = { USER_CREATED: { id: string } };
 export const bus = new EventTarget();
 export const emitUserCreated = (p: Events["USER_CREATED"]) =>
-	bus.dispatchEvent(new CustomEvent("USER_CREATED", { detail: p }));
+    bus.dispatchEvent(new CustomEvent("USER_CREATED", { detail: p }));
 
 // features/user -> emitUserCreated({ id })
 //
@@ -171,8 +171,8 @@ export const emitUserCreated = (p: Events["USER_CREATED"]) =>
 
 ```ts
 async function openEditor() {
-	const { Editor } = await import("./Editor"); // разрывает статический цикл
-	new Editor().mount();
+    const { Editor } = await import("./Editor"); // разрывает статический цикл
+    new Editor().mount();
 }
 ```
 
@@ -210,9 +210,9 @@ A → Facade ← B      (A и B не знают друг о друге)
 
 ```json
 {
-	"scripts": {
-		"depcheck": "madge src --circular --extensions ts,tsx,vue"
-	}
+    "scripts": {
+        "depcheck": "madge src --circular --extensions ts,tsx,vue"
+    }
 }
 ```
 
@@ -246,9 +246,9 @@ A → Facade ← B      (A и B не знают друг о друге)
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
-		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
+        { title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+    ]"
 />

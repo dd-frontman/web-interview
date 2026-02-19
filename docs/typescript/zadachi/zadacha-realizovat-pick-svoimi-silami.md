@@ -15,7 +15,7 @@ updatedAt: "2026-02-16"
 
 ```ts
 type MyPick<T, K extends keyof T> = {
-	[P in K]: T[P];
+    [P in K]: T[P];
 };
 ```
 
@@ -48,9 +48,9 @@ type MyPick<T, K extends keyof T> = {
 
 ```ts
 type User = {
-	id: number;
-	name: string;
-	age: number;
+    id: number;
+    name: string;
+    age: number;
 };
 
 type UserPreview = MyPick<User, "id" | "name">;
@@ -64,8 +64,8 @@ type UserPreview = MyPick<User, "id" | "name">;
 4. Сгенерирует новый тип:
    ```ts
    {
-   	id: number; // T["id"]
-   	name: string; // T["name"]
+       id: number; // T["id"]
+       name: string; // T["name"]
    }
    ```
 
@@ -84,9 +84,9 @@ type UserPreview = MyPick<User, "id" | "name">;
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Утилитарные типы', href: '/typescript/utilitarnye-tipy' },
-		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
-		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
-	]"
+    :items="[
+        { title: 'Утилитарные типы', href: '/typescript/utilitarnye-tipy' },
+        { title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+        { title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+    ]"
 />

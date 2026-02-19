@@ -48,10 +48,10 @@ Vue 3 используется как `v-slot`, чтобы быть более �
 
 <!-- MyCard.vue -->
 <template>
-	<div>
-		<slot name="header" />
-		<slot />
-	</div>
+    <div>
+        <slot name="header" />
+        <slot />
+    </div>
 </template>
 ````
 
@@ -99,18 +99,18 @@ Vue 3 используется как `v-slot`, чтобы быть более �
 
 ```vue
 <template>
-	<ul>
-		<li
-			v-for="item in list"
-			:key="item.id"
-			v-memo="[item.id === selected]"
-			:class="{ selected: item.id === selected }"
-			@click="selected = item.id"
-		>
-			<strong>{{ item.title }}</strong>
-			<p>{{ item.description }}</p>
-		</li>
-	</ul>
+    <ul>
+        <li
+            v-for="item in list"
+            :key="item.id"
+            v-memo="[item.id === selected]"
+            :class="{ selected: item.id === selected }"
+            @click="selected = item.id"
+        >
+            <strong>{{ item.title }}</strong>
+            <p>{{ item.description }}</p>
+        </li>
+    </ul>
 </template>
 
 <script setup lang="ts">
@@ -118,18 +118,18 @@ import { ref } from "vue";
 
 const selected = ref<number | null>(null);
 const list = ref(
-	Array.from({ length: 3000 }, (_, i) => ({
-		id: i + 1,
-		title: `Row #${i + 1}`,
-		description: "…много контента и вложенных узлов…",
-	}))
+    Array.from({ length: 3000 }, (_, i) => ({
+        id: i + 1,
+        title: `Row #${i + 1}`,
+        description: "…много контента и вложенных узлов…",
+    }))
 );
 </script>
 
 <style scoped>
 .selected {
-	background: #222;
-	color: #fff;
+    background: #222;
+    color: #fff;
 }
 </style>
 ```
@@ -189,7 +189,7 @@ Vue добавляет атрибут `v-cloak`, пока не инициали�
 ```vue
 <style>
 [v-cloak] {
-	display: none;
+    display: none;
 }
 </style>
 
@@ -260,9 +260,9 @@ Vue трансформирует это в:
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Оптимизация High Load проекта', href: '/vue/optimizatsiya-high-load-proekta' },
+    ]"
 />

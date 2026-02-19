@@ -19,9 +19,9 @@ updatedAt: "2026-02-16"
 
 ```vue
 <template>
-	<n-config-provider :theme-overrides="themeOverrides">
-		<my-app />
-	</n-config-provider>
+    <n-config-provider :theme-overrides="themeOverrides">
+        <my-app />
+    </n-config-provider>
 </template>
 
 <script setup lang="ts">
@@ -29,15 +29,15 @@ import { ref } from "vue";
 import { GlobalThemeOverrides } from "naive-ui";
 
 const themeOverrides: GlobalThemeOverrides = {
-	common: {
-		primaryColor: "#FF8C00",
-		fontSize: "16px",
-		borderRadius: "6px",
-	},
-	Button: {
-		color: "#FF8C00",
-		textColor: "#ffffff",
-	},
+    common: {
+        primaryColor: "#FF8C00",
+        fontSize: "16px",
+        borderRadius: "6px",
+    },
+    Button: {
+        color: "#FF8C00",
+        textColor: "#ffffff",
+    },
 };
 </script>
 ```
@@ -79,9 +79,9 @@ const themeOverrides: GlobalThemeOverrides = {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
-		{ title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
-		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
-	]"
+    :items="[
+        { title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+        { title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
+        { title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+    ]"
 />

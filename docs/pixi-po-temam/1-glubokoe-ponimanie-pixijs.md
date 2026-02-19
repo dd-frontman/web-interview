@@ -25,12 +25,12 @@ _`Application`_ создаёт канву, _`Renderer`_ (WebGL или WebGPU) р
 
 ```ts
 const app = new Application({
-	view: canvas,
-	preferWebGPU: true,
-	resizeTo: window,
-	background: "#1d1d1d",
-	resolution: devicePixelRatio,
-	autoDensity: true,
+    view: canvas,
+    preferWebGPU: true,
+    resizeTo: window,
+    background: "#1d1d1d",
+    resolution: devicePixelRatio,
+    autoDensity: true,
 });
 await app.init(); // важно для WebGPU
 ```
@@ -105,16 +105,16 @@ Pixi 8 перешёл на модульную систему `extensions`. Пл�
 import { extensions, ExtensionType, Renderer } from "pixi.js";
 
 class FPSMeter {
-	static extension = { type: ExtensionType.RendererPlugin, name: "fpsMeter" };
-	init(renderer: Renderer) {
-		this.t0 = performance.now();
-	}
-	destroy() {}
-	postrender() {
-		const dt = performance.now() - this.t0;
-		renderer.plugins.logger?.info(`frame: ${dt.toFixed(2)}ms`);
-		this.t0 = performance.now();
-	}
+    static extension = { type: ExtensionType.RendererPlugin, name: "fpsMeter" };
+    init(renderer: Renderer) {
+        this.t0 = performance.now();
+    }
+    destroy() {}
+    postrender() {
+        const dt = performance.now() - this.t0;
+        renderer.plugins.logger?.info(`frame: ${dt.toFixed(2)}ms`);
+        this.t0 = performance.now();
+    }
 }
 extensions.add(FPSMeter);
 ```
@@ -146,9 +146,9 @@ _Расширяем_ рендер-пайплайн без форка Pixi: фи�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
-		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
-		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
-	]"
+    :items="[
+        { title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+        { title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+        { title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+    ]"
 />

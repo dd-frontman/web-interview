@@ -25,8 +25,8 @@ updatedAt: "2026-02-16"
 
 ```xml
 <user>
-	<id>1</id>
-	<name>Anna</name>
+    <id>1</id>
+    <name>Anna</name>
 </user>
 ```
 
@@ -101,9 +101,9 @@ message User {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
-		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
-	]"
+    :items="[
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+        { title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+    ]"
 />

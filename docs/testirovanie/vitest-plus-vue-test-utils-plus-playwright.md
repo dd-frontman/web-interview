@@ -30,8 +30,8 @@ import { mount } from "@vue/test-utils";
 import MyComponent from "@/components/MyComponent.vue";
 
 test("renders message", () => {
-	const wrapper = mount(MyComponent, { props: { msg: "Hello" } });
-	expect(wrapper.text()).toContain("Hello");
+    const wrapper = mount(MyComponent, { props: { msg: "Hello" } });
+    expect(wrapper.text()).toContain("Hello");
 });
 ```
 
@@ -95,13 +95,13 @@ Modern testing strategy обычно строится как **пирамида*
 
 ```js
 export default {
-	test: {
-		browser: {
-			enabled: true,
-			provider: "playwright",
-			name: "chromium",
-		},
-	},
+    test: {
+        browser: {
+            enabled: true,
+            provider: "playwright",
+            name: "chromium",
+        },
+    },
 };
 ```
 
@@ -124,10 +124,10 @@ Playwright здесь выступает уже **как отдельный фр
 import { test, expect } from "@playwright/test";
 
 test("user logs in", async ({ page }) => {
-	await page.goto("/");
-	await page.fill("#username", "user1");
-	await page.click("#login-btn");
-	await expect(page.locator("#greeting")).toHaveText("Hello user1!");
+    await page.goto("/");
+    await page.fill("#username", "user1");
+    await page.click("#login-btn");
+    await expect(page.locator("#greeting")).toHaveText("Hello user1!");
 });
 ```
 
@@ -155,9 +155,9 @@ import { mount } from "@vue/test-utils";
 import Counter from "@/components/Counter.vue";
 
 test("increments value", () => {
-	const wrapper = mount(Counter);
-	wrapper.find("button.increment").trigger("click");
-	expect(wrapper.text()).toContain("Count: 1");
+    const wrapper = mount(Counter);
+    wrapper.find("button.increment").trigger("click");
+    expect(wrapper.text()).toContain("Count: 1");
 });
 ```
 
@@ -173,8 +173,8 @@ import { render } from "@vitest/browser-vue";
 import App from "@/App.vue";
 
 test("renders component and reacts", async ({ page }) => {
-	await page.goto("/component-page");
-	await expect(page.getByRole("button")).toBeVisible();
+    await page.goto("/component-page");
+    await expect(page.getByRole("button")).toBeVisible();
 });
 ```
 
@@ -188,10 +188,10 @@ test("renders component and reacts", async ({ page }) => {
 import { test, expect } from "@playwright/test";
 
 test("full login scenario", async ({ page }) => {
-	await page.goto("/");
-	await page.fill('input[name="email"]', "test@example.com");
-	await page.click('button[type="submit"]');
-	await expect(page).toHaveURL("/dashboard");
+    await page.goto("/");
+    await page.fill('input[name="email"]', "test@example.com");
+    await page.click('button[type="submit"]');
+    await expect(page).toHaveURL("/dashboard");
 });
 ```
 
@@ -239,9 +239,9 @@ Vitest может делать **snapshot-тесты UI**, а Playwright — **p
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Vitest', href: '/testirovanie/vitest' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Vitest', href: '/testirovanie/vitest' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

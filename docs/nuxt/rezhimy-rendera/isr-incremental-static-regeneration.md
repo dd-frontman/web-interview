@@ -42,32 +42,32 @@ import { GetStaticProps, GetStaticPaths } from "next";
 type Post = { id: string; title: string; body: string };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
+    const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
 
-	return {
-		paths: posts.slice(0, 5).map((p: Post) => ({ params: { id: p.id.toString() } })),
-		fallback: "blocking",
-	};
+    return {
+        paths: posts.slice(0, 5).map((p: Post) => ({ params: { id: p.id.toString() } })),
+        fallback: "blocking",
+    };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`).then((res) =>
-		res.json()
-	);
+    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`).then((res) =>
+        res.json()
+    );
 
-	return {
-		props: { post },
-		revalidate: 60, // обновляем страницу каждые 60 секунд
-	};
+    return {
+        props: { post },
+        revalidate: 60, // обновляем страницу каждые 60 секунд
+    };
 };
 
 export default function PostPage({ post }: { post: Post }) {
-	return (
-		<>
-			<h1>{post.title}</h1>
-			<p>{post.body}</p>
-		</>
-	);
+    return (
+        <>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+        </>
+    );
 }
 ```
 
@@ -87,7 +87,7 @@ export default function PostPage({ post }: { post: Post }) {
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-	modules: ["nuxt-isr"],
+    modules: ["nuxt-isr"],
 });
 ```
 
@@ -101,20 +101,20 @@ const { data: post } = await useAsyncData(`post-${id}`, () => $fetch(`/api/posts
 </script>
 
 <template>
-	<h1>{{ post.title }}</h1>
-	<p>{{ post.body }}</p>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.body }}</p>
 </template>
 ```
 
 ```ts
 // server/api/posts/[id].ts
 export default defineEventHandler(async (event) => {
-	const id = event.context.params?.id;
-	const data = await $fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    const id = event.context.params?.id;
+    const data = await $fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
 
-	// Кэшируем результат на 60 секунд
-	setResponseHeader(event, "x-isr", "60");
-	return data;
+    // Кэшируем результат на 60 секунд
+    setResponseHeader(event, "x-isr", "60");
+    return data;
 });
 ```
 
@@ -160,9 +160,9 @@ export default defineEventHandler(async (event) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+        { title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+    ]"
 />

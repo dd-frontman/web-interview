@@ -77,10 +77,10 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
-		{ title: 'Монолит', href: '/arkhitektura/monolit' },
-		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
-		{ title: 'Топ-5 фронтенд-архитектур', href: '/arkhitektura/top-5-frontend-arkhitektur' },
-	]"
+    :items="[
+        { title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+        { title: 'Монолит', href: '/arkhitektura/monolit' },
+        { title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+        { title: 'Топ-5 фронтенд-архитектур', href: '/arkhitektura/top-5-frontend-arkhitektur' },
+    ]"
 />

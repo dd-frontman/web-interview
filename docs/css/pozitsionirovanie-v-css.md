@@ -22,7 +22,7 @@ updatedAt: "2026-02-16"
 
 ```css
 .item {
-	position: static;
+    position: static;
 }
 ```
 
@@ -33,9 +33,9 @@ updatedAt: "2026-02-16"
 
 ```css
 .badge {
-	position: relative;
-	top: 4px;
-	left: 8px;
+    position: relative;
+    top: 4px;
+    left: 8px;
 }
 ```
 
@@ -47,13 +47,13 @@ updatedAt: "2026-02-16"
 
 ```css
 .card {
-	position: relative;
+    position: relative;
 }
 
 .card__icon {
-	position: absolute;
-	top: 8px;
-	right: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 ```
 
@@ -65,9 +65,9 @@ updatedAt: "2026-02-16"
 
 ```css
 .chat-button {
-	position: fixed;
-	right: 16px;
-	bottom: 16px;
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
 }
 ```
 
@@ -79,9 +79,9 @@ updatedAt: "2026-02-16"
 
 ```css
 .table-head {
-	position: sticky;
-	top: 0;
-	background: white;
+    position: sticky;
+    top: 0;
+    background: white;
 }
 ```
 
@@ -94,26 +94,26 @@ updatedAt: "2026-02-16"
 ```html
 <header class="header">Каталог</header>
 <article class="card">
-	<button class="badge">New</button>
-	<h3>Товар</h3>
+    <button class="badge">New</button>
+    <h3>Товар</h3>
 </article>
 ```
 
 ```css
 .header {
-	position: sticky;
-	top: 0;
-	z-index: 10;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .card {
-	position: relative;
+    position: relative;
 }
 
 .badge {
-	position: absolute;
-	top: 8px;
-	right: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
 }
 ```
 
@@ -124,21 +124,21 @@ updatedAt: "2026-02-16"
 - `z-index` пытаются чинить без понимания stacking context.
 
 <OfficialDocsLinks
-	:links="[
-		{ title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
-		{
-			title: 'MDN: Learn CSS positioning',
-			href: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning',
-		},
-	]"
+    :links="[
+        { title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
+        {
+            title: 'MDN: Learn CSS positioning',
+            href: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
-		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
-		{ title: 'will-change', href: '/css/will-change' },
-	]"
+    :items="[
+        { title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+        { title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+        { title: 'will-change', href: '/css/will-change' },
+    ]"
 />

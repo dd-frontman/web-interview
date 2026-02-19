@@ -43,9 +43,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
-		{ title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
-		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
-	]"
+    :items="[
+        { title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+        { title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
+        { title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+    ]"
 />

@@ -21,21 +21,21 @@ updatedAt: "2026-02-16"
 
 ```css
 .card-list {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 @media (min-width: 768px) {
-	.card-list {
-		grid-template-columns: repeat(2, 1fr);
-	}
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (min-width: 1200px) {
-	.card-list {
-		grid-template-columns: repeat(4, 1fr);
-	}
+    .card-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 ```
 
@@ -63,7 +63,7 @@ updatedAt: "2026-02-16"
 
 ```css
 h1 {
-	font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
+    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.4rem);
 }
 ```
 
@@ -71,8 +71,8 @@ h1 {
 
 ```css
 img {
-	max-width: 100%;
-	height: auto;
+    max-width: 100%;
+    height: auto;
 }
 ```
 
@@ -118,9 +118,9 @@ Adaptive полезен, если:
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
-		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
-		{ title: 'Расположение контента и высота main', href: '/css/raspolozhenie-kontenta-i-vysota-main' },
-	]"
+    :items="[
+        { title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+        { title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+        { title: 'Расположение контента и высота main', href: '/css/raspolozhenie-kontenta-i-vysota-main' },
+    ]"
 />

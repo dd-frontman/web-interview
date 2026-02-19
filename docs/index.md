@@ -59,8 +59,8 @@ import { withBase } from 'vitepress'
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Подготовка к собеседованию', href: '/podgotovka-k-sobesedovaniyu' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

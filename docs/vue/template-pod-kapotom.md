@@ -69,13 +69,13 @@ console.log(res.staticRenderFns);
 ```js
 const _hoisted_1 = /*#__PURE__*/ createVNode("span", null, "Static!");
 export function render(_ctx, _cache) {
-	return (
-		openBlock(),
-		createBlock("div", null, [
-			createVNode("p", null, toDisplayString(_ctx.msg), 1 /* TEXT */),
-			_hoisted_1,
-		])
-	);
+    return (
+        openBlock(),
+        createBlock("div", null, [
+            createVNode("p", null, toDisplayString(_ctx.msg), 1 /* TEXT */),
+            _hoisted_1,
+        ])
+    );
 }
 ```
 
@@ -103,9 +103,9 @@ export function render(_ctx, _cache) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

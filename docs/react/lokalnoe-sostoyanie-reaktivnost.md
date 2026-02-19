@@ -18,14 +18,14 @@ updatedAt: "2026-02-16"
 import { useState } from "react";
 
 export function SimpleCounter() {
-	const [count, setCount] = useState(0); // локальное состояние
+    const [count, setCount] = useState(0); // локальное состояние
 
-	return (
-		<div>
-			<p>Count: {count}</p>
-			<button onClick={() => setCount(count + 1)}>+1</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>+1</button>
+        </div>
+    );
 }
 ```
 
@@ -33,10 +33,10 @@ export function SimpleCounter() {
 
 ```vue
 <template>
-	<div>
-		<p>Count: {{ count }}</p>
-		<button @click="count++">+1</button>
-	</div>
+    <div>
+        <p>Count: {{ count }}</p>
+        <button @click="count++">+1</button>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -57,18 +57,18 @@ const count = ref(0); // локальное состояние
 import { useState } from "react";
 
 export function FullName() {
-	const [first, setFirst] = useState("John");
-	const [last, setLast] = useState("Doe");
+    const [first, setFirst] = useState("John");
+    const [last, setLast] = useState("Doe");
 
-	return (
-		<div>
-			<p>
-				Full name: {first} {last}
-			</p>
-			<input value={first} onChange={(e) => setFirst(e.target.value)} />
-			<input value={last} onChange={(e) => setLast(e.target.value)} />
-		</div>
-	);
+    return (
+        <div>
+            <p>
+                Full name: {first} {last}
+            </p>
+            <input value={first} onChange={(e) => setFirst(e.target.value)} />
+            <input value={last} onChange={(e) => setLast(e.target.value)} />
+        </div>
+    );
 }
 ```
 
@@ -76,11 +76,11 @@ export function FullName() {
 
 ```vue
 <template>
-	<div>
-		<p>Full name: {{ first }} {{ last }}</p>
-		<input v-model="first" />
-		<input v-model="last" />
-	</div>
+    <div>
+        <p>Full name: {{ first }} {{ last }}</p>
+        <input v-model="first" />
+        <input v-model="last" />
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -104,21 +104,21 @@ import { useState } from "react";
 type User = { name: string; age: number };
 
 export function UserCard() {
-	const [user, setUser] = useState<User>({ name: "Alice", age: 20 });
+    const [user, setUser] = useState<User>({ name: "Alice", age: 20 });
 
-	const birthday = () => {
-		// ⚠️ нельзя мутировать напрямую user.age++
-		setUser((prev) => ({ ...prev, age: prev.age + 1 }));
-	};
+    const birthday = () => {
+        // ⚠️ нельзя мутировать напрямую user.age++
+        setUser((prev) => ({ ...prev, age: prev.age + 1 }));
+    };
 
-	return (
-		<div>
-			<p>
-				{user.name}, {user.age} years old
-			</p>
-			<button onClick={birthday}>Happy Birthday!</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>
+                {user.name}, {user.age} years old
+            </p>
+            <button onClick={birthday}>Happy Birthday!</button>
+        </div>
+    );
 }
 ```
 
@@ -126,10 +126,10 @@ export function UserCard() {
 
 ```vue
 <template>
-	<div>
-		<p>{{ user.name }}, {{ user.age }} years old</p>
-		<button @click="user.age++">Happy Birthday!</button>
-	</div>
+    <div>
+        <p>{{ user.name }}, {{ user.age }} years old</p>
+        <button @click="user.age++">Happy Birthday!</button>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -151,16 +151,16 @@ const user = reactive({ name: "Alice", age: 20 });
 import { useState, useMemo } from "react";
 
 export function ShoppingCart() {
-	const [items, setItems] = useState([100, 200, 50]);
+    const [items, setItems] = useState([100, 200, 50]);
 
-	const total = useMemo(() => items.reduce((a, b) => a + b, 0), [items]);
+    const total = useMemo(() => items.reduce((a, b) => a + b, 0), [items]);
 
-	return (
-		<div>
-			<p>Total: {total}</p>
-			<button onClick={() => setItems([...items, 75])}>Add Item</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>Total: {total}</p>
+            <button onClick={() => setItems([...items, 75])}>Add Item</button>
+        </div>
+    );
 }
 ```
 
@@ -168,10 +168,10 @@ export function ShoppingCart() {
 
 ```vue
 <template>
-	<div>
-		<p>Total: {{ total }}</p>
-		<button @click="items.push(75)">Add Item</button>
-	</div>
+    <div>
+        <p>Total: {{ total }}</p>
+        <button @click="items.push(75)">Add Item</button>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -196,13 +196,13 @@ import { useState, useEffect } from "react";
 type Props = { initial: number };
 
 export function Timer({ initial }: Props) {
-	const [time, setTime] = useState(initial);
+    const [time, setTime] = useState(initial);
 
-	useEffect(() => {
-		setTime(initial); // если initial изменится у родителя — обновим локальное состояние
-	}, [initial]);
+    useEffect(() => {
+        setTime(initial); // если initial изменится у родителя — обновим локальное состояние
+    }, [initial]);
 
-	return <p>Time: {time}</p>;
+    return <p>Time: {time}</p>;
 }
 ```
 
@@ -210,7 +210,7 @@ export function Timer({ initial }: Props) {
 
 ```vue
 <template>
-	<p>Time: {{ time }}</p>
+    <p>Time: {{ time }}</p>
 </template>
 
 <script setup lang="ts">
@@ -220,8 +220,8 @@ const props = defineProps<{ initial: number }>();
 const time = ref(props.initial);
 
 watch(
-	() => props.initial,
-	(v) => (time.value = v)
+    () => props.initial,
+    (v) => (time.value = v)
 );
 </script>
 ```
@@ -277,9 +277,9 @@ watch(
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'React', href: '/react/index' },
-		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
-		{ title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
-	]"
+    :items="[
+        { title: 'React', href: '/react/index' },
+        { title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+        { title: 'Основные функции React', href: '/react/osnovnye-funktsii-react' },
+    ]"
 />

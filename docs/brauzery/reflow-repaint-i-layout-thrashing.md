@@ -51,7 +51,7 @@ Layout thrashing - это многократный forced layout из-за че�
 
 ```js
 for (const card of cards) {
-	card.style.width = card.offsetWidth + 20 + "px"; // write + read в каждой итерации
+    card.style.width = card.offsetWidth + 20 + "px"; // write + read в каждой итерации
 }
 ```
 
@@ -61,7 +61,7 @@ for (const card of cards) {
 const widths = cards.map((card) => card.offsetWidth); // batch read
 
 cards.forEach((card, i) => {
-	card.style.width = widths[i] + 20 + "px"; // batch write
+    card.style.width = widths[i] + 20 + "px"; // batch write
 });
 ```
 
@@ -69,8 +69,8 @@ cards.forEach((card, i) => {
 
 ```js
 requestAnimationFrame(() => {
-	panel.style.transform = "translateX(0)";
-	panel.style.opacity = "1";
+    panel.style.transform = "translateX(0)";
+    panel.style.opacity = "1";
 });
 ```
 
@@ -115,9 +115,9 @@ requestAnimationFrame(() => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
-		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-	]"
+    :items="[
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+        { title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+    ]"
 />

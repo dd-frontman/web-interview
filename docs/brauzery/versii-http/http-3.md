@@ -81,9 +81,9 @@ server {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'HTTP/2: мультиплексирование и бинарный протокол', href: '/brauzery/versii-http/http-2' },
-		{ title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
-		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
-	]"
+    :items="[
+        { title: 'HTTP/2: мультиплексирование и бинарный протокол', href: '/brauzery/versii-http/http-2' },
+        { title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
+        { title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
+    ]"
 />

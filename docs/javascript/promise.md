@@ -19,11 +19,11 @@ updatedAt: "2026-02-16"
 
 ```js
 const promise = new Promise((resolve, reject) => {
-	// Например, симуляция задержки
-	setTimeout(() => {
-		if (Math.random() > 0.5) resolve("Успех!");
-		else reject("Ошибка!");
-	}, 1000);
+    // Например, симуляция задержки
+    setTimeout(() => {
+        if (Math.random() > 0.5) resolve("Успех!");
+        else reject("Ошибка!");
+    }, 1000);
 });
 ```
 
@@ -43,7 +43,7 @@ const promise = new Promise((resolve, reject) => {
 
 ```js
 promise.then((result) => {
-	console.log("Всё хорошо:", result);
+    console.log("Всё хорошо:", result);
 });
 ```
 
@@ -51,7 +51,7 @@ promise.then((result) => {
 
 ```js
 promise.catch((error) => {
-	console.log("Произошла ошибка:", error);
+    console.log("Произошла ошибка:", error);
 });
 ```
 
@@ -59,7 +59,7 @@ promise.catch((error) => {
 
 ```js
 promise.finally(() => {
-	console.log("Операция завершена (успех или ошибка)");
+    console.log("Операция завершена (успех или ошибка)");
 });
 ```
 
@@ -69,22 +69,22 @@ promise.finally(() => {
 
 ```js
 promise
-	.then((result) => {
-		console.log(result);
-		return "Следующий шаг";
-	})
-	.then((data) => {
-		console.log(data); // "Следующий шаг"
-		// Можно вернуть ещё один промис
-		return fetch("/api/some-data");
-	})
-	.then((response) => response.json())
-	.catch((error) => {
-		console.error("Ошибка на любом этапе:", error);
-	})
-	.finally(() => {
-		console.log("Всегда выполняется");
-	});
+    .then((result) => {
+        console.log(result);
+        return "Следующий шаг";
+    })
+    .then((data) => {
+        console.log(data); // "Следующий шаг"
+        // Можно вернуть ещё один промис
+        return fetch("/api/some-data");
+    })
+    .then((response) => response.json())
+    .catch((error) => {
+        console.error("Ошибка на любом этапе:", error);
+    })
+    .finally(() => {
+        console.log("Всегда выполняется");
+    });
 ```
 
 - Если внутри `then` возвращаем значение — следующий `then` получит его.
@@ -103,12 +103,12 @@ promise
 
 ```js
 Promise.all([p1, p2, p3])
-	.then(([res1, res2, res3]) => {
-		/* все успешно */
-	})
-	.catch((err) => {
-		/* хотя бы один с ошибкой */
-	});
+    .then(([res1, res2, res3]) => {
+        /* все успешно */
+    })
+    .catch((err) => {
+        /* хотя бы один с ошибкой */
+    });
 ```
 
 ### 2. `Promise.race(iterable)`
@@ -118,12 +118,12 @@ Promise.all([p1, p2, p3])
 
 ```js
 Promise.race([p1, p2, p3])
-	.then((result) => {
-		/* кто быстрее */
-	})
-	.catch((error) => {
-		/* если первым завершился rejected */
-	});
+    .then((result) => {
+        /* кто быстрее */
+    })
+    .catch((error) => {
+        /* если первым завершился rejected */
+    });
 ```
 
 ### 3. `Promise.allSettled(iterable)`
@@ -133,7 +133,7 @@ Promise.race([p1, p2, p3])
 
 ```js
 Promise.allSettled([p1, p2, p3]).then((results) => {
-	// results: [{status: "fulfilled", value: ...}, {status: "rejected", reason: ...}, ...]
+    // results: [{status: "fulfilled", value: ...}, {status: "rejected", reason: ...}, ...]
 });
 ```
 
@@ -144,20 +144,20 @@ Promise.allSettled([p1, p2, p3]).then((results) => {
 
 ```js
 Promise.any([p1, p2, p3])
-	.then((result) => {
-		/* первый успешный */
-	})
-	.catch((errors) => {
-		/* если все упали */
-	});
+    .then((result) => {
+        /* первый успешный */
+    })
+    .catch((errors) => {
+        /* если все упали */
+    });
 ```
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
-		{ title: 'Event Bubbling', href: '/javascript/event-bubbling' },
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-	]"
+    :items="[
+        { title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+        { title: 'Event Bubbling', href: '/javascript/event-bubbling' },
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+    ]"
 />

@@ -47,7 +47,7 @@ const count = ref(0);
 count.value++;
 
 const form = reactive({
-	user: { name: "Alice" },
+    user: { name: "Alice" },
 });
 form.user.name = "Bob"; // реактивно
 
@@ -56,8 +56,8 @@ cache.value.items.push(1); // UI не обновится
 triggerRef(cache); // обновится после ручного trigger
 
 const settings = shallowReactive({
-	theme: "dark",
-	nested: { compact: false },
+    theme: "dark",
+    nested: { compact: false },
 });
 settings.theme = "light"; // реактивно
 settings.nested.compact = true; // не реактивно
@@ -79,9 +79,9 @@ settings.nested.compact = true; // не реактивно
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-		{ title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
-		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
-	]"
+    :items="[
+        { title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+        { title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
+        { title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+    ]"
 />

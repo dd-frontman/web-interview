@@ -25,16 +25,16 @@ updatedAt: "2026-02-16"
 console.log("Start"); // 1
 
 setTimeout(function () {
-	console.log("Timeout 1"); // 5
+    console.log("Timeout 1"); // 5
 }, 0);
 
 Promise.resolve()
-	.then(function () {
-		console.log("Promise 1"); // 3
-	})
-	.then(function () {
-		console.log("Promise 2"); // 4
-	});
+    .then(function () {
+        console.log("Promise 1"); // 3
+    })
+    .then(function () {
+        console.log("Promise 2"); // 4
+    });
 
 console.log("End"); // 2
 ```
@@ -54,7 +54,7 @@ console.log("End"); // 2
 3. **MutationObserver**: Используется для отслеживания изменений в DOM и выполняет коллбеки как микро-таски.
    ```javascript
    const observer = new MutationObserver(() => {
-   	console.log("DOM mutated");
+       console.log("DOM mutated");
    });
    ```
 
@@ -70,7 +70,7 @@ console.log("End"); // 2
    ```javascript
    const fs = require("fs");
    fs.readFile("/path/to/file", (err, data) => {
-   	console.log("File read");
+       console.log("File read");
    });
    ```
 3. **UI рендеринг**: Обновление пользовательского интерфейса также является макро-таской.
@@ -120,9 +120,9 @@ console.log("End"); // 2
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
-		{ title: 'Event Bubbling', href: '/javascript/event-bubbling' },
-		{ title: 'JSON и его альтернативы', href: '/javascript/json-i-ego-alternativy' },
-	]"
+    :items="[
+        { title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+        { title: 'Event Bubbling', href: '/javascript/event-bubbling' },
+        { title: 'JSON и его альтернативы', href: '/javascript/json-i-ego-alternativy' },
+    ]"
 />

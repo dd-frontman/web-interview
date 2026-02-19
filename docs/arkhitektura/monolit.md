@@ -62,11 +62,11 @@ import Home from "@/pages/Home.vue";
 import Profile from "@/pages/Profile.vue";
 
 export const router = createRouter({
-	history: createWebHistory(),
-	routes: [
-		{ path: "/", component: Home },
-		{ path: "/profile/:id", component: Profile },
-	],
+    history: createWebHistory(),
+    routes: [
+        { path: "/", component: Home },
+        { path: "/profile/:id", component: Profile },
+    ],
 });
 ```
 
@@ -77,12 +77,12 @@ export const router = createRouter({
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
-	state: () => ({ name: "Guest" }),
-	actions: {
-		setName(newName: string) {
-			this.name = newName;
-		},
-	},
+    state: () => ({ name: "Guest" }),
+    actions: {
+        setName(newName: string) {
+            this.name = newName;
+        },
+    },
 });
 ```
 
@@ -91,7 +91,7 @@ export const useUserStore = defineStore("user", {
 ```ts
 // src/services/api.ts
 export const api = {
-	getUser: (id: string) => fetch(`/api/users/${id}`).then((r) => r.json()),
+    getUser: (id: string) => fetch(`/api/users/${id}`).then((r) => r.json()),
 };
 ```
 
@@ -107,15 +107,15 @@ const route = useRoute();
 const user = ref<any>(null);
 
 onMounted(async () => {
-	user.value = await api.getUser(route.params.id as string);
+    user.value = await api.getUser(route.params.id as string);
 });
 </script>
 
 <template>
-	<div v-if="user">
-		<h1>{{ user.name }}</h1>
-		<p>Email: {{ user.email }}</p>
-	</div>
+    <div v-if="user">
+        <h1>{{ user.name }}</h1>
+        <p>Email: {{ user.email }}</p>
+    </div>
 </template>
 ```
 
@@ -145,12 +145,12 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 
 export default function App() {
-	return (
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/profile/:id" element={<Profile />} />
-		</Routes>
-	);
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile/:id" element={<Profile />} />
+        </Routes>
+    );
 }
 ```
 
@@ -161,8 +161,8 @@ export default function App() {
 import create from "zustand";
 
 export const useUserStore = create((set) => ({
-	name: "Guest",
-	setName: (name: string) => set({ name }),
+    name: "Guest",
+    setName: (name: string) => set({ name }),
 }));
 ```
 
@@ -171,10 +171,10 @@ export const useUserStore = create((set) => ({
 ```ts
 // src/services/api.ts
 export const api = {
-	getUser: async (id: string) => {
-		const res = await fetch(`/api/users/${id}`);
-		return res.json();
-	},
+    getUser: async (id: string) => {
+        const res = await fetch(`/api/users/${id}`);
+        return res.json();
+    },
 };
 ```
 
@@ -204,7 +204,7 @@ export default defineEventHandler(() => ({ id: 1, name: "Alice" }));
 const { data: user } = await useFetch("/api/user");
 </script>
 <template>
-	<h1>{{ user.name }}</h1>
+    <h1>{{ user.name }}</h1>
 </template>
 ```
 
@@ -222,16 +222,16 @@ fullstack-next/
 ```ts
 // app/api/user/route.ts
 export async function GET() {
-	return Response.json({ id: 1, name: "Alice" });
+    return Response.json({ id: 1, name: "Alice" });
 }
 ```
 
 ```tsx
 // app/page.tsx
 export default async function Home() {
-	const res = await fetch("http://localhost:3000/api/user");
-	const user = await res.json();
-	return <h1>{user.name}</h1>;
+    const res = await fetch("http://localhost:3000/api/user");
+    const user = await res.json();
+    return <h1>{user.name}</h1>;
 }
 ```
 
@@ -264,9 +264,9 @@ export default async function Home() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
-		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
+        { title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+    ]"
 />

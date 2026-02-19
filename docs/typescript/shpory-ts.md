@@ -695,9 +695,9 @@ class Car {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
-		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
-		{ title: 'TypeScript', href: '/typescript/index' },
-	]"
+    :items="[
+        { title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+        { title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+        { title: 'TypeScript', href: '/typescript/index' },
+    ]"
 />

@@ -81,9 +81,9 @@ JSONP работает через `<script src="...">`, потому что за
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
-		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
-	]"
+    :items="[
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
+        { title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+    ]"
 />

@@ -53,10 +53,10 @@ const { data: product } = await useAsyncData("product", () => $fetch(`/api/produ
 </script>
 
 <template>
-	<div>
-		<h1>{{ product.name }}</h1>
-		<p>{{ product.price }} ₽</p>
-	</div>
+    <div>
+        <h1>{{ product.name }}</h1>
+        <p>{{ product.price }} ₽</p>
+    </div>
 </template>
 ```
 
@@ -66,18 +66,18 @@ const { data: product } = await useAsyncData("product", () => $fetch(`/api/produ
 
 ```tsx
 export async function getServerSideProps() {
-	const res = await fetch("https://api.example.com/products/123");
-	const product = await res.json();
-	return { props: { product } };
+    const res = await fetch("https://api.example.com/products/123");
+    const product = await res.json();
+    return { props: { product } };
 }
 
 export default function Product({ product }: any) {
-	return (
-		<div>
-			<h1>{product.name}</h1>
-			<p>{product.price} ₽</p>
-		</div>
-	);
+    return (
+        <div>
+            <h1>{product.name}</h1>
+            <p>{product.price} ₽</p>
+        </div>
+    );
 }
 ```
 
@@ -142,9 +142,9 @@ export default function Product({ product }: any) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+    ]"
 />

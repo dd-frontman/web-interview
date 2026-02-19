@@ -164,9 +164,9 @@ SELECT * FROM users WHERE username = 'admin' AND password = '' OR '1'='1';
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'CSP — Content Security Policy', href: '/bezopasnost-prilozhenii/csp-content-security-policy' },
-		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
-		{ title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
-	]"
+    :items="[
+        { title: 'CSP — Content Security Policy', href: '/bezopasnost-prilozhenii/csp-content-security-policy' },
+        { title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+        { title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
+    ]"
 />

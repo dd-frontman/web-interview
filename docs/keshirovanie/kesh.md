@@ -118,11 +118,11 @@ Next.js имеет встроенные механизмы кэшировани�
 ```ts
 // Пример сервера (Node.js / Express) — отдаём статичную JS / CSS с кэшем
 app.use(
-	"/static",
-	express.static(path.join(__dirname, "public"), {
-		maxAge: "30d", // Cache-Control: public, max-age=2592000
-		etag: true,
-	})
+    "/static",
+    express.static(path.join(__dirname, "public"), {
+        maxAge: "30d", // Cache-Control: public, max-age=2592000
+        etag: true,
+    })
 );
 ```
 
@@ -132,39 +132,39 @@ import { ref } from "vue";
 import { useQuery } from "vue-query"; // пример
 
 function useUsers() {
-	const { data, isLoading, isError } = useQuery(
-		"users",
-		() => fetch("/api/users").then((r) => r.json()),
-		{
-			staleTime: 1000 * 60, // считаем данные “свежими” 1 минуту
-			cacheTime: 1000 * 60 * 5, // держать кэш в памяти 5 минут
-			retry: 2,
-		}
-	);
+    const { data, isLoading, isError } = useQuery(
+        "users",
+        () => fetch("/api/users").then((r) => r.json()),
+        {
+            staleTime: 1000 * 60, // считаем данные “свежими” 1 минуту
+            cacheTime: 1000 * 60 * 5, // держать кэш в памяти 5 минут
+            retry: 2,
+        }
+    );
 
-	return { data, isLoading, isError };
+    return { data, isLoading, isError };
 }
 ```
 
 ```js
 // Next.js дата-fetch + кэширование на уровне роутов / данных
 export async function getStaticProps() {
-	const res = await fetch("https://api.example.com/posts");
-	const posts = await res.json();
-	return {
-		props: { posts },
-		revalidate: 60, // страницу перегенерировать не реже, чем раз в минуту
-	};
+    const res = await fetch("https://api.example.com/posts");
+    const posts = await res.json();
+    return {
+        props: { posts },
+        revalidate: 60, // страницу перегенерировать не реже, чем раз в минуту
+    };
 }
 
 export default function PostsPage({ posts }) {
-	return (
-		<ul>
-			{posts.map((p) => (
-				<li key={p.id}>{p.title}</li>
-			))}
-		</ul>
-	);
+    return (
+        <ul>
+            {posts.map((p) => (
+                <li key={p.id}>{p.title}</li>
+            ))}
+        </ul>
+    );
 }
 ```
 
@@ -190,9 +190,9 @@ export default function PostsPage({ posts }) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Кэширование', href: '/keshirovanie/index' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Кэширование', href: '/keshirovanie/index' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

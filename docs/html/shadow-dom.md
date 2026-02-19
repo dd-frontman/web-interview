@@ -26,11 +26,11 @@ Shadow DOM — это механизм Web Components, который дает �
 
 ```js
 class XBadge extends HTMLElement {
-	constructor() {
-		super();
+    constructor() {
+        super();
 
-		const root = this.attachShadow({ mode: "open" });
-		root.innerHTML = `
+        const root = this.attachShadow({ mode: "open" });
+        root.innerHTML = `
       <style>
         .badge {
           padding: 4px 8px;
@@ -42,7 +42,7 @@ class XBadge extends HTMLElement {
       </style>
       <span class="badge"><slot></slot></span>
     `;
-	}
+    }
 }
 
 customElements.define("x-badge", XBadge);
@@ -69,8 +69,8 @@ customElements.define("x-badge", XBadge);
 
 ```html
 <x-card>
-	<h3 slot="title">Заголовок</h3>
-	<p>Обычный контент карточки</p>
+    <h3 slot="title">Заголовок</h3>
+    <p>Обычный контент карточки</p>
 </x-card>
 ```
 
@@ -87,20 +87,20 @@ customElements.define("x-badge", XBadge);
 - событие из shadow может "пробулькать" наружу, если оно `composed`
 
 <OfficialDocsLinks
-	:links="[
-		{
-			title: 'MDN: Using shadow DOM',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM',
-		},
-	]"
+    :links="[
+        {
+            title: 'MDN: Using shadow DOM',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Семантические теги', href: '/html/semanticheskie-tegi' },
-		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
-		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
-	]"
+    :items="[
+        { title: 'Семантические теги', href: '/html/semanticheskie-tegi' },
+        { title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+        { title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+    ]"
 />

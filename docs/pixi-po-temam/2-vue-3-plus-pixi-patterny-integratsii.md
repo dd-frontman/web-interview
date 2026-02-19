@@ -21,17 +21,17 @@ const view = shallowRef<HTMLCanvasElement>();
 let app: Application;
 
 onMounted(async () => {
-	app = new Application({ view: view.value!, resizeTo: window });
-	await app.init(); // важно для WebGPU
-	const tex = await Assets.load("/logo.png"); // асинка загрузки
-	app.stage.addChild(Sprite.from(tex));
+    app = new Application({ view: view.value!, resizeTo: window });
+    await app.init(); // важно для WebGPU
+    const tex = await Assets.load("/logo.png"); // асинка загрузки
+    app.stage.addChild(Sprite.from(tex));
 });
 
 onUnmounted(() => app.destroy(true));
 </script>
 
 <template>
-	<canvas ref="view" />
+    <canvas ref="view" />
 </template>
 ```
 
@@ -49,17 +49,17 @@ import { Application } from "pixi.js";
 import { onMounted, onUnmounted } from "vue";
 
 export function usePixi(canvas: HTMLCanvasElement) {
-	let app: Application;
-	onMounted(async () => {
-		app = new Application({ view: canvas, resizeTo: window });
-		await app.init();
-	});
-	onUnmounted(() => app?.destroy(true));
-	return {
-		get app() {
-			return app;
-		},
-	};
+    let app: Application;
+    onMounted(async () => {
+        app = new Application({ view: canvas, resizeTo: window });
+        await app.init();
+    });
+    onUnmounted(() => app?.destroy(true));
+    return {
+        get app() {
+            return app;
+        },
+    };
 }
 ```
 
@@ -69,15 +69,15 @@ export function usePixi(canvas: HTMLCanvasElement) {
 
 ```vue
 <template>
-	<PIXI-Stage :width="800" :height="600">
-		<PIXI-Sprite texture="/hero.png" :x="hero.x" :y="hero.y" :anchor="0.5" @pointertap="jump" />
-	</PIXI-Stage>
+    <PIXI-Stage :width="800" :height="600">
+        <PIXI-Sprite texture="/hero.png" :x="hero.x" :y="hero.y" :anchor="0.5" @pointertap="jump" />
+    </PIXI-Stage>
 </template>
 
 <script setup lang="ts">
 const hero = reactive({ x: 400, y: 300 });
 function jump() {
-	hero.y -= 120;
+    hero.y -= 120;
 }
 </script>
 ```
@@ -136,9 +136,9 @@ sprite.on("pointertap", () => emit("select", id));
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
-		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
-		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
-	]"
+    :items="[
+        { title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+        { title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+        { title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+    ]"
 />

@@ -21,9 +21,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Маленькие принципы', href: '/printsipy-programmirovaniya/malenkie-printsipy' },
-		{ title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Маленькие принципы', href: '/printsipy-programmirovaniya/malenkie-printsipy' },
+        { title: 'SOLID', href: '/printsipy-programmirovaniya/solid' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

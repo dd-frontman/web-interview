@@ -73,9 +73,9 @@ updatedAt: "2026-02-17"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
-		{ title: 'HTTP/2: мультиплексирование и бинарный протокол', href: '/brauzery/versii-http/http-2' },
-		{ title: 'HTTP/3: QUIC, TLS 1.3 и стабильность в плохих сетях', href: '/brauzery/versii-http/http-3' },
-	]"
+    :items="[
+        { title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
+        { title: 'HTTP/2: мультиплексирование и бинарный протокол', href: '/brauzery/versii-http/http-2' },
+        { title: 'HTTP/3: QUIC, TLS 1.3 и стабильность в плохих сетях', href: '/brauzery/versii-http/http-3' },
+    ]"
 />

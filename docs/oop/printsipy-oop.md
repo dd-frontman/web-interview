@@ -27,18 +27,18 @@ updatedAt: "2026-02-16"
 
 ```ts
 class User {
-	#password: string; // приватное поле
+    #password: string; // приватное поле
 
-	constructor(
-		public name: string,
-		password: string
-	) {
-		this.#password = password;
-	}
+    constructor(
+        public name: string,
+        password: string
+    ) {
+        this.#password = password;
+    }
 
-	checkPassword(pwd: string) {
-		return this.#password === pwd;
-	}
+    checkPassword(pwd: string) {
+        return this.#password === pwd;
+    }
 }
 
 const u = new User("Alice", "1234");
@@ -55,15 +55,15 @@ import { ref } from "vue";
 
 const password = ref("1234"); // локальное состояние (инкапсулировано)
 function checkPassword(pwd: string) {
-	return pwd === password.value;
+    return pwd === password.value;
 }
 </script>
 
 <template>
-	<div>
-		<p>Пароль скрыт внутри компонента</p>
-		<button @click="checkPassword('1234')">Проверить</button>
-	</div>
+    <div>
+        <p>Пароль скрыт внутри компонента</p>
+        <button @click="checkPassword('1234')">Проверить</button>
+    </div>
 </template>
 ```
 
@@ -73,13 +73,13 @@ function checkPassword(pwd: string) {
 import { useState } from "react";
 
 export function UserComponent() {
-	const [password] = useState("1234"); // скрыто внутри компонента
+    const [password] = useState("1234"); // скрыто внутри компонента
 
-	function checkPassword(pwd: string) {
-		return pwd === password;
-	}
+    function checkPassword(pwd: string) {
+        return pwd === password;
+    }
 
-	return <button onClick={() => alert(checkPassword("1234"))}>Проверить</button>;
+    return <button onClick={() => alert(checkPassword("1234"))}>Проверить</button>;
 }
 ```
 
@@ -93,14 +93,14 @@ export function UserComponent() {
 
 ```ts
 class Animal {
-	speak() {
-		console.log("Животное издаёт звук");
-	}
+    speak() {
+        console.log("Животное издаёт звук");
+    }
 }
 class Dog extends Animal {
-	speak() {
-		console.log("Собака лает");
-	}
+    speak() {
+        console.log("Собака лает");
+    }
 }
 
 new Dog().speak(); // "Собака лает"
@@ -133,14 +133,14 @@ sound.value = "Гав-гав!";
 
 ```tsx
 function withAnimal(Component: any) {
-	return function Wrapper() {
-		const sound = "Гав-гав!";
-		return <Component sound={sound} />;
-	};
+    return function Wrapper() {
+        const sound = "Гав-гав!";
+        return <Component sound={sound} />;
+    };
 }
 
 function Dog({ sound }: { sound: string }) {
-	return <button onClick={() => console.log(sound)}>Собака</button>;
+    return <button onClick={() => console.log(sound)}>Собака</button>;
 }
 
 export default withAnimal(Dog);
@@ -156,19 +156,19 @@ export default withAnimal(Dog);
 
 ```ts
 class Animal {
-	speak() {
-		console.log("звук");
-	}
+    speak() {
+        console.log("звук");
+    }
 }
 class Dog extends Animal {
-	speak() {
-		console.log("Гав");
-	}
+    speak() {
+        console.log("Гав");
+    }
 }
 class Cat extends Animal {
-	speak() {
-		console.log("Мяу");
-	}
+    speak() {
+        console.log("Мяу");
+    }
 }
 
 const animals: Animal[] = [new Dog(), new Cat()];
@@ -180,7 +180,7 @@ animals.forEach((a) => a.speak());
 
 ```vue
 <template>
-	<component :is="current" />
+    <component :is="current" />
 </template>
 
 <script setup lang="ts">
@@ -195,15 +195,15 @@ const current = Math.random() > 0.5 ? Dog : Cat;
 
 ```tsx
 function Dog() {
-	return <p>Гав</p>;
+    return <p>Гав</p>;
 }
 function Cat() {
-	return <p>Мяу</p>;
+    return <p>Мяу</p>;
 }
 
 export function Animal({ type }: { type: "dog" | "cat" }) {
-	const Component = type === "dog" ? Dog : Cat;
-	return <Component />;
+    const Component = type === "dog" ? Dog : Cat;
+    return <Component />;
 }
 ```
 
@@ -217,16 +217,16 @@ export function Animal({ type }: { type: "dog" | "cat" }) {
 
 ```ts
 abstract class Shape {
-	abstract area(): number; // метод без реализации
+    abstract area(): number; // метод без реализации
 }
 
 class Circle extends Shape {
-	constructor(private r: number) {
-		super();
-	}
-	area() {
-		return Math.PI * this.r ** 2;
-	}
+    constructor(private r: number) {
+        super();
+    }
+    area() {
+        return Math.PI * this.r ** 2;
+    }
 }
 ```
 
@@ -235,8 +235,8 @@ class Circle extends Shape {
 ```ts
 // useShape.ts — абстракция для фигур
 export function useShapeArea(shape: "circle" | "square", size: number) {
-	if (shape === "circle") return Math.PI * size ** 2;
-	if (shape === "square") return size * size;
+    if (shape === "circle") return Math.PI * size ** 2;
+    if (shape === "square") return size * size;
 }
 ```
 
@@ -246,9 +246,9 @@ export function useShapeArea(shape: "circle" | "square", size: number) {
 type ShapeProps = { shape: "circle" | "square"; size: number };
 
 export function ShapeArea({ shape, size }: ShapeProps) {
-	if (shape === "circle") return <p>{Math.PI * size ** 2}</p>;
-	if (shape === "square") return <p>{size * size}</p>;
-	return null;
+    if (shape === "circle") return <p>{Math.PI * size ** 2}</p>;
+    if (shape === "square") return <p>{size * size}</p>;
+    return null;
 }
 ```
 
@@ -262,17 +262,17 @@ export function ShapeArea({ shape, size }: ShapeProps) {
 
 ```ts
 class Engine {
-	start() {
-		console.log("engine started");
-	}
+    start() {
+        console.log("engine started");
+    }
 }
 
 class Car {
-	constructor(private engine: Engine) {}
+    constructor(private engine: Engine) {}
 
-	start() {
-		this.engine.start(); // композиция: Car использует Engine
-	}
+    start() {
+        this.engine.start(); // композиция: Car использует Engine
+    }
 }
 ```
 
@@ -281,14 +281,14 @@ class Car {
 ```ts
 // useAuth.ts
 export function useAuth() {
-	const isAuth = true;
-	return { isAuth };
+    const isAuth = true;
+    return { isAuth };
 }
 
 // usePermissions.ts
 export function usePermissions() {
-	const canEdit = true;
-	return { canEdit };
+    const canEdit = true;
+    return { canEdit };
 }
 
 // компонент комбинирует поведение
@@ -300,19 +300,19 @@ const { canEdit } = usePermissions();
 
 ```tsx
 function useAuth() {
-	return { isAuth: true };
+    return { isAuth: true };
 }
 
 function usePermissions() {
-	return { canEdit: true };
+    return { canEdit: true };
 }
 
 export function Toolbar() {
-	const { isAuth } = useAuth();
-	const { canEdit } = usePermissions();
+    const { isAuth } = useAuth();
+    const { canEdit } = usePermissions();
 
-	if (!isAuth) return null;
-	return <button disabled={!canEdit}>Редактировать</button>;
+    if (!isAuth) return null;
+    return <button disabled={!canEdit}>Редактировать</button>;
 }
 ```
 
@@ -326,23 +326,23 @@ export function Toolbar() {
 
 ```ts
 interface Notifier {
-	send(message: string): void;
+    send(message: string): void;
 }
 
 class EmailNotifier implements Notifier {
-	send(message: string) {
-		console.log("email:", message);
-	}
+    send(message: string) {
+        console.log("email:", message);
+    }
 }
 
 class SmsNotifier implements Notifier {
-	send(message: string) {
-		console.log("sms:", message);
-	}
+    send(message: string) {
+        console.log("sms:", message);
+    }
 }
 
 function notifyUser(notifier: Notifier) {
-	notifier.send("Заказ оформлен");
+    notifier.send("Заказ оформлен");
 }
 ```
 
@@ -351,7 +351,7 @@ function notifyUser(notifier: Notifier) {
 ```ts
 // notifier передаётся как зависимость по контракту
 const props = defineProps<{
-	notifier: { send: (message: string) => void };
+    notifier: { send: (message: string) => void };
 }>();
 
 props.notifier.send("Сохранено");
@@ -363,7 +363,7 @@ props.notifier.send("Сохранено");
 type Notifier = { send: (message: string) => void };
 
 export function SaveButton({ notifier }: { notifier: Notifier }) {
-	return <button onClick={() => notifier.send("Сохранено")}>Сохранить</button>;
+    return <button onClick={() => notifier.send("Сохранено")}>Сохранить</button>;
 }
 ```
 
@@ -377,17 +377,17 @@ export function SaveButton({ notifier }: { notifier: Notifier }) {
 
 ```ts
 class UserRepository {
-	findById(id: string) {
-		return { id, name: "Alice" };
-	}
+    findById(id: string) {
+        return { id, name: "Alice" };
+    }
 }
 
 class UserService {
-	constructor(private repo: UserRepository) {}
+    constructor(private repo: UserRepository) {}
 
-	getProfile(id: string) {
-		return this.repo.findById(id);
-	}
+    getProfile(id: string) {
+        return this.repo.findById(id);
+    }
 }
 ```
 
@@ -396,8 +396,8 @@ class UserService {
 ```ts
 // useUserProfile.ts — одна ответственность: профиль пользователя
 export function useUserProfile() {
-	const loadProfile = async (id: string) => ({ id, name: "Alice" });
-	return { loadProfile };
+    const loadProfile = async (id: string) => ({ id, name: "Alice" });
+    return { loadProfile };
 }
 ```
 
@@ -405,12 +405,12 @@ export function useUserProfile() {
 
 ```tsx
 function UserName({ name }: { name: string }) {
-	return <h3>{name}</h3>; // только отображение
+    return <h3>{name}</h3>; // только отображение
 }
 
 export function UserCard() {
-	const user = { name: "Alice" }; // контейнерная логика
-	return <UserName name={user.name} />;
+    const user = { name: "Alice" }; // контейнерная логика
+    return <UserName name={user.name} />;
 }
 ```
 
@@ -431,9 +431,9 @@ export function UserCard() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ООП', href: '/oop/index' },
-		{ title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'ООП', href: '/oop/index' },
+        { title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

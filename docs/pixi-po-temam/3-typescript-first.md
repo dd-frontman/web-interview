@@ -11,13 +11,13 @@ updatedAt: "2026-02-16"
 
 ```json
 {
-	"compilerOptions": {
-		"strict": true,
-		"types": ["vite/client"],
-		"paths": {
-			"pixi.js": ["node_modules/pixi.js/dist/browser/pixi.mjs"] // тот-же alias используем в Vite
-		}
-	}
+    "compilerOptions": {
+        "strict": true,
+        "types": ["vite/client"],
+        "paths": {
+            "pixi.js": ["node_modules/pixi.js/dist/browser/pixi.mjs"] // тот-же alias используем в Vite
+        }
+    }
 }
 ```
 
@@ -48,9 +48,9 @@ import { describe, it, expect } from "vitest";
 import "vitest-webgl-canvas-mock"; // даёт 2D+WebGL контекст
 
 describe("Pixi boot", () => {
-	it("creates App", () => {
-		expect(() => new Application()).not.toThrow();
-	});
+    it("creates App", () => {
+        expect(() => new Application()).not.toThrow();
+    });
 });
 ```
 
@@ -74,9 +74,9 @@ describe("Pixi boot", () => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
-		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
-		{ title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
-	]"
+    :items="[
+        { title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+        { title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+        { title: 'Производительность и отладка', href: '/pixi-po-temam/4-proizvoditelnost-i-otladka' },
+    ]"
 />

@@ -30,7 +30,7 @@ updatedAt: "2026-02-16"
 
 ```css
 .title {
-	text-align: center;
+    text-align: center;
 }
 ```
 
@@ -40,9 +40,9 @@ updatedAt: "2026-02-16"
 
 ```css
 .pill {
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 ```
 
@@ -54,8 +54,8 @@ updatedAt: "2026-02-16"
 
 ```css
 .card {
-	width: 320px;
-	margin-inline: auto;
+    width: 320px;
+    margin-inline: auto;
 }
 ```
 
@@ -68,8 +68,8 @@ updatedAt: "2026-02-16"
 
 ```css
 .tag-cloud {
-	width: fit-content;
-	margin-inline: auto;
+    width: fit-content;
+    margin-inline: auto;
 }
 ```
 
@@ -79,8 +79,8 @@ updatedAt: "2026-02-16"
 
 ```css
 img.avatar {
-	display: block;
-	margin-inline: auto;
+    display: block;
+    margin-inline: auto;
 }
 ```
 
@@ -90,10 +90,10 @@ img.avatar {
 
 ```css
 .parent {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
 }
 ```
 
@@ -101,8 +101,8 @@ img.avatar {
 
 ```css
 .parent {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 ```
 
@@ -110,9 +110,9 @@ img.avatar {
 
 ```css
 .parent {
-	display: flex;
-	align-items: center;
-	min-height: 240px;
+    display: flex;
+    align-items: center;
+    min-height: 240px;
 }
 ```
 
@@ -120,7 +120,7 @@ img.avatar {
 
 ```css
 .item {
-	margin: auto;
+    margin: auto;
 }
 ```
 
@@ -130,12 +130,12 @@ img.avatar {
 
 ```css
 .grid-like {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: center;
-	gap: 12px;
-	min-height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 12px;
+    min-height: 300px;
 }
 ```
 
@@ -147,9 +147,9 @@ img.avatar {
 
 ```css
 .parent {
-	display: grid;
-	place-items: center;
-	min-height: 240px;
+    display: grid;
+    place-items: center;
+    min-height: 240px;
 }
 ```
 
@@ -157,10 +157,10 @@ img.avatar {
 
 ```css
 .parent {
-	display: grid;
-	justify-items: center; /* inline axis */
-	/* или */
-	align-items: center; /* block axis */
+    display: grid;
+    justify-items: center; /* inline axis */
+    /* или */
+    align-items: center; /* block axis */
 }
 ```
 
@@ -168,7 +168,7 @@ img.avatar {
 
 ```css
 .item {
-	place-self: center;
+    place-self: center;
 }
 ```
 
@@ -176,11 +176,11 @@ img.avatar {
 
 ```css
 .parent {
-	display: grid;
-	grid-template-columns: repeat(3, 120px);
-	justify-content: center;
-	align-content: center;
-	min-height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    justify-content: center;
+    align-content: center;
+    min-height: 300px;
 }
 ```
 
@@ -192,14 +192,14 @@ img.avatar {
 
 ```css
 .overlay {
-	position: relative;
+    position: relative;
 }
 
 .modal {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 ```
 
@@ -207,11 +207,11 @@ img.avatar {
 
 ```css
 .dialog {
-	position: absolute;
-	inset: 0;
-	width: 420px;
-	height: 240px;
-	margin: auto;
+    position: absolute;
+    inset: 0;
+    width: 420px;
+    height: 240px;
+    margin: auto;
 }
 ```
 
@@ -221,10 +221,10 @@ img.avatar {
 
 ```css
 .toast-center {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 ```
 
@@ -232,9 +232,9 @@ img.avatar {
 
 ```css
 .cell {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 ```
 
@@ -246,9 +246,9 @@ img.avatar {
 
 ```css
 .hero {
-	background-image: url("/img/bg.jpg");
-	background-position: center;
-	background-size: cover;
+    background-image: url("/img/bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 ```
 
@@ -256,10 +256,10 @@ img.avatar {
 
 ```css
 .media {
-	width: 100%;
-	height: 260px;
-	object-fit: cover;
-	object-position: center;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
 }
 ```
 
@@ -278,16 +278,16 @@ img.avatar {
 
 ```css
 .button {
-	position: relative;
+    position: relative;
 }
 
 .button::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	margin: auto;
-	width: 16px;
-	height: 16px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 16px;
+    height: 16px;
 }
 ```
 
@@ -297,9 +297,9 @@ img.avatar {
 
 ```css
 .scroll-panel {
-	display: grid;
-	place-items: center;
-	overflow: auto;
+    display: grid;
+    place-items: center;
+    overflow: auto;
 }
 ```
 
@@ -321,30 +321,30 @@ img.avatar {
 6. Loader поверх карточки: `absolute + inset: 0 + margin: auto`.
 
 <OfficialDocsLinks
-	:links="[
-		{
-			title: 'MDN: Center an element',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element',
-		},
-		{
-			title: 'MDN: Aligning items in a flex container',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container',
-		},
-		{
-			title: 'MDN: Box alignment in grid layout',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout',
-		},
-		{ title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
-		{ title: 'MDN: margin', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/margin' },
-	]"
+    :links="[
+        {
+            title: 'MDN: Center an element',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Center_an_element',
+        },
+        {
+            title: 'MDN: Aligning items in a flex container',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container',
+        },
+        {
+            title: 'MDN: Box alignment in grid layout',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout',
+        },
+        { title: 'MDN: position', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/position' },
+        { title: 'MDN: margin', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/margin' },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
-		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
-		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
-	]"
+    :items="[
+        { title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+        { title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+        { title: 'Shadow DOM', href: '/html/shadow-dom' },
+    ]"
 />

@@ -180,7 +180,7 @@ const { data: user } = await useAsyncData('user', () => $fetch('/api/user'), {
 // Vue (CSR, вручную)
 const user = ref<User | null>(null);
 onMounted(async () => {
-	user.value = await api.getUser();
+    user.value = await api.getUser();
 });
 
 // Nuxt (SSR/CSR унифицировано)
@@ -228,9 +228,9 @@ createRouter({ routes: [{ path: "/about", component: About }] });
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+    ]"
 />

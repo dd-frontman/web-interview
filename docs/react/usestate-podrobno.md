@@ -28,14 +28,14 @@ search: false
 import { useState } from "react";
 
 export function BadIf() {
-	const isAdmin = true;
+    const isAdmin = true;
 
-	if (isAdmin) {
-		// ❌ Ошибка: хук внутри if
-		const [count, setCount] = useState(0);
-	}
+    if (isAdmin) {
+        // ❌ Ошибка: хук внутри if
+        const [count, setCount] = useState(0);
+    }
 
-	return <div>...</div>;
+    return <div>...</div>;
 }
 ```
 
@@ -48,10 +48,10 @@ React ожидает, что **каждый рендер вызывает хук
 import { useState } from "react";
 
 export function GoodIf() {
-	const [count, setCount] = useState(0); // всегда вызывается
-	const isAdmin = true;
+    const [count, setCount] = useState(0); // всегда вызывается
+    const isAdmin = true;
 
-	return <div>{isAdmin && <p>Admin count: {count}</p>}</div>;
+    return <div>{isAdmin && <p>Admin count: {count}</p>}</div>;
 }
 ```
 
@@ -63,14 +63,14 @@ export function GoodIf() {
 import { useState } from "react";
 
 export function BadLoop() {
-	const arr = [1, 2, 3];
+    const arr = [1, 2, 3];
 
-	arr.forEach(() => {
-		// ❌ Ошибка: хук внутри цикла
-		const [value, setValue] = useState(0);
-	});
+    arr.forEach(() => {
+        // ❌ Ошибка: хук внутри цикла
+        const [value, setValue] = useState(0);
+    });
 
-	return <div>...</div>;
+    return <div>...</div>;
 }
 ```
 
@@ -80,21 +80,21 @@ export function BadLoop() {
 import { useState } from "react";
 
 export function GoodLoop() {
-	// массив целиком в state
-	const [values, setValues] = useState<number[]>([0, 0, 0]);
+    // массив целиком в state
+    const [values, setValues] = useState<number[]>([0, 0, 0]);
 
-	const increment = (i: number) =>
-		setValues((prev) => prev.map((v, idx) => (idx === i ? v + 1 : v)));
+    const increment = (i: number) =>
+        setValues((prev) => prev.map((v, idx) => (idx === i ? v + 1 : v)));
 
-	return (
-		<div>
-			{values.map((v, i) => (
-				<button key={i} onClick={() => increment(i)}>
-					{v}
-				</button>
-			))}
-		</div>
-	);
+    return (
+        <div>
+            {values.map((v, i) => (
+                <button key={i} onClick={() => increment(i)}>
+                    {v}
+                </button>
+            ))}
+        </div>
+    );
 }
 ```
 
@@ -106,13 +106,13 @@ export function GoodLoop() {
 import { useState } from "react";
 
 export function BadRenderCallback() {
-	const renderItem = () => {
-		// ❌ Ошибка: хук внутри функции, которая вызывается при рендере
-		const [clicked, setClicked] = useState(false);
-		return <button onClick={() => setClicked(true)}>Click</button>;
-	};
+    const renderItem = () => {
+        // ❌ Ошибка: хук внутри функции, которая вызывается при рендере
+        const [clicked, setClicked] = useState(false);
+        return <button onClick={() => setClicked(true)}>Click</button>;
+    };
 
-	return <div>{renderItem()}</div>;
+    return <div>{renderItem()}</div>;
 }
 ```
 
@@ -122,17 +122,17 @@ export function BadRenderCallback() {
 import { useState } from "react";
 
 function ItemButton() {
-	const [clicked, setClicked] = useState(false);
-	return <button onClick={() => setClicked(true)}>{clicked ? "Clicked!" : "Click"}</button>;
+    const [clicked, setClicked] = useState(false);
+    return <button onClick={() => setClicked(true)}>{clicked ? "Clicked!" : "Click"}</button>;
 }
 
 export function GoodRenderCallback() {
-	return (
-		<div>
-			<ItemButton />
-			<ItemButton />
-		</div>
-	);
+    return (
+        <div>
+            <ItemButton />
+            <ItemButton />
+        </div>
+    );
 }
 ```
 
@@ -213,23 +213,23 @@ export function GoodRenderCallback() {
 import { useState } from "react";
 
 export function Counter() {
-	const [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState<number>(0);
 
-	// три раза подряд корректно увеличит на +3
-	const inc3 = () => {
-		setCount((p) => p + 1);
-		setCount((p) => p + 1);
-		setCount((p) => p + 1);
-	};
+    // три раза подряд корректно увеличит на +3
+    const inc3 = () => {
+        setCount((p) => p + 1);
+        setCount((p) => p + 1);
+        setCount((p) => p + 1);
+    };
 
-	return (
-		<div>
-			<p>Count: {count}</p>
-			<button onClick={() => setCount((p) => p + 1)}>+1</button>
-			<button onClick={inc3}>+3 (batched)</button>
-			<button onClick={() => setCount(0)}>Reset</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount((p) => p + 1)}>+1</button>
+            <button onClick={inc3}>+3 (batched)</button>
+            <button onClick={() => setCount(0)}>Reset</button>
+        </div>
+    );
 }
 ```
 
@@ -239,22 +239,22 @@ export function Counter() {
 type User = { id: string; name: string; city?: string };
 
 export function ProfileCard() {
-	const [user, setUser] = useState<User>({ id: "u1", name: "Neo", city: "Seoul" });
+    const [user, setUser] = useState<User>({ id: "u1", name: "Neo", city: "Seoul" });
 
-	const rename = (name: string) => {
-		// ❌ Плохо: user.name = name; setUser(user)
-		// ✅ Хорошо:
-		setUser((prev) => ({ ...prev, name }));
-	};
+    const rename = (name: string) => {
+        // ❌ Плохо: user.name = name; setUser(user)
+        // ✅ Хорошо:
+        setUser((prev) => ({ ...prev, name }));
+    };
 
-	return (
-		<div>
-			<p>
-				{user.name} — {user.city}
-			</p>
-			<button onClick={() => rename("Trinity")}>Rename</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>
+                {user.name} — {user.city}
+            </p>
+            <button onClick={() => rename("Trinity")}>Rename</button>
+        </div>
+    );
 }
 ```
 
@@ -264,32 +264,32 @@ export function ProfileCard() {
 type Todo = { id: string; title: string; done: boolean };
 
 export function Todos() {
-	const [list, setList] = useState<Todo[]>([{ id: "1", title: "Learn useState", done: false }]);
+    const [list, setList] = useState<Todo[]>([{ id: "1", title: "Learn useState", done: false }]);
 
-	const add = (title: string) =>
-		setList((prev) => [...prev, { id: crypto.randomUUID(), title, done: false }]);
+    const add = (title: string) =>
+        setList((prev) => [...prev, { id: crypto.randomUUID(), title, done: false }]);
 
-	const toggle = (id: string) =>
-		setList((prev) => prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
+    const toggle = (id: string) =>
+        setList((prev) => prev.map((t) => (t.id === id ? { ...t, done: !t.done } : t)));
 
-	const remove = (id: string) => setList((prev) => prev.filter((t) => t.id !== id));
+    const remove = (id: string) => setList((prev) => prev.filter((t) => t.id !== id));
 
-	return (
-		<div>
-			<button onClick={() => add("New task")}>Add</button>
-			<ul>
-				{list.map((t) => (
-					<li key={t.id}>
-						<label>
-							<input type="checkbox" checked={t.done} onChange={() => toggle(t.id)} />
-							{t.title}
-						</label>
-						<button onClick={() => remove(t.id)}>×</button>
-					</li>
-				))}
-			</ul>
-		</div>
-	);
+    return (
+        <div>
+            <button onClick={() => add("New task")}>Add</button>
+            <ul>
+                {list.map((t) => (
+                    <li key={t.id}>
+                        <label>
+                            <input type="checkbox" checked={t.done} onChange={() => toggle(t.id)} />
+                            {t.title}
+                        </label>
+                        <button onClick={() => remove(t.id)}>×</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 ```
 
@@ -297,24 +297,24 @@ export function Todos() {
 
 ```tsx
 function heavyCompute(): number {
-	// имитация затратной логики
-	let sum = 0;
-	for (let i = 0; i < 1_000_000; i++) sum += i;
-	return sum;
+    // имитация затратной логики
+    let sum = 0;
+    for (let i = 0; i < 1_000_000; i++) sum += i;
+    return sum;
 }
 
 export function Dashboard() {
-	const [base, setBase] = useState<number>(() => heavyCompute()); // вызовется один раз
-	const [mult, setMult] = useState<number>(1);
+    const [base, setBase] = useState<number>(() => heavyCompute()); // вызовется один раз
+    const [mult, setMult] = useState<number>(1);
 
-	return (
-		<div>
-			<p>Base: {base}</p>
-			<p>Result: {base * mult}</p>
-			<button onClick={() => setMult((p) => p + 1)}>×++</button>
-			<button onClick={() => setBase(() => heavyCompute())}>Recompute</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>Base: {base}</p>
+            <p>Result: {base * mult}</p>
+            <button onClick={() => setMult((p) => p + 1)}>×++</button>
+            <button onClick={() => setBase(() => heavyCompute())}>Recompute</button>
+        </div>
+    );
 }
 ```
 
@@ -322,20 +322,20 @@ export function Dashboard() {
 
 ```tsx
 export function Timer() {
-	const [sec, setSec] = useState(0);
+    const [sec, setSec] = useState(0);
 
-	// ❌ Плохо: захватывает sec = 0 навсегда
-	// setTimeout(() => setSec(sec + 1), 1000);
+    // ❌ Плохо: захватывает sec = 0 навсегда
+    // setTimeout(() => setSec(sec + 1), 1000);
 
-	// ✅ Хорошо: опираемся на предыдущее значение
-	const tick = () => setSec((p) => p + 1);
+    // ✅ Хорошо: опираемся на предыдущее значение
+    const tick = () => setSec((p) => p + 1);
 
-	React.useEffect(() => {
-		const id = setInterval(tick, 1000);
-		return () => clearInterval(id);
-	}, []); // tick использует функциональный апдейтер → зависимость не нужна
+    React.useEffect(() => {
+        const id = setInterval(tick, 1000);
+        return () => clearInterval(id);
+    }, []); // tick использует функциональный апдейтер → зависимость не нужна
 
-	return <p>Seconds: {sec}</p>;
+    return <p>Seconds: {sec}</p>;
 }
 ```
 
@@ -343,13 +343,13 @@ export function Timer() {
 
 ```tsx
 export function SearchBox({ query }: { query: string }) {
-	// при смене key — новый инстанс InputWithState, state сбросится
-	return <InputWithState key={query} initial={query} />;
+    // при смене key — новый инстанс InputWithState, state сбросится
+    return <InputWithState key={query} initial={query} />;
 }
 
 function InputWithState({ initial }: { initial: string }) {
-	const [value, setValue] = useState(initial);
-	return <input value={value} onChange={(e) => setValue(e.target.value)} />;
+    const [value, setValue] = useState(initial);
+    return <input value={value} onChange={(e) => setValue(e.target.value)} />;
 }
 ```
 
@@ -390,17 +390,17 @@ const [mode, setMode] = useState<Mode>("view");
 import { ref } from "vue";
 const count = ref(0);
 const inc3 = () => {
-	count.value++;
-	count.value++;
-	count.value++;
+    count.value++;
+    count.value++;
+    count.value++;
 };
 </script>
 
 <template>
-	<p>Count: {{ count }}</p>
-	<button @click="count++">+1</button>
-	<button @click="inc3">+3</button>
-	<button @click="count = 0">Reset</button>
+    <p>Count: {{ count }}</p>
+    <button @click="count++">+1</button>
+    <button @click="inc3">+3</button>
+    <button @click="count = 0">Reset</button>
 </template>
 ```
 
@@ -428,9 +428,9 @@ const inc3 = () => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'React', href: '/react/index' },
-		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
-		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
-	]"
+    :items="[
+        { title: 'React', href: '/react/index' },
+        { title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+        { title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+    ]"
 />

@@ -22,9 +22,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
-		{ title: 'Принципы', href: '/oop/printsipy-oop' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Пораждающие паттерны', href: '/oop/porazhdayuschie-patterny' },
+        { title: 'Принципы', href: '/oop/printsipy-oop' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

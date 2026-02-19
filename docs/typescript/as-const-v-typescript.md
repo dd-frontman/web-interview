@@ -22,7 +22,7 @@ updatedAt: "2026-02-16"
 
 ```ts
 const theme = {
-	mode: "dark",
+    mode: "dark",
 };
 
 // theme.mode -> string
@@ -32,7 +32,7 @@ const theme = {
 
 ```ts
 const theme = {
-	mode: "dark",
+    mode: "dark",
 } as const;
 
 // theme.mode -> "dark"
@@ -61,12 +61,12 @@ type Role = (typeof roles)[number];
 
 ```ts
 const loadingState = {
-	status: "loading",
+    status: "loading",
 } as const;
 
 const successState = {
-	status: "success",
-	data: [1, 2, 3],
+    status: "success",
+    data: [1, 2, 3],
 } as const;
 ```
 
@@ -104,13 +104,13 @@ const strictUser = { role: "admin" } as const;
 
 ```ts
 type ApiConfig = {
-	baseUrl: string;
-	retry: number;
+    baseUrl: string;
+    retry: number;
 };
 
 const config = {
-	baseUrl: "https://api.example.com",
-	retry: 3,
+    baseUrl: "https://api.example.com",
+    retry: 3,
 } as const satisfies ApiConfig;
 ```
 
@@ -124,9 +124,9 @@ const config = {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
-		{ title: 'TypeScript', href: '/typescript/index' },
-		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
-	]"
+    :items="[
+        { title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+        { title: 'TypeScript', href: '/typescript/index' },
+        { title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+    ]"
 />

@@ -24,7 +24,7 @@ HTML:
 
 ```html
 <div id="parent">
-	<button id="child">Click me</button>
+    <button id="child">Click me</button>
 </div>
 ```
 
@@ -85,7 +85,7 @@ JavaScript позволяет **остановить дальнейшее всп
 
 ```html
 <div @click="onParentClick">
-	<button @click="onChildClick">Click me</button>
+    <button @click="onChildClick">Click me</button>
 </div>
 ```
 
@@ -121,9 +121,9 @@ JavaScript позволяет **остановить дальнейшее всп
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-		{ title: 'JSON и его альтернативы', href: '/javascript/json-i-ego-alternativy' },
-	]"
+    :items="[
+        { title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+        { title: 'JSON и его альтернативы', href: '/javascript/json-i-ego-alternativy' },
+    ]"
 />

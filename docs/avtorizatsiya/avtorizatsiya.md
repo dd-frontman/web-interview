@@ -50,9 +50,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
-		{ title: 'JWT', href: '/avtorizatsiya/jwt' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
+        { title: 'JWT', href: '/avtorizatsiya/jwt' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

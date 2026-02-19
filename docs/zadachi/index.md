@@ -22,9 +22,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: '1 этап', href: '/zadachi/yandeks/1-etap' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: '1 этап', href: '/zadachi/yandeks/1-etap' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

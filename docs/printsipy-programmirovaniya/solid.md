@@ -22,25 +22,25 @@ updatedAt: "2026-02-16"
 
 ```javascript
 class User {
-	constructor(name, email) {
-		this.name = name;
-		this.email = email;
-	}
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
 
-	// Отвечает за данные пользователя
-	save() {
-		// Логика сохранения в базу данных
-	}
+    // Отвечает за данные пользователя
+    save() {
+        // Логика сохранения в базу данных
+    }
 
-	// Отвечает за валидацию
-	validateEmail() {
-		return this.email.includes("@");
-	}
+    // Отвечает за валидацию
+    validateEmail() {
+        return this.email.includes("@");
+    }
 
-	// Отвечает за отправку уведомлений
-	sendEmail(subject, body) {
-		// Логика отправки email
-	}
+    // Отвечает за отправку уведомлений
+    sendEmail(subject, body) {
+        // Логика отправки email
+    }
 }
 ```
 
@@ -48,40 +48,40 @@ class User {
 
 ```javascript
 class User {
-	constructor(name, email) {
-		this.name = name;
-		this.email = email;
-	}
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
 
-	getName() {
-		return this.name;
-	}
+    getName() {
+        return this.name;
+    }
 
-	getEmail() {
-		return this.email;
-	}
+    getEmail() {
+        return this.email;
+    }
 }
 
 class UserRepository {
-	save(user) {
-		// Логика сохранения в базу данных
-	}
+    save(user) {
+        // Логика сохранения в базу данных
+    }
 
-	findById(id) {
-		// Логика поиска пользователя
-	}
+    findById(id) {
+        // Логика поиска пользователя
+    }
 }
 
 class EmailValidator {
-	static isValid(email) {
-		return email.includes("@") && email.includes(".");
-	}
+    static isValid(email) {
+        return email.includes("@") && email.includes(".");
+    }
 }
 
 class EmailService {
-	sendEmail(to, subject, body) {
-		// Логика отправки email
-	}
+    sendEmail(to, subject, body) {
+        // Логика отправки email
+    }
 }
 ```
 
@@ -101,30 +101,30 @@ class EmailService {
 
 ```javascript
 class PaymentProcessor {
-	processPayment(paymentType, amount) {
-		if (paymentType === "credit") {
-			// Логика для кредитной карты
-			return this.processCreditCard(amount);
-		} else if (paymentType === "debit") {
-			// Логика для дебетовой карты
-			return this.processDebitCard(amount);
-		} else if (paymentType === "crypto") {
-			// Логика для криптовалюты
-			return this.processCrypto(amount);
-		}
-	}
+    processPayment(paymentType, amount) {
+        if (paymentType === "credit") {
+            // Логика для кредитной карты
+            return this.processCreditCard(amount);
+        } else if (paymentType === "debit") {
+            // Логика для дебетовой карты
+            return this.processDebitCard(amount);
+        } else if (paymentType === "crypto") {
+            // Логика для криптовалюты
+            return this.processCrypto(amount);
+        }
+    }
 
-	processCreditCard(amount) {
-		// Логика обработки кредитной карты
-	}
+    processCreditCard(amount) {
+        // Логика обработки кредитной карты
+    }
 
-	processDebitCard(amount) {
-		// Логика обработки дебетовой карты
-	}
+    processDebitCard(amount) {
+        // Логика обработки дебетовой карты
+    }
 
-	processCrypto(amount) {
-		// Логика обработки криптовалюты
-	}
+    processCrypto(amount) {
+        // Логика обработки криптовалюты
+    }
 }
 ```
 
@@ -132,36 +132,36 @@ class PaymentProcessor {
 
 ```javascript
 class PaymentProcessor {
-	processPayment(paymentMethod, amount) {
-		return paymentMethod.process(amount);
-	}
+    processPayment(paymentMethod, amount) {
+        return paymentMethod.process(amount);
+    }
 }
 
 class PaymentMethod {
-	process(amount) {
-		throw new Error("process method must be implemented");
-	}
+    process(amount) {
+        throw new Error("process method must be implemented");
+    }
 }
 
 class CreditCardPayment extends PaymentMethod {
-	process(amount) {
-		// Логика обработки кредитной карты
-		return `Credit card payment processed: $${amount}`;
-	}
+    process(amount) {
+        // Логика обработки кредитной карты
+        return `Credit card payment processed: $${amount}`;
+    }
 }
 
 class DebitCardPayment extends PaymentMethod {
-	process(amount) {
-		// Логика обработки дебетовой карты
-		return `Debit card payment processed: $${amount}`;
-	}
+    process(amount) {
+        // Логика обработки дебетовой карты
+        return `Debit card payment processed: $${amount}`;
+    }
 }
 
 class CryptoPayment extends PaymentMethod {
-	process(amount) {
-		// Логика обработки криптовалюты
-		return `Crypto payment processed: $${amount}`;
-	}
+    process(amount) {
+        // Логика обработки криптовалюты
+        return `Crypto payment processed: $${amount}`;
+    }
 }
 
 // Использование
@@ -186,45 +186,45 @@ const result = processor.processPayment(creditPayment, 100);
 
 ```javascript
 class Rectangle {
-	constructor(width, height) {
-		this.width = width;
-		this.height = height;
-	}
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
 
-	getArea() {
-		return this.width * this.height;
-	}
+    getArea() {
+        return this.width * this.height;
+    }
 
-	setWidth(width) {
-		this.width = width;
-	}
+    setWidth(width) {
+        this.width = width;
+    }
 
-	setHeight(height) {
-		this.height = height;
-	}
+    setHeight(height) {
+        this.height = height;
+    }
 }
 
 class Square extends Rectangle {
-	constructor(side) {
-		super(side, side);
-	}
+    constructor(side) {
+        super(side, side);
+    }
 
-	setWidth(width) {
-		this.width = width;
-		this.height = width; // Нарушает принцип!
-	}
+    setWidth(width) {
+        this.width = width;
+        this.height = width; // Нарушает принцип!
+    }
 
-	setHeight(height) {
-		this.width = height; // Нарушает принцип!
-		this.height = height;
-	}
+    setHeight(height) {
+        this.width = height; // Нарушает принцип!
+        this.height = height;
+    }
 }
 
 // Проблема: Square не может заменить Rectangle
 function testArea(rectangle) {
-	rectangle.setWidth(5);
-	rectangle.setHeight(4);
-	console.log(`Expected: 20, Got: ${rectangle.getArea()}`);
+    rectangle.setWidth(5);
+    rectangle.setHeight(4);
+    console.log(`Expected: 20, Got: ${rectangle.getArea()}`);
 }
 
 testArea(new Rectangle(5, 4)); // Expected: 20, Got: 20
@@ -235,49 +235,49 @@ testArea(new Square(5)); // Expected: 20, Got: 25 (нарушение!)
 
 ```javascript
 class Shape {
-	getArea() {
-		throw new Error("getArea method must be implemented");
-	}
+    getArea() {
+        throw new Error("getArea method must be implemented");
+    }
 }
 
 class Rectangle extends Shape {
-	constructor(width, height) {
-		super();
-		this.width = width;
-		this.height = height;
-	}
+    constructor(width, height) {
+        super();
+        this.width = width;
+        this.height = height;
+    }
 
-	getArea() {
-		return this.width * this.height;
-	}
+    getArea() {
+        return this.width * this.height;
+    }
 
-	setWidth(width) {
-		this.width = width;
-	}
+    setWidth(width) {
+        this.width = width;
+    }
 
-	setHeight(height) {
-		this.height = height;
-	}
+    setHeight(height) {
+        this.height = height;
+    }
 }
 
 class Square extends Shape {
-	constructor(side) {
-		super();
-		this.side = side;
-	}
+    constructor(side) {
+        super();
+        this.side = side;
+    }
 
-	getArea() {
-		return this.side * this.side;
-	}
+    getArea() {
+        return this.side * this.side;
+    }
 
-	setSide(side) {
-		this.side = side;
-	}
+    setSide(side) {
+        this.side = side;
+    }
 }
 
 // Теперь Square и Rectangle могут использоваться взаимозаменяемо
 function testArea(shape) {
-	console.log(`Area: ${shape.getArea()}`);
+    console.log(`Area: ${shape.getArea()}`);
 }
 
 testArea(new Rectangle(5, 4)); // Area: 20
@@ -300,33 +300,33 @@ testArea(new Square(5)); // Area: 25
 
 ```javascript
 class Worker {
-	work() {
-		// Работа
-	}
+    work() {
+        // Работа
+    }
 
-	eat() {
-		// Еда
-	}
+    eat() {
+        // Еда
+    }
 
-	sleep() {
-		// Сон
-	}
+    sleep() {
+        // Сон
+    }
 }
 
 class Robot extends Worker {
-	work() {
-		// Робот может работать
-	}
+    work() {
+        // Робот может работать
+    }
 
-	eat() {
-		// Робот не ест!
-		throw new Error("Robots don't eat");
-	}
+    eat() {
+        // Робот не ест!
+        throw new Error("Robots don't eat");
+    }
 
-	sleep() {
-		// Робот не спит!
-		throw new Error("Robots don't sleep");
-	}
+    sleep() {
+        // Робот не спит!
+        throw new Error("Robots don't sleep");
+    }
 }
 ```
 
@@ -402,20 +402,20 @@ makeEat(new Human()); // "Human is eating"
 
 ```javascript
 class EmailNotifier {
-	sendEmail(message) {
-		console.log(`Sending email: ${message}`);
-	}
+    sendEmail(message) {
+        console.log(`Sending email: ${message}`);
+    }
 }
 
 class UserService {
-	constructor() {
-		this.notifier = new EmailNotifier(); // Жесткая зависимость
-	}
+    constructor() {
+        this.notifier = new EmailNotifier(); // Жесткая зависимость
+    }
 
-	createUser(userData) {
-		// Логика создания пользователя
-		this.notifier.sendEmail("User created successfully");
-	}
+    createUser(userData) {
+        // Логика создания пользователя
+        this.notifier.sendEmail("User created successfully");
+    }
 }
 ```
 
@@ -423,32 +423,32 @@ class UserService {
 
 ```javascript
 class Notifier {
-	notify(message) {
-		throw new Error("notify method must be implemented");
-	}
+    notify(message) {
+        throw new Error("notify method must be implemented");
+    }
 }
 
 class EmailNotifier extends Notifier {
-	notify(message) {
-		console.log(`Sending email: ${message}`);
-	}
+    notify(message) {
+        console.log(`Sending email: ${message}`);
+    }
 }
 
 class SMSNotifier extends Notifier {
-	notify(message) {
-		console.log(`Sending SMS: ${message}`);
-	}
+    notify(message) {
+        console.log(`Sending SMS: ${message}`);
+    }
 }
 
 class UserService {
-	constructor(notifier) {
-		this.notifier = notifier; // Зависимость через абстракцию
-	}
+    constructor(notifier) {
+        this.notifier = notifier; // Зависимость через абстракцию
+    }
 
-	createUser(userData) {
-		// Логика создания пользователя
-		this.notifier.notify("User created successfully");
-	}
+    createUser(userData) {
+        // Логика создания пользователя
+        this.notifier.notify("User created successfully");
+    }
 }
 
 // Использование
@@ -474,22 +474,22 @@ userServiceWithSMS.createUser({ name: "Jane" });
 
 ```typescript
 interface PaymentMethod {
-	process(amount: number): string;
+    process(amount: number): string;
 }
 
 interface UserRepository {
-	save(user: User): Promise<void>;
-	findById(id: string): Promise<User | null>;
+    save(user: User): Promise<void>;
+    findById(id: string): Promise<User | null>;
 }
 
 class UserService {
-	constructor(private userRepo: UserRepository) {}
+    constructor(private userRepo: UserRepository) {}
 
-	async createUser(userData: UserData): Promise<User> {
-		const user = new User(userData);
-		await this.userRepo.save(user);
-		return user;
-	}
+    async createUser(userData: UserData): Promise<User> {
+        const user = new User(userData);
+        await this.userRepo.save(user);
+        return user;
+    }
 }
 ```
 
@@ -497,15 +497,15 @@ class UserService {
 
 ```typescript
 class Container {
-	private services = new Map();
+    private services = new Map();
 
-	register(key: string, implementation: any) {
-		this.services.set(key, implementation);
-	}
+    register(key: string, implementation: any) {
+        this.services.set(key, implementation);
+    }
 
-	resolve(key: string) {
-		return this.services.get(key);
-	}
+    resolve(key: string) {
+        return this.services.get(key);
+    }
 }
 
 const container = new Container();
@@ -550,11 +550,11 @@ container.register("UserService", new UserService(container.resolve("UserReposit
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
-		{ title: 'React на примере Vue', href: '/react/react-na-primere-vue' },
-		{ title: 'Vue.md', href: '/vue' },
-		{ title: 'Принципы', href: '/oop/printsipy-oop' },
-		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
-	]"
+    :items="[
+        { title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+        { title: 'React на примере Vue', href: '/react/react-na-primere-vue' },
+        { title: 'Vue.md', href: '/vue' },
+        { title: 'Принципы', href: '/oop/printsipy-oop' },
+        { title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+    ]"
 />

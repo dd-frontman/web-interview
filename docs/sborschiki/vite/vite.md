@@ -328,9 +328,9 @@ Vite использует esbuild для этой задачи, что даёт 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-	]"
+    :items="[
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+        { title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+    ]"
 />

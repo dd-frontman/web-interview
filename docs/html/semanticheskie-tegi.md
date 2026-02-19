@@ -66,126 +66,126 @@ updatedAt: "2026-02-16"
 ```html
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Пример семантической HTML-страницы</title>
-	</head>
-	<body>
-		<!-- Шапка сайта -->
-		<header>
-			<h1>Название сайта</h1>
-			<nav>
-				<ul>
-					<li><a href="#home">Главная</a></li>
-					<li><a href="#articles">Статьи</a></li>
-					<li><a href="#gallery">Галерея</a></li>
-					<li><a href="#contact">Контакты</a></li>
-				</ul>
-			</nav>
-		</header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Пример семантической HTML-страницы</title>
+    </head>
+    <body>
+        <!-- Шапка сайта -->
+        <header>
+            <h1>Название сайта</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#articles">Статьи</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
 
-		<!-- Основной контент -->
-		<main>
-			<!-- Раздел с article -->
-			<section id="articles">
-				<article>
-					<header>
-						<h2>Как использовать семантические теги</h2>
-						<p>Опубликовано: <time datetime="2026-01-03">3 января 2026</time></p>
-					</header>
-					<figure>
-						<img src="example.jpg" alt="Иллюстрация семантики HTML" />
-						<figcaption>Схема семантических тегов</figcaption>
-					</figure>
-					<p>Семантические теги улучшают доступность и SEO.</p>
-					<section>
-						<h3>Преимущества</h3>
-						<ul>
-							<li>Понятная структура</li>
-							<li>Ассистивные технологии видят смысл</li>
-							<li>Поисковики лучше индексируют контент</li>
-						</ul>
-					</section>
-					<footer>Автор: <cite>Frontend Guru</cite></footer>
-				</article>
+        <!-- Основной контент -->
+        <main>
+            <!-- Раздел с article -->
+            <section id="articles">
+                <article>
+                    <header>
+                        <h2>Как использовать семантические теги</h2>
+                        <p>Опубликовано: <time datetime="2026-01-03">3 января 2026</time></p>
+                    </header>
+                    <figure>
+                        <img src="example.jpg" alt="Иллюстрация семантики HTML" />
+                        <figcaption>Схема семантических тегов</figcaption>
+                    </figure>
+                    <p>Семантические теги улучшают доступность и SEO.</p>
+                    <section>
+                        <h3>Преимущества</h3>
+                        <ul>
+                            <li>Понятная структура</li>
+                            <li>Ассистивные технологии видят смысл</li>
+                            <li>Поисковики лучше индексируют контент</li>
+                        </ul>
+                    </section>
+                    <footer>Автор: <cite>Frontend Guru</cite></footer>
+                </article>
 
-				<!-- FAQ блок с <details> -->
-				<section>
-					<h2>Часто задаваемые вопросы</h2>
-					<details>
-						<summary>Что такое семантические теги?</summary>
-						<p>Семантические теги дают браузеру/роботам понять смысл содержимого.</p>
-					</details>
-					<details>
-						<summary>Зачем использовать &lt;nav&gt;?</summary>
-						<p>Чтобы отделить навигацию от остального контента и помочь ориентироваться.</p>
-					</details>
-				</section>
-			</section>
+                <!-- FAQ блок с <details> -->
+                <section>
+                    <h2>Часто задаваемые вопросы</h2>
+                    <details>
+                        <summary>Что такое семантические теги?</summary>
+                        <p>Семантические теги дают браузеру/роботам понять смысл содержимого.</p>
+                    </details>
+                    <details>
+                        <summary>Зачем использовать &lt;nav&gt;?</summary>
+                        <p>Чтобы отделить навигацию от остального контента и помочь ориентироваться.</p>
+                    </details>
+                </section>
+            </section>
 
-			<!-- Галерея как таблица -->
-			<section id="gallery">
-				<h2>Галерея примеров</h2>
-				<table>
-					<caption>
-						Примеры семантических элементов
-					</caption>
-					<thead>
-						<tr>
-							<th>Тег</th>
-							<th>Описание</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>&lt;header&gt;</td>
-							<td>Вводная часть страницы/раздела</td>
-						</tr>
-						<tr>
-							<td>&lt;nav&gt;</td>
-							<td>Навигация</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr>
-							<td colspan="2">Таблица примеров</td>
-						</tr>
-					</tfoot>
-				</table>
-			</section>
+            <!-- Галерея как таблица -->
+            <section id="gallery">
+                <h2>Галерея примеров</h2>
+                <table>
+                    <caption>
+                        Примеры семантических элементов
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Тег</th>
+                            <th>Описание</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt;header&gt;</td>
+                            <td>Вводная часть страницы/раздела</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;nav&gt;</td>
+                            <td>Навигация</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Таблица примеров</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
 
-			<!-- Боковая панель -->
-			<aside>
-				<h2>Ссылки по теме</h2>
-				<ul>
-					<li><a href="#articles">Перейти к статьям</a></li>
-					<li><a href="#gallery">Перейти к галерее</a></li>
-				</ul>
-			</aside>
+            <!-- Боковая панель -->
+            <aside>
+                <h2>Ссылки по теме</h2>
+                <ul>
+                    <li><a href="#articles">Перейти к статьям</a></li>
+                    <li><a href="#gallery">Перейти к галерее</a></li>
+                </ul>
+            </aside>
 
-			<!-- Форма обратной связи -->
-			<section id="contact">
-				<h2>Связаться с нами</h2>
-				<form action="#" method="post">
-					<fieldset>
-						<legend>Ваши данные</legend>
-						<label for="name">Имя:</label>
-						<input type="text" id="name" name="name" />
-						<label for="email">Email:</label>
-						<input type="email" id="email" name="email" />
-					</fieldset>
-					<button type="submit">Отправить</button>
-				</form>
-			</section>
-		</main>
+            <!-- Форма обратной связи -->
+            <section id="contact">
+                <h2>Связаться с нами</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Ваши данные</legend>
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" />
+                    </fieldset>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
 
-		<!-- Подвал страницы -->
-		<footer>
-			<p>&copy; 2026 Frontend Community</p>
-			<p>Все права защищены.</p>
-		</footer>
-	</body>
+        <!-- Подвал страницы -->
+        <footer>
+            <p>&copy; 2026 Frontend Community</p>
+            <p>Все права защищены.</p>
+        </footer>
+    </body>
 </html>
 ```
 
@@ -194,9 +194,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Shadow DOM', href: '/html/shadow-dom' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

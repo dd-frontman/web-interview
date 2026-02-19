@@ -33,8 +33,8 @@ updatedAt: "2026-02-16"
 ```tsx
 // SSR: сервер отдаёт <button>Count: 0</button>
 function Counter() {
-	const [count, setCount] = React.useState(0);
-	return <button onClick={() => setCount((c) => c + 1)}>Count: {count}</button>;
+    const [count, setCount] = React.useState(0);
+    return <button onClick={() => setCount((c) => c + 1)}>Count: {count}</button>;
 }
 ```
 
@@ -51,7 +51,7 @@ const count = ref(0);
 </script>
 
 <template>
-	<button @click="count++">Count: {{ count }}</button>
+    <button @click="count++">Count: {{ count }}</button>
 </template>
 ```
 
@@ -98,9 +98,9 @@ const count = ref(0);
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
-	]"
+    :items="[
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+        { title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+    ]"
 />

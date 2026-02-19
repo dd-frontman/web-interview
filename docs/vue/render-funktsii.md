@@ -30,9 +30,9 @@ updatedAt: "2026-02-16"
 import { h } from "vue";
 
 export default {
-	render() {
-		return h("div", "Hello from render function!");
-	},
+    render() {
+        return h("div", "Hello from render function!");
+    },
 };
 ```
 
@@ -40,7 +40,7 @@ export default {
 
 ```html
 <template>
-	<div>Hello from render function!</div>
+    <div>Hello from render function!</div>
 </template>
 ```
 
@@ -82,11 +82,11 @@ export default {
 import { h } from "vue";
 
 export default {
-	props: ["tag"],
-	render() {
-		// можно динамически выбрать, какой HTML создать
-		return h(this.tag, {}, "Dynamic tag!");
-	},
+    props: ["tag"],
+    render() {
+        // можно динамически выбрать, какой HTML создать
+        return h(this.tag, {}, "Dynamic tag!");
+    },
 };
 ```
 
@@ -102,9 +102,9 @@ export default {
 import { h } from "vue";
 
 export default {
-	setup(props) {
-		return () => h("div", props.msg);
-	},
+    setup(props) {
+        return () => h("div", props.msg);
+    },
 };
 ```
 
@@ -132,9 +132,9 @@ Render-функции также можно писать с помощью JSX:
 
 ```js
 export default {
-	render() {
-		return <div>Hello JSX!</div>;
-	},
+    render() {
+        return <div>Hello JSX!</div>;
+    },
 };
 ```
 
@@ -159,9 +159,9 @@ JSX компилируется в вызовы `h()` за кулисами. [vue
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

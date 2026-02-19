@@ -93,9 +93,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
-		{ title: 'NaiveUI', href: '/npm-tools/naiveui' },
-		{ title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
-	]"
+    :items="[
+        { title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+        { title: 'NaiveUI', href: '/npm-tools/naiveui' },
+        { title: 'OpenAPI, Swagger, Protobuf', href: '/npm-tools/openapi-swagger-protobuf' },
+    ]"
 />

@@ -26,10 +26,10 @@ updatedAt: "2026-02-16"
 
 ```tsx
 useEffect(() => {
-	// эффект
-	return () => {
-		// cleanup (отписка, очистка)
-	};
+    // эффект
+    return () => {
+        // cleanup (отписка, очистка)
+    };
 }, [dependencies]);
 ```
 
@@ -46,11 +46,11 @@ useEffect(() => {
 - Если внутри эффекта используется `async/await`, пишем так:
   ```tsx
   useEffect(() => {
-  	async function load() {
-  		const data = await fetchData();
-  		setValue(data);
-  	}
-  	load();
+      async function load() {
+          const data = await fetchData();
+          setValue(data);
+      }
+      load();
   }, []);
   ```
 - Если забыть зависимости → возможны **баги или утечки памяти** (например, старые данные в замыкании).
@@ -67,21 +67,21 @@ useEffect(() => {
 import { useEffect, useState } from "react";
 
 export function Users() {
-	const [users, setUsers] = useState<string[]>([]);
+    const [users, setUsers] = useState<string[]>([]);
 
-	useEffect(() => {
-		fetch("https://jsonplaceholder.typicode.com/users")
-			.then((res) => res.json())
-			.then((data) => setUsers(data.map((u: any) => u.name)));
-	}, []); // [] → только при монтировании
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then((res) => res.json())
+            .then((data) => setUsers(data.map((u: any) => u.name)));
+    }, []); // [] → только при монтировании
 
-	return (
-		<ul>
-			{users.map((u) => (
-				<li key={u}>{u}</li>
-			))}
-		</ul>
-	);
+    return (
+        <ul>
+            {users.map((u) => (
+                <li key={u}>{u}</li>
+            ))}
+        </ul>
+    );
 }
 ```
 
@@ -93,18 +93,18 @@ export function Users() {
 import { useEffect, useState } from "react";
 
 export function WindowWidth() {
-	const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(window.innerWidth);
 
-	useEffect(() => {
-		const handleResize = () => setWidth(window.innerWidth);
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
 
-		window.addEventListener("resize", handleResize);
+        window.addEventListener("resize", handleResize);
 
-		// cleanup: удаляем слушатель при анмаунте
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+        // cleanup: удаляем слушатель при анмаунте
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
-	return <p>Ширина окна: {width}</p>;
+    return <p>Ширина окна: {width}</p>;
 }
 ```
 
@@ -116,17 +116,17 @@ export function WindowWidth() {
 import { useEffect, useState } from "react";
 
 export function Timer() {
-	const [sec, setSec] = useState(0);
+    const [sec, setSec] = useState(0);
 
-	useEffect(() => {
-		const id = setInterval(() => {
-			setSec((p) => p + 1);
-		}, 1000);
+    useEffect(() => {
+        const id = setInterval(() => {
+            setSec((p) => p + 1);
+        }, 1000);
 
-		return () => clearInterval(id); // очистка при анмаунте
-	}, []);
+        return () => clearInterval(id); // очистка при анмаунте
+    }, []);
 
-	return <p>{sec} сек</p>;
+    return <p>{sec} сек</p>;
 }
 ```
 
@@ -138,14 +138,14 @@ export function Timer() {
 import { useEffect, useState } from "react";
 
 export function Search({ query }: { query: string }) {
-	const [result, setResult] = useState("");
+    const [result, setResult] = useState("");
 
-	useEffect(() => {
-		if (!query) return;
-		setResult("Поиск: " + query);
-	}, [query]); // эффект запускается при изменении query
+    useEffect(() => {
+        if (!query) return;
+        setResult("Поиск: " + query);
+    }, [query]); // эффект запускается при изменении query
 
-	return <p>{result}</p>;
+    return <p>{result}</p>;
 }
 ```
 
@@ -187,9 +187,9 @@ export function Search({ query }: { query: string }) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
-		{ title: 'useContext', href: '/react/khuki/usecontext' },
-		{ title: 'useState', href: '/react/khuki/usestate' },
-	]"
+    :items="[
+        { title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+        { title: 'useContext', href: '/react/khuki/usecontext' },
+        { title: 'useState', href: '/react/khuki/usestate' },
+    ]"
 />

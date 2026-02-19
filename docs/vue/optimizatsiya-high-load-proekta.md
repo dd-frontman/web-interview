@@ -72,7 +72,7 @@ import { markRaw, reactive } from "vue";
 const socket = markRaw(new WebSocket("ws://..."));
 
 const state = reactive({
-	conn: socket,
+    conn: socket,
 });
 ```
 
@@ -107,12 +107,12 @@ const state = reactive({
 
 ```vue
 <tbody>
-	<RowItem
-		v-for="row in rows"
-		:key="row.id"
-		:data="row"
-		:selected="row.id === selectedId"
-	/>
+    <RowItem
+        v-for="row in rows"
+        :key="row.id"
+        :data="row"
+        :selected="row.id === selectedId"
+    />
 </tbody>
 ```
 
@@ -152,7 +152,7 @@ const state = reactive({
 import { debounce } from "lodash-es";
 
 const search = debounce(async (q) => {
-	await fetchData(q);
+    await fetchData(q);
 }, 400);
 ```
 
@@ -189,9 +189,9 @@ npm i -D rollup-plugin-visualizer
 import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
-	plugins: [
-		visualizer({ open: true }), // откроет html в браузере после сборки
-	],
+    plugins: [
+        visualizer({ open: true }), // откроет html в браузере после сборки
+    ],
 });
 ```
 
@@ -258,9 +258,9 @@ export default defineConfig({
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

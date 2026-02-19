@@ -44,8 +44,8 @@ indicator.textContent = `${h}px`;
 panel.classList.add("expanded");
 
 requestAnimationFrame(() => {
-	const h = panel.getBoundingClientRect().height;
-	indicator.textContent = `${h}px`;
+    const h = panel.getBoundingClientRect().height;
+    indicator.textContent = `${h}px`;
 });
 ```
 
@@ -65,8 +65,8 @@ requestAnimationFrame(() => {
 
 ```js
 button.addEventListener("click", () => {
-	heavySyncWork(); // 120ms
-	openPanel();
+    heavySyncWork(); // 120ms
+    openPanel();
 });
 ```
 
@@ -74,12 +74,12 @@ button.addEventListener("click", () => {
 
 ```js
 button.addEventListener("click", async () => {
-	openPanel(); // мгновенный визуальный фидбек
+    openPanel(); // мгновенный визуальный фидбек
 
-	for (const chunk of chunks) {
-		processChunk(chunk);
-		await new Promise((r) => setTimeout(r, 0)); // yield
-	}
+    for (const chunk of chunks) {
+        processChunk(chunk);
+        await new Promise((r) => setTimeout(r, 0)); // yield
+    }
 });
 ```
 
@@ -109,9 +109,9 @@ button.addEventListener("click", async () => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'Reflow, Repaint, Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
-		{ title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
-	]"
+    :items="[
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'Reflow, Repaint, Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+        { title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
+    ]"
 />

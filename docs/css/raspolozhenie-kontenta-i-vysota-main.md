@@ -20,22 +20,22 @@ updatedAt: "2026-02-16"
 
 ```html
 <body class="page">
-	<header>Header</header>
-	<main>Main content</main>
-	<footer>Footer</footer>
+    <header>Header</header>
+    <main>Main content</main>
+    <footer>Footer</footer>
 </body>
 ```
 
 ```css
 .page {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
 }
 
 main {
-	flex: 1;
+    flex: 1;
 }
 ```
 
@@ -49,10 +49,10 @@ main {
 
 ```css
 .page {
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: auto 1fr auto; /* header / main / footer */
-	margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header / main / footer */
+    margin: 0;
 }
 ```
 
@@ -66,8 +66,8 @@ main {
 
 ```css
 .page {
-	min-height: 100vh; /* fallback */
-	min-height: 100dvh; /* dynamic viewport height */
+    min-height: 100vh; /* fallback */
+    min-height: 100dvh; /* dynamic viewport height */
 }
 ```
 
@@ -89,8 +89,8 @@ main {
 
 ```css
 .page {
-	min-height: 100vh; /* fallback */
-	min-height: 100dvh; /* основной вариант на мобильных */
+    min-height: 100vh; /* fallback */
+    min-height: 100dvh; /* основной вариант на мобильных */
 }
 ```
 
@@ -100,13 +100,13 @@ main {
 
 ```css
 main {
-	flex: 1;
-	min-height: 0; /* критично для внутренних scroll-зон */
+    flex: 1;
+    min-height: 0; /* критично для внутренних scroll-зон */
 }
 
 .content-scroll {
-	height: 100%;
-	overflow: auto;
+    height: 100%;
+    overflow: auto;
 }
 ```
 
@@ -118,13 +118,13 @@ main {
 
 ```css
 header {
-	position: fixed;
-	inset: 0 0 auto 0;
-	height: 64px;
+    position: fixed;
+    inset: 0 0 auto 0;
+    height: 64px;
 }
 
 main {
-	padding-top: 64px; /* компенсация высоты шапки */
+    padding-top: 64px; /* компенсация высоты шапки */
 }
 ```
 
@@ -141,7 +141,7 @@ main {
 ```css
 html,
 body {
-	height: 100%;
+    height: 100%;
 }
 ```
 
@@ -159,7 +159,7 @@ body {
 
 ```css
 body {
-	margin: 0;
+    margin: 0;
 }
 ```
 
@@ -182,7 +182,7 @@ body {
 
 ```css
 footer {
-	padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
 }
 ```
 
@@ -191,43 +191,43 @@ footer {
 ```css
 html,
 body {
-	margin: 0;
+    margin: 0;
 }
 
 body {
-	min-height: 100vh;
-	min-height: 100dvh;
-	display: flex;
-	flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
-	flex: 1;
-	min-height: 0;
+    flex: 1;
+    min-height: 0;
 }
 ```
 
 Этот шаблон покрывает большую часть проектов.
 
 <OfficialDocsLinks
-	:links="[
-		{ title: 'MDN: min-height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/min-height' },
-		{ title: 'MDN: height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/height' },
-		{
-			title: 'MDN: Layout cookbook - Sticky footers',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers',
-		},
-		{ title: 'MDN: Flexbox', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout' },
-		{ title: 'MDN: Grid layout', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout' },
-	]"
+    :links="[
+        { title: 'MDN: min-height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/min-height' },
+        { title: 'MDN: height', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/height' },
+        {
+            title: 'MDN: Layout cookbook - Sticky footers',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook/Sticky_footers',
+        },
+        { title: 'MDN: Flexbox', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout' },
+        { title: 'MDN: Grid layout', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout' },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
-		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
-		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
-	]"
+    :items="[
+        { title: 'Центрирование в CSS', href: '/css/tsentrirovanie-v-css' },
+        { title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+        { title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+    ]"
 />

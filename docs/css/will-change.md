@@ -14,7 +14,7 @@ updatedAt: "2026-02-16"
 
 ```css
 .card {
-	will-change: transform;
+    will-change: transform;
 }
 ```
 
@@ -39,21 +39,21 @@ updatedAt: "2026-02-16"
 const el = document.querySelector(".panel");
 
 function startAnimation() {
-	el.style.willChange = "transform, opacity";
-	requestAnimationFrame(() => {
-		el.classList.add("panel--open");
-	});
+    el.style.willChange = "transform, opacity";
+    requestAnimationFrame(() => {
+        el.classList.add("panel--open");
+    });
 }
 
 function endAnimation() {
-	el.classList.remove("panel--open");
-	el.addEventListener(
-		"transitionend",
-		() => {
-			el.style.willChange = "auto";
-		},
-		{ once: true }
-	);
+    el.classList.remove("panel--open");
+    el.addEventListener(
+        "transitionend",
+        () => {
+            el.style.willChange = "auto";
+        },
+        { once: true }
+    );
 }
 ```
 
@@ -70,17 +70,17 @@ function endAnimation() {
 Это самые безопасные кандидаты для анимаций в UI.
 
 <OfficialDocsLinks
-	:links="[
-		{ title: 'MDN: will-change', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/will-change' },
-	]"
+    :links="[
+        { title: 'MDN: will-change', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/will-change' },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
-		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
-		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-	]"
+    :items="[
+        { title: 'z-index и stacking context', href: '/css/z-index-i-stacking-context' },
+        { title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+        { title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+    ]"
 />

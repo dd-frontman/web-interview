@@ -45,12 +45,12 @@ Frontend обычно:
 
 ```ts
 await fetch("/api/orders", {
-	method: "POST",
-	headers: {
-		"content-type": "application/json",
-		traceparent: "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
-	},
-	body: JSON.stringify({ productId: "p-1" }),
+    method: "POST",
+    headers: {
+        "content-type": "application/json",
+        traceparent: "00-4bf92f3577b34da6a3ce929d0e0e4736-00f067aa0ba902b7-01",
+    },
+    body: JSON.stringify({ productId: "p-1" }),
 });
 ```
 
@@ -82,9 +82,9 @@ await fetch("/api/orders", {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
-		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+        { title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+    ]"
 />

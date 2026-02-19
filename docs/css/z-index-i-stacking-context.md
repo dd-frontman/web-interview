@@ -34,25 +34,25 @@ Stacking context — это "локальный слой", внутри кото
 
 ```html
 <div class="parent">
-	<div class="tooltip">Tooltip</div>
+    <div class="tooltip">Tooltip</div>
 </div>
 <div class="modal">Modal</div>
 ```
 
 ```css
 .parent {
-	position: relative;
-	transform: translateZ(0); /* создает новый stacking context */
+    position: relative;
+    transform: translateZ(0); /* создает новый stacking context */
 }
 
 .tooltip {
-	position: absolute;
-	z-index: 9999;
+    position: absolute;
+    z-index: 9999;
 }
 
 .modal {
-	position: fixed;
-	z-index: 10;
+    position: fixed;
+    z-index: 10;
 }
 ```
 
@@ -66,21 +66,21 @@ Stacking context — это "локальный слой", внутри кото
 4. Проверяйте stacking context в DevTools.
 
 <OfficialDocsLinks
-	:links="[
-		{ title: 'MDN: z-index', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/z-index' },
-		{
-			title: 'MDN: Stacking context',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context',
-		},
-	]"
+    :links="[
+        { title: 'MDN: z-index', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/z-index' },
+        {
+            title: 'MDN: Stacking context',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
-		{ title: 'will-change', href: '/css/will-change' },
-		{ title: 'Shadow DOM', href: '/html/shadow-dom' },
-	]"
+    :items="[
+        { title: 'Позиционирование в CSS', href: '/css/pozitsionirovanie-v-css' },
+        { title: 'will-change', href: '/css/will-change' },
+        { title: 'Shadow DOM', href: '/html/shadow-dom' },
+    ]"
 />

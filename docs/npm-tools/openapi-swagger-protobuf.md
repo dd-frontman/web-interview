@@ -101,45 +101,45 @@ updatedAt: "2026-02-16"
 import axios from "axios";
 
 const api = axios.create({
-	baseURL: "/api/v1",
-	timeout: 10000,
+    baseURL: "/api/v1",
+    timeout: 10000,
 });
 
 // авторизация через токен
 api.interceptors.request.use((config) => {
-	const token = authStore.getToken();
-	if (token) {
-		config.headers["Authorization"] = `Bearer ${token}`;
-	}
-	return config;
+    const token = authStore.getToken();
+    if (token) {
+        config.headers["Authorization"] = `Bearer ${token}`;
+    }
+    return config;
 });
 
 // глобальная обработка ошибок
 api.interceptors.response.use(
-	(response) => response,
-	(error) => {
-		if (error.response) {
-			switch (error.response.status) {
-				case 401:
-					// токен истёк или неавторизован
-					authStore.logout();
-					break;
-				case 403:
-					// нет прав
-					break;
-				case 500:
-					// показать сообщение “Серверная ошибка”
-					break;
-				default:
-					break;
-			}
-		} else if (error.request) {
-			// запрос отправлен, ответа нет
-		} else {
-			// что-то пошло не так в настройке запроса
-		}
-		return Promise.reject(error);
-	}
+    (response) => response,
+    (error) => {
+        if (error.response) {
+            switch (error.response.status) {
+                case 401:
+                    // токен истёк или неавторизован
+                    authStore.logout();
+                    break;
+                case 403:
+                    // нет прав
+                    break;
+                case 500:
+                    // показать сообщение “Серверная ошибка”
+                    break;
+                default:
+                    break;
+            }
+        } else if (error.request) {
+            // запрос отправлен, ответа нет
+        } else {
+            // что-то пошло не так в настройке запроса
+        }
+        return Promise.reject(error);
+    }
 );
 
 export default api;
@@ -150,20 +150,20 @@ export default api;
 
 // React псевдо:
 function useFetchUsers() {
-	const [data, setData] = useState<User[] | null>(null);
-	const [loading, setLoading] = useState(false);
-	const [error, setError] = useState<string | null>(null);
+    const [data, setData] = useState<User[] | null>(null);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
-	useEffect(() => {
-		setLoading(true);
-		api
-			.get("/users")
-			.then((resp) => setData(resp.data))
-			.catch((err) => setError(err.message || "Error"))
-			.finally(() => setLoading(false));
-	}, []); // зависимость, если нужны параметры
+    useEffect(() => {
+        setLoading(true);
+        api
+            .get("/users")
+            .then((resp) => setData(resp.data))
+            .catch((err) => setError(err.message || "Error"))
+            .finally(() => setLoading(false));
+    }, []); // зависимость, если нужны параметры
 
-	return { data, loading, error };
+    return { data, loading, error };
 }
 ```
 
@@ -190,9 +190,9 @@ function useFetchUsers() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
-		{ title: 'NaiveUI', href: '/npm-tools/naiveui' },
-		{ title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
-	]"
+    :items="[
+        { title: 'gRPC и Protobuf', href: '/npm-tools/grpc-i-protobuf' },
+        { title: 'NaiveUI', href: '/npm-tools/naiveui' },
+        { title: 'Nx и Turborepo', href: '/npm-tools/nx-i-turborepo' },
+    ]"
 />

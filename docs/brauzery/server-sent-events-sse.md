@@ -28,16 +28,16 @@ SSE удобно использовать для уведомлений, live-с
 const source = new EventSource("/api/events");
 
 source.addEventListener("message", (event) => {
-	console.log("update:", event.data);
+    console.log("update:", event.data);
 });
 
 source.addEventListener("order-updated", (event) => {
-	const payload = JSON.parse(event.data);
-	console.log("order", payload.id, payload.status);
+    const payload = JSON.parse(event.data);
+    console.log("order", payload.id, payload.status);
 });
 
 source.onerror = () => {
-	console.log("connection error");
+    console.log("connection error");
 };
 ```
 
@@ -45,20 +45,20 @@ source.onerror = () => {
 
 ```ts
 app.get("/api/events", (req, res) => {
-	res.setHeader("Content-Type", "text/event-stream");
-	res.setHeader("Cache-Control", "no-cache");
-	res.setHeader("Connection", "keep-alive");
-	res.flushHeaders();
+    res.setHeader("Content-Type", "text/event-stream");
+    res.setHeader("Cache-Control", "no-cache");
+    res.setHeader("Connection", "keep-alive");
+    res.flushHeaders();
 
-	const timer = setInterval(() => {
-		res.write(`event: order-updated\n`);
-		res.write(`data: ${JSON.stringify({ id: 42, status: "processing" })}\n\n`);
-	}, 2000);
+    const timer = setInterval(() => {
+        res.write(`event: order-updated\n`);
+        res.write(`data: ${JSON.stringify({ id: 42, status: "processing" })}\n\n`);
+    }, 2000);
 
-	req.on("close", () => {
-		clearInterval(timer);
-		res.end();
-	});
+    req.on("close", () => {
+        clearInterval(timer);
+        res.end();
+    });
 });
 ```
 
@@ -72,9 +72,9 @@ app.get("/api/events", (req, res) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
-		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
-	]"
+    :items="[
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
+        { title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+    ]"
 />

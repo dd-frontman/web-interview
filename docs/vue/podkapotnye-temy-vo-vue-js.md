@@ -70,7 +70,7 @@ import { reactive, effect } from "vue";
 const state = reactive({ count: 0 });
 
 effect(() => {
-	console.log(`Count changed: ${state.count}`);
+    console.log(`Count changed: ${state.count}`);
 });
 
 state.count++; // триггерит effect
@@ -79,9 +79,9 @@ state.count++; // триггерит effect
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

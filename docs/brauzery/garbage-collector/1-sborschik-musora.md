@@ -108,9 +108,9 @@ GC в JavaScript-движке запускается:
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
-		{ title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
-		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
-	]"
+    :items="[
+        { title: 'Утечки памяти', href: '/brauzery/garbage-collector/2-utechki-pamyati' },
+        { title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
+        { title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+    ]"
 />

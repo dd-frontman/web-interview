@@ -28,11 +28,11 @@ JavaScript исполняется не напрямую браузером "ка
 
 ```ts
 function a() {
-	b();
+    b();
 }
 
 function b() {
-	console.log("done");
+    console.log("done");
 }
 
 a();
@@ -113,9 +113,9 @@ console.log("4");
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-		{ title: 'Promise', href: '/javascript/promise' },
-		{ title: 'Garbage Collector', href: '/brauzery/garbage-collector/1-sborschik-musora' },
-	]"
+    :items="[
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+        { title: 'Promise', href: '/javascript/promise' },
+        { title: 'Garbage Collector', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+    ]"
 />

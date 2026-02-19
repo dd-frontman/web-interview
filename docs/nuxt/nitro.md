@@ -56,7 +56,7 @@ Nitro оптимизирует:
 
 ```ts
 export default defineEventHandler(() => {
-	return { message: "Hello from Nitro API!" };
+    return { message: "Hello from Nitro API!" };
 });
 ```
 
@@ -127,9 +127,9 @@ Nuxt интегрирует Nitro таким образом, что вам **н�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nuxt vs Vue', href: '/nuxt/nuxt-vs-vue' },
+    ]"
 />

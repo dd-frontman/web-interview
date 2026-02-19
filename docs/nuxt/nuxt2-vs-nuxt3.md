@@ -84,21 +84,21 @@ updatedAt: "2026-02-16"
 
 ```vue
 <template>
-	<div>
-		<h1>Posts</h1>
-		<ul>
-			<li v-for="p in posts" :key="p.id">{{ p.title }}</li>
-		</ul>
-	</div>
+    <div>
+        <h1>Posts</h1>
+        <ul>
+            <li v-for="p in posts" :key="p.id">{{ p.title }}</li>
+        </ul>
+    </div>
 </template>
 
 <script>
 export default {
-	async asyncData({ $axios }) {
-		const posts = await $axios.$get("https://jsonplaceholder.typicode.com/posts?_limit=5");
-		return { posts };
-	},
-	data: () => ({ posts: [] }),
+    async asyncData({ $axios }) {
+        const posts = await $axios.$get("https://jsonplaceholder.typicode.com/posts?_limit=5");
+        return { posts };
+    },
+    data: () => ({ posts: [] }),
 };
 </script>
 ```
@@ -108,17 +108,17 @@ export default {
 ```vue
 <script setup lang="ts">
 const { data: posts } = await useAsyncData("posts", () =>
-	$fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+    $fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
 );
 </script>
 
 <template>
-	<div>
-		<h1>Posts</h1>
-		<ul>
-			<li v-for="p in posts" :key="p.id">{{ p.title }}</li>
-		</ul>
-	</div>
+    <div>
+        <h1>Posts</h1>
+        <ul>
+            <li v-for="p in posts" :key="p.id">{{ p.title }}</li>
+        </ul>
+    </div>
 </template>
 ```
 
@@ -129,9 +129,9 @@ const { data: posts } = await useAsyncData("posts", () =>
 ```js
 export const state = () => ({ cart: [] });
 export const mutations = {
-	add(s, item) {
-		s.cart.push(item);
-	},
+    add(s, item) {
+        s.cart.push(item);
+    },
 };
 export const getters = { count: (s) => s.cart.length };
 ```
@@ -141,10 +141,10 @@ export const getters = { count: (s) => s.cart.length };
 ```ts
 // composables/useCart.ts
 export function useCart() {
-	const cart = useState<any[]>("cart", () => []);
-	const add = (item: any) => cart.value.push(item);
-	const count = computed(() => cart.value.length);
-	return { cart, add, count };
+    const cart = useState<any[]>("cart", () => []);
+    const add = (item: any) => cart.value.push(item);
+    const count = computed(() => cart.value.length);
+    return { cart, add, count };
 }
 ```
 
@@ -154,8 +154,8 @@ export function useCart() {
 
 ```js
 export default ({ app }, inject) => {
-	const api = (path) => app.$axios.$get(`/api/${path}`);
-	inject("api", api);
+    const api = (path) => app.$axios.$get(`/api/${path}`);
+    inject("api", api);
 };
 ```
 
@@ -163,8 +163,8 @@ export default ({ app }, inject) => {
 
 ```ts
 export default defineNuxtPlugin(() => {
-	const api = (path: string) => $fetch(`/api/${path}`);
-	return { provide: { api } };
+    const api = (path: string) => $fetch(`/api/${path}`);
+    return { provide: { api } };
 });
 // использование: const { $api } = useNuxtApp()
 ```
@@ -176,14 +176,14 @@ export default defineNuxtPlugin(() => {
 ```js
 // nuxt.config.js
 export default {
-	serverMiddleware: [{ path: "/api/hello", handler: "~/server-middleware/hello.js" }],
+    serverMiddleware: [{ path: "/api/hello", handler: "~/server-middleware/hello.js" }],
 };
 ```
 
 ```js
 // server-middleware/hello.js
 export default function (req, res) {
-	res.end(JSON.stringify({ msg: "Hello from Nuxt 2" }));
+    res.end(JSON.stringify({ msg: "Hello from Nuxt 2" }));
 }
 ```
 
@@ -200,7 +200,7 @@ export default defineEventHandler(() => ({ msg: "Hello from Nuxt 3/Nitro" }));
 
 ```js
 export default function ({ store, redirect }) {
-	if (!store.state.user) return redirect("/login");
+    if (!store.state.user) return redirect("/login");
 }
 ```
 
@@ -209,8 +209,8 @@ export default function ({ store, redirect }) {
 ```ts
 // middleware/auth.global.ts
 export default defineNuxtRouteMiddleware((to) => {
-	const user = useState("user");
-	if (!user.value && to.path !== "/login") return navigateTo("/login");
+    const user = useState("user");
+    if (!user.value && to.path !== "/login") return navigateTo("/login");
 });
 ```
 
@@ -220,9 +220,9 @@ export default defineNuxtRouteMiddleware((to) => {
 
 ```js
 export default {
-	head() {
-		return { title: "Home", meta: [{ hid: "desc", name: "description", content: "..." }] };
-	},
+    head() {
+        return { title: "Home", meta: [{ hid: "desc", name: "description", content: "..." }] };
+    },
 };
 ```
 
@@ -334,9 +334,9 @@ useHead({ title: "Home", meta: [{ name: "description", content: "..." }] });
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+    ]"
 />

@@ -20,12 +20,12 @@ updatedAt: "2026-02-16"
 
 ```js
 function createCounter() {
-	let count = 0;
+    let count = 0;
 
-	return function next() {
-		count += 1;
-		return count;
-	};
+    return function next() {
+        count += 1;
+        return count;
+    };
 }
 
 const counter = createCounter();
@@ -42,15 +42,15 @@ console.log(counter()); // 3
 
 ```js
 function createSecretStore() {
-	let value = null;
-	return {
-		set(v) {
-			value = v;
-		},
-		get() {
-			return value;
-		},
-	};
+    let value = null;
+    return {
+        set(v) {
+            value = v;
+        },
+        get() {
+            return value;
+        },
+    };
 }
 ```
 
@@ -60,9 +60,9 @@ function createSecretStore() {
 
 ```js
 function withPrefix(prefix) {
-	return function log(message) {
-		console.log(`[${prefix}] ${message}`);
-	};
+    return function log(message) {
+        console.log(`[${prefix}] ${message}`);
+    };
 }
 
 const apiLog = withPrefix("API");
@@ -73,7 +73,7 @@ apiLog("request started"); // [API] request started
 
 ```js
 for (var i = 0; i < 3; i++) {
-	setTimeout(() => console.log(i), 0);
+    setTimeout(() => console.log(i), 0);
 }
 // 3, 3, 3
 ```
@@ -84,7 +84,7 @@ for (var i = 0; i < 3; i++) {
 
 ```js
 for (let i = 0; i < 3; i++) {
-	setTimeout(() => console.log(i), 0);
+    setTimeout(() => console.log(i), 0);
 }
 // 0, 1, 2
 ```
@@ -95,20 +95,20 @@ for (let i = 0; i < 3; i++) {
 Если держать тяжелые объекты в замыкании без необходимости, можно получить утечки.
 
 <OfficialDocsLinks
-	:links="[
-		{
-			title: 'MDN: Closures',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures',
-		},
-	]"
+    :links="[
+        {
+            title: 'MDN: Closures',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Closures',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Типы функций', href: '/javascript/tipy-funktsii' },
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-		{ title: 'Promise', href: '/javascript/promise' },
-	]"
+    :items="[
+        { title: 'Типы функций', href: '/javascript/tipy-funktsii' },
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+        { title: 'Promise', href: '/javascript/promise' },
+    ]"
 />

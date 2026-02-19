@@ -185,10 +185,10 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
-		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
-	]"
+    :items="[
+        { title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+        { title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Алгоритмы', href: '/algoritmy/algoritmy' },
+    ]"
 />

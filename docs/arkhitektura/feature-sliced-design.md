@@ -54,10 +54,10 @@ export { metadata } from "./config/metadata";
 ```vue
 <!-- pages/CatalogPage.vue -->
 <template>
-	<div>
-		<ProductList />
-		<Filters />
-	</div>
+    <div>
+        <ProductList />
+        <Filters />
+    </div>
 </template>
 ```
 
@@ -72,11 +72,11 @@ export { metadata } from "./config/metadata";
 ```vue
 <!-- widgets/Header/Header.vue -->
 <template>
-	<header>
-		<Logo />
-		<Navigation />
-		<UserProfile />
-	</header>
+    <header>
+        <Logo />
+        <Navigation />
+        <UserProfile />
+    </header>
 </template>
 ```
 
@@ -96,14 +96,14 @@ export { default as Header } from "./Header.vue";
 ```vue
 <!-- features/AddToCart/AddToCart.vue -->
 <template>
-	<button @click="addToCart">Добавить в корзину</button>
+    <button @click="addToCart">Добавить в корзину</button>
 </template>
 
 <script setup>
 const props = defineProps(["productId"]);
 
 const addToCart = () => {
-	// Логика добавления
+    // Логика добавления
 };
 </script>
 ```
@@ -119,10 +119,10 @@ const addToCart = () => {
 ```vue
 <!-- entities/Product/ProductCard.vue -->
 <template>
-	<div class="product-card">
-		<h3>{{ product.name }}</h3>
-		<p>{{ product.price }}</p>
-	</div>
+    <div class="product-card">
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.price }}</p>
+    </div>
 </template>
 
 <script setup>
@@ -133,9 +133,9 @@ defineProps(["product"]);
 ```typescript
 // entities/Product/model/types.ts
 export interface Product {
-	id: string;
-	name: string;
-	price: number;
+    id: string;
+    name: string;
+    price: number;
 }
 ```
 
@@ -150,14 +150,14 @@ export interface Product {
 ```vue
 <!-- shared/ui/Button/Button.vue -->
 <template>
-	<button class="btn" :class="variant">
-		<slot />
-	</button>
+    <button class="btn" :class="variant">
+        <slot />
+    </button>
 </template>
 
 <script setup>
 defineProps({
-	variant: { type: String, default: "primary" },
+    variant: { type: String, default: "primary" },
 });
 </script>
 ```
@@ -165,7 +165,7 @@ defineProps({
 ```typescript
 // shared/api/base.ts
 export const apiClient = axios.create({
-	baseURL: "/api",
+    baseURL: "/api",
 });
 ```
 
@@ -289,9 +289,9 @@ FSD не требует рефакторинга всего проекта ср�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
-		{ title: 'Архитектура', href: '/arkhitektura/index' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
+        { title: 'Архитектура', href: '/arkhitektura/index' },
+    ]"
 />

@@ -53,7 +53,7 @@ DOM становится тяжелее для layout и style recalculation.
 
 ```js
 for (const item of items) {
-	item.style.width = item.offsetWidth + 10 + "px";
+    item.style.width = item.offsetWidth + 10 + "px";
 }
 ```
 
@@ -119,9 +119,9 @@ for (const item of items) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Critical Render Path (CRP): полный разбор', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
-		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
-	]"
+    :items="[
+        { title: 'Critical Render Path (CRP): полный разбор', href: '/brauzery/crp/critical-render-path' },
+        { title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+        { title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+    ]"
 />

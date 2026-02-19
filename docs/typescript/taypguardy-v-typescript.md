@@ -18,11 +18,11 @@ updatedAt: "2026-02-16"
 
 ```ts
 function printLength(value: string | null) {
-	// value.length; // Ошибка: value может быть null
+    // value.length; // Ошибка: value может быть null
 
-	if (value !== null) {
-		console.log(value.length); // OK
-	}
+    if (value !== null) {
+        console.log(value.length); // OK
+    }
 }
 ```
 
@@ -34,11 +34,11 @@ function printLength(value: string | null) {
 
 ```ts
 function format(value: string | number) {
-	if (typeof value === "string") {
-		return value.toUpperCase();
-	}
+    if (typeof value === "string") {
+        return value.toUpperCase();
+    }
 
-	return value.toFixed(2);
+    return value.toFixed(2);
 }
 ```
 
@@ -50,20 +50,20 @@ function format(value: string | number) {
 
 ```ts
 class ApiError extends Error {
-	code: number;
+    code: number;
 
-	constructor(message: string, code: number) {
-		super(message);
-		this.code = code;
-	}
+    constructor(message: string, code: number) {
+        super(message);
+        this.code = code;
+    }
 }
 
 function handleError(error: Error | ApiError) {
-	if (error instanceof ApiError) {
-		console.log(error.code); // ApiError
-	} else {
-		console.log(error.message); // Error
-	}
+    if (error instanceof ApiError) {
+        console.log(error.code); // ApiError
+    } else {
+        console.log(error.message); // Error
+    }
 }
 ```
 
@@ -76,11 +76,11 @@ type Cat = { meow: () => void };
 type Dog = { bark: () => void };
 
 function makeSound(animal: Cat | Dog) {
-	if ("meow" in animal) {
-		animal.meow();
-	} else {
-		animal.bark();
-	}
+    if ("meow" in animal) {
+        animal.meow();
+    } else {
+        animal.bark();
+    }
 }
 ```
 
@@ -96,14 +96,14 @@ type ErrorState = { status: "error"; message: string };
 type RequestState = LoadingState | SuccessState | ErrorState;
 
 function render(state: RequestState) {
-	switch (state.status) {
-		case "loading":
-			return "Loading...";
-		case "success":
-			return state.data.join(", ");
-		case "error":
-			return state.message;
-	}
+    switch (state.status) {
+        case "loading":
+            return "Loading...";
+        case "success":
+            return state.data.join(", ");
+        case "error":
+            return state.message;
+    }
 }
 ```
 
@@ -111,11 +111,11 @@ function render(state: RequestState) {
 
 ```ts
 function greet(name?: string) {
-	if (!name) {
-		return "Привет, гость";
-	}
+    if (!name) {
+        return "Привет, гость";
+    }
 
-	return `Привет, ${name}`;
+    return `Привет, ${name}`;
 }
 ```
 
@@ -123,11 +123,11 @@ function greet(name?: string) {
 
 ```ts
 function normalize(input: string | null) {
-	if (input === null) {
-		return "default";
-	}
+    if (input === null) {
+        return "default";
+    }
 
-	return input.trim();
+    return input.trim();
 }
 ```
 
@@ -135,11 +135,11 @@ function normalize(input: string | null) {
 
 ```ts
 function toArray(value: string | string[]) {
-	if (Array.isArray(value)) {
-		return value;
-	}
+    if (Array.isArray(value)) {
+        return value;
+    }
 
-	return [value];
+    return [value];
 }
 ```
 
@@ -149,18 +149,18 @@ function toArray(value: string | string[]) {
 
 ```ts
 type User = {
-	id: number;
-	name: string;
+    id: number;
+    name: string;
 };
 
 function isUser(value: unknown): value is User {
-	return typeof value === "object" && value !== null && "id" in value && "name" in value;
+    return typeof value === "object" && value !== null && "id" in value && "name" in value;
 }
 
 function printUser(value: unknown) {
-	if (isUser(value)) {
-		console.log(value.name); // User
-	}
+    if (isUser(value)) {
+        console.log(value.name); // User
+    }
 }
 ```
 
@@ -170,14 +170,14 @@ function printUser(value: unknown) {
 
 ```ts
 function assertIsString(value: unknown): asserts value is string {
-	if (typeof value !== "string") {
-		throw new Error("Expected string");
-	}
+    if (typeof value !== "string") {
+        throw new Error("Expected string");
+    }
 }
 
 function process(value: unknown) {
-	assertIsString(value);
-	console.log(value.toUpperCase()); // value -> string
+    assertIsString(value);
+    console.log(value.toUpperCase()); // value -> string
 }
 ```
 
@@ -199,9 +199,9 @@ function process(value: unknown) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
-		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
-		{ title: 'TypeScript', href: '/typescript/index' },
-	]"
+    :items="[
+        { title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+        { title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+        { title: 'TypeScript', href: '/typescript/index' },
+    ]"
 />

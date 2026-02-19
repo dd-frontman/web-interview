@@ -25,24 +25,24 @@ updatedAt: "2026-02-16"
 
 ```html
 <picture>
-	<source
-		type="image/avif"
-		srcset="/img/hero-640.avif 640w, /img/hero-1280.avif 1280w"
-		sizes="(max-width: 768px) 100vw, 50vw"
-	/>
-	<source
-		type="image/webp"
-		srcset="/img/hero-640.webp 640w, /img/hero-1280.webp 1280w"
-		sizes="(max-width: 768px) 100vw, 50vw"
-	/>
-	<img
-		src="/img/hero-1280.jpg"
-		alt="Главный баннер"
-		width="1280"
-		height="720"
-		loading="lazy"
-		decoding="async"
-	/>
+    <source
+        type="image/avif"
+        srcset="/img/hero-640.avif 640w, /img/hero-1280.avif 1280w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+    />
+    <source
+        type="image/webp"
+        srcset="/img/hero-640.webp 640w, /img/hero-1280.webp 1280w"
+        sizes="(max-width: 768px) 100vw, 50vw"
+    />
+    <img
+        src="/img/hero-1280.jpg"
+        alt="Главный баннер"
+        width="1280"
+        height="720"
+        loading="lazy"
+        decoding="async"
+    />
 </picture>
 ```
 
@@ -90,9 +90,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-		{ title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
-	]"
+    :items="[
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+        { title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+    ]"
 />

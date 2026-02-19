@@ -199,8 +199,8 @@ add_header Reporting-Endpoints "csp-endpoint=\"https://report.example.com/csp\""
 import { NextResponse } from "next/server";
 
 export function middleware(req: Request) {
-	const nonce = crypto.randomUUID().replace(/-/g, "");
-	const csp = `
+    const nonce = crypto.randomUUID().replace(/-/g, "");
+    const csp = `
     default-src 'self';
     script-src 'self' 'nonce-${nonce}' 'strict-dynamic';
     style-src  'self' 'nonce-${nonce}';
@@ -212,14 +212,14 @@ export function middleware(req: Request) {
     upgrade-insecure-requests;
     report-uri /csp-report; report-to csp-endpoint;
   `
-		.replace(/\s{2,}/g, " ")
-		.trim();
+        .replace(/\s{2,}/g, " ")
+        .trim();
 
-	const res = NextResponse.next();
-	res.headers.set("x-nonce", nonce);
-	res.headers.set("Content-Security-Policy", csp);
-	res.headers.set("Reporting-Endpoints", 'csp-endpoint="https://report.example.com/csp"');
-	return res;
+    const res = NextResponse.next();
+    res.headers.set("x-nonce", nonce);
+    res.headers.set("Content-Security-Policy", csp);
+    res.headers.set("Reporting-Endpoints", 'csp-endpoint="https://report.example.com/csp"');
+    return res;
 }
 ```
 
@@ -228,28 +228,28 @@ export function middleware(req: Request) {
 ```ts
 // nuxt.config.ts (идея, реальные опции см. в доке модуля)
 export default defineNuxtConfig({
-	modules: ["nuxt-security"],
-	security: {
-		headers: {
-			contentSecurityPolicy: {
-				value: {
-					"default-src": ["'self'"],
-					"script-src": ["'self'", "'strict-dynamic'", "'nonce-{{nonce}}'"],
-					"style-src": ["'self'", "'nonce-{{nonce}}'"],
-					"img-src": ["'self'", "data:"],
-					"connect-src": ["'self'", "https://api.example.com"],
-					"object-src": ["'none'"],
-					"frame-ancestors": ["'none'"],
-					"upgrade-insecure-requests": true,
-					"report-uri": ["/csp-report"],
-					"report-to": ["csp-endpoint"],
-				},
-			},
-			reportingEndpoints: {
-				value: 'csp-endpoint="https://report.example.com/csp"',
-			},
-		},
-	},
+    modules: ["nuxt-security"],
+    security: {
+        headers: {
+            contentSecurityPolicy: {
+                value: {
+                    "default-src": ["'self'"],
+                    "script-src": ["'self'", "'strict-dynamic'", "'nonce-{{nonce}}'"],
+                    "style-src": ["'self'", "'nonce-{{nonce}}'"],
+                    "img-src": ["'self'", "data:"],
+                    "connect-src": ["'self'", "https://api.example.com"],
+                    "object-src": ["'none'"],
+                    "frame-ancestors": ["'none'"],
+                    "upgrade-insecure-requests": true,
+                    "report-uri": ["/csp-report"],
+                    "report-to": ["csp-endpoint"],
+                },
+            },
+            reportingEndpoints: {
+                value: 'csp-endpoint="https://report.example.com/csp"',
+            },
+        },
+    },
 });
 ```
 
@@ -276,9 +276,9 @@ export default defineNuxtConfig({
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
-		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
-		{ title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
-	]"
+    :items="[
+        { title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+        { title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+        { title: 'XSS (Cross-Site Scripting)', href: '/bezopasnost-prilozhenii/xss-cross-site-scripting' },
+    ]"
 />

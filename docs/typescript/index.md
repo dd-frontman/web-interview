@@ -22,9 +22,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
-		{ title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
-		{ title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
-	]"
+    :items="[
+        { title: 'as const в TypeScript', href: '/typescript/as-const-v-typescript' },
+        { title: 'assert в TypeScript', href: '/typescript/assert-v-typescript' },
+        { title: 'satisfies в TypeScript', href: '/typescript/satisfies-v-typescript' },
+    ]"
 />

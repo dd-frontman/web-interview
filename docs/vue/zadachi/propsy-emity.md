@@ -18,40 +18,40 @@ updatedAt: "2026-02-17"
 
 ```vue
 <template>
-	<section class="child">
-		<h3>ZeroChild</h3>
+    <section class="child">
+        <h3>ZeroChild</h3>
 
-		<p>
-			<b>props.title:</b> "{{ props.title }}"
-			<br />
-			<b>props.count:</b> {{ props.count }}
-			<br />
-			<b>props.active:</b> {{ props.active }}
-			<br />
-			<b>props.meta.source:</b> {{ props.meta?.source ?? "—" }}
-		</p>
+        <p>
+            <b>props.title:</b> "{{ props.title }}"
+            <br />
+            <b>props.count:</b> {{ props.count }}
+            <br />
+            <b>props.active:</b> {{ props.active }}
+            <br />
+            <b>props.meta.source:</b> {{ props.meta?.source ?? "—" }}
+        </p>
 
-		<div class="row">
-			<!-- Способ 1: эмит через обработчик -->
-			<button @click="ping">emit('ping')</button>
+        <div class="row">
+            <!-- Способ 1: эмит через обработчик -->
+            <button @click="ping">emit('ping')</button>
 
-			<!-- Способ 2: обновление prop через update:* (паттерн v-model / .sync) -->
-			<button @click="rename">emit('update:title')</button>
+            <!-- Способ 2: обновление prop через update:* (паттерн v-model / .sync) -->
+            <button @click="rename">emit('update:title')</button>
 
-			<!-- Способ 3: эмит с payload-объектом -->
-			<button @click="submit">emit('submit')</button>
-		</div>
+            <!-- Способ 3: эмит с payload-объектом -->
+            <button @click="submit">emit('submit')</button>
+        </div>
 
-		<!-- Пример v-model-like связывания внутри дочернего: -->
-		<div class="row">
-			<input
-				class="input"
-				:value="props.title"
-				@input="onInputTitle"
-				placeholder="Изменяй title (через update:title)"
-			/>
-		</div>
-	</section>
+        <!-- Пример v-model-like связывания внутри дочернего: -->
+        <div class="row">
+            <input
+                class="input"
+                :value="props.title"
+                @input="onInputTitle"
+                placeholder="Изменяй title (через update:title)"
+            />
+        </div>
+    </section>
 </template>
 
 <script setup lang="ts">
@@ -66,10 +66,10 @@ updatedAt: "2026-02-17"
 
 /** ✅ Вариант A (активный): TypeScript типизация через generic */
 type Props = {
-	title: string;
-	count: number;
-	active?: boolean;
-	meta?: { source: string; ts: number };
+    title: string;
+    count: number;
+    active?: boolean;
+    meta?: { source: string; ts: number };
 };
 const props = defineProps<Props>();
 
@@ -122,9 +122,9 @@ const props = defineProps<Props>();
 
 /** ✅ Вариант 1 (активный): TS typed signatures */
 const emit = defineEmits<{
-	(e: "ping", payload: { from: string; at: number }): void;
-	(e: "update:title", value: string): void;
-	(e: "submit", payload: { title: string; count: number }): void;
+    (e: "ping", payload: { from: string; at: number }): void;
+    (e: "update:title", value: string): void;
+    (e: "submit", payload: { title: string; count: number }): void;
 }>();
 
 /**
@@ -154,42 +154,42 @@ const emit = defineEmits<{
  */
 
 function ping() {
-	emit("ping", { from: "ZeroChild", at: Date.now() });
+    emit("ping", { from: "ZeroChild", at: Date.now() });
 }
 
 function rename() {
-	emit("update:title", props.title + "!");
+    emit("update:title", props.title + "!");
 }
 
 function submit() {
-	emit("submit", { title: props.title, count: props.count });
+    emit("submit", { title: props.title, count: props.count });
 }
 
 function onInputTitle(e: Event) {
-	const v = (e.target as HTMLInputElement).value;
-	emit("update:title", v);
+    const v = (e.target as HTMLInputElement).value;
+    emit("update:title", v);
 }
 </script>
 
 <style scoped>
 .child {
-	display: grid;
-	gap: 10px;
-	padding: 12px;
-	border: 1px dashed #bbb;
-	border-radius: 10px;
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+    border: 1px dashed #bbb;
+    border-radius: 10px;
 }
 .row {
-	display: flex;
-	gap: 8px;
-	flex-wrap: wrap;
-	align-items: center;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .input {
-	padding: 8px 10px;
-	border: 1px solid #ccc;
-	border-radius: 8px;
-	min-width: 240px;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 240px;
 }
 </style>
 ```
@@ -198,71 +198,71 @@ function onInputTitle(e: Event) {
 
 ```vue
 <template>
-	<div class="wrap">
-		<h3>Пользователи</h3>
+    <div class="wrap">
+        <h3>Пользователи</h3>
 
-		<ul>
-			<li v-for="user in users" :key="user.id">{{ user.name }} — {{ user.age }}</li>
-		</ul>
+        <ul>
+            <li v-for="user in users" :key="user.id">{{ user.name }} — {{ user.age }}</li>
+        </ul>
 
-		<button @click="addUser">Добавить пользователя</button>
-		<button @click="increaseAge">Увеличить возраст последнего</button>
-	</div>
+        <button @click="addUser">Добавить пользователя</button>
+        <button @click="increaseAge">Увеличить возраст последнего</button>
+    </div>
 </template>
 
 <script>
 export default {
-	name: "UsersList",
-	data() {
-		return {
-			users: [
-				{ id: 1, name: "Alice", age: 25 },
-				{ id: 2, name: "Bob", age: 30 },
-			],
-		};
-	},
-	methods: {
-		addUser() {
-			const newUser = {
-				id: Date.now(),
-				name: "New user",
-				// age специально не задаём — будет добавляться позже
-			};
+    name: "UsersList",
+    data() {
+        return {
+            users: [
+                { id: 1, name: "Alice", age: 25 },
+                { id: 2, name: "Bob", age: 30 },
+            ],
+        };
+    },
+    methods: {
+        addUser() {
+            const newUser = {
+                id: Date.now(),
+                name: "New user",
+                // age специально не задаём — будет добавляться позже
+            };
 
-			// TODO FIX: Vue 2 не отслеживает добавление массива через индекс (arr[i] = ...)
-			// ✅ FIX: this.users.push(newUser)
-			// ✅ FIX: this.users = [...this.users, newUser]
-			// ✅ FIX: this.$set(this.users, this.users.length, newUser)
-			this.users[this.users.length] = newUser;
-		},
+            // TODO FIX: Vue 2 не отслеживает добавление массива через индекс (arr[i] = ...)
+            // ✅ FIX: this.users.push(newUser)
+            // ✅ FIX: this.users = [...this.users, newUser]
+            // ✅ FIX: this.$set(this.users, this.users.length, newUser)
+            this.users[this.users.length] = newUser;
+        },
 
-		increaseAge() {
-			const lastIndex = this.users.length - 1;
-			const user = this.users[lastIndex];
+        increaseAge() {
+            const lastIndex = this.users.length - 1;
+            const user = this.users[lastIndex];
 
-			// TODO FIX: Vue 2 не отслеживает добавление НОВОГО свойства в объект (user.age = ...)
-			// ✅ FIX: this.$set(user, "age", (user.age || 0) + 1)
-			// ✅ FIX: this.users.splice(lastIndex, 1, { ...user, age: (user.age || 0) + 1 })
-			// ✅ FIX: this.users = this.users.map((u, i) => i === lastIndex ? { ...u, age: (u.age || 0) + 1 } : u)
-			user.age = (user.age || 0) + 1;
-		},
-	},
+            // TODO FIX: Vue 2 не отслеживает добавление НОВОГО свойства в объект (user.age = ...)
+            // ✅ FIX: this.$set(user, "age", (user.age || 0) + 1)
+            // ✅ FIX: this.users.splice(lastIndex, 1, { ...user, age: (user.age || 0) + 1 })
+            // ✅ FIX: this.users = this.users.map((u, i) => i === lastIndex ? { ...u, age: (u.age || 0) + 1 } : u)
+            user.age = (user.age || 0) + 1;
+        },
+    },
 };
 </script>
 
 <style scoped>
 .wrap {
-	max-width: 420px;
+    max-width: 420px;
 }
 ul {
-	padding-left: 16px;
+    padding-left: 16px;
 }
 li {
-	margin-bottom: 4px;
+    margin-bottom: 4px;
 }
 button {
-	margin-top: 8px;
-	margin-right: 8px;
+    margin-top: 8px;
+    margin-right: 8px;
 }
 </style>
 ```
@@ -270,9 +270,9 @@ button {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Двустороннее связывание через v-model', href: '/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Двустороннее связывание через v-model', href: '/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

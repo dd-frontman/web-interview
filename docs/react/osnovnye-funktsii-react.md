@@ -26,7 +26,7 @@ import { ref } from "vue";
 const count = ref(0);
 </script>
 <template>
-	<button @click="count++">{{ count }}</button>
+    <button @click="count++">{{ count }}</button>
 </template>
 ```
 
@@ -38,7 +38,7 @@ const count = ref(0);
 
 ```jsx
 useEffect(() => {
-	fetchData();
+    fetchData();
 }, []);
 ```
 
@@ -48,7 +48,7 @@ useEffect(() => {
 <script setup>
 import { onMounted } from "vue";
 onMounted(() => {
-	fetchData();
+    fetchData();
 });
 </script>
 ```
@@ -121,7 +121,7 @@ onMounted(() => inputRef.value.focus());
 ```jsx
 const Theme = createContext("light");
 <Theme.Provider value="dark">
-	<App />
+    <App />
 </Theme.Provider>;
 ```
 
@@ -149,7 +149,7 @@ const theme = inject("theme");
 
 ```jsx
 <Routes>
-	<Route path="/about" element={<About />} />
+    <Route path="/about" element={<About />} />
 </Routes>
 ```
 
@@ -173,7 +173,7 @@ const Row = memo(({ item }) => <div>{item.name}</div>);
 
 ```vue
 <template v-memo="[item.id]">
-	<div>{{ item.name }}</div>
+    <div>{{ item.name }}</div>
 </template>
 ```
 
@@ -191,7 +191,7 @@ return createPortal(<Modal />, document.body);
 
 ```vue
 <template>
-	<Teleport to="body"><Modal /></Teleport>
+    <Teleport to="body"><Modal /></Teleport>
 </template>
 ```
 
@@ -203,7 +203,7 @@ return createPortal(<Modal />, document.body);
 
 ```jsx
 <Suspense fallback={<Spinner />}>
-	<LazyComp />
+    <LazyComp />
 </Suspense>
 ```
 
@@ -232,7 +232,7 @@ class Boundary extends React.Component { componentDidCatch(e){...} ... }
 <script setup>
 import { onErrorCaptured } from "vue";
 onErrorCaptured((err) => {
-	report(err);
+    report(err);
 });
 </script>
 ```
@@ -245,11 +245,11 @@ onErrorCaptured((err) => {
 
 ```jsx
 function useCounter() {
-	const [c, setC] = useState(0);
-	return {
-		c,
-		inc: () => setC((x) => x + 1),
-	};
+    const [c, setC] = useState(0);
+    return {
+        c,
+        inc: () => setC((x) => x + 1),
+    };
 }
 ```
 
@@ -259,9 +259,9 @@ function useCounter() {
 // useCounter.ts
 import { ref } from "vue";
 export function useCounter() {
-	const c = ref(0);
-	const inc = () => c.value++;
-	return { c, inc };
+    const c = ref(0);
+    const inc = () => c.value++;
+    return { c, inc };
 }
 ```
 
@@ -273,7 +273,7 @@ export function useCounter() {
 
 ```jsx
 const [state, dispatch] = useReducer(reducer, {
-	count: 0,
+    count: 0,
 });
 ```
 
@@ -282,12 +282,12 @@ const [state, dispatch] = useReducer(reducer, {
 ```js
 import { defineStore } from "pinia";
 export const useCounter = defineStore("c", {
-	state: () => ({ count: 0 }),
-	actions: {
-		inc() {
-			this.count++;
-		},
-	},
+    state: () => ({ count: 0 }),
+    actions: {
+        inc() {
+            this.count++;
+        },
+    },
 });
 ```
 
@@ -310,7 +310,7 @@ import { ref } from "vue";
 const email = ref("");
 </script>
 <template>
-	<input v-model="email" />
+    <input v-model="email" />
 </template>
 ```
 
@@ -322,10 +322,10 @@ const email = ref("");
 
 ```jsx
 {
-	isAuth ? <User /> : <Login />;
+    isAuth ? <User /> : <Login />;
 }
 {
-	list.map((i) => <li key={i.id}>{i.name}</li>);
+    list.map((i) => <li key={i.id}>{i.name}</li>);
 }
 ```
 
@@ -333,8 +333,8 @@ const email = ref("");
 
 ```vue
 <template>
-	<User v-if="isAuth" /><Login v-else />
-	<li v-for="i in list" :key="i.id">{{ i.name }}</li>
+    <User v-if="isAuth" /><Login v-else />
+    <li v-for="i in list" :key="i.id">{{ i.name }}</li>
 </template>
 ```
 
@@ -363,8 +363,8 @@ const [v, setV] = useState('')
 
 ```jsx
 <>
-	<h1 />
-	<p />
+    <h1 />
+    <p />
 </>
 ```
 
@@ -372,8 +372,8 @@ const [v, setV] = useState('')
 
 ```vue
 <template>
-	<h1 />
-	<p />
+    <h1 />
+    <p />
 </template>
 ```
 
@@ -458,7 +458,7 @@ import s from "./btn.module.css";
 ```vue
 <style scoped>
 .btn {
-	padding: 8px;
+    padding: 8px;
 }
 </style>
 ```
@@ -473,9 +473,9 @@ import s from "./btn.module.css";
 ```js
 import { h } from "vue";
 export default {
-	render() {
-		return h("div", "hi");
-	},
+    render() {
+        return h("div", "hi");
+    },
 };
 ```
 
@@ -500,7 +500,7 @@ export default {
 ```jsx
 const btnRef = useRef(null);
 useEffect(() => {
-	btnRef.current.focus();
+    btnRef.current.focus();
 }, []);
 <button ref={btnRef}>Click</button>;
 ```
@@ -512,7 +512,7 @@ useEffect(() => {
 import { ref, onMounted } from "vue";
 const btnRef = ref(null);
 onMounted(() => {
-	btnRef.value.focus();
+    btnRef.value.focus();
 });
 </script>
 <template><button ref="btnRef">Click</button></template>
@@ -527,7 +527,7 @@ onMounted(() => {
 ```jsx
 const elRef = useRef();
 useEffect(() => {
-	externalLib.init(elRef.current);
+    externalLib.init(elRef.current);
 }, []);
 <div ref={elRef} />;
 ```
@@ -539,7 +539,7 @@ useEffect(() => {
 import { ref, onMounted } from "vue";
 const elRef = ref(null);
 onMounted(() => {
-	externalLib.init(elRef.value);
+    externalLib.init(elRef.value);
 });
 </script>
 <template><div ref="elRef"></div></template>
@@ -595,7 +595,7 @@ store.inc();
 ```vue
 <!-- Child.vue -->
 <template>
-	<button @click="$emit('custom-event')">Emit</button>
+    <button @click="$emit('custom-event')">Emit</button>
 </template>
 ```
 
@@ -607,7 +607,7 @@ store.inc();
 
 ```jsx
 <Layout header={<Header />} footer={<Footer />}>
-	Main
+    Main
 </Layout>
 ```
 
@@ -645,7 +645,7 @@ const Page = lazy(() => import("./Page"));
 
 ```js
 export async function loader() {
-	return fetchData();
+    return fetchData();
 }
 ```
 
@@ -698,9 +698,9 @@ const { t } = useTranslation();
 
 ```jsx
 try {
-	await fetchData();
+    await fetchData();
 } catch (e) {
-	setError(e);
+    setError(e);
 }
 ```
 
@@ -711,9 +711,9 @@ try {
 import { ref } from "vue";
 const error = ref(null);
 try {
-	await fetchData();
+    await fetchData();
 } catch (e) {
-	error.value = e;
+    error.value = e;
 }
 </script>
 ```
@@ -744,8 +744,8 @@ b.value = 2; // один рендер
 
 ```jsx
 useEffect(() => {
-	const s = new WebSocket(url);
-	return () => s.close();
+    const s = new WebSocket(url);
+    return () => s.close();
 }, []);
 ```
 
@@ -755,10 +755,10 @@ useEffect(() => {
 <script setup>
 import { onMounted, onUnmounted } from "vue";
 onMounted(() => {
-	socket = new WebSocket(url);
+    socket = new WebSocket(url);
 });
 onUnmounted(() => {
-	socket.close();
+    socket.close();
 });
 </script>
 ```
@@ -816,9 +816,9 @@ const { data } = useSWR("/api/user", fetcher);
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'React', href: '/react/index' },
-		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
-		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
-	]"
+    :items="[
+        { title: 'React', href: '/react/index' },
+        { title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+        { title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+    ]"
 />

@@ -192,9 +192,9 @@ CSP позволяет браузеру блокировать выполнен�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
-		{ title: 'CSP — Content Security Policy', href: '/bezopasnost-prilozhenii/csp-content-security-policy' },
-		{ title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
-	]"
+    :items="[
+        { title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+        { title: 'CSP — Content Security Policy', href: '/bezopasnost-prilozhenii/csp-content-security-policy' },
+        { title: 'CSRF (Cross-Site Request Forgery)', href: '/bezopasnost-prilozhenii/csrf-cross-site-request-forgery' },
+    ]"
 />

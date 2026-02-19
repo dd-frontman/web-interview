@@ -137,9 +137,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'React', href: '/react/index' },
-		{ title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
-		{ title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
-	]"
+    :items="[
+        { title: 'React', href: '/react/index' },
+        { title: 'JSX и его альтернативы', href: '/react/jsx-i-ego-alternativy' },
+        { title: 'Локальное состояние (реактивность)', href: '/react/lokalnoe-sostoyanie-reaktivnost' },
+    ]"
 />

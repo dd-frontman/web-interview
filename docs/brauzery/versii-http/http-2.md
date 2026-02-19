@@ -79,9 +79,9 @@ server {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
-		{ title: 'HTTP/3: QUIC и современный транспорт', href: '/brauzery/versii-http/http-3' },
-		{ title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
-	]"
+    :items="[
+        { title: 'HTTP/1.1: как работает и где упирается', href: '/brauzery/versii-http/http-1-1' },
+        { title: 'HTTP/3: QUIC и современный транспорт', href: '/brauzery/versii-http/http-3' },
+        { title: 'Сравнение HTTP/1.1, HTTP/2 и HTTP/3', href: '/brauzery/versii-http/sravnenie-http-versii' },
+    ]"
 />

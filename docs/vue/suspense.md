@@ -17,15 +17,15 @@ updatedAt: "2026-02-16"
 
 ```vue
 <template>
-	<Suspense>
-		<template #default>
-			<AsyncProfile />
-			<AsyncStats />
-		</template>
-		<template #fallback>
-			<LoadingIndicator />
-		</template>
-	</Suspense>
+    <Suspense>
+        <template #default>
+            <AsyncProfile />
+            <AsyncStats />
+        </template>
+        <template #fallback>
+            <LoadingIndicator />
+        </template>
+    </Suspense>
 </template>
 
 <script setup>
@@ -75,9 +75,9 @@ const AsyncStats = defineAsyncComponent(() => import("./Stats.vue"));
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'defineExpose()', href: '/vue/defineexpose' },
-		{ title: 'Директивы Vue', href: '/vue/direktivy-vue' },
-	]"
+    :items="[
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'defineExpose()', href: '/vue/defineexpose' },
+        { title: 'Директивы Vue', href: '/vue/direktivy-vue' },
+    ]"
 />

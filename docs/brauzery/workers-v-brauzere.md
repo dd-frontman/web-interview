@@ -33,8 +33,8 @@ worker.onmessage = (event) => console.log(event.data);
 ```ts
 // sum.worker.ts
 self.onmessage = (event) => {
-	const sum = event.data.numbers.reduce((acc: number, n: number) => acc + n, 0);
-	self.postMessage({ sum });
+    const sum = event.data.numbers.reduce((acc: number, n: number) => acc + n, 0);
+    self.postMessage({ sum });
 };
 ```
 
@@ -66,9 +66,9 @@ self.onmessage = (event) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-	]"
+    :items="[
+        { title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+    ]"
 />

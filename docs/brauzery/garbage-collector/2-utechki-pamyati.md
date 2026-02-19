@@ -37,7 +37,7 @@ JavaScript считает, что объект _нужен_, если:
 
 ```js
 function createLeak() {
-	leakyVar = "global"; // становится глобальной переменной
+    leakyVar = "global"; // становится глобальной переменной
 }
 createLeak();
 // эта память уже не будет освобождена
@@ -56,10 +56,10 @@ createLeak();
 
 ```js
 function createClosure() {
-	const bigArray = new Array(1e6).fill("data");
-	return function inner() {
-		console.log(bigArray.length);
-	};
+    const bigArray = new Array(1e6).fill("data");
+    return function inner() {
+        console.log(bigArray.length);
+    };
 }
 
 const leaky = createClosure(); // bigArray всё ещё в памяти
@@ -78,7 +78,7 @@ const leaky = createClosure(); // bigArray всё ещё в памяти
 ```js
 const button = document.createElement("button");
 button.addEventListener("click", () => {
-	console.log("clicked");
+    console.log("clicked");
 });
 document.body.appendChild(button);
 
@@ -120,7 +120,7 @@ document.body.removeChild(cachedDiv);
 
 ```js
 const id = setInterval(() => {
-	console.log("tick");
+    console.log("tick");
 }, 1000);
 // ничего не очищаем → функция и её окружение живут постоянно
 ```
@@ -142,7 +142,7 @@ const id = setInterval(() => {
 ```js
 const cache = {};
 function remember(key, value) {
-	cache[key] = value; // без ограничения → бесконечный рост
+    cache[key] = value; // без ограничения → бесконечный рост
 }
 ```
 
@@ -201,9 +201,9 @@ b = null;
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
-		{ title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
-		{ title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
-	]"
+    :items="[
+        { title: 'Сборщик мусора', href: '/brauzery/garbage-collector/1-sborschik-musora' },
+        { title: 'Вопросы по Garbage Collector', href: '/brauzery/garbage-collector/voprosy-po-garbage-collector' },
+        { title: 'Полный путь загрузки сайта', href: '/brauzery/polnyi-put-zagruzki-saita' },
+    ]"
 />

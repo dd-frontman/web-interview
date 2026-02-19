@@ -61,7 +61,7 @@ Vitest из коробки поддерживает:
 import { test, expect } from "vitest";
 
 test("sum works", () => {
-	expect(1 + 2).toBe(3);
+    expect(1 + 2).toBe(3);
 });
 ```
 
@@ -185,9 +185,9 @@ Vitest — это:
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Vitest + Vue Test Utils + Playwright', href: '/testirovanie/vitest-plus-vue-test-utils-plus-playwright' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Vitest + Vue Test Utils + Playwright', href: '/testirovanie/vitest-plus-vue-test-utils-plus-playwright' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

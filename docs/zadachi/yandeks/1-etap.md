@@ -23,7 +23,7 @@ updatedAt: "2026-02-17"
  * Можно использовать любые API процессы.
  */
 function sumPromises(...promises) {
-	return Promise.all(promises).then((results) => results.reduce((acc, number) => acc + number, 0));
+    return Promise.all(promises).then((results) => results.reduce((acc, number) => acc + number, 0));
 }
 
 // Пример использования:
@@ -42,7 +42,7 @@ sumPromises(promise1, promise2).then(console.log); // 3
  */
 
 function strjoin(separator, ...letters) {
-	return letters.join(separator);
+    return letters.join(separator);
 }
 
 console.log(strjoin(".", "a", "b", "c")); // 'a.b.c'
@@ -52,9 +52,9 @@ console.log(strjoin("-", "d", "e", "f")); // 'd-e-f'
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Задачи', href: '/zadachi/index' },
-		{ title: 'Vue', href: '/vue' },
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-	]"
+    :items="[
+        { title: 'Задачи', href: '/zadachi/index' },
+        { title: 'Vue', href: '/vue' },
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+    ]"
 />

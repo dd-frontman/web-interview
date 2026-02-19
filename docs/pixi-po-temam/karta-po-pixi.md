@@ -32,10 +32,10 @@ const canvas = ref<HTMLCanvasElement | null>(null);
 let app: Application;
 
 onMounted(async () => {
-	app = new Application({ view: canvas.value!, resizeTo: window });
-	await app.init();
-	const tex = await Assets.load("/logo.png");
-	app.stage.addChild(Sprite.from(tex));
+    app = new Application({ view: canvas.value!, resizeTo: window });
+    await app.init();
+    const tex = await Assets.load("/logo.png");
+    app.stage.addChild(Sprite.from(tex));
 });
 
 onUnmounted(() => app.destroy(true));
@@ -59,9 +59,9 @@ onUnmounted(() => app.destroy(true));
 
 ```vue
 <template>
-	<PIXI-Stage :width="800" :height="600">
-		<PIXI-Sprite texture="/hero.png" :x="400" :y="300" :anchor="0.5" @pointertap="jump" />
-	</PIXI-Stage>
+    <PIXI-Stage :width="800" :height="600">
+        <PIXI-Sprite texture="/hero.png" :x="400" :y="300" :anchor="0.5" @pointertap="jump" />
+    </PIXI-Stage>
 </template>
 ```
 
@@ -103,9 +103,9 @@ onUnmounted(() => app.destroy(true));
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
-		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
-		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
-	]"
+    :items="[
+        { title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+        { title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+        { title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+    ]"
 />

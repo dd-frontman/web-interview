@@ -45,8 +45,8 @@ import { shallowRef } from "vue";
 const state = shallowRef({ items: [1, 2, 3] });
 
 state.value = {
-	...state.value,
-	items: [...state.value.items, 4],
+    ...state.value,
+    items: [...state.value.items, 4],
 }; // UI обновится
 ```
 
@@ -76,9 +76,9 @@ triggerRef(state); // вручную триггерим зависимости
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ref / reactive: краткая шпаргалка', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
-	]"
+    :items="[
+        { title: 'ref / reactive: краткая шпаргалка', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+        { title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+        { title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+    ]"
 />

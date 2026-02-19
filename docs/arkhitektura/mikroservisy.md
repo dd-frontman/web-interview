@@ -71,12 +71,12 @@ import express from "express";
 const router = express.Router();
 
 router.post("/login", (req, res) => {
-	// проверка логина/пароля
-	res.json({ token: "jwt-token" });
+    // проверка логина/пароля
+    res.json({ token: "jwt-token" });
 });
 
 router.get("/me", (req, res) => {
-	res.json({ id: 1, name: "Alice" });
+    res.json({ id: 1, name: "Alice" });
 });
 
 export default router;
@@ -90,7 +90,7 @@ import express from "express";
 const router = express.Router();
 
 router.get("/", (req, res) => {
-	res.json([{ id: 100, product: "Phone", qty: 1 }]);
+    res.json([{ id: 100, product: "Phone", qty: 1 }]);
 });
 
 export default router;
@@ -117,9 +117,9 @@ export default router;
 ```ts
 // frontend/apps/web/src/services/api.ts
 export const api = {
-	login: (data) => fetch("/api/auth/login", { method: "POST", body: JSON.stringify(data) }),
-	me: () => fetch("/api/auth/me").then((r) => r.json()),
-	orders: () => fetch("/api/orders").then((r) => r.json()),
+    login: (data) => fetch("/api/auth/login", { method: "POST", body: JSON.stringify(data) }),
+    me: () => fetch("/api/auth/me").then((r) => r.json()),
+    orders: () => fetch("/api/orders").then((r) => r.json()),
 };
 ```
 
@@ -131,21 +131,21 @@ import { useEffect, useState } from "react";
 import { api } from "../services/api";
 
 export function Orders() {
-	const [orders, setOrders] = useState<any[]>([]);
+    const [orders, setOrders] = useState<any[]>([]);
 
-	useEffect(() => {
-		api.orders().then(setOrders);
-	}, []);
+    useEffect(() => {
+        api.orders().then(setOrders);
+    }, []);
 
-	return (
-		<ul>
-			{orders.map((o) => (
-				<li key={o.id}>
-					{o.product} × {o.qty}
-				</li>
-			))}
-		</ul>
-	);
+    return (
+        <ul>
+            {orders.map((o) => (
+                <li key={o.id}>
+                    {o.product} × {o.qty}
+                </li>
+            ))}
+        </ul>
+    );
 }
 ```
 
@@ -197,9 +197,9 @@ export function Orders() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
-		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Domain-Driven Design', href: '/arkhitektura/domain-driven-design' },
+        { title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+    ]"
 />

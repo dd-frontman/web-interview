@@ -136,20 +136,20 @@ Content-Length: 1234
 ```js
 // Ручная настройка
 app.use((req, res, next) => {
-	res.header("Access-Control-Allow-Origin", "http://siteA.com");
-	res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-	res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
-	next();
+    res.header("Access-Control-Allow-Origin", "http://siteA.com");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+    res.header("Access-Control-Allow-Headers", "Content-Type,Authorization");
+    next();
 });
 
 // С помощью cors middleware
 import cors from "cors";
 app.use(
-	cors({
-		origin: "http://siteA.com",
-		methods: ["GET", "POST", "PUT", "DELETE"],
-		allowedHeaders: ["Content-Type", "Authorization"],
-	})
+    cors({
+        origin: "http://siteA.com",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        allowedHeaders: ["Content-Type", "Authorization"],
+    })
 );
 ```
 
@@ -174,9 +174,9 @@ CORS → сервер сам решает, **кому можно**. Это за�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'A11y (Accessibility)', href: '/brauzery/a11y-accessibility' },
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
-	]"
+    :items="[
+        { title: 'A11y (Accessibility)', href: '/brauzery/a11y-accessibility' },
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+    ]"
 />

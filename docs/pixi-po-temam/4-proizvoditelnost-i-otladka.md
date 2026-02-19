@@ -56,7 +56,7 @@ app.stage.addChild(snow);
 
 ```ts
 app.ticker.add(({ deltaMS }) => {
-	sprite.x += speed * deltaMS;
+    sprite.x += speed * deltaMS;
 });
 // При паузе:
 app.ticker.stop();
@@ -69,10 +69,10 @@ app.ticker.stop();
 ```ts
 const pool: RenderTexture[] = [];
 function getRT(w, h) {
-	return pool.pop() ?? RenderTexture.create({ width: w, height: h });
+    return pool.pop() ?? RenderTexture.create({ width: w, height: h });
 }
 function reclaim(rt: RenderTexture) {
-	pool.push(rt);
+    pool.push(rt);
 }
 ```
 
@@ -116,9 +116,9 @@ Pixi 8 уже отдаёт хук `app.renderer.texture.disposeClient` для ч
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
-		{ title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
-		{ title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
-	]"
+    :items="[
+        { title: 'Глубокое понимание PixiJS', href: '/pixi-po-temam/1-glubokoe-ponimanie-pixijs' },
+        { title: 'Vue 3 + Pixi паттерны интеграции', href: '/pixi-po-temam/2-vue-3-plus-pixi-patterny-integratsii' },
+        { title: 'TypeScript first', href: '/pixi-po-temam/3-typescript-first' },
+    ]"
 />

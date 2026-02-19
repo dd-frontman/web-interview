@@ -53,8 +53,8 @@ const count = ref(0);
 count.value++;
 
 const state = reactive({
-	user: { name: "Alice" },
-	loading: false,
+    user: { name: "Alice" },
+    loading: false,
 });
 state.user.name = "Bob";
 
@@ -71,9 +71,9 @@ const { user, loading } = toRefs(state);
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ref / reactive: краткая шпаргалка', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-		{ title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
-		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
-	]"
+    :items="[
+        { title: 'ref / reactive: краткая шпаргалка', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+        { title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
+        { title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
+    ]"
 />

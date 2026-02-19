@@ -100,9 +100,9 @@ Pinia показывает state/action-потоки в привычном дл�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Pinia', href: '/vue/story/pinia' },
-		{ title: 'Vuex', href: '/vue/story/vuex' },
-		{ title: 'provide и inject', href: '/vue/provide-i-inject' },
-	]"
+    :items="[
+        { title: 'Pinia', href: '/vue/story/pinia' },
+        { title: 'Vuex', href: '/vue/story/vuex' },
+        { title: 'provide и inject', href: '/vue/provide-i-inject' },
+    ]"
 />

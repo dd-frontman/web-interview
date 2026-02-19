@@ -24,9 +24,9 @@ const channel = new BroadcastChannel("app-events");
 channel.postMessage({ type: "LOGOUT" });
 
 channel.onmessage = (event) => {
-	if (event.data.type === "LOGOUT") {
-		// очистка токенов и редирект
-	}
+    if (event.data.type === "LOGOUT") {
+        // очистка токенов и редирект
+    }
 };
 ```
 
@@ -43,11 +43,11 @@ channel.onmessage = (event) => {
 localStorage.setItem("app:event", JSON.stringify({ type: "LOGOUT", at: Date.now() }));
 
 window.addEventListener("storage", (event) => {
-	if (event.key !== "app:event" || !event.newValue) return;
-	const payload = JSON.parse(event.newValue);
-	if (payload.type === "LOGOUT") {
-		// синхронизация состояния
-	}
+    if (event.key !== "app:event" || !event.newValue) return;
+    const payload = JSON.parse(event.newValue);
+    if (payload.type === "LOGOUT") {
+        // синхронизация состояния
+    }
 });
 ```
 
@@ -69,9 +69,9 @@ window.addEventListener("storage", (event) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Event Loop', href: '/javascript/event-loop' },
-	]"
+    :items="[
+        { title: 'Workers в браузере', href: '/brauzery/workers-v-brauzere' },
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'Event Loop', href: '/javascript/event-loop' },
+    ]"
 />

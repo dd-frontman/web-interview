@@ -72,10 +72,10 @@ CSRF (Cross-Site Request Forgery) — атака, при которой злоу
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
-		{ title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
-		{ title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-	]"
+    :items="[
+        { title: 'Безопасность приложений', href: '/bezopasnost-prilozhenii/bezopasnost-prilozhenii' },
+        { title: 'Авторизация', href: '/avtorizatsiya/avtorizatsiya' },
+        { title: 'Cookie-сессия vs JWT', href: '/avtorizatsiya/cookie-sessiya-vs-jwt' },
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+    ]"
 />

@@ -45,11 +45,11 @@ Vue использует **ES 2015 Proxy** (вместо старого `Object.
 import { reactive } from "vue";
 
 const state = reactive({
-	count: 0,
-	user: {
-		name: "Alice",
-		age: 25,
-	},
+    count: 0,
+    user: {
+        name: "Alice",
+        age: 25,
+    },
 });
 
 state.count++; // отслеживается
@@ -83,7 +83,7 @@ Vue следит как за самим массивом, так и за объ�
 
 ```js
 const state = reactive({
-	count: ref(0),
+    count: ref(0),
 });
 console.log(state.count); // Vue unwrap ref
 ```
@@ -169,9 +169,9 @@ function increment() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
-		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-		{ title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
-	]"
+    :items="[
+        { title: 'Реактивность во Vue3', href: '/vue/ref-and-reactive/reaktivnost-vo-vue3' },
+        { title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+        { title: 'shallowReactive', href: '/vue/ref-and-reactive/shallowreactive' },
+    ]"
 />

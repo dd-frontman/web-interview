@@ -96,7 +96,7 @@ console.log(set.has(obj)); // true
 
 ```js
 for (const val of set) {
-	console.log(val);
+    console.log(val);
 }
 
 set.forEach((v) => console.log(v));
@@ -188,7 +188,7 @@ console.log(uniqueUsers.has("Bob")); // true
 
 // перебираем
 uniqueUsers.forEach((name) => {
-	console.log(name);
+    console.log(name);
 });
 
 // удаляем
@@ -211,9 +211,9 @@ console.log(uniqueUsers.size); // 1
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
-		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
-		{ title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
-	]"
+    :items="[
+        { title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+        { title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+        { title: 'WeakSet', href: '/javascript/kollektsii-dannykh/weakset' },
+    ]"
 />

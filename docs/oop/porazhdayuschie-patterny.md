@@ -29,15 +29,15 @@ updatedAt: "2026-02-16"
 
 ```ts
 class Config {
-	private static instance: Config;
-	private constructor(public readonly apiUrl: string) {}
+    private static instance: Config;
+    private constructor(public readonly apiUrl: string) {}
 
-	static getInstance() {
-		if (!Config.instance) {
-			Config.instance = new Config("https://api.example.com");
-		}
-		return Config.instance;
-	}
+    static getInstance() {
+        if (!Config.instance) {
+            Config.instance = new Config("https://api.example.com");
+        }
+        return Config.instance;
+    }
 }
 
 const c1 = Config.getInstance();
@@ -53,7 +53,7 @@ Pinia store работает как Singleton: при `useStore()` получа�
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
-	state: () => ({ name: "Guest" }),
+    state: () => ({ name: "Guest" }),
 });
 ```
 
@@ -65,12 +65,12 @@ Context обеспечивает единый экземпляр для всег
 const ThemeContext = createContext(null);
 
 export function ThemeProvider({ children }: any) {
-	const [theme, setTheme] = useState("light");
-	return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
+    const [theme, setTheme] = useState("light");
+    return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;
 }
 
 export function useTheme() {
-	return useContext(ThemeContext);
+    return useContext(ThemeContext);
 }
 ```
 
@@ -87,18 +87,18 @@ export function useTheme() {
 
 ```ts
 abstract class Dialog {
-	abstract createButton(): Button;
+    abstract createButton(): Button;
 }
 
 class HtmlDialog extends Dialog {
-	createButton() {
-		return new HtmlButton();
-	}
+    createButton() {
+        return new HtmlButton();
+    }
 }
 class WindowsDialog extends Dialog {
-	createButton() {
-		return new WindowsButton();
-	}
+    createButton() {
+        return new WindowsButton();
+    }
 }
 ```
 
@@ -108,7 +108,7 @@ class WindowsDialog extends Dialog {
 
 ```vue
 <template>
-	<component :is="current" />
+    <component :is="current" />
 </template>
 
 <script setup>
@@ -125,9 +125,9 @@ const current = Math.random() > 0.5 ? HtmlButton : ImgButton;
 
 ```tsx
 function ButtonFactory({ type }: { type: "html" | "image" }) {
-	if (type === "html") return <button>HTML</button>;
-	if (type === "image") return <img src="btn.png" alt="btn" />;
-	return null;
+    if (type === "html") return <button>HTML</button>;
+    if (type === "image") return <img src="btn.png" alt="btn" />;
+    return null;
 }
 ```
 
@@ -144,30 +144,30 @@ function ButtonFactory({ type }: { type: "html" | "image" }) {
 
 ```ts
 interface Button {
-	render(): void;
+    render(): void;
 }
 interface Checkbox {
-	render(): void;
+    render(): void;
 }
 
 class DarkButton implements Button {
-	render() {
-		console.log("Dark btn");
-	}
+    render() {
+        console.log("Dark btn");
+    }
 }
 class DarkCheckbox implements Checkbox {
-	render() {
-		console.log("Dark check");
-	}
+    render() {
+        console.log("Dark check");
+    }
 }
 
 class DarkUIFactory {
-	createButton(): Button {
-		return new DarkButton();
-	}
-	createCheckbox(): Checkbox {
-		return new DarkCheckbox();
-	}
+    createButton(): Button {
+        return new DarkButton();
+    }
+    createCheckbox(): Checkbox {
+        return new DarkCheckbox();
+    }
 }
 ```
 
@@ -179,20 +179,20 @@ import DarkBtn from "./DarkBtn.vue";
 import DarkInput from "./DarkInput.vue";
 
 class DarkFactory {
-	createButton() {
-		return DarkBtn;
-	}
-	createInput() {
-		return DarkInput;
-	}
+    createButton() {
+        return DarkBtn;
+    }
+    createInput() {
+        return DarkInput;
+    }
 }
 
 const factory = new DarkFactory();
 </script>
 
 <template>
-	<component :is="factory.createButton()" />
-	<component :is="factory.createInput()" />
+    <component :is="factory.createButton()" />
+    <component :is="factory.createInput()" />
 </template>
 ```
 
@@ -200,10 +200,10 @@ const factory = new DarkFactory();
 
 ```tsx
 function createFactory(theme: "dark" | "light") {
-	return {
-		Button: theme === "dark" ? DarkButton : LightButton,
-		Input: theme === "dark" ? DarkInput : LightInput,
-	};
+    return {
+        Button: theme === "dark" ? DarkButton : LightButton,
+        Input: theme === "dark" ? DarkInput : LightInput,
+    };
 }
 
 const { Button, Input } = createFactory("dark");
@@ -222,32 +222,32 @@ const { Button, Input } = createFactory("dark");
 
 ```ts
 class User {
-	constructor(
-		public name?: string,
-		public age?: number,
-		public email?: string
-	) {}
+    constructor(
+        public name?: string,
+        public age?: number,
+        public email?: string
+    ) {}
 }
 
 class UserBuilder {
-	private u = new User();
+    private u = new User();
 
-	setName(name: string) {
-		this.u.name = name;
-		return this;
-	}
-	setAge(age: number) {
-		this.u.age = age;
-		return this;
-	}
-	setEmail(email: string) {
-		this.u.email = email;
-		return this;
-	}
+    setName(name: string) {
+        this.u.name = name;
+        return this;
+    }
+    setAge(age: number) {
+        this.u.age = age;
+        return this;
+    }
+    setEmail(email: string) {
+        this.u.email = email;
+        return this;
+    }
 
-	build() {
-		return this.u;
-	}
+    build() {
+        return this.u;
+    }
 }
 
 const user = new UserBuilder().setName("Alice").setAge(25).build();
@@ -264,9 +264,9 @@ const user = reactive({ name: "", age: 0, email: "" });
 </script>
 
 <template>
-	<input v-model="user.name" />
-	<input v-model="user.age" type="number" />
-	<input v-model="user.email" />
+    <input v-model="user.name" />
+    <input v-model="user.age" type="number" />
+    <input v-model="user.email" />
 </template>
 ```
 
@@ -274,15 +274,15 @@ const user = reactive({ name: "", age: 0, email: "" });
 
 ```tsx
 export function UserForm() {
-	const [user, setUser] = useState({ name: "", age: 0, email: "" });
+    const [user, setUser] = useState({ name: "", age: 0, email: "" });
 
-	return (
-		<>
-			<input value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} />
-			<input value={user.age} onChange={(e) => setUser({ ...user, age: +e.target.value })} />
-			<input value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
-		</>
-	);
+    return (
+        <>
+            <input value={user.name} onChange={(e) => setUser({ ...user, name: e.target.value })} />
+            <input value={user.age} onChange={(e) => setUser({ ...user, age: +e.target.value })} />
+            <input value={user.email} onChange={(e) => setUser({ ...user, email: e.target.value })} />
+        </>
+    );
 }
 ```
 
@@ -339,9 +339,9 @@ console.log(u1.role); // "user"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'ООП', href: '/oop/index' },
-		{ title: 'Принципы', href: '/oop/printsipy-oop' },
-		{ title: 'Vue', href: '/vue' },
-	]"
+    :items="[
+        { title: 'ООП', href: '/oop/index' },
+        { title: 'Принципы', href: '/oop/printsipy-oop' },
+        { title: 'Vue', href: '/vue' },
+    ]"
 />

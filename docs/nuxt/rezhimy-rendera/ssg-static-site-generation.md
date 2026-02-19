@@ -42,13 +42,13 @@ SSG — это когда страница вашего приложения **�
 ```ts
 // nuxt.config.ts
 export default defineNuxtConfig({
-	ssr: true, // обязательно включён SSR
-	nitro: {
-		preset: "static", // указываем, что билдим в статике
-	},
-	generate: {
-		routes: ["/blog/1", "/blog/2"], // статические маршруты
-	},
+    ssr: true, // обязательно включён SSR
+    nitro: {
+        preset: "static", // указываем, что билдим в статике
+    },
+    generate: {
+        routes: ["/blog/1", "/blog/2"], // статические маршруты
+    },
 });
 ```
 
@@ -63,8 +63,8 @@ const { data: post } = await useAsyncData(`post-${id}`, () => $fetch(`/api/posts
 </script>
 
 <template>
-	<h1>{{ post.title }}</h1>
-	<p>{{ post.content }}</p>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
 </template>
 ```
 
@@ -79,30 +79,30 @@ import { GetStaticPaths, GetStaticProps } from "next";
 type Post = { id: string; title: string; content: string };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	// Пути генерируются на этапе билда
-	const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
+    // Пути генерируются на этапе билда
+    const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
 
-	return {
-		paths: posts.slice(0, 5).map((p: Post) => ({ params: { id: p.id.toString() } })),
-		fallback: false, // false = 404 для несуществующих путей
-	};
+    return {
+        paths: posts.slice(0, 5).map((p: Post) => ({ params: { id: p.id.toString() } })),
+        fallback: false, // false = 404 для несуществующих путей
+    };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`).then((res) =>
-		res.json()
-	);
+    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${params?.id}`).then((res) =>
+        res.json()
+    );
 
-	return { props: { post } };
+    return { props: { post } };
 };
 
 export default function BlogPage({ post }: { post: Post }) {
-	return (
-		<>
-			<h1>{post.title}</h1>
-			<p>{post.content}</p>
-		</>
-	);
+    return (
+        <>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
+        </>
+    );
 }
 ```
 
@@ -153,9 +153,9 @@ export default function BlogPage({ post }: { post: Post }) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
-		{ title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
-		{ title: 'Nitro', href: '/nuxt/nitro' },
-	]"
+    :items="[
+        { title: 'Hydration', href: '/nuxt/rezhimy-rendera/hydration' },
+        { title: 'ISR - Incremental Static Regeneration', href: '/nuxt/rezhimy-rendera/isr-incremental-static-regeneration' },
+        { title: 'Nitro', href: '/nuxt/nitro' },
+    ]"
 />

@@ -93,24 +93,24 @@ src/
 ```ts
 // domains/user/model/entities/User.ts
 export class User {
-	constructor(
-		public id: string,
-		public email: string,
-		public name: string
-	) {
-		if (!User.isValidEmail(email)) {
-			throw new Error("Invalid email");
-		}
-	}
+    constructor(
+        public id: string,
+        public email: string,
+        public name: string
+    ) {
+        if (!User.isValidEmail(email)) {
+            throw new Error("Invalid email");
+        }
+    }
 
-	static isValidEmail(email: string): boolean {
-		return /\S+@\S+\.\S+/.test(email);
-	}
+    static isValidEmail(email: string): boolean {
+        return /\S+@\S+\.\S+/.test(email);
+    }
 
-	rename(newName: string) {
-		if (!newName) throw new Error("Name cannot be empty");
-		this.name = newName;
-	}
+    rename(newName: string) {
+        if (!newName) throw new Error("Name cannot be empty");
+        this.name = newName;
+    }
 }
 ```
 
@@ -121,12 +121,12 @@ import { User } from "../model/entities/User";
 type RawUser = { id: string; email: string; name: string };
 
 export async function fetchUser(userId: string): Promise<User> {
-	const resp = await fetch(`/api/users/${userId}`);
-	if (!resp.ok) {
-		throw new Error("Fetch failed");
-	}
-	const raw = (await resp.json()) as RawUser;
-	return new User(raw.id, raw.email, raw.name);
+    const resp = await fetch(`/api/users/${userId}`);
+    if (!resp.ok) {
+        throw new Error("Fetch failed");
+    }
+    const raw = (await resp.json()) as RawUser;
+    return new User(raw.id, raw.email, raw.name);
 }
 ```
 
@@ -137,36 +137,36 @@ import { fetchUser } from "../api/userApi";
 import { User } from "./entities/User";
 
 export function useUser(userId: string) {
-	const user = ref<User | null>(null);
-	const loading = ref(false);
-	const error = ref<string | null>(null);
+    const user = ref<User | null>(null);
+    const loading = ref(false);
+    const error = ref<string | null>(null);
 
-	async function load() {
-		loading.value = true;
-		error.value = null;
-		try {
-			const u = await fetchUser(userId);
-			user.value = u;
-		} catch (e: any) {
-			error.value = e.message || "Error fetching user";
-		} finally {
-			loading.value = false;
-		}
-	}
+    async function load() {
+        loading.value = true;
+        error.value = null;
+        try {
+            const u = await fetchUser(userId);
+            user.value = u;
+        } catch (e: any) {
+            error.value = e.message || "Error fetching user";
+        } finally {
+            loading.value = false;
+        }
+    }
 
-	return { user, loading, error, load };
+    return { user, loading, error, load };
 }
 ```
 
 ```vue
 <!-- domains/user/components/UserProfile.vue -->
 <template>
-	<div v-if="loading">Loading user...</div>
-	<div v-else-if="error">Error: {{ error }}</div>
-	<div v-else>
-		<h2>{{ user?.name }}</h2>
-		<p>{{ user?.email }}</p>
-	</div>
+    <div v-if="loading">Loading user...</div>
+    <div v-else-if="error">Error: {{ error }}</div>
+    <div v-else>
+        <h2>{{ user?.name }}</h2>
+        <p>{{ user?.email }}</p>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -210,9 +210,9 @@ load();
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
-		{ title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
-		{ title: 'Архитектура', href: '/arkhitektura/index' },
-	]"
+    :items="[
+        { title: 'Архитектура приложений — виды и особенности', href: '/arkhitektura/arkhitektura-prilozhenii-vidy-i-osobennosti' },
+        { title: 'Feature-Sliced Design', href: '/arkhitektura/feature-sliced-design' },
+        { title: 'Архитектура', href: '/arkhitektura/index' },
+    ]"
 />

@@ -76,15 +76,15 @@ const [count, setCount] = useState(0);
 import { useState } from "react";
 
 export function Counter() {
-	const [count, setCount] = useState<number>(0);
+    const [count, setCount] = useState<number>(0);
 
-	return (
-		<div>
-			<p>Счётчик: {count}</p>
-			<button onClick={() => setCount((p) => p + 1)}>+1</button>
-			<button onClick={() => setCount(0)}>Сброс</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>Счётчик: {count}</p>
+            <button onClick={() => setCount((p) => p + 1)}>+1</button>
+            <button onClick={() => setCount(0)}>Сброс</button>
+        </div>
+    );
 }
 ```
 
@@ -94,14 +94,14 @@ export function Counter() {
 type User = { id: string; name: string };
 
 export function Profile() {
-	const [user, setUser] = useState<User>({ id: "1", name: "Alice" });
+    const [user, setUser] = useState<User>({ id: "1", name: "Alice" });
 
-	return (
-		<div>
-			<p>{user.name}</p>
-			<button onClick={() => setUser((prev) => ({ ...prev, name: "Bob" }))}>Переименовать</button>
-		</div>
-	);
+    return (
+        <div>
+            <p>{user.name}</p>
+            <button onClick={() => setUser((prev) => ({ ...prev, name: "Bob" }))}>Переименовать</button>
+        </div>
+    );
 }
 ```
 
@@ -111,20 +111,20 @@ export function Profile() {
 type Todo = { id: string; text: string };
 
 export function TodoList() {
-	const [todos, setTodos] = useState<Todo[]>([]);
+    const [todos, setTodos] = useState<Todo[]>([]);
 
-	const add = (text: string) => setTodos((prev) => [...prev, { id: crypto.randomUUID(), text }]);
+    const add = (text: string) => setTodos((prev) => [...prev, { id: crypto.randomUUID(), text }]);
 
-	return (
-		<div>
-			<button onClick={() => add("Новая задача")}>Добавить</button>
-			<ul>
-				{todos.map((t) => (
-					<li key={t.id}>{t.text}</li>
-				))}
-			</ul>
-		</div>
-	);
+    return (
+        <div>
+            <button onClick={() => add("Новая задача")}>Добавить</button>
+            <ul>
+                {todos.map((t) => (
+                    <li key={t.id}>{t.text}</li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 ```
 
@@ -160,9 +160,9 @@ export function TodoList() {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
-		{ title: 'useContext', href: '/react/khuki/usecontext' },
-		{ title: 'useEffect', href: '/react/khuki/useeffect' },
-	]"
+    :items="[
+        { title: 'Основные хуки в React', href: '/react/khuki/osnovnye-khuki-v-react' },
+        { title: 'useContext', href: '/react/khuki/usecontext' },
+        { title: 'useEffect', href: '/react/khuki/useeffect' },
+    ]"
 />

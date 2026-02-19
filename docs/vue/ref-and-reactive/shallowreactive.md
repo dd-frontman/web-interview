@@ -18,8 +18,8 @@ updatedAt: "2026-02-16"
 
 ```js
 const state = shallowReactive({
-	count: 0,
-	nested: { value: 10 },
+    count: 0,
+    nested: { value: 10 },
 });
 
 state.count++; // реактивно
@@ -144,9 +144,9 @@ const updateNested = () => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
-		{ title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
-		{ title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-	]"
+    :items="[
+        { title: 'reactive', href: '/vue/ref-and-reactive/reactive' },
+        { title: 'shallowRef', href: '/vue/ref-and-reactive/shallowref' },
+        { title: 'ref vs reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+    ]"
 />

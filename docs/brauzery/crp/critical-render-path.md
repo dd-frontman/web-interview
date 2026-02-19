@@ -111,10 +111,10 @@ DOM и CSSOM объединяются в Render Tree (дерево того, ч�
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Типичные ошибки в Critical Render Path', href: '/brauzery/crp/oshibki-critical-render-path' },
-		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
-		{ title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
-		{ title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
-	]"
+    :items="[
+        { title: 'Типичные ошибки в Critical Render Path', href: '/brauzery/crp/oshibki-critical-render-path' },
+        { title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+        { title: 'Reflow, Repaint и Layout Thrashing', href: '/brauzery/reflow-repaint-i-layout-thrashing' },
+        { title: 'LCP, INP, TTI', href: '/brauzery/lcp-inp-tti' },
+    ]"
 />

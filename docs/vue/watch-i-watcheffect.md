@@ -29,13 +29,13 @@ const search = ref("");
 const results = ref([]);
 
 watch(search, async (value) => {
-	if (!value.trim()) {
-		results.value = [];
-		return;
-	}
+    if (!value.trim()) {
+        results.value = [];
+        return;
+    }
 
-	const res = await fetch(`/api/search?q=${encodeURIComponent(value)}`);
-	results.value = await res.json();
+    const res = await fetch(`/api/search?q=${encodeURIComponent(value)}`);
+    results.value = await res.json();
 });
 ```
 
@@ -63,7 +63,7 @@ const fullName = computed(() => `${firstName.value} ${lastName.value}`);
 const theme = ref("dark");
 
 watch(theme, (next) => {
-	localStorage.setItem("theme", next);
+    localStorage.setItem("theme", next);
 });
 ```
 
@@ -94,7 +94,7 @@ const count = ref(0);
 const double = ref(0);
 
 watchEffect(() => {
-	double.value = count.value * 2;
+    double.value = count.value * 2;
 });
 ```
 
@@ -138,11 +138,11 @@ watch(userId, loadUser, { immediate: true });
 
 ```ts
 watch(
-	() => formState,
-	(next) => {
-		saveDraft(next);
-	},
-	{ deep: true }
+    () => formState,
+    (next) => {
+        saveDraft(next);
+    },
+    { deep: true }
 );
 ```
 
@@ -158,8 +158,8 @@ watch(
 
 ```ts
 watch(activeTab, () => {
-	// нужен уже обновленный DOM
-	readLayout();
+    // нужен уже обновленный DOM
+    readLayout();
 }, { flush: "post" });
 ```
 
@@ -169,7 +169,7 @@ watch(activeTab, () => {
 
 ```ts
 watch(isReady, () => {
-	sendFirstReadyMetric();
+    sendFirstReadyMetric();
 }, { once: true });
 ```
 
@@ -179,9 +179,9 @@ watch(isReady, () => {
 
 ```ts
 watch(source, cb, {
-	onTrack(event) {
-		console.log("track", event);
-	},
+    onTrack(event) {
+        console.log("track", event);
+    },
 });
 ```
 
@@ -191,9 +191,9 @@ watch(source, cb, {
 
 ```ts
 watch(source, cb, {
-	onTrigger(event) {
-		console.log("trigger", event);
-	},
+    onTrigger(event) {
+        console.log("trigger", event);
+    },
 });
 ```
 
@@ -203,12 +203,12 @@ watch(source, cb, {
 
 ```ts
 watch(source, callback, {
-	immediate: true,
-	deep: false,
-	flush: "pre",
-	once: false,
-	onTrack: (e) => console.debug("track", e),
-	onTrigger: (e) => console.debug("trigger", e),
+    immediate: true,
+    deep: false,
+    flush: "pre",
+    once: false,
+    onTrack: (e) => console.debug("track", e),
+    onTrigger: (e) => console.debug("trigger", e),
 });
 ```
 
@@ -226,11 +226,11 @@ watch(source, callback, {
 
 ```ts
 watch(query, async (q, _, onCleanup) => {
-	const controller = new AbortController();
-	onCleanup(() => controller.abort());
+    const controller = new AbortController();
+    onCleanup(() => controller.abort());
 
-	const res = await fetch(`/api/search?q=${q}`, { signal: controller.signal });
-	data.value = await res.json();
+    const res = await fetch(`/api/search?q=${q}`, { signal: controller.signal });
+    data.value = await res.json();
 });
 ```
 
@@ -245,9 +245,9 @@ watch(query, async (q, _, onCleanup) => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Ref vs Reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
-		{ title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
-		{ title: 'Vue2 vs Vue3', href: '/vue/vue2-vs-vue3' },
-	]"
+    :items="[
+        { title: 'Ref vs Reactive', href: '/vue/ref-and-reactive/ref-vs-reactive' },
+        { title: 'Асинхронные рендеры и батчинг', href: '/vue/asinkhronnye-rendery-i-batching' },
+        { title: 'Vue2 vs Vue3', href: '/vue/vue2-vs-vue3' },
+    ]"
 />

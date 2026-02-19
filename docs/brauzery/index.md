@@ -26,9 +26,9 @@ updatedAt: "2026-02-16"
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
-		{ title: 'Типичные ошибки в CRP', href: '/brauzery/crp/oshibki-critical-render-path' },
-		{ title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
-	]"
+    :items="[
+        { title: 'Critical Render Path', href: '/brauzery/crp/critical-render-path' },
+        { title: 'Типичные ошибки в CRP', href: '/brauzery/crp/oshibki-critical-render-path' },
+        { title: 'Forced Synchronous Layout и Long Tasks', href: '/brauzery/forced-synchronous-layout-i-long-tasks' },
+    ]"
 />

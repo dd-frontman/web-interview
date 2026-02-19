@@ -28,7 +28,7 @@ delete user.role; // не удалится
 
 ```js
 const config = {
-	api: { baseUrl: "/api" },
+    api: { baseUrl: "/api" },
 };
 
 Object.freeze(config);
@@ -41,21 +41,21 @@ config.api.baseUrl = "/v2"; // изменится, потому что влож�
 
 ```js
 function deepFreeze(value, seen = new WeakSet()) {
-	if (value === null || typeof value !== "object" || seen.has(value)) {
-		return value;
-	}
+    if (value === null || typeof value !== "object" || seen.has(value)) {
+        return value;
+    }
 
-	seen.add(value);
-	for (const key of Reflect.ownKeys(value)) {
-		deepFreeze(value[key], seen);
-	}
+    seen.add(value);
+    for (const key of Reflect.ownKeys(value)) {
+        deepFreeze(value[key], seen);
+    }
 
-	return Object.freeze(value);
+    return Object.freeze(value);
 }
 
 const settings = deepFreeze({
-	theme: { mode: "dark" },
-	flags: ["a", "b"],
+    theme: { mode: "dark" },
+    flags: ["a", "b"],
 });
 ```
 
@@ -80,20 +80,20 @@ const settings = deepFreeze({
 - immutable-подходы в архитектуре
 
 <OfficialDocsLinks
-	:links="[
-		{
-			title: 'MDN: Object.freeze()',
-			href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
-		},
-	]"
+    :links="[
+        {
+            title: 'MDN: Object.freeze()',
+            href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze',
+        },
+    ]"
 />
 
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Типы данных / Object', href: '/javascript/tipy-dannykh/object' },
-		{ title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
-		{ title: 'TypeScript: утилитарные типы', href: '/typescript/utilitarnye-tipy' },
-	]"
+    :items="[
+        { title: 'Типы данных / Object', href: '/javascript/tipy-dannykh/object' },
+        { title: 'Что такое замыкание', href: '/javascript/chto-takoe-zamykanie' },
+        { title: 'TypeScript: утилитарные типы', href: '/typescript/utilitarnye-tipy' },
+    ]"
 />

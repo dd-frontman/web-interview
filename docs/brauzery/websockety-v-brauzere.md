@@ -37,16 +37,16 @@ updatedAt: "2026-02-16"
 const socket = new WebSocket("wss://example.com/ws");
 
 socket.addEventListener("open", () => {
-	socket.send(JSON.stringify({ type: "PING" }));
+    socket.send(JSON.stringify({ type: "PING" }));
 });
 
 socket.addEventListener("message", (event) => {
-	const data = JSON.parse(event.data);
-	console.log("message", data);
+    const data = JSON.parse(event.data);
+    console.log("message", data);
 });
 
 socket.addEventListener("close", () => {
-	console.log("connection closed");
+    console.log("connection closed");
 });
 ```
 
@@ -76,9 +76,9 @@ socket.addEventListener("close", () => {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Server-Sent Events (SSE)', href: '/brauzery/server-sent-events-sse' },
-		{ title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
-		{ title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
-	]"
+    :items="[
+        { title: 'Server-Sent Events (SSE)', href: '/brauzery/server-sent-events-sse' },
+        { title: 'Сети, HTTP и CORS', href: '/brauzery/seti-http-i-cors' },
+        { title: 'Общение между вкладками браузера', href: '/brauzery/obschenie-mezhdu-vkladkami-brauzera' },
+    ]"
 />

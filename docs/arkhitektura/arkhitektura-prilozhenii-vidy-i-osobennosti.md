@@ -139,22 +139,22 @@ updatedAt: "2026-02-16"
 ```javascript
 // React компоненты
 const UserList = ({ users, onUserClick }) => {
-	return (
-		<div className="user-list">
-			{users.map((user) => (
-				<UserCard key={user.id} user={user} onClick={() => onUserClick(user)} />
-			))}
-		</div>
-	);
+    return (
+        <div className="user-list">
+            {users.map((user) => (
+                <UserCard key={user.id} user={user} onClick={() => onUserClick(user)} />
+            ))}
+        </div>
+    );
 };
 
 const UserCard = ({ user, onClick }) => {
-	return (
-		<div className="user-card" onClick={onClick}>
-			<h3>{user.name}</h3>
-			<p>{user.email}</p>
-		</div>
-	);
+    return (
+        <div className="user-card" onClick={onClick}>
+            <h3>{user.name}</h3>
+            <p>{user.email}</p>
+        </div>
+    );
 };
 ```
 
@@ -163,23 +163,23 @@ const UserCard = ({ user, onClick }) => {
 ```javascript
 // Централизованное управление состоянием
 class UserStore {
-	constructor() {
-		this.users = [];
-		this.loading = false;
-		this.error = null;
-	}
+    constructor() {
+        this.users = [];
+        this.loading = false;
+        this.error = null;
+    }
 
-	async fetchUsers() {
-		this.loading = true;
-		try {
-			const response = await fetch("/api/users");
-			this.users = await response.json();
-		} catch (error) {
-			this.error = error.message;
-		} finally {
-			this.loading = false;
-		}
-	}
+    async fetchUsers() {
+        this.loading = true;
+        try {
+            const response = await fetch("/api/users");
+            this.users = await response.json();
+        } catch (error) {
+            this.error = error.message;
+        } finally {
+            this.loading = false;
+        }
+    }
 }
 ```
 
@@ -197,22 +197,22 @@ app.use(express.json());
 
 // Роуты для пользователей
 app.get("/api/users", async (req, res) => {
-	try {
-		const users = await User.find();
-		res.json(users);
-	} catch (error) {
-		res.status(500).json({ error: error.message });
-	}
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 app.post("/api/users", async (req, res) => {
-	try {
-		const user = new User(req.body);
-		await user.save();
-		res.status(201).json(user);
-	} catch (error) {
-		res.status(400).json({ error: error.message });
-	}
+    try {
+        const user = new User(req.body);
+        await user.save();
+        res.status(201).json(user);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
 });
 ```
 
@@ -247,16 +247,16 @@ const typeDefs = `
 
 // Резолверы
 const resolvers = {
-	Query: {
-		users: () => User.find(),
-		user: (_, { id }) => User.findById(id),
-	},
-	Mutation: {
-		createUser: (_, { name, email }) => {
-			const user = new User({ name, email });
-			return user.save();
-		},
-	},
+    Query: {
+        users: () => User.find(),
+        user: (_, { id }) => User.findById(id),
+    },
+    Mutation: {
+        createUser: (_, { name, email }) => {
+            const user = new User({ name, email });
+            return user.save();
+        },
+    },
 };
 ```
 
@@ -329,48 +329,48 @@ const resolvers = {
 ```javascript
 // Исходный монолит
 class UserService {
-	async createUser(userData) {
-		// Создание пользователя
-		const user = await User.create(userData);
+    async createUser(userData) {
+        // Создание пользователя
+        const user = await User.create(userData);
 
-		// Отправка email
-		await EmailService.sendWelcomeEmail(user.email);
+        // Отправка email
+        await EmailService.sendWelcomeEmail(user.email);
 
-		// Создание профиля
-		await ProfileService.createProfile(user.id);
+        // Создание профиля
+        await ProfileService.createProfile(user.id);
 
-		return user;
-	}
+        return user;
+    }
 }
 
 // После миграции на микросервисы
 class UserService {
-	async createUser(userData) {
-		// Создание пользователя
-		const user = await User.create(userData);
+    async createUser(userData) {
+        // Создание пользователя
+        const user = await User.create(userData);
 
-		// Публикация события
-		await EventBus.publish("user.created", {
-			userId: user.id,
-			email: user.email,
-		});
+        // Публикация события
+        await EventBus.publish("user.created", {
+            userId: user.id,
+            email: user.email,
+        });
 
-		return user;
-	}
+        return user;
+    }
 }
 
 // Email Service
 class EmailService {
-	async handleUserCreated(event) {
-		await this.sendWelcomeEmail(event.email);
-	}
+    async handleUserCreated(event) {
+        await this.sendWelcomeEmail(event.email);
+    }
 }
 
 // Profile Service
 class ProfileService {
-	async handleUserCreated(event) {
-		await this.createProfile(event.userId);
-	}
+    async handleUserCreated(event) {
+        await this.createProfile(event.userId);
+    }
 }
 ```
 
@@ -418,12 +418,12 @@ class ProfileService {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Принципы SOLID', href: '/printsipy-programmirovaniya/solid' },
-		{ title: 'Монолит', href: '/arkhitektura/monolit' },
-		{ title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
-		{ title: 'Циклические зависимости', href: '/arkhitektura/tsiklicheskie-zavisimosti' },
-		{ title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
-		{ title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
-	]"
+    :items="[
+        { title: 'Принципы SOLID', href: '/printsipy-programmirovaniya/solid' },
+        { title: 'Монолит', href: '/arkhitektura/monolit' },
+        { title: 'Микросервисы', href: '/arkhitektura/mikroservisy' },
+        { title: 'Циклические зависимости', href: '/arkhitektura/tsiklicheskie-zavisimosti' },
+        { title: 'JavaScript', href: '/javascript/tipy-dannykh/tipy-dannykh' },
+        { title: 'Эффективное обучение', href: '/podgotovka-k-sobesedovaniyu' },
+    ]"
 />

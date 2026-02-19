@@ -78,12 +78,12 @@ console.log(ws.has(user)); // false
 const processed = new WeakSet();
 
 function processNode(node) {
-	if (processed.has(node)) {
-		return;
-	}
+    if (processed.has(node)) {
+        return;
+    }
 
-	processed.add(node);
-	// тяжелая логика
+    processed.add(node);
+    // тяжелая логика
 }
 ```
 
@@ -95,15 +95,15 @@ function processNode(node) {
 const bound = new WeakSet();
 
 function bindClick(el) {
-	if (bound.has(el)) {
-		return;
-	}
+    if (bound.has(el)) {
+        return;
+    }
 
-	el.addEventListener("click", () => {
-		console.log("clicked");
-	});
+    el.addEventListener("click", () => {
+        console.log("clicked");
+    });
 
-	bound.add(el);
+    bound.add(el);
 }
 ```
 
@@ -157,9 +157,9 @@ function bindClick(el) {
 ---
 
 <RelatedTopics
-	:items="[
-		{ title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
-		{ title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
-		{ title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
-	]"
+    :items="[
+        { title: 'Map', href: '/javascript/kollektsii-dannykh/map' },
+        { title: 'Set', href: '/javascript/kollektsii-dannykh/set' },
+        { title: 'WeakMap', href: '/javascript/kollektsii-dannykh/weakmap' },
+    ]"
 />
