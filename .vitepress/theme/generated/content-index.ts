@@ -597,7 +597,7 @@ export const contentIndex: ContentIndexItem[] = [
 	{
 		route: "/javascript/kollektsii-dannykh/weakmap",
 		title: "Что такое WeakMap",
-		description: "Это значит: если объект-ключ больше нигде не используется, он может быть автоматически удалён сборщиком мусора (GC) вместе со связанным значением. [turn0search0][turn0...",
+		description: "WeakMap хранит пары ключ-значение, где ключи связаны слабо и не мешают сборщику мусора.",
 		tags: ["javascript", "kollektsii-dannykh", "weakmap"],
 		updatedAt: "2026-02-16",
 		hasManualRelated: true,
