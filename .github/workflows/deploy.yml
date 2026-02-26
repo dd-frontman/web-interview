@@ -62,7 +62,7 @@ jobs:
         run: yarn report:stale
 
       - name: Install Playwright browser
-        run: npx --yes playwright@1.51.1 install --with-deps chromium
+        run: yarn playwright install --with-deps webkit
 
       - name: Mobile smoke tests
         run: yarn test:mobile
