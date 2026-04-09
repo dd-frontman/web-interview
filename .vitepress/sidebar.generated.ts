@@ -30,6 +30,19 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 			{ text: "Vue2 vs Vue3", link: "/vue/vue2-vs-vue3" },
 			{ text: "watch vs watchEffect", link: "/vue/watch-i-watcheffect" },
 			{
+				text: "Бандлеры",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "esbuild для Vue", link: "/vue/bandlery/esbuild" },
+					{ text: "Parcel для Vue", link: "/vue/bandlery/parcel" },
+					{ text: "Rollup для Vue", link: "/vue/bandlery/rollup" },
+					{ text: "Rspack для Vue", link: "/vue/bandlery/rspack" },
+					{ text: "Vite для Vue", link: "/vue/bandlery/vite" },
+					{ text: "Webpack для Vue", link: "/vue/bandlery/webpack" }
+				],
+			},
+			{
 				text: "Задачи",
 				collapsible: true,
 				collapsed: true,
@@ -43,6 +56,8 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				collapsible: true,
 				collapsed: true,
 				items: [
+					{ text: "Сторы под капотом", link: "/vue/story/story-pod-kapotom" },
+					{ text: "Чем заменить store", link: "/vue/story/chem-zamenit-store" },
 					{ text: "Pinia", link: "/vue/story/pinia" },
 					{ text: "Pinia vs Vuex", link: "/vue/story/pinia-vs-vuex" },
 					{ text: "Vuex", link: "/vue/story/vuex" }
@@ -133,6 +148,16 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				],
 			},
 			{
+				text: "Контроль мутаций объекта",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "Сравнение режимов", link: "/javascript/object-freeze/freeze-vs-seal-vs-prevent-extensions" },
+					{ text: "Object.preventExtensions", link: "/javascript/object-freeze/object-prevent-extensions" },
+					{ text: "Object.seal", link: "/javascript/object-freeze/object-seal" }
+				],
+			},
+			{
 				text: "Типы данных",
 				collapsible: true,
 				collapsed: true,
@@ -171,6 +196,7 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 		collapsed: true,
 		items: [
 			{ text: "TS", link: "/typescript" },
+			{ text: "30 вопросов по", link: "/typescript/30-voprosov-po-typescript-middle" },
 			{ text: "Утилитарные типы", link: "/typescript/utilitarnye-tipy" },
 			{ text: "Шпоры TS", link: "/typescript/shpory-ts" },
 			{ text: "as const в", link: "/typescript/as-const-v-typescript" },
@@ -356,6 +382,136 @@ export const sidebar: SidebarItemWithCollapsible[] = [
 				collapsed: true,
 				items: [
 					{ text: "1 этап", link: "/zadachi/yandeks/1-etap" }
+				],
+			}
+		],
+	},
+	{
+		text: "Вопросы",
+		collapsible: true,
+		collapsed: true,
+		items: [
+			{
+				text: "Выбор стека и архитектурные решения",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Какой стек вы бы выбрали для нового frontend-проекта и почему?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/1-kakoi-stek-vybrat-dlya-novogo-proekta" },
+					{ text: "2. Какие факторы вы уточняете перед тем, как предлагать стек для нового проекта?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/2-kakie-faktory-utochnyat-pered-vyborom-steka" },
+					{ text: "3. В каких случаях для проекта достаточно CSR, а когда стоит рассматривать SSR?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/3-kogda-dostatochno-csr-a-kogda-ssr" },
+					{ text: "4. Какие преимущества даёт SSR?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/4-preimushchestva-ssr" },
+					{ text: "5. Какие дополнительные издержки появляются при использовании SSR?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/5-izderzhki-ssr" },
+					{ text: "6. Когда TypeScript стоит подключать с самого начала, а когда допустим поэтапный переход?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/6-kogda-podklyuchat-typescript" },
+					{ text: "7. Какие инструменты и библиотеки вы считаете базовыми для современного frontend-проекта?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/7-bazovye-instrumenty-dlya-frontend-proekta" },
+					{ text: "8. Что бы вы добавили в проект помимо Vue, TypeScript и роутера, чтобы улучшить качество разработки и сопровождения?", link: "/voprosy/vybor-steka-i-arkhitekturnye-resheniya/8-chto-dobavit-dlya-kachestva-razrabotki" }
+				],
+			},
+			{
+				text: "Миграция Vue 2 на Vue 3",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Какие основные сложности возникают при миграции с Vue 2 на Vue 3?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/1-osnovnye-slozhnosti-migratsii" },
+					{ text: "2. Какой подход к миграции Vue 2 -> Vue 3 вы считаете наиболее безопасным и практичным?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/2-bezopasnyi-podkhod-k-migratsii" },
+					{ text: "3. Какие части системы, кроме компонентов, обычно требуют миграции при переходе на Vue 3?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/3-kakie-chasti-sistemy-trebuyut-migratsii" },
+					{ text: "4. Как вы подходите к миграции Vuex на Pinia?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/4-migratsiya-vuex-na-pinia" },
+					{ text: "5. Почему имеет смысл заменять mixins на composables?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/5-pochemu-stoit-zamenyat-mixins-na-composables" },
+					{ text: "6. Какие архитектурные улучшения имеет смысл делать параллельно с миграцией на новую версию фреймворка?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/6-kakie-arkhitekturnye-uluchsheniya-delat-parallelno" },
+					{ text: "7. Как вы понимаете переход от монолитной frontend-архитектуры к модульной?", link: "/voprosy/migratsiya-s-vue-2-na-vue-3/7-perekhod-ot-monolita-k-modulnoi-arkhitekture" }
+				],
+			},
+			{
+				text: "Надёжность, мониторинг и поддержка frontend-приложений",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Как вы повышаете отказоустойчивость frontend-приложения?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/1-kak-povyshat-otkazoustoichivost-frontend-prilozheniya" },
+					{ text: "2. Как сделать так, чтобы падения приложения в проде были более предсказуемыми и диагностируемыми?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/2-kak-sdelat-padeniya-bolee-predskazuemymi-i-diagnostiruemymi" },
+					{ text: "3. Какие инструменты вы используете для мониторинга frontend-приложения?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/3-instrumenty-dlya-monitoringa-frontend-prilozheniya" },
+					{ text: "4. Как вы организуете сбор ошибок на клиенте?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/4-kak-organizovat-sbor-oshibok-na-kliente" },
+					{ text: "5. Что должно попадать в error tracking помимо текста ошибки?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/5-chto-otpravlyat-v-error-tracking" },
+					{ text: "6. Как вы диагностируете проблему, если приложение падает только у части пользователей?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/6-kak-diagnostirovat-padenie-u-chasti-polzovatelei" },
+					{ text: "7. Какие метрики полезно собирать на frontend?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/7-kakie-metriki-sobirat-na-frontend" },
+					{ text: "8. Чем отличаются тесты от продовой наблюдаемости?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/8-chem-testy-otlichayutsya-ot-prodovoi-nablyudaemosti" },
+					{ text: "9. Как бы вы организовали логирование пользовательских сценариев на клиенте?", link: "/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/9-kak-organizovat-logirovanie-polzovatelskikh-stsenariev" }
+				],
+			},
+			{
+				text: "Опыт и сложные задачи",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Какая задача в вашем опыте была самой сложной и больше всего повлияла на ваш рост как инженера?", link: "/voprosy/opyt-i-slozhnye-zadachi/1-samaya-slozhnaya-zadacha" },
+					{ text: "2. С какими техническими или архитектурными вызовами вы сталкивались в legacy-проектах?", link: "/voprosy/opyt-i-slozhnye-zadachi/2-vyzovy-v-legacy-proektakh" },
+					{ text: "3. Расскажите про проект, где вам пришлось работать с техническим долгом или устаревшим стеком. В чём была основная сложность?", link: "/voprosy/opyt-i-slozhnye-zadachi/3-tekhnicheskii-dolg-i-ustarevshii-stek" }
+				],
+			},
+			{
+				text: "Практика Vue и реактивность",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Когда использовать computed, watch и watchEffect?", link: "/voprosy/praktika-vue-i-reaktivnost/1-kogda-ispolzovat-computed-watch-watcheffect" },
+					{ text: "2. Как обработать race condition в async watch?", link: "/voprosy/praktika-vue-i-reaktivnost/2-kak-obrabotat-race-condition-v-async-watch" },
+					{ text: "3. Что делает cleanup в watch?", link: "/voprosy/praktika-vue-i-reaktivnost/3-chto-delaet-cleanup-v-watch" },
+					{ text: "4. Как вызвать метод дочернего компонента из родителя (defineExpose)?", link: "/voprosy/praktika-vue-i-reaktivnost/4-kak-vyzvat-metod-dochernego-komponenta" },
+					{ text: "5. Что такое Suspense и когда его использовать?", link: "/voprosy/praktika-vue-i-reaktivnost/5-chto-takoe-suspense-i-kogda-ispolzovat" },
+					{ text: "6. Почему нельзя использовать index как key в v-for?", link: "/voprosy/praktika-vue-i-reaktivnost/6-pochemu-nelzya-ispolzovat-index-kak-key" },
+					{ text: "7. Что происходит при потере реактивности?", link: "/voprosy/praktika-vue-i-reaktivnost/7-chto-proiskhodit-pri-potere-reaktivnosti" },
+					{ text: "8. Как определить, что компонент слишком большой?", link: "/voprosy/praktika-vue-i-reaktivnost/8-kak-opredelit-chto-komponent-slishkom-bolshoi" },
+					{ text: "9. Когда логику стоит выносить в composable?", link: "/voprosy/praktika-vue-i-reaktivnost/9-kogda-logiku-stoit-vynosat-v-composable" },
+					{ text: "10. Какие признаки указывают на плохую реактивную архитектуру?", link: "/voprosy/praktika-vue-i-reaktivnost/10-priznaki-plokhoi-reaktivnoi-arkhitektury" }
+				],
+			},
+			{
+				text: "API и контракты между frontend и backend",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Как вы обычно организуете API-слой во frontend-проекте?", link: "/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/1-kak-organizovat-api-sloi" },
+					{ text: "2. Какие преимущества даёт OpenAPI и генерация клиентов?", link: "/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/2-preimushchestva-openapi-i-generatsii-klientov" },
+					{ text: "3. Что именно даёт генерация типов и контрактов для frontend-команды?", link: "/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/3-chto-dayut-generatsiya-tipov-i-kontraktov" },
+					{ text: "4. Какие ограничения есть у подхода с OpenAPI code generation?", link: "/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/4-ogranicheniya-openapi-code-generation" },
+					{ text: "5. Как вы отделяете DTO, приходящие с backend, от внутренних моделей frontend-приложения?", link: "/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/5-kak-otdelyat-dto-ot-vnutrennikh-modelei" }
+				],
+			},
+			{
+				text: "Code Review и анализ кода",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Как вы проводите code review?", link: "/voprosy/code-review-i-analiz-koda/1-kak-vy-provodite-code-review" },
+					{ text: "2. На что вы смотрите в первую очередь при ревью кода?", link: "/voprosy/code-review-i-analiz-koda/2-na-chto-smotrite-v-pervuyu-ochered-pri-revyu" },
+					{ text: "3. Какие критерии для вас самые важные в code review?", link: "/voprosy/code-review-i-analiz-koda/3-kriterii-v-code-review" },
+					{ text: "4. Как вы проверяете, соответствует ли код архитектуре проекта?", link: "/voprosy/code-review-i-analiz-koda/4-kak-proveryaete-sootvetstvie-arkhitekture" },
+					{ text: "5. Какие типовые ошибки во Vue-коде вы чаще всего замечаете на code review?", link: "/voprosy/code-review-i-analiz-koda/5-tipovye-oshibki-vo-vue-kode" },
+					{ text: "6. Как вы формулируете замечания на code review?", link: "/voprosy/code-review-i-analiz-koda/6-kak-formuliruete-zamechaniya" }
+				],
+			},
+			{
+				text: "State management",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Когда в проекте действительно нужен глобальный store, а когда можно обойтись без него?", link: "/voprosy/state-management/1-kogda-nuzhen-globalnyi-store" },
+					{ text: "2. Почему вы бы выбрали Pinia для Vue-проекта?", link: "/voprosy/state-management/2-pochemu-vybrat-pinia" },
+					{ text: "3. В чём основные отличия Pinia от Vuex?", link: "/voprosy/state-management/3-otlichiya-pinia-ot-vuex" },
+					{ text: "4. В каких случаях вы бы рассмотрели альтернативные решения для state management?", link: "/voprosy/state-management/4-kogda-rassmatrivat-alternativy-dlya-state-management" }
+				],
+			},
+			{
+				text: "Vue и frontend-экосистема",
+				collapsible: true,
+				collapsed: true,
+				items: [
+					{ text: "1. Какие возможности Vue 3 вы считаете наиболее важными в реальной разработке?", link: "/voprosy/vue-i-frontend-ekosistema/1-vazhnye-vozmozhnosti-vue-3" },
+					{ text: "2. В каких случаях вы используете Composition API и какие преимущества он даёт?", link: "/voprosy/vue-i-frontend-ekosistema/2-kogda-ispolzovat-composition-api" },
+					{ text: "3. Где на практике полезны Teleport и Suspense?", link: "/voprosy/vue-i-frontend-ekosistema/3-gde-polezny-teleport-i-suspense" },
+					{ text: "4. Как устроена реактивность во Vue 3 на высоком уровне?", link: "/voprosy/vue-i-frontend-ekosistema/4-kak-ustroena-reaktivnost-vue-3" },
+					{ text: "5. Чем ref отличается от reactive?", link: "/voprosy/vue-i-frontend-ekosistema/5-chem-ref-otlichaetsya-ot-reactive" },
+					{ text: "6. В каких случаях watch лучше computed, а в каких нет?", link: "/voprosy/vue-i-frontend-ekosistema/6-kogda-watch-luchshe-computed" },
+					{ text: "7. Почему deep watch может быть дорогим?", link: "/voprosy/vue-i-frontend-ekosistema/7-pochemu-deep-watch-mozhet-byt-dorogim" },
+					{ text: "8. Какие ошибки чаще всего допускают разработчики при работе с реактивностью во Vue?", link: "/voprosy/vue-i-frontend-ekosistema/8-oshibki-pri-rabote-s-reaktivnostyu" }
 				],
 			}
 		],

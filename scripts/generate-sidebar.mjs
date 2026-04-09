@@ -30,6 +30,7 @@ const SECTION_ORDER = [
 	"printsipy-programmirovaniya",
 	"keshirovanie",
 	"zadachi",
+	"voprosy",
 	"sborschiki",
 	"testirovanie",
 ];
@@ -53,6 +54,7 @@ const SECTION_TITLES = {
 	"printsipy-programmirovaniya": "Принципы программирования",
 	keshirovanie: "Кэширование",
 	zadachi: "Задачи",
+	voprosy: "Вопросы",
 	sborschiki: "Сборщики",
 	testirovanie: "Тестирование",
 };
@@ -88,6 +90,9 @@ const TITLE_OVERRIDES = {
 	"/javascript/kollektsii-dannykh/weakset": "WeakSet",
 	"/javascript/metody-massivov": "Методы массивов",
 	"/javascript/object-freeze": "Object.freeze()",
+	"/javascript/object-freeze/object-seal": "Object.seal()",
+	"/javascript/object-freeze/object-prevent-extensions": "Object.preventExtensions()",
+	"/javascript/object-freeze/freeze-vs-seal-vs-prevent-extensions": "Сравнение режимов",
 	"/javascript/operatory": "Операторы",
 	"/javascript/promise": "Promise",
 	"/javascript/tipy-dannykh/object": "Object",
@@ -156,6 +161,66 @@ const TITLE_OVERRIDES = {
 	"/vue/provide-i-inject": "provide и inject",
 	"/vue/zadachi/dvustoronnee-svyazyvanie-cherez-v-model": "Двустороннее связывание через v-model",
 	"/vue/zadachi/propsy-emity": "Props и Emits",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/1-kak-organizovat-api-sloi": "1. Как вы обычно организуете API-слой во frontend-проекте?",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/2-preimushchestva-openapi-i-generatsii-klientov": "2. Какие преимущества даёт OpenAPI и генерация клиентов?",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/3-chto-dayut-generatsiya-tipov-i-kontraktov": "3. Что именно даёт генерация типов и контрактов для frontend-команды?",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/4-ogranicheniya-openapi-code-generation": "4. Какие ограничения есть у подхода с OpenAPI code generation?",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/5-kak-otdelyat-dto-ot-vnutrennikh-modelei": "5. Как вы отделяете DTO, приходящие с backend, от внутренних моделей frontend-приложения?",
+	"/voprosy/praktika-vue-i-reaktivnost/1-kogda-ispolzovat-computed-watch-watcheffect": "1. Когда использовать computed, watch и watchEffect?",
+	"/voprosy/praktika-vue-i-reaktivnost/2-kak-obrabotat-race-condition-v-async-watch": "2. Как обработать race condition в async watch?",
+	"/voprosy/praktika-vue-i-reaktivnost/3-chto-delaet-cleanup-v-watch": "3. Что делает cleanup в watch?",
+	"/voprosy/praktika-vue-i-reaktivnost/4-kak-vyzvat-metod-dochernego-komponenta": "4. Как вызвать метод дочернего компонента из родителя (defineExpose)?",
+	"/voprosy/praktika-vue-i-reaktivnost/5-chto-takoe-suspense-i-kogda-ispolzovat": "5. Что такое Suspense и когда его использовать?",
+	"/voprosy/praktika-vue-i-reaktivnost/6-pochemu-nelzya-ispolzovat-index-kak-key": "6. Почему нельзя использовать index как key в v-for?",
+	"/voprosy/praktika-vue-i-reaktivnost/7-chto-proiskhodit-pri-potere-reaktivnosti": "7. Что происходит при потере реактивности?",
+	"/voprosy/praktika-vue-i-reaktivnost/8-kak-opredelit-chto-komponent-slishkom-bolshoi": "8. Как определить, что компонент слишком большой?",
+	"/voprosy/praktika-vue-i-reaktivnost/9-kogda-logiku-stoit-vynosat-v-composable": "9. Когда логику стоит выносить в composable?",
+	"/voprosy/praktika-vue-i-reaktivnost/10-priznaki-plokhoi-reaktivnoi-arkhitektury": "10. Какие признаки указывают на плохую реактивную архитектуру?",
+	"/voprosy/opyt-i-slozhnye-zadachi/1-samaya-slozhnaya-zadacha": "1. Какая задача в вашем опыте была самой сложной и больше всего повлияла на ваш рост как инженера?",
+	"/voprosy/opyt-i-slozhnye-zadachi/2-vyzovy-v-legacy-proektakh": "2. С какими техническими или архитектурными вызовами вы сталкивались в legacy-проектах?",
+	"/voprosy/opyt-i-slozhnye-zadachi/3-tekhnicheskii-dolg-i-ustarevshii-stek": "3. Расскажите про проект, где вам пришлось работать с техническим долгом или устаревшим стеком. В чём была основная сложность?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/1-osnovnye-slozhnosti-migratsii": "1. Какие основные сложности возникают при миграции с Vue 2 на Vue 3?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/2-bezopasnyi-podkhod-k-migratsii": "2. Какой подход к миграции Vue 2 -> Vue 3 вы считаете наиболее безопасным и практичным?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/3-kakie-chasti-sistemy-trebuyut-migratsii": "3. Какие части системы, кроме компонентов, обычно требуют миграции при переходе на Vue 3?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/4-migratsiya-vuex-na-pinia": "4. Как вы подходите к миграции Vuex на Pinia?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/5-pochemu-stoit-zamenyat-mixins-na-composables": "5. Почему имеет смысл заменять mixins на composables?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/6-kakie-arkhitekturnye-uluchsheniya-delat-parallelno": "6. Какие архитектурные улучшения имеет смысл делать параллельно с миграцией на новую версию фреймворка?",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/7-perekhod-ot-monolita-k-modulnoi-arkhitekture": "7. Как вы понимаете переход от монолитной frontend-архитектуры к модульной?",
+	"/voprosy/code-review-i-analiz-koda/1-kak-vy-provodite-code-review": "1. Как вы проводите code review?",
+	"/voprosy/code-review-i-analiz-koda/2-na-chto-smotrite-v-pervuyu-ochered-pri-revyu": "2. На что вы смотрите в первую очередь при ревью кода?",
+	"/voprosy/code-review-i-analiz-koda/3-kriterii-v-code-review": "3. Какие критерии для вас самые важные в code review?",
+	"/voprosy/code-review-i-analiz-koda/4-kak-proveryaete-sootvetstvie-arkhitekture": "4. Как вы проверяете, соответствует ли код архитектуре проекта?",
+	"/voprosy/code-review-i-analiz-koda/5-tipovye-oshibki-vo-vue-kode": "5. Какие типовые ошибки во Vue-коде вы чаще всего замечаете на code review?",
+	"/voprosy/code-review-i-analiz-koda/6-kak-formuliruete-zamechaniya": "6. Как вы формулируете замечания на code review?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/1-kak-povyshat-otkazoustoichivost-frontend-prilozheniya": "1. Как вы повышаете отказоустойчивость frontend-приложения?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/2-kak-sdelat-padeniya-bolee-predskazuemymi-i-diagnostiruemymi": "2. Как сделать так, чтобы падения приложения в проде были более предсказуемыми и диагностируемыми?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/3-instrumenty-dlya-monitoringa-frontend-prilozheniya": "3. Какие инструменты вы используете для мониторинга frontend-приложения?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/4-kak-organizovat-sbor-oshibok-na-kliente": "4. Как вы организуете сбор ошибок на клиенте?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/5-chto-otpravlyat-v-error-tracking": "5. Что должно попадать в error tracking помимо текста ошибки?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/6-kak-diagnostirovat-padenie-u-chasti-polzovatelei": "6. Как вы диагностируете проблему, если приложение падает только у части пользователей?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/7-kakie-metriki-sobirat-na-frontend": "7. Какие метрики полезно собирать на frontend?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/8-chem-testy-otlichayutsya-ot-prodovoi-nablyudaemosti": "8. Чем отличаются тесты от продовой наблюдаемости?",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/9-kak-organizovat-logirovanie-polzovatelskikh-stsenariev": "9. Как бы вы организовали логирование пользовательских сценариев на клиенте?",
+	"/voprosy/vue-i-frontend-ekosistema/1-vazhnye-vozmozhnosti-vue-3": "1. Какие возможности Vue 3 вы считаете наиболее важными в реальной разработке?",
+	"/voprosy/vue-i-frontend-ekosistema/2-kogda-ispolzovat-composition-api": "2. В каких случаях вы используете Composition API и какие преимущества он даёт?",
+	"/voprosy/vue-i-frontend-ekosistema/3-gde-polezny-teleport-i-suspense": "3. Где на практике полезны Teleport и Suspense?",
+	"/voprosy/vue-i-frontend-ekosistema/4-kak-ustroena-reaktivnost-vue-3": "4. Как устроена реактивность во Vue 3 на высоком уровне?",
+	"/voprosy/vue-i-frontend-ekosistema/5-chem-ref-otlichaetsya-ot-reactive": "5. Чем ref отличается от reactive?",
+	"/voprosy/vue-i-frontend-ekosistema/6-kogda-watch-luchshe-computed": "6. В каких случаях watch лучше computed, а в каких нет?",
+	"/voprosy/vue-i-frontend-ekosistema/7-pochemu-deep-watch-mozhet-byt-dorogim": "7. Почему deep watch может быть дорогим?",
+	"/voprosy/vue-i-frontend-ekosistema/8-oshibki-pri-rabote-s-reaktivnostyu": "8. Какие ошибки чаще всего допускают разработчики при работе с реактивностью во Vue?",
+	"/voprosy/state-management/1-kogda-nuzhen-globalnyi-store": "1. Когда в проекте действительно нужен глобальный store, а когда можно обойтись без него?",
+	"/voprosy/state-management/2-pochemu-vybrat-pinia": "2. Почему вы бы выбрали Pinia для Vue-проекта?",
+	"/voprosy/state-management/3-otlichiya-pinia-ot-vuex": "3. В чём основные отличия Pinia от Vuex?",
+	"/voprosy/state-management/4-kogda-rassmatrivat-alternativy-dlya-state-management": "4. В каких случаях вы бы рассмотрели альтернативные решения для state management?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/1-kakoi-stek-vybrat-dlya-novogo-proekta": "1. Какой стек вы бы выбрали для нового frontend-проекта и почему?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/2-kakie-faktory-utochnyat-pered-vyborom-steka": "2. Какие факторы вы уточняете перед тем, как предлагать стек для нового проекта?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/3-kogda-dostatochno-csr-a-kogda-ssr": "3. В каких случаях для проекта достаточно CSR, а когда стоит рассматривать SSR?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/4-preimushchestva-ssr": "4. Какие преимущества даёт SSR?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/5-izderzhki-ssr": "5. Какие дополнительные издержки появляются при использовании SSR?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/6-kogda-podklyuchat-typescript": "6. Когда TypeScript стоит подключать с самого начала, а когда допустим поэтапный переход?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/7-bazovye-instrumenty-dlya-frontend-proekta": "7. Какие инструменты и библиотеки вы считаете базовыми для современного frontend-проекта?",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/8-chto-dobavit-dlya-kachestva-razrabotki": "8. Что бы вы добавили в проект помимо Vue, TypeScript и роутера, чтобы улучшить качество разработки и сопровождения?",
 	"/zadachi/yandeks/1-etap": "1 этап",
 	"/brauzery/seti-http-i-cors": "Сети, HTTP и CORS",
 	"/brauzery/a11y-accessibility": "A11y (Accessibility)",
@@ -170,6 +235,69 @@ const WEAK_HEADINGS = new Set([
 	"шпаргалка",
 	"основы",
 	"пример использования",
+]);
+
+const FULL_TITLE_ROUTES = new Set([
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/1-kak-organizovat-api-sloi",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/2-preimushchestva-openapi-i-generatsii-klientov",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/3-chto-dayut-generatsiya-tipov-i-kontraktov",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/4-ogranicheniya-openapi-code-generation",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend/5-kak-otdelyat-dto-ot-vnutrennikh-modelei",
+	"/voprosy/opyt-i-slozhnye-zadachi/1-samaya-slozhnaya-zadacha",
+	"/voprosy/opyt-i-slozhnye-zadachi/2-vyzovy-v-legacy-proektakh",
+	"/voprosy/opyt-i-slozhnye-zadachi/3-tekhnicheskii-dolg-i-ustarevshii-stek",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/1-osnovnye-slozhnosti-migratsii",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/2-bezopasnyi-podkhod-k-migratsii",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/3-kakie-chasti-sistemy-trebuyut-migratsii",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/4-migratsiya-vuex-na-pinia",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/5-pochemu-stoit-zamenyat-mixins-na-composables",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/6-kakie-arkhitekturnye-uluchsheniya-delat-parallelno",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3/7-perekhod-ot-monolita-k-modulnoi-arkhitekture",
+	"/voprosy/code-review-i-analiz-koda/1-kak-vy-provodite-code-review",
+	"/voprosy/code-review-i-analiz-koda/2-na-chto-smotrite-v-pervuyu-ochered-pri-revyu",
+	"/voprosy/code-review-i-analiz-koda/3-kriterii-v-code-review",
+	"/voprosy/code-review-i-analiz-koda/4-kak-proveryaete-sootvetstvie-arkhitekture",
+	"/voprosy/code-review-i-analiz-koda/5-tipovye-oshibki-vo-vue-kode",
+	"/voprosy/code-review-i-analiz-koda/6-kak-formuliruete-zamechaniya",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/1-kak-povyshat-otkazoustoichivost-frontend-prilozheniya",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/2-kak-sdelat-padeniya-bolee-predskazuemymi-i-diagnostiruemymi",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/3-instrumenty-dlya-monitoringa-frontend-prilozheniya",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/4-kak-organizovat-sbor-oshibok-na-kliente",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/5-chto-otpravlyat-v-error-tracking",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/6-kak-diagnostirovat-padenie-u-chasti-polzovatelei",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/7-kakie-metriki-sobirat-na-frontend",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/8-chem-testy-otlichayutsya-ot-prodovoi-nablyudaemosti",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii/9-kak-organizovat-logirovanie-polzovatelskikh-stsenariev",
+	"/voprosy/praktika-vue-i-reaktivnost/1-kogda-ispolzovat-computed-watch-watcheffect",
+	"/voprosy/praktika-vue-i-reaktivnost/2-kak-obrabotat-race-condition-v-async-watch",
+	"/voprosy/praktika-vue-i-reaktivnost/3-chto-delaet-cleanup-v-watch",
+	"/voprosy/praktika-vue-i-reaktivnost/4-kak-vyzvat-metod-dochernego-komponenta",
+	"/voprosy/praktika-vue-i-reaktivnost/5-chto-takoe-suspense-i-kogda-ispolzovat",
+	"/voprosy/praktika-vue-i-reaktivnost/6-pochemu-nelzya-ispolzovat-index-kak-key",
+	"/voprosy/praktika-vue-i-reaktivnost/7-chto-proiskhodit-pri-potere-reaktivnosti",
+	"/voprosy/praktika-vue-i-reaktivnost/8-kak-opredelit-chto-komponent-slishkom-bolshoi",
+	"/voprosy/praktika-vue-i-reaktivnost/9-kogda-logiku-stoit-vynosat-v-composable",
+	"/voprosy/praktika-vue-i-reaktivnost/10-priznaki-plokhoi-reaktivnoi-arkhitektury",
+	"/voprosy/state-management/1-kogda-nuzhen-globalnyi-store",
+	"/voprosy/state-management/2-pochemu-vybrat-pinia",
+	"/voprosy/state-management/3-otlichiya-pinia-ot-vuex",
+	"/voprosy/state-management/4-kogda-rassmatrivat-alternativy-dlya-state-management",
+	"/voprosy/vue-i-frontend-ekosistema/1-vazhnye-vozmozhnosti-vue-3",
+	"/voprosy/vue-i-frontend-ekosistema/2-kogda-ispolzovat-composition-api",
+	"/voprosy/vue-i-frontend-ekosistema/3-gde-polezny-teleport-i-suspense",
+	"/voprosy/vue-i-frontend-ekosistema/4-kak-ustroena-reaktivnost-vue-3",
+	"/voprosy/vue-i-frontend-ekosistema/5-chem-ref-otlichaetsya-ot-reactive",
+	"/voprosy/vue-i-frontend-ekosistema/6-kogda-watch-luchshe-computed",
+	"/voprosy/vue-i-frontend-ekosistema/7-pochemu-deep-watch-mozhet-byt-dorogim",
+	"/voprosy/vue-i-frontend-ekosistema/8-oshibki-pri-rabote-s-reaktivnostyu",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/1-kakoi-stek-vybrat-dlya-novogo-proekta",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/2-kakie-faktory-utochnyat-pered-vyborom-steka",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/3-kogda-dostatochno-csr-a-kogda-ssr",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/4-preimushchestva-ssr",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/5-izderzhki-ssr",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/6-kogda-podklyuchat-typescript",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/7-bazovye-instrumenty-dlya-frontend-proekta",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya/8-chto-dobavit-dlya-kachestva-razrabotki",
 ]);
 
 const TITLE_REPLACEMENTS = [
@@ -223,18 +351,29 @@ function compactTitle(title) {
 }
 
 const GROUP_TITLE_OVERRIDES = {
+	"/vue/bandlery": "Бандлеры",
 	"/vue/ref-and-reactive": "Ref & reactive",
 	"/vue/story": "Сторы",
 	"/vue/zadachi": "Задачи",
 	"/react/khuki": "Хуки",
 	"/javascript/tipy-dannykh": "Типы данных",
 	"/javascript/kollektsii-dannykh": "Коллекции данных",
+	"/javascript/object-freeze": "Контроль мутаций объекта",
 	"/nuxt/rezhimy-rendera": "Режимы рендера",
 	"/brauzery/garbage-collector": "Garbage Collector",
 	"/brauzery/crp": "CRP",
 	"/brauzery/versii-http": "Версии HTTP",
 	"/typescript/zadachi": "Задачи",
 	"/sborschiki/vite": "Vite",
+	"/voprosy/api-i-kontrakty-mezhdu-frontend-i-backend": "API и контракты между frontend и backend",
+	"/voprosy/code-review-i-analiz-koda": "Code Review и анализ кода",
+	"/voprosy/migratsiya-s-vue-2-na-vue-3": "Миграция Vue 2 на Vue 3",
+	"/voprosy/nadezhnost-monitoring-i-podderzhka-frontend-prilozhenii": "Надёжность, мониторинг и поддержка frontend-приложений",
+	"/voprosy/opyt-i-slozhnye-zadachi": "Опыт и сложные задачи",
+	"/voprosy/praktika-vue-i-reaktivnost": "Практика Vue и реактивность",
+	"/voprosy/state-management": "State management",
+	"/voprosy/vue-i-frontend-ekosistema": "Vue и frontend-экосистема",
+	"/voprosy/vybor-steka-i-arkhitekturnye-resheniya": "Выбор стека и архитектурные решения",
 	"/zadachi/yandeks": "Яндекс",
 };
 
@@ -326,9 +465,10 @@ function resolveSection(route) {
 
 function normalizeTitle(route, body, frontmatter) {
 	const publicRoute = toPublicRoute(route);
+	const keepFullTitle = FULL_TITLE_ROUTES.has(publicRoute) || FULL_TITLE_ROUTES.has(route);
 	const override = TITLE_OVERRIDES[publicRoute] ?? TITLE_OVERRIDES[route];
 	if (override) {
-		return compactTitle(override);
+		return keepFullTitle ? override.trim() : compactTitle(override);
 	}
 
 	if (typeof frontmatter.title === "string" && frontmatter.title.trim()) {
@@ -336,12 +476,13 @@ function normalizeTitle(route, body, frontmatter) {
 		if (looksLikeLatinOnlyTitle(title)) {
 			const fallbackTitle = extractBestCyrillicHeading(body);
 			if (fallbackTitle) {
-				return compactTitle(fallbackTitle);
+				return keepFullTitle ? fallbackTitle : compactTitle(fallbackTitle);
 			}
 		}
-		return compactTitle(title);
+		return keepFullTitle ? title : compactTitle(title);
 	}
-	return compactTitle(inferTitle(route, body));
+	const inferredTitle = inferTitle(route, body);
+	return keepFullTitle ? inferredTitle : compactTitle(inferredTitle);
 }
 
 function toGroupTitle(fullPath, segment) {
@@ -360,6 +501,10 @@ function toGroupTitle(fullPath, segment) {
 function toSidebarItems(entries) {
 	const section = entries[0]?.section ?? "";
 	const sectionPrefix = `/${section}/`;
+	const titleCollator = new Intl.Collator("ru", {
+		numeric: true,
+		sensitivity: "base",
+	});
 
 	/** @type {Array<{text: string, link: string}>} */
 	const rootItems = [];
@@ -420,12 +565,12 @@ function toSidebarItems(entries) {
 	}
 
 	function sortLeafItems(items) {
-		return items.sort((a, b) => a.text.localeCompare(b.text, "ru"));
+		return items.sort((a, b) => titleCollator.compare(a.text, b.text));
 	}
 
 	function renderGroup(group) {
 		const childGroups = Array.from(group.children.values())
-			.sort((a, b) => a.text.localeCompare(b.text, "ru"))
+			.sort((a, b) => titleCollator.compare(a.text, b.text))
 			.map(renderGroup);
 		const leafItems = sortLeafItems(group.items).map((item) => ({
 			text: item.text,
@@ -441,7 +586,7 @@ function toSidebarItems(entries) {
 	}
 
 	const renderedGroups = Array.from(topLevelGroups.values())
-		.sort((a, b) => a.text.localeCompare(b.text, "ru"))
+		.sort((a, b) => titleCollator.compare(a.text, b.text))
 		.map(renderGroup);
 
 	const renderedRootItems = sortLeafItems(rootItems);

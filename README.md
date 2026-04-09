@@ -71,6 +71,8 @@ yarn test:mobile
 
 ## Контент: правила добавления
 
+Подробный гайд по написанию новых материалов: [CONTRIBUTING.md](CONTRIBUTING.md)
+
 1. Добавляйте новый материал как `docs/<section>/<slug>.md` в `kebab-case`.
 2. Пишите контент простым markdown, без ручной правки `sidebar.generated.ts`.
 3. Перед коммитом запускайте:

@@ -3,7 +3,7 @@ title: "TS"
 description: "Краткая выжимка по теме \"TypeScript\"."
 tags:
   - "typescript"
-updatedAt: "2026-02-16"
+updatedAt: "2026-03-19"
 ---
 # TS
 
@@ -18,6 +18,7 @@ updatedAt: "2026-02-16"
 ## Практика
 
 - [Задача по реализации Pick](/typescript/zadachi/zadacha-realizovat-pick-svoimi-silami) — хорошее упражнение для понимания mapped types.
+- [30 вопросов по TypeScript для middle](/typescript/30-voprosov-po-typescript-middle) — подборка вопросов и развёрнутых ответов по темам раздела.
 
 ---
 
